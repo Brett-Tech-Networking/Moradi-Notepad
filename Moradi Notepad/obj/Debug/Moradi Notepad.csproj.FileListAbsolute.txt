@@ -1,0 +1,10 @@
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe.config
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\bin\Debug\Ubuntu Theme.dll
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Form1.resources
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.exe
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.AboutBox1.resources
