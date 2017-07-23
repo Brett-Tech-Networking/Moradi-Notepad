@@ -13,6 +13,7 @@ namespace Moradi_Notepad
     public partial class Form1 : Form
     {
         private bool bold;
+        
 
         public Form1()
         {
@@ -21,7 +22,7 @@ namespace Moradi_Notepad
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -212,6 +213,20 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_ContentsResized(object sender, ContentsResizedEventArgs e)
+        {
+         
+        }
+
+        private void richTextBox1_SizeChanged(object sender, EventArgs e)
+        {
         }
     }
 }
