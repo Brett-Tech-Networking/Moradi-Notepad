@@ -12,6 +12,8 @@ namespace Moradi_Notepad
 {
     public partial class Form1 : Form
     {
+        private bool bold;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace Moradi_Notepad
         {
 
         }
+
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -115,12 +118,13 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void B_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
-
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
+
+           
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -131,6 +135,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Strikeout);
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -192,7 +197,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -202,6 +207,11 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             { 
                 richTextBox1.Font = fd.Font;
             }
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

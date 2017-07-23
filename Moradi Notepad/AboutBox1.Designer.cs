@@ -30,7 +30,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ubuntuControlBox1 = new Ubuntu_Theme.UbuntuControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,28 +65,16 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // ubuntuControlBox1
-            // 
-            this.ubuntuControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ubuntuControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ubuntuControlBox1.Font = new System.Drawing.Font("Marlett", 7F);
-            this.ubuntuControlBox1.Location = new System.Drawing.Point(621, 1);
-            this.ubuntuControlBox1.Name = "ubuntuControlBox1";
-            this.ubuntuControlBox1.Size = new System.Drawing.Size(75, 23);
-            this.ubuntuControlBox1.TabIndex = 4;
-            this.ubuntuControlBox1.Text = "ubuntuControlBox1";
-            // 
             // AboutBox1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(688, 336);
-            this.Controls.Add(this.ubuntuControlBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutBox1";
@@ -95,7 +82,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AboutBox1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,6 +93,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Ubuntu_Theme.UbuntuControlBox ubuntuControlBox1;
     }
 }

@@ -8,3 +8,4 @@ c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Mora
 c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.exe
 c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.pdb
 c:\users\administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.AboutBox1.resources
+C:\Users\Administrator\documents\visual studio 2015\Projects\Moradi Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojResolveAssemblyReference.cache
