@@ -228,6 +228,27 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void richTextBox1_SizeChanged(object sender, EventArgs e)
         {
         }
+
+        private void numberedLinesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please Choose Show, Hide");
+        }
+
+        private void showToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Location = new Point(20, 52);
+        
+        }
+
+        private void hideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Location = new Point(2, 52);
+        }
+
+        private void ubuntuTheme1_Resize(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
 
