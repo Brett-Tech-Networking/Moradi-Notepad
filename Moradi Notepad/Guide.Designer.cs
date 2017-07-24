@@ -34,11 +34,11 @@
             this.faderVerticalTabControl1 = new Fader_Theme.FaderVerticalTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.faderGroupBox1 = new Fader_Theme.FaderGroupBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.faderGroupBox2 = new Fader_Theme.FaderGroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.faderGroupBox3 = new Fader_Theme.FaderGroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.faderTheme1.SuspendLayout();
@@ -46,8 +46,8 @@
             this.tabPage1.SuspendLayout();
             this.faderGroupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.faderGroupBox2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.faderGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,27 +118,6 @@
             this.faderGroupBox1.TabIndex = 0;
             this.faderGroupBox1.Text = "How Moradi Notepad Was Born";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.tabPage2.Controls.Add(this.faderGroupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(104, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(673, 363);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Changelog";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.tabPage3.Controls.Add(this.faderGroupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(104, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(673, 363);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Credits";
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Black;
@@ -152,6 +131,17 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.tabPage2.Controls.Add(this.faderGroupBox2);
+            this.tabPage2.Location = new System.Drawing.Point(104, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(673, 363);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Changelog";
             // 
             // faderGroupBox2
             // 
@@ -167,7 +157,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Red;
             this.textBox2.Location = new System.Drawing.Point(12, 39);
             this.textBox2.Multiline = true;
@@ -175,6 +165,17 @@
             this.textBox2.Size = new System.Drawing.Size(590, 274);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = resources.GetString("textBox2.Text");
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.tabPage3.Controls.Add(this.faderGroupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(104, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(673, 363);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Credits";
             // 
             // faderGroupBox3
             // 
@@ -222,9 +223,9 @@
             this.faderGroupBox1.ResumeLayout(false);
             this.faderGroupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.faderGroupBox2.ResumeLayout(false);
             this.faderGroupBox2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.faderGroupBox3.ResumeLayout(false);
             this.faderGroupBox3.PerformLayout();
             this.ResumeLayout(false);

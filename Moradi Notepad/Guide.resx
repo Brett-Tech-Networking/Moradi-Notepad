@@ -126,9 +126,47 @@
   <metadata name="tabPage1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>
+A Group of 3 (well ... lets just say Professinal) Professinal Programmers Were Talking About Increasing There Programming
+Skills, And So We Thought And Thought, Well Mr. Moradi | Developer of Moradi OS | Came Up With An Idea To Develop Some
+Software For His OS And So Me Brett | Founder of Brett Tech Networking LLC. | Begain To Create A Software Called "Moradi Notepad" Today This Notepad Has Tons Of Increasing Features &amp; We Hope That You Find This Tool As Helpful As The Moradi OS Development Team Did While Keeping All There Programming Scripts, And Other Important Files Inside The Moradi Notepad.
+
+And This Ladies &amp; Gentalmen Is How The Moadi Notepad Was Born  
+</value>
+  </data>
   <metadata name="tabPage2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>7/24/17  3:30 am
+* Added Themes Tab (Containing Many Cool Themes)
+* Added Show/HIde Line Numbers
+* Added User Friendly Background Changer &amp; Font Color Changer
+* Added Guide Under "Help" Tab (Includes About, Changelog, &amp; Credits) 
+
+7/24/17 9:30 am
+*Added More Color Options in (Font Color, Background Colors)
+*Fixed Bug (Can Now Change Colors of text without all text auto resorting to new color)
+*Fixed A+, A- (Increase Text Size, Decrease Text Size) now works on selected Text
+*Added option to Change Text Case ( Select Your Text Click The A,a button to Make Selected Text All CAPS or lowercase)
+</value>
+  </data>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>Using Brett Tech Networking;
+Using Moradi OS Development;
+
+namespace Moradi_Notepad
+{
+           Public Moradi Notepad()
+         {
+                Brett ("Brett Tech Networking LLC")
+         {
+                 Matthew ("Moradi OS Development")
+          }
+    }  
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="faderTheme1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3528,38 +3566,6 @@
         AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAFAAAACAAAAAgAAAAFAAAAAgAA
         AAAAAAAAAAAAAAAAAAAAAAAA+B+sQeAHrEHAA6xBgAGsQYABrEEAAKxBAACsQQAArEEAAKxBAACsQQAA
         rEGAAaxBgAGsQcADrEHgB6xB+B+sQQ==
-</value>
-  </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>
-A Group of 3 (well ... lets just say Professinal) Professinal Programmers Were Talking About Increasing There Programming
-Skills, And So We Thought And Thought, Well Mr. Moradi | Developer of Moradi OS | Came Up With An Idea To Develop Some
-Software For His OS And So Me Brett | Founder of Brett Tech Networking LLC. | Begain To Create A Software Called "Moradi Notepad" Today This Notepad Has Tons Of Increasing Features &amp; We Hope That You Find This Tool As Helpful As The Moradi OS Development Team Did While Keeping All There Programming Scripts, And Other Important Files Inside The Moradi Notepad.
-
-And This Ladies &amp; Gentalmen Is How The Moadi Notepad Was Born  
-</value>
-  </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>7/24/17 
-
-* Added Themes Tab (Containing Many Cool Themes)
-* Added Show/HIde Line Numbers
-* Added User Friendly Background Changer &amp; Font Color Changer
-* Added Guide Under "Help" Tab (Includes About, Changelog, &amp; Credits) </value>
-  </data>
-  <data name="textBox3.Text" xml:space="preserve">
-    <value>Using Brett Tech Networking;
-Using Moradi OS Development;
-
-namespace Moradi_Notepad
-{
-           Public Moradi Notepad()
-         {
-                Brett ("Brett Tech Networking LLC")
-         {
-                 Matthew ("Moradi OS Development")
-          }
-    }  
 </value>
   </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

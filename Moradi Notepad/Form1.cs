@@ -7,10 +7,11 @@ namespace Moradi_Notepad
     public partial class Form1 : Form
     {
         private bool bold;
-        
+        int size = 10;
 
         public Form1()
         {
+            
             InitializeComponent();
         }
 
@@ -69,10 +70,8 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-
-            //Save Text of RichTextBox
             SaveFileDialog svf = new SaveFileDialog();
+           
             svf.Filter = "Save File (.txt)|*.txt";
             svf.Title = "Save File";
             if (svf.ShowDialog() == DialogResult.OK) ;
@@ -218,9 +217,11 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            
-        }
+            size = size + 2;
 
+            richTextBox1.SelectionFont = new Font("Arial Rounded MT", size);
+            }
+        
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FontDialog fd = new FontDialog();
@@ -232,7 +233,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            
+            richTextBox1.SelectedText = richTextBox1.SelectedText.ToUpper();
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -277,7 +278,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void redToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            richTextBox1.ForeColor = Color.Red;
+            richTextBox1.SelectionColor = Color.Red;
         }
 
         private void blackThemeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -300,6 +301,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         {
             richTextBox1.BackColor = Color.Maroon;
             richTextBox1.ForeColor = Color.Lime;
+            richTextBox1.Text = "Start Typing Here. . . ";
         }
 
         private void toolStripButton11_Click(object sender, EventArgs e)
@@ -319,22 +321,50 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void blueTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.ForeColor = Color.DodgerBlue;
+            richTextBox1.SelectionColor = Color.DodgerBlue;
         }
 
         private void limeTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.ForeColor = Color.Lime;
+            richTextBox1.SelectionColor = Color.Lime;
         }
 
         private void yellowTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.ForeColor = Color.Yellow;
+            richTextBox1.SelectionColor = Color.Yellow;
         }
 
         private void navyBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.BackColor = Color.Navy;
+        }
+
+        private void purpleTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionColor = Color.Purple;
+        }
+
+        private void limeBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.Lime;
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            size = size - 2;
+            richTextBox1.SelectionFont = new Font("Arial Rounded MT", size);
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectedText = richTextBox1.SelectedText.ToLower();
+        }
+
+        private void windowsNotepadThemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.White;
+            richTextBox1.ForeColor = Color.Black;
+            richTextBox1.Text = "Start Typing Here. . .";
         }
     }
 }
