@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -61,6 +55,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+
             ofd.Filter = "Text Files (.txt)|*.txt";
             ofd.Title = "Open File";
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -74,6 +69,9 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+
+            //Save Text of RichTextBox
             SaveFileDialog svf = new SaveFileDialog();
             svf.Filter = "Save File (.txt)|*.txt";
             svf.Title = "Save File";
@@ -118,8 +116,29 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void B_Click(object sender, EventArgs e)
         {
-            richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+            if(richTextBox1.SelectionFont != null)
+   {
+                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
+                System.Drawing.FontStyle newFontStyle;
+
+                if (richTextBox1.SelectionFont.Bold == true)
+                {
+                    newFontStyle = FontStyle.Regular;
+                }
+                else
+                {
+                    newFontStyle = FontStyle.Bold;
+                }
+
+                richTextBox1.SelectionFont = new Font(
+                   currentFont.FontFamily,
+                   currentFont.Size,
+                   newFontStyle
+                );
+            }
         }
+       
+       
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
@@ -174,7 +193,8 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Guide box = new Guide();
+            box.ShowDialog();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -227,6 +247,94 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void richTextBox1_SizeChanged(object sender, EventArgs e)
         {
+        }
+
+        private void numberedLinesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please Choose Show, Hide");
+        }
+
+        private void showToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Location = new Point(20, 52);
+        
+        }
+
+        private void hideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Location = new Point(2, 52);
+        }
+
+        private void ubuntuTheme1_Resize(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.Maroon;
+        }
+
+        private void redToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Red;
+        }
+
+        private void blackThemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.Black;
+        }
+
+        private void ubuntuTheme1_Enter(object sender, EventArgs e)
+        {
+                   
+        }
+
+        private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.Black;
+            richTextBox1.ForeColor = Color.Lime;
+        }
+
+        private void halloweenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.Maroon;
+            richTextBox1.ForeColor = Color.Lime;
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Location = new Point(20, 52);
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Location = new Point(2, 52);
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void blueTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.DodgerBlue;
+        }
+
+        private void limeTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Lime;
+        }
+
+        private void yellowTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Yellow;
+        }
+
+        private void navyBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.BackColor = Color.Navy;
         }
     }
 }
