@@ -11,13 +11,13 @@ namespace Moradi_Notepad
 
         public Form1()
         {
-            
+
             InitializeComponent();
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -71,7 +71,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog svf = new SaveFileDialog();
-           
+
             svf.Filter = "Save File (.txt)|*.txt";
             svf.Title = "Save File";
             if (svf.ShowDialog() == DialogResult.OK) ;
@@ -122,8 +122,8 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void B_Click(object sender, EventArgs e)
         {
-            if(richTextBox1.SelectionFont != null)
-   {
+            if (richTextBox1.SelectionFont != null)
+            {
                 System.Drawing.Font currentFont = richTextBox1.SelectionFont;
                 System.Drawing.FontStyle newFontStyle;
 
@@ -143,14 +143,14 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 );
             }
         }
-       
-       
+
+
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
 
-           
+
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -161,7 +161,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Strikeout);
-            
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -199,16 +199,16 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Guide box = new Guide();
+            About box = new About();
             box.ShowDialog();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBox1 box = new AboutBox1();
+            About box = new About();
             box.ShowDialog();
         }
-
+        
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -238,13 +238,13 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 */
             }
 
-            }
-        
+        }
+
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FontDialog fd = new FontDialog();
             if (fd.ShowDialog() == DialogResult.OK)
-            { 
+            {
                 richTextBox1.Font = fd.Font;
             }
         }
@@ -261,7 +261,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void richTextBox1_ContentsResized(object sender, ContentsResizedEventArgs e)
         {
-         
+
         }
 
         private void richTextBox1_SizeChanged(object sender, EventArgs e)
@@ -276,7 +276,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Location = new Point(20, 52);
-        
+
         }
 
         private void hideToolStripMenuItem_Click(object sender, EventArgs e)
@@ -286,7 +286,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void ubuntuTheme1_Resize(object sender, EventArgs e)
         {
-           
+
         }
 
         private void redToolStripMenuItem_Click(object sender, EventArgs e)
@@ -306,7 +306,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void ubuntuTheme1_Enter(object sender, EventArgs e)
         {
-                   
+
         }
 
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
@@ -386,10 +386,36 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         }
 
         private void windowsNotepadThemeToolStripMenuItem_Click(object sender, EventArgs e)
+        // Windows Notepad Theme
         {
             richTextBox1.BackColor = Color.White;
             richTextBox1.ForeColor = Color.Black;
             richTextBox1.Text = "Start Typing Here. . .";
         }
+
+        private void richTextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (richTextBox1.Text == "Start Typing Here . . .") ; // Text On Main Notepad To Be Deleted Once Screen Is Clicked
+            richTextBox1.Clear();  // Deletes Ritten Text
+            {
+                if (richTextBox1.Text == ("")) 
+                richTextBox1.Text = (""); // Tells Code If There is text other than the phrase "Start Typing Here . .  ." then do not delete leave it alone
+  
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
+
+
+
+

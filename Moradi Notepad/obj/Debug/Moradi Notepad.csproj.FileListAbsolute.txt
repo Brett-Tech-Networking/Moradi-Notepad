@@ -17,7 +17,6 @@ C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi Not
 C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\bin\Debug\Moradi Notepad.exe
 C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\bin\Debug\Moradi Notepad.pdb
 C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi Notepad.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.AboutBox1.resources
 C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.Form1.resources
 C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
 C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
@@ -37,4 +36,4 @@ C:\Users\Administrator\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Mo
 C:\Users\Administrator\Documents\Moradi Notepad Versions\7-24-17 3 30 am\Moradi-Notepad-master\Moradi Notepad\bin\Debug\Moradi Notepad.exe.config
 C:\Users\Administrator\Documents\Moradi Notepad Versions\7-24-17 3 30 am\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi Notepad.exe
 C:\Users\Administrator\Documents\Moradi Notepad Versions\7-24-17 3 30 am\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi Notepad.pdb
-C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.Guide.resources
+C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.About.resources
