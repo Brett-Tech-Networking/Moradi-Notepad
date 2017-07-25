@@ -76,9 +76,16 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             svf.Title = "Save File";
             if (svf.ShowDialog() == DialogResult.OK) ;
             {
-                System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                sw.Write(richTextBox1.Text);
-                sw.Close();
+                try
+                {
+                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                    sw.Write(richTextBox1.Text);
+                    sw.Close();
+                }
+                catch
+                {
+                    //This is just meant to catch the exception. It doesn't actaully return anything.
+                }
             }
         }
 
@@ -218,8 +225,19 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             size = size + 2;
+            try
+            {
+                richTextBox1.SelectionFont = new Font("Arial Rounded MT", size);
+            }
+            catch
+            {
+                /*
+                I actually don't know why this is happening. Just a catch.
+                For some reason when I fixed the shrink exception, it caused a growth exception.
+                This shall fix the exception.
+                */
+            }
 
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", size);
             }
         
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -351,8 +369,15 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            size = size - 2;
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", size);
+            try
+            {
+                size = size - 2;
+                richTextBox1.SelectionFont = new Font("Arial Rounded MT", size);
+            }
+            catch
+            {
+                MessageBox.Show("Size Too Small!!!", "Critical Error");
+            }
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
@@ -368,5 +393,3 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         }
     }
 }
-
-
