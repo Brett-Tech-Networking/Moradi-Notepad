@@ -208,7 +208,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             About box = new About();
             box.ShowDialog();
         }
-        
+
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -395,14 +395,12 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
         private void richTextBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (richTextBox1.Text == "Start Typing Here . . .") ; // Text On Main Notepad To Be Deleted Once Screen Is Clicked
-            richTextBox1.Clear();  // Deletes Ritten Text
+            if (richTextBox1.Text == ("Start Typing Here . . .")) // Text On Main Notepad To Be Deleted Once Screen Is Clicked
             {
-                if (richTextBox1.Text == ("")) 
-                richTextBox1.Text = (""); // Tells Code If There is text other than the phrase "Start Typing Here . .  ." then do not delete leave it alone
-  
+                richTextBox1.Clear();  // Deletes Ritten Text
             }
         }
+
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
