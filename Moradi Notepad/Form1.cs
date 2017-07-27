@@ -8,6 +8,8 @@ namespace Moradi_Notepad
     {
         private bool bold;
         int size = 10;
+        public Credits c = new Credits();
+        public About a = new About();
 
         public Form1()
         {
@@ -235,13 +237,12 @@ namespace Moradi_Notepad
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About box = new About();
-            box.ShowDialog();
+            a.Show();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About box = new About();
+            Credits box = new Credits();
             box.ShowDialog();
         }
 
@@ -446,6 +447,11 @@ namespace Moradi_Notepad
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            c.Show();
         }
     }
 }

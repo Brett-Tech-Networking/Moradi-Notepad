@@ -17,34 +17,9 @@ namespace Moradi_Notepad
             InitializeComponent();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void faderTheme1_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void faderTheme1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

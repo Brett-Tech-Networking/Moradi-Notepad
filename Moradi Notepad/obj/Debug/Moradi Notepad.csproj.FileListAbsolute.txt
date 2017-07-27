@@ -47,3 +47,4 @@ C:\Users\Mat\Documents\Visual Studio 2015\Projects\Brett_VB\Moradi-Notepad-maste
 C:\Users\Mat\Documents\Visual Studio 2015\Projects\Brett_VB\Moradi-Notepad-master\Moradi Notepad\obj\Debug\LineNumbers.LineNumbers_For_RichTextBox.resources
 C:\Users\Mat\Documents\Visual Studio 2015\Projects\Brett_VB\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
 C:\Users\Mat\Documents\Visual Studio 2015\Projects\Brett_VB\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\Moradi-Notepad-master\Moradi Notepad\obj\Debug\Moradi_Notepad.Credits.resources
