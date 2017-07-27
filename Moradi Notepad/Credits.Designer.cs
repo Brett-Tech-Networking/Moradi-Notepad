@@ -32,18 +32,18 @@
             this.faderTheme1 = new Fader_Theme.FaderTheme();
             this.faderControlBox1 = new Fader_Theme.FaderControlBox();
             this.faderVerticalTabControl1 = new Fader_Theme.FaderVerticalTabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.faderGroupBox2 = new Fader_Theme.FaderGroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.faderGroupBox3 = new Fader_Theme.FaderGroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.faderGroupBox2 = new Fader_Theme.FaderGroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.faderTheme1.SuspendLayout();
             this.faderVerticalTabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.faderGroupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.faderGroupBox3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.faderGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // faderTheme1
@@ -90,6 +90,41 @@
             this.faderVerticalTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.faderVerticalTabControl1.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.tabPage3.Controls.Add(this.faderGroupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(104, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(673, 363);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Credits";
+            // 
+            // faderGroupBox3
+            // 
+            this.faderGroupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.faderGroupBox3.Controls.Add(this.textBox3);
+            this.faderGroupBox3.Location = new System.Drawing.Point(3, 3);
+            this.faderGroupBox3.Name = "faderGroupBox3";
+            this.faderGroupBox3.ShowHeader = true;
+            this.faderGroupBox3.Size = new System.Drawing.Size(664, 357);
+            this.faderGroupBox3.TabIndex = 0;
+            this.faderGroupBox3.Text = "Credits";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.WindowText;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.textBox3.Location = new System.Drawing.Point(13, 40);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(638, 305);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.Text = resources.GetString("textBox3.Text");
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
@@ -127,41 +162,6 @@
             this.textBox2.Text = resources.GetString("textBox2.Text");
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.tabPage3.Controls.Add(this.faderGroupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(104, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(673, 363);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Credits";
-            // 
-            // faderGroupBox3
-            // 
-            this.faderGroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.faderGroupBox3.Controls.Add(this.textBox3);
-            this.faderGroupBox3.Location = new System.Drawing.Point(3, 3);
-            this.faderGroupBox3.Name = "faderGroupBox3";
-            this.faderGroupBox3.ShowHeader = true;
-            this.faderGroupBox3.Size = new System.Drawing.Size(664, 357);
-            this.faderGroupBox3.TabIndex = 0;
-            this.faderGroupBox3.Text = "Credits";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.WindowText;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.SpringGreen;
-            this.textBox3.Location = new System.Drawing.Point(13, 40);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(638, 305);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.Text = resources.GetString("textBox3.Text");
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
             // Credits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,12 +180,12 @@
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.faderTheme1.ResumeLayout(false);
             this.faderVerticalTabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.faderGroupBox2.ResumeLayout(false);
-            this.faderGroupBox2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.faderGroupBox3.ResumeLayout(false);
             this.faderGroupBox3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.faderGroupBox2.ResumeLayout(false);
+            this.faderGroupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

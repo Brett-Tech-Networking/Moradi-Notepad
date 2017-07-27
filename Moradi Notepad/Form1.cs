@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Moradi_Notepad.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -354,10 +355,12 @@ namespace Moradi_Notepad
 
         private void halloweenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.BackColor = Color.Maroon;
-            richTextBox1.ForeColor = Color.Lime;
-            richTextBox1.Text = "Start Typing Here. . . ";
-        }
+
+         
+            richTextBox1.BackColor = Color.DarkRed;
+            richTextBox1.ForeColor = Color.White;
+           
+                }
 
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
@@ -452,6 +455,21 @@ namespace Moradi_Notepad
         private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             c.Show();
+        }
+
+        private void copyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
+
+        private void pasteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+
+        private void cutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
         }
     }
 }

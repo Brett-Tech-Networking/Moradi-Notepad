@@ -83,6 +83,26 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Christmas {
+            get {
+                object obj = ResourceManager.GetObject("Christmas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChristmasTree {
+            get {
+                object obj = ResourceManager.GetObject("ChristmasTree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Scrap_Pen {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Scrap-Pen", resourceCulture);
@@ -106,6 +126,16 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap Moradi_notepad {
             get {
                 object obj = ResourceManager.GetObject("Moradi notepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paint_bucket_blue {
+            get {
+                object obj = ResourceManager.GetObject("paint_bucket_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
