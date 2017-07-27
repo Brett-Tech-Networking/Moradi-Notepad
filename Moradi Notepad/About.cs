@@ -41,5 +41,10 @@ namespace Moradi_Notepad
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

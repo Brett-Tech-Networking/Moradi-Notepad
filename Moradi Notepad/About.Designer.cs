@@ -131,6 +131,7 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tabPage2
             // 
@@ -162,6 +163,7 @@
             this.textBox2.Location = new System.Drawing.Point(12, 39);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(590, 274);
             this.textBox2.TabIndex = 0;
@@ -197,6 +199,7 @@
             this.textBox3.Location = new System.Drawing.Point(13, 40);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(638, 305);
             this.textBox3.TabIndex = 0;
             this.textBox3.Text = resources.GetString("textBox3.Text");

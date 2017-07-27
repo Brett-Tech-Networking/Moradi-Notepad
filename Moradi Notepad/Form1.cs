@@ -23,8 +23,8 @@ namespace Moradi_Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to save this file?", "Warning",
-MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Warning",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             //yes
             if (result == DialogResult.Yes)
@@ -34,9 +34,16 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 svf.Title = "Save File";
                 if (svf.ShowDialog() == DialogResult.OK) ;
                 {
-                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                    sw.Write(richTextBox1.Text);
-                    sw.Close();
+                    try
+                    {
+                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                        sw.Write(richTextBox1.Text);
+                        sw.Close();
+                    }
+                    catch
+                    {
+                        //This is just meant to catch the exception. It doesn't actaully return anything.
+                    }
                 }
             }
 
@@ -62,6 +69,35 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    SaveFileDialog svf = new SaveFileDialog();
+                    svf.Filter = "Save File (.txt)|*.txt";
+                    svf.Title = "Save File";
+                    if (svf.ShowDialog() == DialogResult.OK) ;
+                    {
+                        try
+                        {
+                            System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                            sw.Write(richTextBox1.Text);
+                            sw.Close();
+                        }
+                        catch
+                        {
+                            //This is just meant to catch the exception. It doesn't actaully return anything.
+                        }
+                    }
+                }
+
+                // no
+                else if (result == DialogResult.No)
+                {
+                    richTextBox1.Clear();
+                }
                 richTextBox1.Text = sr.ReadToEnd();
                 sr.Close();
             }
