@@ -98,8 +98,10 @@
     <Compile Include="linenum_rtf.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="menuStrip_Form_Align_Left.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="toolStrip_Down_AlignJustify.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +181,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ChristmasTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_24_8334251899.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-dot-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon-green-dot-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-dot-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow-dot-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location_dot_purple.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

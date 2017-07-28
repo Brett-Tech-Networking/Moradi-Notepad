@@ -112,22 +112,23 @@ namespace Moradi_Notepad
             SaveFileDialog svf = new SaveFileDialog();
 
             svf.Filter = "Save File (.txt)|*.txt";
-            svf.Title = "Save File";
-            if (svf.ShowDialog() == DialogResult.OK) ;
-            {
-                try
+                svf.Title = "Save File";
+                if (svf.ShowDialog() == DialogResult.OK) ;
                 {
-                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                    sw.Write(richTextBox1.Text);
-                    sw.Close();
+                    try
+                    {
+                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                        sw.Write(richTextBox1.Text);
+                        sw.Close();
+                    }
+                    catch
+                    {
+                        //This is just meant to catch the exception. It doesn't actaully return anything.
+                    }
                 }
-                catch
-                {
-                    //This is just meant to catch the exception. It doesn't actaully return anything.
-                }
-            }
         }
-
+     
+        
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Undo();
@@ -470,6 +471,31 @@ namespace Moradi_Notepad
         private void cutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             richTextBox1.Cut();
+        }
+
+        private void toolStripButton13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void undoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void redoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Redo();
+        }
+
+        private void selectAllToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }

@@ -73,6 +73,26 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_dot_md {
+            get {
+                object obj = ResourceManager.GetObject("black-dot-md", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_dot_md {
+            get {
+                object obj = ResourceManager.GetObject("blue-dot-md", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn {
             get {
                 object obj = ResourceManager.GetObject("btn", resourceCulture);
@@ -113,6 +133,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imageedit_24_8334251899 {
+            get {
+                object obj = ResourceManager.GetObject("imageedit_24_8334251899", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageedit_8_8865346137 {
             get {
                 object obj = ResourceManager.GetObject("imageedit_8_8865346137", resourceCulture);
@@ -123,9 +153,29 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Location_dot_purple_svg {
+            get {
+                object obj = ResourceManager.GetObject("Location_dot_purple.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Moradi_notepad {
             get {
                 object obj = ResourceManager.GetObject("Moradi notepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap neon_green_dot_hi {
+            get {
+                object obj = ResourceManager.GetObject("neon-green-dot-hi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +196,16 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap x {
             get {
                 object obj = ResourceManager.GetObject("x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_dot_md {
+            get {
+                object obj = ResourceManager.GetObject("yellow-dot-md", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
