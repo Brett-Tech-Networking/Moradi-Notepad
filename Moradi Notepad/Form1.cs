@@ -1,6 +1,8 @@
 ﻿using Moradi_Notepad.Properties;
 using System;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -11,6 +13,10 @@ namespace Moradi_Notepad
         int size = 10;
         public Credits c = new Credits();
         public About a = new About();
+        private object printPreviewDialog1;
+        private object myDocument;
+
+        public PrintPageEventHandler pd_PrintPage { get; private set; }
 
         public Form1()
         {
@@ -112,23 +118,23 @@ namespace Moradi_Notepad
             SaveFileDialog svf = new SaveFileDialog();
 
             svf.Filter = "Save File (.txt)|*.txt";
-                svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK) ;
+            svf.Title = "Save File";
+            if (svf.ShowDialog() == DialogResult.OK) ;
+            {
+                try
                 {
-                    try
-                    {
-                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                        sw.Write(richTextBox1.Text);
-                        sw.Close();
-                    }
-                    catch
-                    {
-                        //This is just meant to catch the exception. It doesn't actaully return anything.
-                    }
+                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                    sw.Write(richTextBox1.Text);
+                    sw.Close();
                 }
+                catch
+                {
+                    //This is just meant to catch the exception. It doesn't actaully return anything.
+                }
+            }
         }
-     
-        
+
+
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Undo();
@@ -357,11 +363,11 @@ namespace Moradi_Notepad
         private void halloweenToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-         
+
             richTextBox1.BackColor = Color.DarkRed;
             richTextBox1.ForeColor = Color.White;
-           
-                }
+
+        }
 
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
@@ -445,9 +451,9 @@ namespace Moradi_Notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-           
-            }
-      
+
+        }
+
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -498,8 +504,55 @@ namespace Moradi_Notepad
         {
             label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            PrintDocument documentToPrint = new PrintDocument();
+            printDialog.Document = documentToPrint;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                StringReader reader = new StringReader(richTextBox1.Text);
+                documentToPrint.Print();
+                documentToPrint.PrintPage += new PrintPageEventHandler(DocumentToPrint_PrintPage);
+            }
+        }
+
+        private void DocumentToPrint_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    {
+                        PrintDocument pd = new PrintDocument();
+                        pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
+
+                        PrintDialog printdlg = new PrintDialog();
+                        PrintPreviewDialog printPrvDlg = new PrintPreviewDialog();
+
+                        // preview the assigned document or you can create a different previewButton for it
+                        printPrvDlg.Document = pd;
+                        printPrvDlg.ShowDialog(); // this shows the preview and then show the Printer Dlg below
+
+                        printdlg.Document = pd;
+                    }
+                }
+                catch
+
+                {
+                    MessageBox.Show("Unable To Show Print Preview Do To A Coding Error");
+                }
+            }
+        }
     }
 }
+
 
 
 
