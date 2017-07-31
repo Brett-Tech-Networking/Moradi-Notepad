@@ -390,8 +390,7 @@ namespace Moradi_Notepad
 
         private void halloweenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
+            richTextBox1.Text = ("Start Typing Here . . .");
             richTextBox1.BackColor = Color.DarkRed;
             richTextBox1.ForeColor = Color.White;
 
@@ -465,17 +464,16 @@ namespace Moradi_Notepad
         {
             richTextBox1.BackColor = Color.White;
             richTextBox1.ForeColor = Color.Black;
-            richTextBox1.Text = "Start Typing Here. . .";
+            richTextBox1.Text = ("Start Typing Here . . .");
         }
 
         private void richTextBox1_MouseClick(object sender, MouseEventArgs e)
         {
             if (richTextBox1.Text == ("Start Typing Here . . .")) // Text On Main Notepad To Be Deleted Once Screen Is Clicked
             {
-                richTextBox1.Clear();  // Deletes Ritten Text
+                richTextBox1.Clear();  // Deletes Written Text
             }
         }
-
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
