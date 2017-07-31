@@ -63,9 +63,37 @@ namespace Moradi_Notepad
             }
         }
 
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Warning",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            //yes
+            if (result == DialogResult.Yes)
+            {
+                SaveFileDialog svf = new SaveFileDialog();
+                svf.Filter = "Save File (.txt)|*.txt";
+                svf.Title = "Save File";
+                if (svf.ShowDialog() == DialogResult.OK) ;
+                {
+                    try
+                    {
+                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                        sw.Write(richTextBox1.Text);
+                        sw.Close();
+                    }
+                    catch
+                    {
+                        //This is just meant to catch the exception. It doesn't actaully return anything.
+                    }
+                }
+            }
+
+            // no
+            else if (result == DialogResult.No)
+            {
+                richTextBox1.Clear();
+            }
             Application.Exit();
         }
 
@@ -219,7 +247,7 @@ namespace Moradi_Notepad
         {
             {
                 DialogResult result = MessageBox.Show("Do you want to save this file?", "Warning",
-    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 //yes
                 if (result == DialogResult.Yes)
@@ -457,6 +485,28 @@ namespace Moradi_Notepad
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do you want to save this file?", "Warning",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            //yes
+            if (result == DialogResult.Yes)
+            {
+                SaveFileDialog svf = new SaveFileDialog();
+                svf.Filter = "Save File (.txt)|*.txt";
+                svf.Title = "Save File";
+                if (svf.ShowDialog() == DialogResult.OK) ;
+                {
+                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                    sw.Write(richTextBox1.Text);
+                    sw.Close();
+                }
+            }
+
+            // no
+            else if (result == DialogResult.No)
+            {
+                richTextBox1.Clear();
+            }
             Application.Restart();
         }
 
@@ -544,7 +594,6 @@ namespace Moradi_Notepad
                     }
                 }
                 catch
-
                 {
                     MessageBox.Show("Unable To Show Print Preview Do To A Coding Error");
                 }
@@ -552,8 +601,3 @@ namespace Moradi_Notepad
         }
     }
 }
-
-
-
-
-

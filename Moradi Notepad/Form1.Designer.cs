@@ -112,8 +112,8 @@
             this.selectAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.ubuntuTheme1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -256,7 +256,7 @@
             this.toolStripButton12});
             this.toolStrip1.Location = new System.Drawing.Point(461, 27);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(329, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(360, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -384,7 +384,7 @@
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(29, 22);
-            this.toolStripButton9.Text = "toolStripButton9";
+            this.toolStripButton9.Text = "Background Color";
             // 
             // redToolStripMenuItem
             // 
@@ -445,8 +445,8 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "!";
-            this.toolStripDropDownButton1.ToolTipText = "BackGround Color (NULL)";
+            this.toolStripDropDownButton1.Text = "Text Color";
+            this.toolStripDropDownButton1.ToolTipText = "Text Color";
             this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // redToolStripMenuItem1
@@ -456,7 +456,7 @@
             this.redToolStripMenuItem1.ForeColor = System.Drawing.Color.Red;
             this.redToolStripMenuItem1.Image = global::Moradi_Notepad.Properties.Resources.imageedit_24_8334251899;
             this.redToolStripMenuItem1.Name = "redToolStripMenuItem1";
-            this.redToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.redToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.redToolStripMenuItem1.Text = "Red | Text";
             this.redToolStripMenuItem1.Click += new System.EventHandler(this.redToolStripMenuItem1_Click);
             // 
@@ -467,7 +467,7 @@
             this.blueTextToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
             this.blueTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.blue_dot_md;
             this.blueTextToolStripMenuItem.Name = "blueTextToolStripMenuItem";
-            this.blueTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.blueTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.blueTextToolStripMenuItem.Text = "Blue | Text";
             this.blueTextToolStripMenuItem.Click += new System.EventHandler(this.blueTextToolStripMenuItem_Click);
             // 
@@ -478,7 +478,7 @@
             this.limeTextToolStripMenuItem.ForeColor = System.Drawing.Color.Lime;
             this.limeTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.neon_green_dot_hi;
             this.limeTextToolStripMenuItem.Name = "limeTextToolStripMenuItem";
-            this.limeTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.limeTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.limeTextToolStripMenuItem.Text = "Lime | Text";
             this.limeTextToolStripMenuItem.Click += new System.EventHandler(this.limeTextToolStripMenuItem_Click);
             // 
@@ -489,7 +489,7 @@
             this.yellowTextToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.yellowTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.yellow_dot_md;
             this.yellowTextToolStripMenuItem.Name = "yellowTextToolStripMenuItem";
-            this.yellowTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.yellowTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.yellowTextToolStripMenuItem.Text = "Yellow | Text";
             this.yellowTextToolStripMenuItem.Click += new System.EventHandler(this.yellowTextToolStripMenuItem_Click);
             // 
@@ -500,7 +500,7 @@
             this.purpleTextToolStripMenuItem.ForeColor = System.Drawing.Color.Purple;
             this.purpleTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.Location_dot_purple_svg;
             this.purpleTextToolStripMenuItem.Name = "purpleTextToolStripMenuItem";
-            this.purpleTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.purpleTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.purpleTextToolStripMenuItem.Text = "Purple | Text";
             this.purpleTextToolStripMenuItem.Click += new System.EventHandler(this.purpleTextToolStripMenuItem_Click);
             // 
@@ -914,6 +914,16 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // printPreviewDialog2
+            // 
+            this.printPreviewDialog2.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog2.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog2.Enabled = true;
+            this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
+            this.printPreviewDialog2.Name = "printPreviewDialog2";
+            this.printPreviewDialog2.Visible = false;
+            // 
             // lineNumbers_For_RichTextBox2
             // 
             this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
@@ -950,16 +960,6 @@
             this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
             this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 633);
             this.lineNumbers_For_RichTextBox2.TabIndex = 7;
-            // 
-            // printPreviewDialog2
-            // 
-            this.printPreviewDialog2.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog2.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog2.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog2.Enabled = true;
-            this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
-            this.printPreviewDialog2.Name = "printPreviewDialog2";
-            this.printPreviewDialog2.Visible = false;
             // 
             // Form1
             // 
