@@ -578,24 +578,19 @@ namespace Moradi_Notepad
                 try
                 {
                     {
-                        PrintDocument pd = new PrintDocument();
-                        pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
-
-                        PrintDialog printdlg = new PrintDialog();
-                        PrintPreviewDialog printPrvDlg = new PrintPreviewDialog();
-
-                        // preview the assigned document or you can create a different previewButton for it
-                        printPrvDlg.Document = pd;
-                        printPrvDlg.ShowDialog(); // this shows the preview and then show the Printer Dlg below
-
-                        printdlg.Document = pd;
+                        printDialog1.ShowDialog(); // this shows the preview and then show the Printer Dlg below
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Unable To Show Print Preview Do To A Coding Error");
+                    MessageBox.Show("Unable To Show Print Preview Do To A Coding Error", "ERROR");
                 }
             }
+        }
+
+        private void tESTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
