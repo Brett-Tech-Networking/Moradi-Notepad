@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Effectual Theme">
+      <HintPath>..\..\desktop\Theme . dlls\Effectual Theme.dll</HintPath>
+    </Reference>
     <Reference Include="Fader Theme">
       <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Fader Theme.dll</HintPath>
     </Reference>
@@ -55,6 +58,9 @@
       <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Login Theme.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="onlykl theme">
+      <HintPath>..\..\desktop\Theme . dlls\onlykl theme.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -66,6 +72,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="theme">
+      <HintPath>..\..\desktop\Theme . dlls\theme.dll</HintPath>
+    </Reference>
     <Reference Include="Ubuntu Theme">
       <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Ubuntu Theme.dll</HintPath>
     </Reference>

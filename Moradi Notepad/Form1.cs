@@ -222,20 +222,77 @@ namespace Moradi_Notepad
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
+            if (richTextBox1.SelectionFont != null)
+            {
+                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
+                System.Drawing.FontStyle newFontStyle;
+
+                if (richTextBox1.SelectionFont.Italic == true)
+                {
+                    newFontStyle = FontStyle.Regular;
+                }
+                else
+                {
+                    newFontStyle = FontStyle.Italic;
+                }
+
+                richTextBox1.SelectionFont = new Font(
+                   currentFont.FontFamily,
+                   currentFont.Size,
+                   newFontStyle
+                );
 
 
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
+            if (richTextBox1.SelectionFont != null)
+            {
+                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
+                System.Drawing.FontStyle newFontStyle;
+
+                if (richTextBox1.SelectionFont.Underline == true)
+                {
+                    newFontStyle = FontStyle.Regular;
+                }
+                else
+                {
+                    newFontStyle = FontStyle.Underline;
+                }
+
+                richTextBox1.SelectionFont = new Font(
+                   currentFont.FontFamily,
+                   currentFont.Size,
+                   newFontStyle
+                );
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Strikeout);
+            if (richTextBox1.SelectionFont != null)
+            {
+                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
+                System.Drawing.FontStyle newFontStyle;
 
+                if (richTextBox1.SelectionFont.Strikeout == true)
+                {
+                    newFontStyle = FontStyle.Regular;
+                }
+                else
+                {
+                    newFontStyle = FontStyle.Strikeout;
+                }
+
+                richTextBox1.SelectionFont = new Font(
+                   currentFont.FontFamily,
+                   currentFont.Size,
+                   newFontStyle
+                );
+
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -592,5 +649,24 @@ namespace Moradi_Notepad
         {
 
         }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (richTextBox1.Text == ("Start Typing Here . . ."))
+            {
+                richTextBox1.Clear();
+            }
+        }
+
+        private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = System.DateTime.Today.ToShortDateString();
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
