@@ -718,6 +718,21 @@ namespace Moradi_Notepad
                 richTextBox1.SelectionIndent = 0;
             }
         }
+
+        private void toolStripButton13_Click_1(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void toolStripButton14_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void toolStripButton15_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
     }
 }
 

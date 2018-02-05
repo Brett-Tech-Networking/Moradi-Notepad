@@ -123,6 +123,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap center {
+            get {
+                object obj = ResourceManager.GetObject("center", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Christmas {
             get {
                 object obj = ResourceManager.GetObject("Christmas", resourceCulture);
@@ -153,6 +163,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_left_text_theme_action_alignment_align {
+            get {
+                object obj = ResourceManager.GetObject("icon-left-text-theme-action-alignment-align", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageedit_24_8334251899 {
             get {
                 object obj = ResourceManager.GetObject("imageedit_24_8334251899", resourceCulture);
@@ -166,6 +186,16 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap imageedit_8_8865346137 {
             get {
                 object obj = ResourceManager.GetObject("imageedit_8_8865346137", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_allign {
+            get {
+                object obj = ResourceManager.GetObject("left allign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +236,16 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap paint_bucket_blue {
             get {
                 object obj = ResourceManager.GetObject("paint_bucket_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap text_27924_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("text-27924_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

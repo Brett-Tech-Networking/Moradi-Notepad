@@ -89,15 +89,13 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
+            this.helpToolStripButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.kToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.B = new System.Windows.Forms.ToolStripButton();
@@ -129,9 +127,8 @@
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.kToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.ubuntuTheme1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -665,94 +662,110 @@
             // 
             this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripButton,
-            this.openToolStripButton,
-            this.saveToolStripButton,
-            this.printToolStripButton,
-            this.toolStripSeparator10,
-            this.cutToolStripButton,
-            this.copyToolStripButton,
-            this.pasteToolStripButton,
             this.toolStripSeparator11,
-            this.helpToolStripButton});
+            this.helpToolStripButton,
+            this.toolStripSeparator10,
+            this.toolStripButton13,
+            this.toolStripButton14,
+            this.toolStripButton15,
+            this.toolStripSeparator12});
             this.toolStrip3.Location = new System.Drawing.Point(1, 51);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(214, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(128, 25);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "toolStrip3";
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
-            // newToolStripButton
+            // lineNumbers_For_RichTextBox2
             // 
-            this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
-            this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton.Text = "&New";
+            this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
+            this.lineNumbers_For_RichTextBox2.AutoSizing = true;
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.DockSide = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Left;
+            this.lineNumbers_For_RichTextBox2.GridLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.GridLines_Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbers_For_RichTextBox2.GridLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.LineNrs_Alignment = System.Drawing.ContentAlignment.TopRight;
+            this.lineNumbers_For_RichTextBox2.LineNrs_AntiAlias = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_AsHexadecimal = false;
+            this.lineNumbers_For_RichTextBox2.LineNrs_ClippedByItemRectangle = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_LeadingZeroes = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_Offset = new System.Drawing.Size(0, 0);
+            this.lineNumbers_For_RichTextBox2.Location = new System.Drawing.Point(-18, 76);
+            this.lineNumbers_For_RichTextBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbers_For_RichTextBox2.MarginLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.Name = "lineNumbers_For_RichTextBox2";
+            this.lineNumbers_For_RichTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.lineNumbers_For_RichTextBox2.ParentRichTextBox = this.richTextBox1;
+            this.lineNumbers_For_RichTextBox2.Show_BackgroundGradient = true;
+            this.lineNumbers_For_RichTextBox2.Show_BorderLines = true;
+            this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
+            this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
+            this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
+            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 632);
+            this.lineNumbers_For_RichTextBox2.TabIndex = 7;
             // 
-            // openToolStripButton
+            // helpToolStripButton
             // 
-            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
-            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.openToolStripButton.Text = "&Open";
+            this.helpToolStripButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kToolStripMenuItem});
+            this.helpToolStripButton.Image = global::Moradi_Notepad.Properties.Resources.bullets;
+            this.helpToolStripButton.Name = "helpToolStripButton";
+            this.helpToolStripButton.Size = new System.Drawing.Size(29, 22);
+            this.helpToolStripButton.Click += new System.EventHandler(this.helpToolStripButton_Click);
             // 
-            // saveToolStripButton
+            // kToolStripMenuItem
             // 
-            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton.Text = "&Save";
+            this.kToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.kToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.black_dot_md1;
+            this.kToolStripMenuItem.Name = "kToolStripMenuItem";
+            this.kToolStripMenuItem.ShowShortcutKeys = false;
+            this.kToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
+            this.kToolStripMenuItem.Text = "Dot";
+            this.kToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.kToolStripMenuItem.Click += new System.EventHandler(this.kToolStripMenuItem_Click);
             // 
-            // printToolStripButton
+            // toolStripButton13
             // 
-            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printToolStripButton.Text = "&Print";
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = global::Moradi_Notepad.Properties.Resources.icon_left_text_theme_action_alignment_align;
+            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "Left";
+            this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click_1);
             // 
-            // cutToolStripButton
+            // toolStripButton14
             // 
-            this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
-            this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.cutToolStripButton.Text = "C&ut";
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = global::Moradi_Notepad.Properties.Resources.center;
+            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton14.Text = "Center";
+            this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
-            // copyToolStripButton
+            // toolStripButton15
             // 
-            this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
-            this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.copyToolStripButton.Text = "&Copy";
-            // 
-            // pasteToolStripButton
-            // 
-            this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
-            this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.pasteToolStripButton.Text = "&Paste";
+            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton15.Image = global::Moradi_Notepad.Properties.Resources.text_27924_960_720;
+            this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton15.Name = "toolStripButton15";
+            this.toolStripButton15.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton15.Text = "Right";
+            this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
             // toolStripButton1
             // 
@@ -1105,61 +1118,15 @@
             this.pasteToolStripMenuItem.Text = "&Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
-            // helpToolStripButton
+            // toolStripSeparator10
             // 
-            this.helpToolStripButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kToolStripMenuItem});
-            this.helpToolStripButton.Image = global::Moradi_Notepad.Properties.Resources.bullets;
-            this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(29, 22);
-            this.helpToolStripButton.Click += new System.EventHandler(this.helpToolStripButton_Click);
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
-            // kToolStripMenuItem
+            // toolStripSeparator12
             // 
-            this.kToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.kToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.black_dot_md1;
-            this.kToolStripMenuItem.Name = "kToolStripMenuItem";
-            this.kToolStripMenuItem.ShowShortcutKeys = false;
-            this.kToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.kToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kToolStripMenuItem.Click += new System.EventHandler(this.kToolStripMenuItem_Click);
-            // 
-            // lineNumbers_For_RichTextBox2
-            // 
-            this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
-            this.lineNumbers_For_RichTextBox2.AutoSizing = true;
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.DockSide = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Left;
-            this.lineNumbers_For_RichTextBox2.GridLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.GridLines_Style = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.lineNumbers_For_RichTextBox2.GridLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.LineNrs_Alignment = System.Drawing.ContentAlignment.TopRight;
-            this.lineNumbers_For_RichTextBox2.LineNrs_AntiAlias = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_AsHexadecimal = false;
-            this.lineNumbers_For_RichTextBox2.LineNrs_ClippedByItemRectangle = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_LeadingZeroes = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_Offset = new System.Drawing.Size(0, 0);
-            this.lineNumbers_For_RichTextBox2.Location = new System.Drawing.Point(-18, 76);
-            this.lineNumbers_For_RichTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.lineNumbers_For_RichTextBox2.MarginLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.Name = "lineNumbers_For_RichTextBox2";
-            this.lineNumbers_For_RichTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.lineNumbers_For_RichTextBox2.ParentRichTextBox = this.richTextBox1;
-            this.lineNumbers_For_RichTextBox2.Show_BackgroundGradient = true;
-            this.lineNumbers_For_RichTextBox2.Show_BorderLines = true;
-            this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
-            this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
-            this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
-            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 632);
-            this.lineNumbers_For_RichTextBox2.TabIndex = 7;
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
             // 
             // Form1
             // 
@@ -1287,17 +1254,14 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label output;
         private System.Windows.Forms.ToolStrip toolStrip3;
-        private System.Windows.Forms.ToolStripButton newToolStripButton;
-        private System.Windows.Forms.ToolStripButton openToolStripButton;
-        private System.Windows.Forms.ToolStripButton saveToolStripButton;
-        private System.Windows.Forms.ToolStripButton printToolStripButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripButton cutToolStripButton;
-        private System.Windows.Forms.ToolStripButton copyToolStripButton;
-        private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripDropDownButton helpToolStripButton;
         private System.Windows.Forms.ToolStripMenuItem kToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripButton toolStripButton15;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
     }
 }
 

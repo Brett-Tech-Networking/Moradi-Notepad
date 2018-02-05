@@ -244,6 +244,18 @@
   <ItemGroup>
     <None Include="Resources\black-dot-md1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left allign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-left-text-theme-action-alignment-align.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-27924_960_720.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
