@@ -65,3 +65,4 @@ C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\LineNumbers.LineNumbers_For_RichTextBox.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.ResolveComReference.cache
