@@ -130,6 +130,9 @@
   <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Location_dot_purple.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Location_dot_purple.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="neon-green-dot-hi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neon-green-dot-hi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,13 +157,16 @@
   <data name="imageedit_24_8334251899" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imageedit_24_8334251899.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bullets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yellow-dot-md" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellow-dot-md.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Moradi notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Moradi notepad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Location_dot_purple.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Location_dot_purple.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-dot-md1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-dot-md1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

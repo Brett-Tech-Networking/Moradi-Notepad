@@ -198,7 +198,7 @@ namespace Moradi_Notepad
             richTextBox1.SelectAll();
         }
 
-        private void B_Click(object sender, EventArgs e)
+        private void B_Click(object sender, EventArgs e) 
         {
             if (richTextBox1.SelectionFont != null)
             {
@@ -668,7 +668,7 @@ namespace Moradi_Notepad
 
         private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = System.DateTime.Today.ToShortDateString();
+            richTextBox1.Text = richTextBox1.Text + DateTime.Now;
         }
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
@@ -693,6 +693,29 @@ namespace Moradi_Notepad
                 richTextBox1.SelectionBackColor = Color.Yellow;
                 // After a match is found the index is increased so the search won't stop at the same match again. This makes possible to highlight same words at the same time.
                 index = richTextBox1.Text.IndexOf(textBox1.Text, index) + 1;
+            }
+        }
+
+        private void helpToolStripButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.AcceptsTab = true;
+        }
+
+        private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                richTextBox1.SelectionIndent = 30;
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                richTextBox1.SelectionIndent = 0;
             }
         }
     }
