@@ -3543,7 +3543,11 @@ namespace Moradi_Notepad
 </value>
   </data>
   <data name="textBox2.Text" xml:space="preserve">
-    <value>9/24/17 12:25 AM
+    <value>2/4/18
+* Added Character/Word Counter
+* Added Find &amp; Highlight Words 
+
+9/24/17 12:25 AM
 * Fixed Select/Deselect Bold, Italic, Underline, Strikeout
 * Added Feature To Allow Users To Begain Typing Upon Start
 * Added Insert Time/Date
