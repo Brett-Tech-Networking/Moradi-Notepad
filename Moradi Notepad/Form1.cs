@@ -9,6 +9,9 @@ namespace Moradi_Notepad
 {
     public partial class Form1 : Form
     {
+        //define variable here
+        int charCount = 0;
+
         private bool bold;
         int size = 10;
         public Credits c = new Credits();
@@ -534,6 +537,9 @@ namespace Moradi_Notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+            charCount = richTextBox1.Text.Length;
+            output.Text = "Characters: " + charCount.ToString();
+
 
         }
 

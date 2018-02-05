@@ -118,6 +118,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.output = new System.Windows.Forms.Label();
             this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.ubuntuTheme1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
@@ -130,6 +131,7 @@
             // ubuntuTheme1
             // 
             this.ubuntuTheme1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ubuntuTheme1.Controls.Add(this.output);
             this.ubuntuTheme1.Controls.Add(this.button1);
             this.ubuntuTheme1.Controls.Add(this.label2);
             this.ubuntuTheme1.Controls.Add(this.textBox1);
@@ -953,7 +955,7 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(761, 30);
+            this.textBox1.Location = new System.Drawing.Point(755, 30);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 20);
             this.textBox1.TabIndex = 9;
@@ -963,7 +965,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(709, 33);
+            this.label2.Location = new System.Drawing.Point(706, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 10;
@@ -974,13 +976,25 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Digital Readout Upright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(919, 29);
+            this.button1.Location = new System.Drawing.Point(910, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 23);
+            this.button1.Size = new System.Drawing.Size(48, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "Find";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // output
+            // 
+            this.output.AutoSize = true;
+            this.output.BackColor = System.Drawing.Color.Transparent;
+            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output.ForeColor = System.Drawing.Color.Lime;
+            this.output.Location = new System.Drawing.Point(770, 5);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(80, 15);
+            this.output.TabIndex = 12;
+            this.output.Text = "Characters:";
             // 
             // lineNumbers_For_RichTextBox2
             // 
@@ -1142,6 +1156,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label output;
     }
 }
 
