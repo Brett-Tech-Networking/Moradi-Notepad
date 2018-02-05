@@ -667,6 +667,26 @@ namespace Moradi_Notepad
         {
 
         }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int index = 0; string temp = richTextBox1.Text; richTextBox1.Text = ""; richTextBox1.Text = temp;
+
+            while (index < richTextBox1.Text.LastIndexOf(textBox1.Text))
+            {
+                // Searches the text in a RichTextBox control for a string within a range of text withing the control and with specific options applied to the search.
+                richTextBox1.Find(textBox1.Text, index, richTextBox1.TextLength, RichTextBoxFinds.None);
+                // Selection Color. This is added automatically when a match is found.
+                richTextBox1.SelectionBackColor = Color.Yellow;
+                // After a match is found the index is increased so the search won't stop at the same match again. This makes possible to highlight same words at the same time.
+                index = richTextBox1.Text.IndexOf(textBox1.Text, index) + 1;
+            }
+        }
     }
 }
 
