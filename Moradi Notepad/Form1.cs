@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
-using Microsoft.Office.Interop;
+using Microsoft.Office;
 
 namespace Moradi_Notepad
 {
@@ -539,7 +539,7 @@ namespace Moradi_Notepad
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             charCount = richTextBox1.Text.Length;
-            output.Text = "Characters: " + charCount.ToString();
+            output.Text = "Char: " + charCount.ToString();
             
 
 
