@@ -8,28 +8,23 @@
 - Added Bullets for Text
 
 
-9/24/17 12:25 AM
+9/24/17 
 - Fixed Select/Deselect Bold, Italic, Underline, Strikeout
 - Added Feature To Allow Users To Begain Typing Upon Start
-- Added Insert Time/Date
-
-
-9/24/17 12:22 AM
+- Added Insert Time/Date 
 - Fixed Select/Deselect Bold, Italic, Underline, Strikeout
 - Added Feature To Allow User To Begain Typing Apon
 
-7/25/17 2:00 pm
+7/25/17 
 - Changed "Guide" to About
 - Added Restart Application Under "File" Tab
 - Working On Mouse Click Remove "Start Typing Here" but not removing other text
 
-7/24/17 9:30 am
+7/24/17 
 - Added More Color Options in (Font Color, Background Colors)
 - Fixed Bug (Can Now Change Colors of text without all text auto resorting to new color)
 - Fixed A+, A- (Increase Text Size, Decrease Text Size) now works on selected Text
 - Added option to Change Text Case ( Select Your Text Click The A,a button to Make Selected Text All CAPS or lowercase)
-
-7/24/17  3:30 am
 - Added Themes Tab (Containing Many Cool Themes)
 - Added Show/HIde Line Numbers
 - Added User Friendly Background Changer & Font Color Changer
