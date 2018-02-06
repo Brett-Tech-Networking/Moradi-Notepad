@@ -6,6 +6,7 @@
 - Fixed Date Time Insert
 - Added left center right alignment for text
 - Added Bullets for Text
+- Added Ability To Drag & Drop Images
 
 ### Updates: 9/24/17 ###
 - Fixed Select/Deselect Bold, Italic, Underline, Strikeout
