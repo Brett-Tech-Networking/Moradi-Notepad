@@ -36,7 +36,7 @@ namespace Moradi_Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Warning",
+            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             //yes
@@ -69,7 +69,7 @@ namespace Moradi_Notepad
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Warning",
+            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             //yes
@@ -110,7 +110,7 @@ namespace Moradi_Notepad
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);
-                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Warning",
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 //yes
@@ -307,7 +307,7 @@ namespace Moradi_Notepad
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             {
-                DialogResult result = MessageBox.Show("Do you want to save this file?", "Warning",
+                DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 //yes
@@ -548,7 +548,7 @@ namespace Moradi_Notepad
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to save this file?", "Warning",
+            DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             //yes
