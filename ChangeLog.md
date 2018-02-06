@@ -1,4 +1,4 @@
-# ***Moradi Notepad Changelog***
+# ---Change_Log---
 
 ### Updates: 2/4/18 ###
 - Added Character/Word Counter
