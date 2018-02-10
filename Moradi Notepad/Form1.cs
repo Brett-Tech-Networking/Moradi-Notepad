@@ -363,7 +363,9 @@ namespace Moradi_Notepad
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Shows about window 
-            a.Show();
+
+            About Info = new About();
+            Info.Show();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -635,7 +637,8 @@ namespace Moradi_Notepad
         private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Shows Credit given Window
-            c.Show();
+            Credits credit = new Credits();
+            credit.Show();
         }
 
         private void copyToolStripMenuItem1_Click(object sender, EventArgs e)
