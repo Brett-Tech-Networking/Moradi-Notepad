@@ -453,7 +453,7 @@ namespace Moradi_Notepad
         private void halloweenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.BackColor = Color.DarkRed;
-            richTextBox1.ForeColor = Color.White;
+            richTextBox1.ForeColor = Color.Lime;
             richTextBox1.Text = richTextBox1.Text;
         }
 
