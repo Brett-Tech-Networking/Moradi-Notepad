@@ -4,6 +4,8 @@
 - Fixed bug when opening "About" or "Credits" caused crash
 - Updated Christmas Theme to Dark Red Background Lime Green Text
 - Added option "Other Color" to background color list & Text Color List
+- Added Preset signatures (Thank you , sincerely etc.)
+- Relocated Insert Date/Time to Format > insert > Date/Time
 
 ### Updates: 2/4/18 ###
 - Added Character/Word Counter
