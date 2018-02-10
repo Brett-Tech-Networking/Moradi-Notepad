@@ -153,6 +153,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Color_wheel {
+            get {
+                object obj = ResourceManager.GetObject("Color_wheel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Scrap_Pen {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Scrap-Pen", resourceCulture);

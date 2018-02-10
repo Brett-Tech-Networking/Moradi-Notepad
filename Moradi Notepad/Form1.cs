@@ -830,6 +830,41 @@ namespace Moradi_Notepad
         {
             // Current Time of day 
         }
+
+        private void otherColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Background color wheel picker
+            {
+                ColorDialog MyDialog = new ColorDialog();
+                // Keeps the user from selecting a custom color.
+                MyDialog.AllowFullOpen = true;
+                // Allows the user to get help. (The default is false.)
+                MyDialog.ShowHelp = true;
+                // Sets the initial color select to the current text color.
+                MyDialog.Color = richTextBox1.BackColor;
+
+                // Update the text box color if the user clicks OK 
+                if (MyDialog.ShowDialog() == DialogResult.OK)
+                    richTextBox1.BackColor = MyDialog.Color;
+            }
+        }
+
+        private void otherColorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //text color wheel picker
+
+            ColorDialog MyDialog = new ColorDialog();
+            // Keeps the user from selecting a custom color.
+            MyDialog.AllowFullOpen = true;
+            // Allows the user to get help. (The default is false.)
+            MyDialog.ShowHelp = true;
+            // Sets the initial color select to the current text color.
+            MyDialog.Color = richTextBox1.ForeColor;
+
+            // Update the text box color if the user clicks OK 
+            if (MyDialog.ShowDialog() == DialogResult.OK)
+                richTextBox1.ForeColor = MyDialog.Color;
+        }
     }
 }
 
