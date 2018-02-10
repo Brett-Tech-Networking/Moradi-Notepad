@@ -5,6 +5,7 @@
 - Updated Christmas Theme to Dark Red Background Lime Green Text
 - Added option "Other Color" to background color list & Text Color List
 - Added Preset signatures (Thank you , sincerely etc.)
+- Added option "Font Styles" With around 14 different fonts to choose from
 - Relocated Insert Date/Time to Format > insert > Date/Time
 
 ### Updates: 2/4/18 ###
