@@ -36,6 +36,8 @@ namespace Moradi_Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // clears current rich textbox to begain a new document
+
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -69,6 +71,8 @@ namespace Moradi_Notepad
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Will Close Moradi Notepad Software
+
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -103,6 +107,8 @@ namespace Moradi_Notepad
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Open an existing document/file 
+
             OpenFileDialog ofd = new OpenFileDialog();
 
             ofd.Filter = "Text Files (.txt)|*.txt";
@@ -147,6 +153,8 @@ namespace Moradi_Notepad
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Save Changes in notepad to local drive
+
             SaveFileDialog svf = new SaveFileDialog();
 
             svf.Filter = "Save File (.txt)|*.txt";
@@ -169,37 +177,51 @@ namespace Moradi_Notepad
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Undo an action (ex. Undo backspaced/deleted text as long as not closed and reopend prior too)
+
             richTextBox1.Undo();
 
         }
 
         private void redoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Redo an undo action
+
             richTextBox1.Redo();
         }
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //cut and paste text
+
             richTextBox1.Cut();
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Copy document text
+
             richTextBox1.Copy();
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Paste copied text
+
             richTextBox1.Paste();
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Select all text
+
             richTextBox1.SelectAll();
         }
 
         private void B_Click(object sender, EventArgs e) 
         {
+            // Bold format for text
+
             if (richTextBox1.SelectionFont != null)
             {
                 System.Drawing.Font currentFont = richTextBox1.SelectionFont;
@@ -226,6 +248,8 @@ namespace Moradi_Notepad
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            // Italic Format For Text
+
             if (richTextBox1.SelectionFont != null)
             {
                 System.Drawing.Font currentFont = richTextBox1.SelectionFont;
@@ -252,6 +276,7 @@ namespace Moradi_Notepad
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            // Underlined format for text
             if (richTextBox1.SelectionFont != null)
             {
                 System.Drawing.Font currentFont = richTextBox1.SelectionFont;
@@ -276,6 +301,8 @@ namespace Moradi_Notepad
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
+            // StrikeThrough format for text
+
             if (richTextBox1.SelectionFont != null)
             {
                 System.Drawing.Font currentFont = richTextBox1.SelectionFont;
@@ -306,6 +333,7 @@ namespace Moradi_Notepad
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
+            // Start New Document
             {
                 DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -334,6 +362,7 @@ namespace Moradi_Notepad
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Shows about window 
             a.Show();
         }
 
@@ -345,6 +374,7 @@ namespace Moradi_Notepad
 
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
+            //Open Existing Document
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Text Files (.txt)|*.txt";
             ofd.Title = "Open File";
@@ -358,6 +388,7 @@ namespace Moradi_Notepad
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
+            // Increase font size of text
             size = size + 2;
             try
             {
@@ -376,6 +407,8 @@ namespace Moradi_Notepad
 
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Allows user too choose font
+
             FontDialog fd = new FontDialog();
             if (fd.ShowDialog() == DialogResult.OK)
             {
@@ -385,6 +418,8 @@ namespace Moradi_Notepad
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
+            // Make Selected Text All CAPS
+
             richTextBox1.SelectedText = richTextBox1.SelectedText.ToUpper();
         }
 
@@ -403,18 +438,22 @@ namespace Moradi_Notepad
         }
 
         private void numberedLinesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        { 
             MessageBox.Show("Please Choose Show, Hide");
         }
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Show numbered lines on left
+
             richTextBox1.Location = new Point(20, 52);
 
         }
 
         private void hideToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Hide numbered lines on left
+
             richTextBox1.Location = new Point(2, 52);
         }
 
@@ -425,16 +464,19 @@ namespace Moradi_Notepad
 
         private void redToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Red Background 
             richTextBox1.BackColor = Color.Maroon;
         }
 
         private void redToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            // Red text font
             richTextBox1.SelectionColor = Color.Red;
         }
 
         private void blackThemeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Black Background
             richTextBox1.BackColor = Color.Black;
         }
 
@@ -445,6 +487,7 @@ namespace Moradi_Notepad
 
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Default theme for Moradi Notepad
             richTextBox1.BackColor = Color.Black;
             richTextBox1.ForeColor = Color.Lime;
             richTextBox1.Text = richTextBox1.Text;
@@ -452,6 +495,7 @@ namespace Moradi_Notepad
 
         private void halloweenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Christmas theme for Moradi Notepad
             richTextBox1.BackColor = Color.DarkRed;
             richTextBox1.ForeColor = Color.Lime;
             richTextBox1.Text = richTextBox1.Text;
@@ -459,51 +503,61 @@ namespace Moradi_Notepad
 
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
+            // Display Numbered lines left of document 
+
             richTextBox1.Location = new Point(20, 52);
         }
 
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
+            // Hide numbered lines on left side of document
             richTextBox1.Location = new Point(2, 52);
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
-
+            // This is a color picker drop down list
         }
 
         private void blueTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Blue text font
             richTextBox1.SelectionColor = Color.DodgerBlue;
         }
 
         private void limeTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Lime Text Font
             richTextBox1.SelectionColor = Color.Lime;
         }
 
         private void yellowTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Yellow Text Font
             richTextBox1.SelectionColor = Color.Yellow;
         }
 
         private void navyBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Navy Blue Background
             richTextBox1.BackColor = Color.Navy;
         }
 
         private void purpleTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Purple Text Font
             richTextBox1.SelectionColor = Color.Purple;
         }
 
         private void limeBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Lime Green Background
             richTextBox1.BackColor = Color.Lime;
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
+            // Decrease font size of text
             try
             {
                 size = size - 2;
@@ -517,11 +571,13 @@ namespace Moradi_Notepad
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
+            // Make Selected Text All lowercase
+
             richTextBox1.SelectedText = richTextBox1.SelectedText.ToLower();
         }
 
         private void windowsNotepadThemeToolStripMenuItem_Click(object sender, EventArgs e)
-        // Windows Notepad Theme
+        // Windows Theme for Moradi Notepad
         {
             richTextBox1.BackColor = Color.White;
             richTextBox1.ForeColor = Color.Black;
@@ -538,6 +594,7 @@ namespace Moradi_Notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+            //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
             
@@ -548,6 +605,8 @@ namespace Moradi_Notepad
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Will Restart the Moradi Notepad Software
+
             DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -575,6 +634,7 @@ namespace Moradi_Notepad
 
         private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Shows Credit given Window
             c.Show();
         }
 
@@ -620,6 +680,8 @@ namespace Moradi_Notepad
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Print current document text to local printer
+
             PrintDialog printDialog = new PrintDialog();
             PrintDocument documentToPrint = new PrintDocument();
             printDialog.Document = documentToPrint;
@@ -639,6 +701,8 @@ namespace Moradi_Notepad
 
         private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Print Preview for viewing how the document will look when printed
+
             {
                 try
                 {
@@ -668,6 +732,8 @@ namespace Moradi_Notepad
 
         private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //insert time/date into document
+
             richTextBox1.Text = richTextBox1.Text + DateTime.Now;
         }
 
@@ -683,6 +749,8 @@ namespace Moradi_Notepad
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Find Text In Document Button 
+
             int index = 0; string temp = richTextBox1.Text; richTextBox1.Text = ""; richTextBox1.Text = temp;
 
             while (index < richTextBox1.Text.LastIndexOf(textBox1.Text))
@@ -703,6 +771,7 @@ namespace Moradi_Notepad
 
         private void kToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Text bullets (listing items)
             richTextBox1.SelectionBullet = true;
             richTextBox1.AcceptsTab = true;
         }
@@ -721,17 +790,45 @@ namespace Moradi_Notepad
 
         private void toolStripButton13_Click_1(object sender, EventArgs e)
         {
+            // Left alignment for text location
             richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
         }
 
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
+            // Center alignment for text location
             richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private void toolStripButton15_Click(object sender, EventArgs e)
         {
+            // Right alignment for text location
             richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            // This is a color picker drop down list
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            // Search Label 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Search TextBox 
+        }
+
+        private void output_Click(object sender, EventArgs e)
+        {
+            // Charector Counter (Of typed charectors in doc.)
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // Current Time of day 
         }
     }
 }
