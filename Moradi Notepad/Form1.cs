@@ -5,6 +5,8 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
 using Microsoft.Office;
+using Moradi_Notepad;
+using Microsoft.Office.Core;
 
 namespace Moradi_Notepad
 {
@@ -735,9 +737,7 @@ namespace Moradi_Notepad
 
         private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //insert time/date into document
-
-            richTextBox1.Text = richTextBox1.Text + DateTime.Now;
+         
         }
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
@@ -867,6 +867,46 @@ namespace Moradi_Notepad
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
                 richTextBox1.ForeColor = MyDialog.Color;
+        }
+
+        private void addSignaturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void signatures1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void thankYouToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // add thank you text to selected area 
+            richTextBox1.Text = richTextBox1.Text + "Thank You, ";
+        }
+
+        private void sincerelyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // add sincerely to selected area
+            richTextBox1.Text = richTextBox1.Text + "sincerely, ";
+        }
+
+        private void moradiDevelopmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            richTextBox1.Text = richTextBox1.Text + "Using, Moradi Notepad";
+        }
+
+        private void headerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //insert time/date into document
+
+            richTextBox1.Text = richTextBox1.Text + DateTime.Now;
         }
     }
 }
