@@ -4,9 +4,6 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
-using Microsoft.Office;
-using Moradi_Notepad;
-using Microsoft.Office.Core;
 
 namespace Moradi_Notepad
 {
@@ -907,6 +904,81 @@ namespace Moradi_Notepad
             //insert time/date into document
 
             richTextBox1.Text = richTextBox1.Text + DateTime.Now;
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void arielToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("ariel", 10, FontStyle.Regular);
+        }
+
+        private void algerianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("algerian", 10, FontStyle.Regular);
+        }
+
+        private void aRCHRISTYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("AR CHRISTY", 10, FontStyle.Regular);
+        }
+
+        private void aRDELANEYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("AR DELANEY", 10, FontStyle.Regular);
+        }
+
+        private void aRDESTINEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("AR DESTINE", 10, FontStyle.Regular);
+        }
+
+        private void castellarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("castellar", 10, FontStyle.Regular);
+        }
+
+        private void digitalReadoutUprightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Digital Readout Upright", 10, FontStyle.Regular);
+        }
+
+        private void georgiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Georgia", 10, FontStyle.Regular);
+        }
+
+        private void jokermanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Jokerman", 10, FontStyle.Regular);
+        }
+
+        private void lucidaHandwritingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("lucida Handwriting", 10, FontStyle.Regular);
+        }
+
+        private void microsoftSansSerifToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+        }
+
+        private void modernNo20ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Modern No. 20", 10, FontStyle.Regular);
+        }
+
+        private void smallFontsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Stencil", 10, FontStyle.Regular);
+        }
+
+        private void timesNewRomanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font("Times New Roman", 10, FontStyle.Regular);
         }
     }
 }
