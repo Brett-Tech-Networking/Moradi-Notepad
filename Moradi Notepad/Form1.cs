@@ -92,6 +92,7 @@ namespace Moradi_Notepad
                     catch
                     {
                         //This is just meant to catch the exception. It doesn't actaully return anything.
+                        MessageBox.Show("Woa howdy there, just click ok ill handle the rest", "ERROR");
                     }
                 }
             }
