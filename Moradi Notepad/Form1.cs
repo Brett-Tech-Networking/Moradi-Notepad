@@ -986,6 +986,41 @@ namespace Moradi_Notepad
         {
             richTextBox1.SelectionFont = new Font("Times New Roman", 10, FontStyle.Regular);
         }
+
+        private void redToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Red;
+        }
+
+        private void limeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Green;
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Blue;
+        }
+
+        private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.HotPink;
+        }
+
+        private void hhmmssToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void hhmmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

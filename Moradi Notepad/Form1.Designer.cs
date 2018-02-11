@@ -146,6 +146,13 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.clockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.limeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.ubuntuTheme1.SuspendLayout();
             this.toolStrip3.SuspendLayout();
@@ -1080,7 +1087,9 @@
             this.customizeToolStripMenuItem,
             this.addSignaturesToolStripMenuItem,
             this.toolStripMenuItem4,
-            this.insertToolStripMenuItem});
+            this.insertToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.clockToolStripMenuItem});
             this.toolsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
@@ -1268,6 +1277,10 @@
             this.selectAllToolStripMenuItem1.Text = "Select All";
             this.selectAllToolStripMenuItem1.Click += new System.EventHandler(this.selectAllToolStripMenuItem1_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -1281,6 +1294,58 @@
             this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
+            // 
+            // clockToolStripMenuItem
+            // 
+            this.clockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timeColorToolStripMenuItem});
+            this.clockToolStripMenuItem.Name = "clockToolStripMenuItem";
+            this.clockToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.clockToolStripMenuItem.Text = "Clock ";
+            // 
+            // timeColorToolStripMenuItem
+            // 
+            this.timeColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.redToolStripMenuItem2,
+            this.limeToolStripMenuItem,
+            this.blueToolStripMenuItem,
+            this.pinkToolStripMenuItem});
+            this.timeColorToolStripMenuItem.Name = "timeColorToolStripMenuItem";
+            this.timeColorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.timeColorToolStripMenuItem.Text = "Time Color";
+            // 
+            // redToolStripMenuItem2
+            // 
+            this.redToolStripMenuItem2.Name = "redToolStripMenuItem2";
+            this.redToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.redToolStripMenuItem2.Text = "Red";
+            this.redToolStripMenuItem2.Click += new System.EventHandler(this.redToolStripMenuItem2_Click);
+            // 
+            // limeToolStripMenuItem
+            // 
+            this.limeToolStripMenuItem.Name = "limeToolStripMenuItem";
+            this.limeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.limeToolStripMenuItem.Text = "Green";
+            this.limeToolStripMenuItem.Click += new System.EventHandler(this.limeToolStripMenuItem_Click);
+            // 
+            // blueToolStripMenuItem
+            // 
+            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.blueToolStripMenuItem.Text = "Blue";
+            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
+            // 
+            // pinkToolStripMenuItem
+            // 
+            this.pinkToolStripMenuItem.Name = "pinkToolStripMenuItem";
+            this.pinkToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pinkToolStripMenuItem.Text = "Pink";
+            this.pinkToolStripMenuItem.Click += new System.EventHandler(this.pinkToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(155, 6);
             // 
             // lineNumbers_For_RichTextBox2
             // 
@@ -1472,6 +1537,13 @@
         private System.Windows.Forms.ToolStripMenuItem modernNo20ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem smallFontsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timesNewRomanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem timeColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem limeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pinkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
     }
 }
 
