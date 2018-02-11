@@ -513,7 +513,7 @@ namespace Moradi_Notepad
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
             // Hide numbered lines on left side of document
-            richTextBox1.Location = new Point(2, 52);
+            richTextBox1.Location = new Point(1, 76);
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
