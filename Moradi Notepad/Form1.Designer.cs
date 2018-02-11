@@ -51,11 +51,16 @@
             this.georgiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jokermanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lucidaHandwritingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.microsoftSansSerifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modernNo20ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smallFontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timesNewRomanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.output = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.CopyPaste = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -146,11 +151,6 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
-            this.microsoftSansSerifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modernNo20ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.smallFontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timesNewRomanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ubuntuTheme1.SuspendLayout();
             this.toolStrip3.SuspendLayout();
             this.CopyPaste.SuspendLayout();
@@ -373,6 +373,38 @@
             this.lucidaHandwritingToolStripMenuItem.Text = "Lucida Handwriting";
             this.lucidaHandwritingToolStripMenuItem.Click += new System.EventHandler(this.lucidaHandwritingToolStripMenuItem_Click);
             // 
+            // microsoftSansSerifToolStripMenuItem
+            // 
+            this.microsoftSansSerifToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.microsoftSansSerifToolStripMenuItem.Name = "microsoftSansSerifToolStripMenuItem";
+            this.microsoftSansSerifToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.microsoftSansSerifToolStripMenuItem.Text = "Microsoft Sans Serif";
+            this.microsoftSansSerifToolStripMenuItem.Click += new System.EventHandler(this.microsoftSansSerifToolStripMenuItem_Click);
+            // 
+            // modernNo20ToolStripMenuItem
+            // 
+            this.modernNo20ToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold);
+            this.modernNo20ToolStripMenuItem.Name = "modernNo20ToolStripMenuItem";
+            this.modernNo20ToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.modernNo20ToolStripMenuItem.Text = "Modern No. 20";
+            this.modernNo20ToolStripMenuItem.Click += new System.EventHandler(this.modernNo20ToolStripMenuItem_Click);
+            // 
+            // smallFontsToolStripMenuItem
+            // 
+            this.smallFontsToolStripMenuItem.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Bold);
+            this.smallFontsToolStripMenuItem.Name = "smallFontsToolStripMenuItem";
+            this.smallFontsToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.smallFontsToolStripMenuItem.Text = "Stencil";
+            this.smallFontsToolStripMenuItem.Click += new System.EventHandler(this.smallFontsToolStripMenuItem_Click);
+            // 
+            // timesNewRomanToolStripMenuItem
+            // 
+            this.timesNewRomanToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
+            this.timesNewRomanToolStripMenuItem.Name = "timesNewRomanToolStripMenuItem";
+            this.timesNewRomanToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.timesNewRomanToolStripMenuItem.Text = "Times New Roman";
+            this.timesNewRomanToolStripMenuItem.Click += new System.EventHandler(this.timesNewRomanToolStripMenuItem_Click);
+            // 
             // output
             // 
             this.output.AutoSize = true;
@@ -434,6 +466,43 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "00:00:00:00";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lineNumbers_For_RichTextBox2
+            // 
+            this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
+            this.lineNumbers_For_RichTextBox2.AutoSizing = true;
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.DockSide = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Left;
+            this.lineNumbers_For_RichTextBox2.GridLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.GridLines_Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbers_For_RichTextBox2.GridLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.LineNrs_Alignment = System.Drawing.ContentAlignment.TopRight;
+            this.lineNumbers_For_RichTextBox2.LineNrs_AntiAlias = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_AsHexadecimal = false;
+            this.lineNumbers_For_RichTextBox2.LineNrs_ClippedByItemRectangle = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_LeadingZeroes = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_Offset = new System.Drawing.Size(0, 0);
+            this.lineNumbers_For_RichTextBox2.Location = new System.Drawing.Point(-18, 76);
+            this.lineNumbers_For_RichTextBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbers_For_RichTextBox2.MarginLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.Name = "lineNumbers_For_RichTextBox2";
+            this.lineNumbers_For_RichTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.lineNumbers_For_RichTextBox2.ParentRichTextBox = this.richTextBox1;
+            this.lineNumbers_For_RichTextBox2.Show_BackgroundGradient = true;
+            this.lineNumbers_For_RichTextBox2.Show_BorderLines = true;
+            this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
+            this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
+            this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
+            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 632);
+            this.lineNumbers_For_RichTextBox2.TabIndex = 7;
             // 
             // richTextBox1
             // 
@@ -540,7 +609,7 @@
             this.toolStripButton12});
             this.toolStrip1.Location = new System.Drawing.Point(364, 27);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(329, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(360, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -1288,75 +1357,6 @@
             this.printPreviewDialog2.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog2.Icon")));
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
-            // 
-            // lineNumbers_For_RichTextBox2
-            // 
-            this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
-            this.lineNumbers_For_RichTextBox2.AutoSizing = true;
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.DockSide = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Left;
-            this.lineNumbers_For_RichTextBox2.GridLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.GridLines_Style = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.lineNumbers_For_RichTextBox2.GridLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.LineNrs_Alignment = System.Drawing.ContentAlignment.TopRight;
-            this.lineNumbers_For_RichTextBox2.LineNrs_AntiAlias = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_AsHexadecimal = false;
-            this.lineNumbers_For_RichTextBox2.LineNrs_ClippedByItemRectangle = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_LeadingZeroes = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_Offset = new System.Drawing.Size(0, 0);
-            this.lineNumbers_For_RichTextBox2.Location = new System.Drawing.Point(-18, 76);
-            this.lineNumbers_For_RichTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.lineNumbers_For_RichTextBox2.MarginLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.Name = "lineNumbers_For_RichTextBox2";
-            this.lineNumbers_For_RichTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.lineNumbers_For_RichTextBox2.ParentRichTextBox = this.richTextBox1;
-            this.lineNumbers_For_RichTextBox2.Show_BackgroundGradient = true;
-            this.lineNumbers_For_RichTextBox2.Show_BorderLines = true;
-            this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
-            this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
-            this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
-            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 632);
-            this.lineNumbers_For_RichTextBox2.TabIndex = 7;
-            // 
-            // microsoftSansSerifToolStripMenuItem
-            // 
-            this.microsoftSansSerifToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.microsoftSansSerifToolStripMenuItem.Name = "microsoftSansSerifToolStripMenuItem";
-            this.microsoftSansSerifToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.microsoftSansSerifToolStripMenuItem.Text = "Microsoft Sans Serif";
-            this.microsoftSansSerifToolStripMenuItem.Click += new System.EventHandler(this.microsoftSansSerifToolStripMenuItem_Click);
-            // 
-            // modernNo20ToolStripMenuItem
-            // 
-            this.modernNo20ToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Bold);
-            this.modernNo20ToolStripMenuItem.Name = "modernNo20ToolStripMenuItem";
-            this.modernNo20ToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.modernNo20ToolStripMenuItem.Text = "Modern No. 20";
-            this.modernNo20ToolStripMenuItem.Click += new System.EventHandler(this.modernNo20ToolStripMenuItem_Click);
-            // 
-            // smallFontsToolStripMenuItem
-            // 
-            this.smallFontsToolStripMenuItem.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Bold);
-            this.smallFontsToolStripMenuItem.Name = "smallFontsToolStripMenuItem";
-            this.smallFontsToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.smallFontsToolStripMenuItem.Text = "Stencil";
-            this.smallFontsToolStripMenuItem.Click += new System.EventHandler(this.smallFontsToolStripMenuItem_Click);
-            // 
-            // timesNewRomanToolStripMenuItem
-            // 
-            this.timesNewRomanToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.timesNewRomanToolStripMenuItem.Name = "timesNewRomanToolStripMenuItem";
-            this.timesNewRomanToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.timesNewRomanToolStripMenuItem.Text = "Times New Roman";
-            this.timesNewRomanToolStripMenuItem.Click += new System.EventHandler(this.timesNewRomanToolStripMenuItem_Click);
             // 
             // Form1
             // 

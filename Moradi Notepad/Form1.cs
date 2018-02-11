@@ -506,7 +506,7 @@ namespace Moradi_Notepad
         {
             // Display Numbered lines left of document 
 
-            richTextBox1.Location = new Point(20, 52);
+            richTextBox1.Location = new Point(20, 80);
         }
 
         private void toolStripButton12_Click(object sender, EventArgs e)
