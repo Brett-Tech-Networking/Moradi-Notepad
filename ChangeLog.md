@@ -4,6 +4,8 @@
  - Fixed issue with line numbers causing text to be hidden by toolbar
  - Fixed issue with color wheel for text "other color" option causing all text to be changed to selected color
  - Fixed issue with saving, caused when exiting and choosing yes to save then changing your mind and hitting cancel(caused exeption error)
+ - Added option for users to change clock/time color > format > clock > time color
+ - Added status bar to bottom for things linke character count line count etc...
 
 ### Updates: 2/9/18 ###
 - Fixed bug with text getting deleted when changing themes
