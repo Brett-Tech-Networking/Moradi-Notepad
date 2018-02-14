@@ -111,7 +111,7 @@ namespace Moradi_Notepad
 
             OpenFileDialog ofd = new OpenFileDialog();
 
-            ofd.Filter = "Text Files (.txt)|*.txt";
+            ofd.Filter = "Text Files (.rtf)|*.rtf";
             ofd.Title = "Open File";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -123,7 +123,7 @@ namespace Moradi_Notepad
                 if (result == DialogResult.Yes)
                 {
                     SaveFileDialog svf = new SaveFileDialog();
-                    svf.Filter = "Save File (.txt)|*.txt";
+                    svf.Filter = "Save File (.rtf)|*.rtf";
                     svf.Title = "Save File";
                     if (svf.ShowDialog() == DialogResult.OK) ;
                     {
@@ -157,9 +157,9 @@ namespace Moradi_Notepad
 
             SaveFileDialog svf = new SaveFileDialog();
 
-            svf.Filter = "Save File (.txt)|*.txt";
+            svf.Filter = "Save File (.rtf)|*.rtf";
             svf.Title = "Save File";
-            if (svf.ShowDialog() == DialogResult.OK) ;
+            if (svf.ShowDialog() == DialogResult.OK) 
             {
                 try
                 {
