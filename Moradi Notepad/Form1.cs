@@ -1121,5 +1121,10 @@ namespace Moradi_Notepad
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
         }
+
+        private void ubuntuControlBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

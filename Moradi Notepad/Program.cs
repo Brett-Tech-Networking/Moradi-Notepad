@@ -16,7 +16,7 @@ namespace Moradi_Notepad
         {
             
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new splashscreen());
+           Application.Run(new splashscreen());
         }
     }
 }

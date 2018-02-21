@@ -17,12 +17,40 @@ namespace Moradi_Notepad
         {
             InitializeComponent();
         }
-        
+
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-           
+
         }
-    
+
+        int progress = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progress += 1;
+            if(progress >=100)
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                this.Hide();
+
+                //open main form
+                Form1 f = new Form1();
+                f.Show();
+             }
+            progressBar1.Value = progress; 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splashscreen_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            timer1.Interval = 40;
+
+        }
     }
 }
