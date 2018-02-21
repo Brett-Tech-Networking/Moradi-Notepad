@@ -32,7 +32,7 @@ namespace Moradi_Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // clears current rich textbox to begain a new document
+            //Clears current rich textbox to begain a new document
 
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -327,9 +327,16 @@ namespace Moradi_Notepad
                     svf.Title = "Save File";
                     if (svf.ShowDialog() == DialogResult.OK) ;
                     {
-                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                        sw.Write(richTextBox1.Text);
-                        sw.Close();
+                        try
+                        {
+                            System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                            sw.Write(richTextBox1.Text);
+                            sw.Close();
+                        }
+                        catch
+                        {
+                            //This is just to catch the exception.
+                        }
                     }
                 }
 
@@ -343,8 +350,7 @@ namespace Moradi_Notepad
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Shows about window 
-
+            // Shows About Window 
             About Info = new About();
             Info.Show();
         }
@@ -357,7 +363,6 @@ namespace Moradi_Notepad
 
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
-
             {
                 DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
