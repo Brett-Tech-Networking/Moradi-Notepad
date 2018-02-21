@@ -1,0 +1,1 @@
+MoradiNotepad;3.5;https://github.com/Brett-Tech-Networking/Moradi-Notepad/archive/master.zip
