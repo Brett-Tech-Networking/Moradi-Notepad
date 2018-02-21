@@ -376,10 +376,37 @@ namespace Moradi_Notepad
 
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
+
+            {
+                DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                //userInput == yes
+                if (result == DialogResult.Yes)
+                {
+                    SaveFileDialog svf = new SaveFileDialog();
+                    svf.Filter = "Save File (.txt)|*.txt";
+                    svf.Title = "Save File";
+                    if (svf.ShowDialog() == DialogResult.OK) ;
+                    {
+                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                        sw.Write(richTextBox1.Text);
+                        sw.Close();
+                    }
+                }
+
+                //userInput == no
+                else if (result == DialogResult.No)
+                {
+                    richTextBox1.Clear();
+                }
+            }
+
             //Open Existing Document
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Text Files (.txt)|*.txt";
             ofd.Title = "Open File";
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);

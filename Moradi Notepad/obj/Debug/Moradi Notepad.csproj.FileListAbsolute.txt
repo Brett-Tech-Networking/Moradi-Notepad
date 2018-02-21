@@ -79,3 +79,16 @@ C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_N
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\LineNumbers.LineNumbers_For_RichTextBox.resources
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe.config
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.ResolveComReference.cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.exe
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.pdb
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.pdb
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojResolveAssemblyReference.cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.About.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Form1.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Credits.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\LineNumbers.LineNumbers_For_RichTextBox.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
