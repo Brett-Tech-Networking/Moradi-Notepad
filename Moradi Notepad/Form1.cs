@@ -1116,5 +1116,11 @@ namespace Moradi_Notepad
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
         }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Check4Updates checkupdate = new Check4Updates("https://github.com/Brett-Tech-Networking/Moradi-Notepad/blob/master/UpdateChecker.txt");
+            MessageBox.Show(checkupdate.appname + "\r\n" + checkupdate.version.ToString() + "\r\n" + checkupdate.newdownloadlink);
+        }
     }
 }
