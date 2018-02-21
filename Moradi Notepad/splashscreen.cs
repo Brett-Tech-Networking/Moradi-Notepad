@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -19,7 +12,6 @@ namespace Moradi_Notepad
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-           
         }
 
         int progress = 0;
@@ -33,7 +25,7 @@ namespace Moradi_Notepad
                 timer1.Stop();
                 this.Hide();
 
-                //open main form
+                //Instantiates Main Form
                 Form1 f1 = new Form1();
                 f1.Show();
             }
@@ -43,7 +35,11 @@ namespace Moradi_Notepad
         private void splashscreen_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            timer1.Interval = 40;
+            timer1.Interval = 30;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
