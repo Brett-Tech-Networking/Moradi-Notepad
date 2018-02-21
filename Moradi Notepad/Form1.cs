@@ -23,15 +23,12 @@ namespace Moradi_Notepad
 
         public Form1()
         {
-
             InitializeComponent();
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
         {
-
         }
-
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -147,7 +144,6 @@ namespace Moradi_Notepad
                 richTextBox1.Text = sr.ReadToEnd();
                 sr.Close();
             }
-
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -173,47 +169,39 @@ namespace Moradi_Notepad
             }
         }
 
-
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Undo an action (ex. Undo backspaced/deleted text as long as not closed and reopend prior too)
-
             richTextBox1.Undo();
-
         }
 
         private void redoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Redo an undo action
-
             richTextBox1.Redo();
         }
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //cut and paste text
-
             richTextBox1.Cut();
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Copy document text
-
             richTextBox1.Copy();
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Paste copied text
-
             richTextBox1.Paste();
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Select all text
-
             richTextBox1.SelectAll();
         }
 
@@ -243,8 +231,6 @@ namespace Moradi_Notepad
             }
         }
 
-
-
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             // Italic Format For Text
@@ -268,8 +254,6 @@ namespace Moradi_Notepad
                    currentFont.Size,
                    newFontStyle
                 );
-
-
             }
         }
 
@@ -321,13 +305,11 @@ namespace Moradi_Notepad
                    currentFont.Size,
                    newFontStyle
                 );
-
             }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
@@ -394,12 +376,10 @@ namespace Moradi_Notepad
                             sw.Write(richTextBox1.Text);
                             sw.Close();
                         }
-
                         catch
                         {
                             //This is just meant to catch the exception.
                         }
-
                     }
                 }
 
@@ -439,7 +419,6 @@ namespace Moradi_Notepad
                 This shall fix the exception.
                 */
             }
-
         }
 
         private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -456,18 +435,15 @@ namespace Moradi_Notepad
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             // Make Selected Text All CAPS
-
             richTextBox1.SelectedText = richTextBox1.SelectedText.ToUpper();
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBox1_ContentsResized(object sender, ContentsResizedEventArgs e)
         {
-
         }
 
         private void richTextBox1_SizeChanged(object sender, EventArgs e)
@@ -482,21 +458,17 @@ namespace Moradi_Notepad
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Show numbered lines on left
-
             richTextBox1.Location = new Point(20, 52);
-
         }
 
         private void hideToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Hide numbered lines on left
-
             richTextBox1.Location = new Point(2, 52);
         }
 
         private void ubuntuTheme1_Resize(object sender, EventArgs e)
         {
-
         }
 
         private void redToolStripMenuItem_Click(object sender, EventArgs e)
@@ -519,7 +491,6 @@ namespace Moradi_Notepad
 
         private void ubuntuTheme1_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
@@ -634,11 +605,7 @@ namespace Moradi_Notepad
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
-
-
-
         }
-
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -693,7 +660,6 @@ namespace Moradi_Notepad
 
         private void toolStripButton13_Click(object sender, EventArgs e)
         {
-
         }
 
         private void undoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -740,7 +706,6 @@ namespace Moradi_Notepad
         private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Print Preview for viewing how the document will look when printed
-
             {
                 try
                 {
@@ -757,7 +722,6 @@ namespace Moradi_Notepad
 
         private void tESTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -770,23 +734,19 @@ namespace Moradi_Notepad
 
         private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             // Find Text In Document Button 
-
             int index = 0; string temp = richTextBox1.Text; richTextBox1.Text = ""; richTextBox1.Text = temp;
 
             while (index < richTextBox1.Text.LastIndexOf(textBox1.Text))
@@ -802,7 +762,6 @@ namespace Moradi_Notepad
 
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
-
         }
 
         private void kToolStripMenuItem_Click(object sender, EventArgs e)
@@ -904,17 +863,14 @@ namespace Moradi_Notepad
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
                 richTextBox1.SelectionColor = MyDialog.Color;
-
         }
 
         private void addSignaturesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void signatures1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void thankYouToolStripMenuItem_Click(object sender, EventArgs e)
@@ -931,13 +887,11 @@ namespace Moradi_Notepad
 
         private void moradiDevelopmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             richTextBox1.Text = richTextBox1.Text + "Using, Moradi Notepad";
         }
 
         private void headerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -949,7 +903,6 @@ namespace Moradi_Notepad
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void arielToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1049,12 +1002,10 @@ namespace Moradi_Notepad
 
         private void hhmmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
@@ -1164,7 +1115,6 @@ namespace Moradi_Notepad
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
