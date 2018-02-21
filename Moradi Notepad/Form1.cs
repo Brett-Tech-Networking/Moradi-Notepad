@@ -81,7 +81,7 @@ namespace Moradi_Notepad
                 SaveFileDialog svf = new SaveFileDialog();
                 svf.Filter = "Save File (.txt)|*.txt";
                 svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK) ;
+                if (svf.ShowDialog() == DialogResult.OK);
                 {
                     try
                     {
@@ -91,8 +91,7 @@ namespace Moradi_Notepad
                     }
                     catch
                     {
-                        //This is just meant to catch the exception. It doesn't actaully return anything.
-                        MessageBox.Show("Woa howdy there, just click ok ill handle the rest", "ERROR");
+                        //This is just meant to catch the exception.
                     }
                 }
             }
@@ -101,8 +100,8 @@ namespace Moradi_Notepad
             else if (result == DialogResult.No)
             {
                 richTextBox1.Clear();
+                Application.Exit();
             }
-            Application.Exit();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,7 +134,7 @@ namespace Moradi_Notepad
                         }
                         catch
                         {
-                            //This is just meant to catch the exception. It doesn't actaully return anything.
+                            //This is just meant to catch the exception.
                         }
                     }
                 }
@@ -389,9 +388,18 @@ namespace Moradi_Notepad
                     svf.Title = "Save File";
                     if (svf.ShowDialog() == DialogResult.OK) ;
                     {
-                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                        sw.Write(richTextBox1.Text);
-                        sw.Close();
+                        try
+                        {
+                            System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                            sw.Write(richTextBox1.Text);
+                            sw.Close();
+                        }
+
+                        catch
+                        {
+                            //This is just meant to catch the exception.
+                        }
+
                     }
                 }
 
