@@ -14,7 +14,7 @@ namespace Moradi_Notepad
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new splashscreen());
         }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Moradi_Notepad
 {
@@ -16,5 +17,12 @@ namespace Moradi_Notepad
         {
             InitializeComponent();
         }
+        
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+           
+        }
+    
     }
 }
