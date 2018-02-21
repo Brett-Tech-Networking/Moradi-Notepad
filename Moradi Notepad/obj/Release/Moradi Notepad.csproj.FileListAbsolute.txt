@@ -1,0 +1,10 @@
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.exe.config
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.ResolveComReference.cache
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.About.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Form1.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Credits.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\LineNumbers.LineNumbers_For_RichTextBox.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.splashscreen.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.GenerateResource.Cache

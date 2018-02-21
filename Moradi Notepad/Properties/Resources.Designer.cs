@@ -63,6 +63,26 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _151919295531136178 {
+            get {
+                object obj = ResourceManager.GetObject("151919295531136178", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _new {
+            get {
+                object obj = ResourceManager.GetObject("new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ABOUT {
             get {
                 object obj = ResourceManager.GetObject("ABOUT", resourceCulture);
@@ -236,6 +256,26 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap neon_green_dot_hi {
             get {
                 object obj = ResourceManager.GetObject("neon-green-dot-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Notepad101 {
+            get {
+                object obj = ResourceManager.GetObject("Notepad101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Notepad1011 {
+            get {
+                object obj = ResourceManager.GetObject("Notepad1011", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

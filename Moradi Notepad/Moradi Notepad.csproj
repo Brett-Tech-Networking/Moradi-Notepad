@@ -112,6 +112,12 @@
     <Compile Include="menuStrip_Form_Align_Left.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashscreen.Designer.cs">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="toolStrip_Down_AlignJustify.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -135,6 +141,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="splashscreen.resx">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -260,6 +269,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Color_wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151919295531136178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad1011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
