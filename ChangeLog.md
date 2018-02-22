@@ -1,6 +1,6 @@
 # ---Change_Log---
 
-### Updates 2/22/18 ###
+### Updates: 2/22/18 ###
  - Added Locking/Unlocking Ability, to prevent unauthorized modification to your document.
  - Added A Custom Loading Screen Prior To Accessing The Notepad.
  - Added Save/Open Formats .txt | .rtf 
