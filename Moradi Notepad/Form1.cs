@@ -93,6 +93,9 @@ namespace Moradi_Notepad
             {
                 richTextBox1.Clear();
                 Application.Exit();
+                splashscreen ss = new splashscreen();
+                ss.Close();
+                    
             }
         }
 
@@ -605,6 +608,8 @@ namespace Moradi_Notepad
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
+
+           
         }
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1115,6 +1120,12 @@ namespace Moradi_Notepad
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ubuntuControlBox1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
