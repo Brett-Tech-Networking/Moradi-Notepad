@@ -1176,10 +1176,14 @@ namespace Moradi_Notepad
 
         }
 
+        //splash screen reference
+        splashscreen ss = new splashscreen();
+
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            splashscreen splash = new splashscreen();
-            splash.Close();
+            Application.Exit();
+            ss.Close();
+            
         }
 
         private void toolStripButton16_Click(object sender, EventArgs e)
