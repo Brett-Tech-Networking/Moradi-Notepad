@@ -94,3 +94,4 @@ C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources

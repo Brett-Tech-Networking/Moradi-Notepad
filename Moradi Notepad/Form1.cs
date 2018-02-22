@@ -13,8 +13,8 @@ namespace Moradi_Notepad
         int size = 10;
         public Credits c = new Credits();
         public About a = new About();
-        
-        
+
+
 
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
@@ -75,7 +75,7 @@ namespace Moradi_Notepad
                 SaveFileDialog svf = new SaveFileDialog();
                 svf.Filter = "Save File (.txt)|*.txt";
                 svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK);
+                if (svf.ShowDialog() == DialogResult.OK) ;
                 {
                     try
                     {
@@ -97,7 +97,7 @@ namespace Moradi_Notepad
                 Application.Exit();
                 splashscreen ss = new splashscreen();
                 ss.Close();
-                    
+
             }
         }
 
@@ -611,7 +611,7 @@ namespace Moradi_Notepad
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
 
-           
+
         }
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
@@ -912,7 +912,7 @@ namespace Moradi_Notepad
         {
         }
 
-        
+
         private void arielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("ariel", 10, FontStyle.Regular);
@@ -1158,12 +1158,12 @@ namespace Moradi_Notepad
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ubuntuControlBox1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void toolStripDropDownButton2_Click(object sender, EventArgs e)
@@ -1193,5 +1193,17 @@ namespace Moradi_Notepad
             richTextBox1.ReadOnly = false;
             MessageBox.Show("Your Document Is Now UNLOCKED, You May Now Continue Editing Your Document", "UNLOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            try
+            {
+                richTextBox1.ZoomFactor = trackBar1.Value;
+            }
+            catch
+            {
+                //do nothing
+            }
+    }
     }
 }
