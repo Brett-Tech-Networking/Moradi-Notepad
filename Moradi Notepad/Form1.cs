@@ -13,6 +13,8 @@ namespace Moradi_Notepad
         int size = 10;
         public Credits c = new Credits();
         public About a = new About();
+        
+        
 
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
@@ -910,74 +912,89 @@ namespace Moradi_Notepad
         {
         }
 
+        
         private void arielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("ariel", 10, FontStyle.Regular);
+            Font_style.Text = "Ariel";
         }
 
         private void algerianToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("algerian", 10, FontStyle.Regular);
+            Font_style.Text = "Algerian";
         }
 
         private void aRCHRISTYToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("AR CHRISTY", 10, FontStyle.Regular);
+            Font_style.Text = "AR CHRISTY";
         }
 
         private void aRDELANEYToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("AR DELANEY", 10, FontStyle.Regular);
+            Font_style.Text = "AR DELANEY";
         }
 
         private void aRDESTINEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("AR DESTINE", 10, FontStyle.Regular);
+            Font_style.Text = "AR DESTINE";
         }
 
         private void castellarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("castellar", 10, FontStyle.Regular);
+            Font_style.Text = "Castellar";
         }
 
         private void digitalReadoutUprightToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Digital Readout Upright", 10, FontStyle.Regular);
+            Font_style.Text = "Digital Readout Upright";
         }
 
         private void georgiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Georgia", 10, FontStyle.Regular);
+            Font_style.Text = "Georgia";
         }
 
         private void jokermanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Jokerman", 10, FontStyle.Regular);
+            Font_style.Text = "Jokerman";
         }
 
         private void lucidaHandwritingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("lucida Handwriting", 10, FontStyle.Regular);
+            Font_style.Text = "Lucisa Handwriting";
         }
 
         private void microsoftSansSerifToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+            Font_style.Text = "Microsoft Sans Serif";
         }
 
         private void modernNo20ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Modern No. 20", 10, FontStyle.Regular);
+            Font_style.Text = "Modern No. 20";
         }
 
         private void smallFontsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Stencil", 10, FontStyle.Regular);
+            Font_style.Text = "Stencil";
         }
 
         private void timesNewRomanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Times New Roman", 10, FontStyle.Regular);
+            Font_style.Text = "Times New Roman";
         }
 
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -1016,106 +1033,127 @@ namespace Moradi_Notepad
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 10);
+            Font_Size.Text = "10";
         }
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 11);
+            Font_Size.Text = "11";
         }
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 12);
+            Font_Size.Text = "12";
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 13);
+            Font_Size.Text = "13";
         }
 
         private void toolStripMenuItem10_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 14);
+            Font_Size.Text = "14";
         }
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 15);
+            Font_Size.Text = "15";
         }
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 16);
+            Font_Size.Text = "16";
         }
 
         private void toolStripMenuItem13_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 17);
+            Font_Size.Text = "17";
         }
 
         private void toolStripMenuItem14_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 18);
+            Font_Size.Text = "18";
         }
 
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 19);
+            Font_Size.Text = "19";
         }
 
         private void toolStripMenuItem16_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 20);
+            Font_Size.Text = "20";
         }
 
         private void toolStripMenuItem17_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 21);
+            Font_Size.Text = "21";
         }
 
         private void toolStripMenuItem18_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 22);
+            Font_Size.Text = "22";
         }
 
         private void toolStripMenuItem19_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 23);
+            Font_Size.Text = "23";
         }
 
         private void toolStripMenuItem20_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 24);
+            Font_Size.Text = "24";
         }
 
         private void toolStripMenuItem21_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 25);
+            Font_Size.Text = "25";
         }
 
         private void toolStripMenuItem22_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 26);
+            Font_Size.Text = "26";
         }
 
         private void toolStripMenuItem23_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 27);
+            Font_Size.Text = "27";
         }
 
         private void toolStripMenuItem24_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 28);
+            Font_Size.Text = "28";
         }
 
         private void toolStripMenuItem25_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 29);
+            Font_Size.Text = "29";
         }
 
         private void toolStripMenuItem26_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("Arial Rounded MT", 30);
+            Font_Size.Text = "30";
         }
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
@@ -1126,6 +1164,11 @@ namespace Moradi_Notepad
         private void ubuntuControlBox1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
