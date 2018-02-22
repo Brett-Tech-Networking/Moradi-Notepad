@@ -1,4 +1,11 @@
 # ---Change_Log---
+
+###Updates 2/22/18 ###
+ - Added Locking/Unlocking Ability, to prevent unauthorized modification to your document.
+ - Added A Custom Loading Screen Prior To Accessing The Notepad.
+ - Added Save/Open Formats .txt | .rtf 
+ - Fixed Bug: Font Size & Font Type Not Activly Showing Current Font & Size.
+
 ### Updates: 2/11/18 ###
  - Removed View Tab - Currenly served no needed purpose
  - Fixed issue with line numbers causing text to be hidden by toolbar
