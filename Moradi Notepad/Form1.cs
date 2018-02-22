@@ -1181,5 +1181,17 @@ namespace Moradi_Notepad
             splashscreen splash = new splashscreen();
             splash.Close();
         }
+
+        private void toolStripButton16_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = true;
+            MessageBox.Show("Your Document is now LOCKED, You Can Not Edit This Document Until You Unlock It", "LOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void toolStripButton17_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = false;
+            MessageBox.Show("Your Document Is Now UNLOCKED, You May Now Continue Editing Your Document", "UNLOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

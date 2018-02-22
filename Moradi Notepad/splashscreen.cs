@@ -35,7 +35,7 @@ namespace Moradi_Notepad
         private void splashscreen_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            timer1.Interval = 30;
+            timer1.Interval = 15;
         }
 
         private void label1_Click(object sender, EventArgs e)

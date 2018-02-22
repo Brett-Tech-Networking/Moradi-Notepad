@@ -121,17 +121,20 @@
   <data name="ChristmasTree" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChristmasTree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="left allign" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left allign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ABOUT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ABOUT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bullets" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bullets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Moradi notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Moradi notepad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Location_dot_purple.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Location_dot_purple.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,6 +160,9 @@
   <data name="black-dot-md" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\black-dot-md.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="text-27924_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text-27924_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imageedit_8_8865346137" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imageedit_8_8865346137.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,6 +175,9 @@
   <data name="btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Notepad1011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notepad1011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="center" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\center.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,16 +187,13 @@
   <data name="yellow-dot-md" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellow-dot-md.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="text-27924_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\text-27924_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bullets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Moradi notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Moradi notepad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="left allign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left allign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Notepad1011" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Notepad1011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlocked.icon;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

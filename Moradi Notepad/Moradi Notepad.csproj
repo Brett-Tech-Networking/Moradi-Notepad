@@ -185,6 +185,7 @@
     <None Include="Resources\ABOUT.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\unlocked.icon" />
     <None Include="Resources\x.png" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +276,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
