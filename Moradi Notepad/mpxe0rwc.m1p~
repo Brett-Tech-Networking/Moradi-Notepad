@@ -584,6 +584,30 @@ namespace Moradi_Notepad
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Will Restart the Moradi Notepad Software
+
+            DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            //yes
+            if (result == DialogResult.Yes)
+            {
+                SaveFileDialog svf = new SaveFileDialog();
+                svf.Filter = "Save File (.txt)|*.txt";
+                svf.Title = "Save File";
+                if (svf.ShowDialog() == DialogResult.OK) ;
+                {
+                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
+                    sw.Write(richTextBox1.Text);
+                    sw.Close();
+                }
+            }
+
+            // no
+            else if (result == DialogResult.No)
+            {
+                richTextBox1.Clear();
+            }
             Application.Restart();
         }
 
@@ -1178,6 +1202,6 @@ namespace Moradi_Notepad
             {
                 //do nothing
             }
-        }
+    }
     }
 }
