@@ -1210,5 +1210,15 @@ namespace Moradi_Notepad
                 //do nothing
             }
         }
+
+        private void undo_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void redo_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Redo();
+        }
     }
 }
