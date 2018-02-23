@@ -30,7 +30,7 @@ namespace Moradi_Notepad
             //Clears current rich textbox to begain a new document
 
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
             //yes
             if (result == DialogResult.Yes)
@@ -38,13 +38,14 @@ namespace Moradi_Notepad
                 SaveFileDialog svf = new SaveFileDialog();
                 svf.Filter = "Save File (.txt)|*.txt";
                 svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK) ;
+                if (svf.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
                         System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
                         sw.Write(richTextBox1.Text);
                         sw.Close();
+                        richTextBox1.Clear();
                     }
                     catch
                     {
@@ -58,12 +59,17 @@ namespace Moradi_Notepad
             {
                 richTextBox1.Clear();
             }
+
+            //cancel
+            else if (result == DialogResult.Cancel)
+            {
+                //Do nothing if the user changes their indecisive mind.
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Will Close Moradi Notepad Software
-                richTextBox1.Clear();
                 Application.Exit();
                 splashscreen ss = new splashscreen();
                 ss.Close();
@@ -72,22 +78,15 @@ namespace Moradi_Notepad
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Open an existing document/file 
-
-            OpenFileDialog ofd = new OpenFileDialog();
-
-            ofd.Filter = "Text Files (.rtf)|*.rtf|Text Files (.txt)|*.txt";
-            ofd.Title = "Open File";
-            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);
-                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
-                //yes
+                //userInput == yes
                 if (result == DialogResult.Yes)
                 {
                     SaveFileDialog svf = new SaveFileDialog();
-                    svf.Filter = "Save File (.rtf)|*.rtf";
+                    svf.Filter = "Save File (.txt)|*.txt";
                     svf.Title = "Save File";
                     if (svf.ShowDialog() == DialogResult.OK) ;
                     {
@@ -102,13 +101,29 @@ namespace Moradi_Notepad
                             //This is just meant to catch the exception.
                         }
                     }
+                    return;
                 }
 
-                // no
+                //userInput == no
                 else if (result == DialogResult.No)
                 {
                     richTextBox1.Clear();
                 }
+
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+
+            //Open Existing Document
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Text Files (.txt)|*.txt";
+            ofd.Title = "Open File";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);
                 richTextBox1.Text = sr.ReadToEnd();
                 sr.Close();
             }
@@ -285,7 +300,7 @@ namespace Moradi_Notepad
             // Start New Document
             {
                 DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
                 //yes
                 if (result == DialogResult.Yes)
@@ -313,6 +328,12 @@ namespace Moradi_Notepad
                 {
                     richTextBox1.Clear();
                 }
+
+                //cancel
+                else if (result == DialogResult.Cancel)
+                {
+                    //Do nothing if the user changes their indecisive mind.
+                }
             }
         }
 
@@ -333,7 +354,7 @@ namespace Moradi_Notepad
         {
             {
                 DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
                 //userInput == yes
                 if (result == DialogResult.Yes)
@@ -353,6 +374,7 @@ namespace Moradi_Notepad
                         {
                             //This is just meant to catch the exception.
                         }
+                        return;
                     }
                 }
 
@@ -360,6 +382,11 @@ namespace Moradi_Notepad
                 else if (result == DialogResult.No)
                 {
                     richTextBox1.Clear();
+                }
+
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
                 }
             }
 
@@ -1102,22 +1129,18 @@ namespace Moradi_Notepad
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ubuntuControlBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripDropDownButton2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
         }
 
         //splash screen reference
@@ -1126,7 +1149,7 @@ namespace Moradi_Notepad
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
             //yes
             if (result == DialogResult.Yes)
@@ -1134,7 +1157,7 @@ namespace Moradi_Notepad
                 SaveFileDialog svf = new SaveFileDialog();
                 svf.Filter = "Save File (.txt)|*.txt";
                 svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK) ;
+                if (svf.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
@@ -1154,6 +1177,14 @@ namespace Moradi_Notepad
             {
                 ss.Close();
             }
+
+            //cancer
+            else if(result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+                return;
+            }
+            Application.ExitThread();
         }
 
         private void toolStripButton16_Click(object sender, EventArgs e)
