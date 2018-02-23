@@ -34,6 +34,7 @@ namespace Moradi_Notepad
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ubuntuTheme1 = new Ubuntu_Theme.UbuntuTheme();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
@@ -182,15 +183,14 @@ namespace Moradi_Notepad
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.ubuntuTheme1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.toolStrip3.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // ubuntuTheme1
@@ -211,6 +211,8 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.menuStrip1);
             this.ubuntuTheme1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ubuntuTheme1.Location = new System.Drawing.Point(0, 0);
+            this.ubuntuTheme1.MaximumSize = new System.Drawing.Size(1178, 726);
+            this.ubuntuTheme1.MinimumSize = new System.Drawing.Size(1178, 726);
             this.ubuntuTheme1.Name = "ubuntuTheme1";
             this.ubuntuTheme1.Size = new System.Drawing.Size(1178, 726);
             this.ubuntuTheme1.TabIndex = 0;
@@ -218,6 +220,16 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Click += new System.EventHandler(this.ubuntuTheme1_Click);
             this.ubuntuTheme1.Enter += new System.EventHandler(this.ubuntuTheme1_Enter);
             this.ubuntuTheme1.Resize += new System.EventHandler(this.ubuntuTheme1_Resize);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.AutoSize = false;
+            this.trackBar1.Location = new System.Drawing.Point(1056, 706);
+            this.trackBar1.Maximum = 5;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(119, 19);
+            this.trackBar1.TabIndex = 14;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // toolStrip3
             // 
@@ -1626,16 +1638,6 @@ namespace Moradi_Notepad
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.AutoSize = false;
-            this.trackBar1.Location = new System.Drawing.Point(1056, 706);
-            this.trackBar1.Maximum = 5;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(119, 19);
-            this.trackBar1.TabIndex = 14;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1648,7 +1650,8 @@ namespace Moradi_Notepad
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1178, 687);
+            this.MaximumSize = new System.Drawing.Size(1178, 726);
+            this.MinimumSize = new System.Drawing.Size(1178, 726);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Moradi Notepad";
@@ -1657,6 +1660,7 @@ namespace Moradi_Notepad
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.ubuntuTheme1.ResumeLayout(false);
             this.ubuntuTheme1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
             this.CopyPaste.ResumeLayout(false);
@@ -1667,7 +1671,6 @@ namespace Moradi_Notepad
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
