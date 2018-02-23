@@ -106,12 +106,34 @@
     <Compile Include="Credits.Designer.cs">
       <DependentUpon>Credits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hasher.cs" />
+    <Compile Include="ISharpUpdate.cs" />
     <Compile Include="linenum_rtf.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="menuStrip_Form_Align_Left.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharpUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharpUpdateForm.Designer.cs">
+      <DependentUpon>SharpUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharpUpdateInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharpUpdateInfoForm.Designer.cs">
+      <DependentUpon>SharpUpdateInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharpUpdatePrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharpUpdatePrompt.Designer.cs">
+      <DependentUpon>SharpUpdatePrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharpUpdater.cs" />
+    <Compile Include="SharpUpdateXML.cs" />
     <Compile Include="splashscreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +163,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SharpUpdateForm.resx">
+      <DependentUpon>SharpUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharpUpdateInfoForm.resx">
+      <DependentUpon>SharpUpdateInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharpUpdatePrompt.resx">
+      <DependentUpon>SharpUpdatePrompt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="splashscreen.resx">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +306,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnome-software-update-urgent_svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdatePLZ.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

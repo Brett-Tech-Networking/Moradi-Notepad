@@ -4,10 +4,11 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace Moradi_Notepad
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, ISharpUpdate
     {
         int charCount = 0;
         int size = 10;
@@ -15,6 +16,54 @@ namespace Moradi_Notepad
         public About a = new About();
 
         public PrintPageEventHandler pd_PrintPage { get; private set; }
+
+        public string ApplicationName
+        {
+            get
+            {
+                return "AppName";
+            }
+        }
+
+        public string ApplicationID
+        {
+            get
+            {
+                return "APPID";
+            }
+        }
+
+        public Assembly ApplicationAssembly
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly();
+            }
+        }
+
+        public Icon ApplicationIcon
+        {
+            get
+            {
+                return this.Icon;
+            }
+        }
+
+        public Uri UpdateXmlLocation
+        {
+            get
+            {
+                return new Uri("Link2XML");
+            }
+        }
+
+        public Form Context
+        {
+            get
+            {
+                return this;
+            }
+        }
 
         public Form1()
         {

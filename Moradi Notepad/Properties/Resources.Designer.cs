@@ -173,6 +173,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gnome_software_update_urgent_svg {
+            get {
+                object obj = ResourceManager.GetObject("Gnome_software_update_urgent_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Scrap_Pen {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Scrap-Pen", resourceCulture);
@@ -276,6 +286,16 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap text_27924_960_720 {
             get {
                 object obj = ResourceManager.GetObject("text-27924_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UpdatePLZ {
+            get {
+                object obj = ResourceManager.GetObject("UpdatePLZ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
