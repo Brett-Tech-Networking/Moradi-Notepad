@@ -23,5 +23,14 @@ namespace Moradi_Notepad
             SpeechSynthesizer ss = new SpeechSynthesizer();
             ss.SpeakAsync(textBox1.Text);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //max length of text reached
+            if (textBox1.Text.Length == 1000)
+            {
+                MessageBox.Show("Please Type Less I Can Only Handle 1000 Characters At A Time", "Whoa There Pal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
