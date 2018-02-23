@@ -109,7 +109,6 @@
     <Compile Include="linenum_rtf.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="menuStrip_Form_Align_Left.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="splashscreen.cs">
@@ -118,7 +117,6 @@
     <Compile Include="splashscreen.Designer.cs">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="toolStrip_Down_AlignJustify.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
