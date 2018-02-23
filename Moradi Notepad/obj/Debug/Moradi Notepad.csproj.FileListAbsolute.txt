@@ -95,3 +95,6 @@ C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources

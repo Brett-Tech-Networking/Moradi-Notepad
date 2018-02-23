@@ -1220,5 +1220,11 @@ namespace Moradi_Notepad
         {
             richTextBox1.Redo();
         }
+
+        private void pronounceThatWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pronounce_That_Word ptw = new Pronounce_That_Word();
+            ptw.Show();
+        }
     }
 }
