@@ -1766,5 +1766,40 @@ namespace Moradi_Notepad
         {
             clock.Stop();
         }
+
+        private void toolStripButton18_Click(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void toolStripButton19_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.FileName = "";
+            openFileDialog1.Filter = "BMP (*.BMP)|*.BMP|JPG (*.JPG)|*.JPG|JPEG (*.JPEG)|*.JPEG|PNG (*.PNG)|*.PNG|All Files (*.*)|*.*";
+            openFileDialog1.DefaultExt = "*.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Image img = Image.FromFile(openFileDialog1.FileName);
+
+                Clipboard.SetImage(img);
+                richTextBox1.Paste();
+            }
+        }
+
+        private void imageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.FileName = "";
+            openFileDialog1.Filter = "BMP (*.BMP)|*.BMP|JPG (*.JPG)|*.JPG|JPEG (*.JPEG)|*.JPEG|PNG (*.PNG)|*.PNG|All Files (*.*)|*.*";
+            openFileDialog1.DefaultExt = "*.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Image img = Image.FromFile(openFileDialog1.FileName);
+
+                Clipboard.SetImage(img);
+                richTextBox1.Paste();
+            }
+        }
     }
 }
