@@ -1,0 +1,16 @@
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.exe.config
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.ResolveComReference.cache
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.exe
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.pdb
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Fader Theme.dll
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Ubuntu Theme.dll
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.About.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Form1.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Credits.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\LineNumbers.LineNumbers_For_RichTextBox.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Pronounce_That_Word.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.splashscreen.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.exe
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.pdb

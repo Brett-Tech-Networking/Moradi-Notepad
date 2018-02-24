@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace Moradi_Notepad
 {
     partial class Form1

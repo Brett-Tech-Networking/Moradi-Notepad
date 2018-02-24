@@ -151,6 +151,16 @@ namespace Moradi_Notepad.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Fader_Theme {
+            get {
+                object obj = ResourceManager.GetObject("Fader_Theme", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Scrap_Pen {
@@ -267,6 +277,16 @@ namespace Moradi_Notepad.Properties {
             get {
                 object obj = ResourceManager.GetObject("text-27924_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Ubuntu_Theme {
+            get {
+                object obj = ResourceManager.GetObject("Ubuntu_Theme", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
