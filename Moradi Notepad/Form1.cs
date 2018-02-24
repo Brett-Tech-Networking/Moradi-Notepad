@@ -72,9 +72,9 @@ namespace Moradi_Notepad
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Will Close Moradi Notepad Software
-                Application.Exit();
-                splashscreen ss = new splashscreen();
-                ss.Close();
+            Application.Exit();
+            splashscreen ss = new splashscreen();
+            ss.Close();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1181,7 +1181,7 @@ namespace Moradi_Notepad
             }
 
             //cancer
-            else if(result == DialogResult.Cancel)
+            else if (result == DialogResult.Cancel)
             {
                 e.Cancel = true;
                 return;
@@ -1225,7 +1225,7 @@ namespace Moradi_Notepad
 
         private void pronounceThatWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void pronounceThatWordToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -1242,7 +1242,113 @@ namespace Moradi_Notepad
 
         private void gotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void newToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {            
+                infolabel.Text = ("New Document");            
+        }
+
+        private void newToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = ("Ready");
+        }
+
+        private void openToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = ("Open Document");
+        }
+
+        private void openToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = ("Ready");
+        }
+
+        private void saveToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = ("Save Document As");
+          
+        }
+
+        private void saveToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = ("Ready");
+        }
+
+        private void printToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Print";
+        }
+
+        private void printToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void printPreviewToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Print Preview";
+        }
+
+        private void printPreviewToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void restartSoftwareToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Restart Notepad";
+        }
+
+        private void restartSoftwareToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void exitToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Exit Notepad";
+        }
+
+        private void undoToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Undo Action";
+        }
+
+        private void undoToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void redoToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Redo Action";
+        }
+
+        private void redoToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void cutToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Cut Text";
+        }
+
+        private void cutToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void copyToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Copy Text";
+        }
+
+        private void copyToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
         }
     }
 }
