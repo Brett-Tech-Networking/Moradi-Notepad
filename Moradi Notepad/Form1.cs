@@ -6,6 +6,7 @@ using System.IO;
 using System.Speech.Synthesis;
 using System.Windows.Forms;
 
+
 namespace Moradi_Notepad
 {
     public partial class Form1 : Form
@@ -1236,7 +1237,12 @@ namespace Moradi_Notepad
         private void readCurrentDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SpeechSynthesizer ss = new SpeechSynthesizer();
-            ss.SpeakAsync(richTextBox1.Text);
+            ss.SpeakAsync(richTextBox1.SelectedText);
+        }
+
+        private void gotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
