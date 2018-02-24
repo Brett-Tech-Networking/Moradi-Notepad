@@ -1350,5 +1350,356 @@ namespace Moradi_Notepad
         {
             infolabel.Text = "Ready";
         }
+
+        private void pasteToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Paste Text";
+        }
+
+        private void pasteToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void selectAllToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Select All Text";
+        }
+
+        private void customizeToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Font Selection";
+        }
+
+        private void customizeToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void addSignaturesToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Add Signatures";
+        }
+
+        private void addSignaturesToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void insertToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Insert Item";
+        }
+
+        private void insertToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+
+        }
+
+        private void clockToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Clock Settings";
+        }
+
+        private void clockToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void pronounceThatWordToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Word Pronounce";
+        }
+
+        private void pronounceThatWordToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void readCurrentDocumentToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Read Selected Text";
+        }
+
+        private void readCurrentDocumentToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void themesToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void defaultToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Default Theme";
+        }
+
+        private void defaultToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void halloweenToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Christmas Theme";
+        }
+
+        private void halloweenToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void windowsNotepadThemeToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Win Notepad Theme";
+        }
+
+        private void windowsNotepadThemeToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void contentsToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "About Moradi Notepad";
+        }
+
+        private void contentsToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void creditsToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Credits";
+        }
+
+        private void creditsToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton1_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "New Document";
+        }
+
+        private void toolStripButton1_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton10_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Open Document";
+        }
+
+        private void toolStripButton10_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void B_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Bold Font";
+        }
+
+        private void B_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton2_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Italic Font";
+        }
+
+        private void toolStripButton2_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton3_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Underline Text";
+        }
+
+        private void toolStripButton3_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton4_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Strike Through";
+        }
+
+        private void toolStripButton4_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton5_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "CAP Selected Word";
+        }
+
+        private void toolStripButton5_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton6_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Lower Case Word";
+        }
+
+        private void toolStripButton6_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton7_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Increase Size";
+        }
+
+        private void toolStripButton7_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton8_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Decrease Text Size";
+        }
+
+        private void toolStripButton8_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton9_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Background Color";
+        }
+
+        private void toolStripButton9_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripDropDownButton1_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Text Color";
+        }
+
+        private void toolStripDropDownButton1_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton11_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Show Line Numbers";
+        }
+
+        private void toolStripButton11_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton12_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Hide Line Numbers";
+        }
+
+        private void toolStripButton12_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton13_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Left Text Align";
+        }
+
+        private void toolStripButton13_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton14_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Center Text Align";
+        }
+
+        private void toolStripButton14_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton15_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Right Text Align";
+        }
+
+        private void toolStripButton15_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void helpToolStripButton_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Text Bullets";
+        }
+
+        private void helpToolStripButton_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void undo_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Undo Action";
+        }
+
+        private void undo_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void redo_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Redo Action";
+        }
+
+        private void redo_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton16_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Lock Document";
+        }
+
+        private void toolStripButton16_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
+
+        private void toolStripButton17_MouseHover(object sender, EventArgs e)
+        {
+            infolabel.Text = "Unlock Document";
+        }
+
+        private void toolStripButton17_MouseLeave(object sender, EventArgs e)
+        {
+            infolabel.Text = "Ready";
+        }
     }
 }

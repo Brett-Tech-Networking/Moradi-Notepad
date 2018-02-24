@@ -150,7 +150,6 @@ namespace Moradi_Notepad
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addSignaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -262,7 +261,7 @@ namespace Moradi_Notepad
             this.toolStripButton17});
             this.toolStrip3.Location = new System.Drawing.Point(1, 51);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(312, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(343, 25);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "Lock Document";
             // 
@@ -280,6 +279,8 @@ namespace Moradi_Notepad
             this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton13.Text = "Left";
             this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click_1);
+            this.toolStripButton13.MouseLeave += new System.EventHandler(this.toolStripButton13_MouseLeave);
+            this.toolStripButton13.MouseHover += new System.EventHandler(this.toolStripButton13_MouseHover);
             // 
             // toolStripButton14
             // 
@@ -290,6 +291,8 @@ namespace Moradi_Notepad
             this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton14.Text = "Center";
             this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
+            this.toolStripButton14.MouseLeave += new System.EventHandler(this.toolStripButton14_MouseLeave);
+            this.toolStripButton14.MouseHover += new System.EventHandler(this.toolStripButton14_MouseHover);
             // 
             // toolStripButton15
             // 
@@ -300,6 +303,8 @@ namespace Moradi_Notepad
             this.toolStripButton15.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton15.Text = "Right";
             this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
+            this.toolStripButton15.MouseLeave += new System.EventHandler(this.toolStripButton15_MouseLeave);
+            this.toolStripButton15.MouseHover += new System.EventHandler(this.toolStripButton15_MouseHover);
             // 
             // toolStripSeparator11
             // 
@@ -314,6 +319,8 @@ namespace Moradi_Notepad
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(29, 22);
             this.helpToolStripButton.Click += new System.EventHandler(this.helpToolStripButton_Click);
+            this.helpToolStripButton.MouseLeave += new System.EventHandler(this.helpToolStripButton_MouseLeave);
+            this.helpToolStripButton.MouseHover += new System.EventHandler(this.helpToolStripButton_MouseHover);
             // 
             // kToolStripMenuItem
             // 
@@ -662,6 +669,8 @@ namespace Moradi_Notepad
             this.undo.Size = new System.Drawing.Size(23, 22);
             this.undo.Text = "Undo";
             this.undo.Click += new System.EventHandler(this.undo_Click);
+            this.undo.MouseLeave += new System.EventHandler(this.undo_MouseLeave);
+            this.undo.MouseHover += new System.EventHandler(this.undo_MouseHover);
             // 
             // redo
             // 
@@ -673,6 +682,8 @@ namespace Moradi_Notepad
             this.redo.Text = "redo";
             this.redo.ToolTipText = "Redo";
             this.redo.Click += new System.EventHandler(this.redo_Click);
+            this.redo.MouseLeave += new System.EventHandler(this.redo_MouseLeave);
+            this.redo.MouseHover += new System.EventHandler(this.redo_MouseHover);
             // 
             // toolStripSeparator14
             // 
@@ -689,6 +700,8 @@ namespace Moradi_Notepad
             this.toolStripButton16.Text = "toolStripButton16";
             this.toolStripButton16.ToolTipText = "Lock Document";
             this.toolStripButton16.Click += new System.EventHandler(this.toolStripButton16_Click);
+            this.toolStripButton16.MouseLeave += new System.EventHandler(this.toolStripButton16_MouseLeave);
+            this.toolStripButton16.MouseHover += new System.EventHandler(this.toolStripButton16_MouseHover);
             // 
             // toolStripButton17
             // 
@@ -699,6 +712,8 @@ namespace Moradi_Notepad
             this.toolStripButton17.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton17.Text = "Unlock Document";
             this.toolStripButton17.Click += new System.EventHandler(this.toolStripButton17_Click);
+            this.toolStripButton17.MouseLeave += new System.EventHandler(this.toolStripButton17_MouseLeave);
+            this.toolStripButton17.MouseHover += new System.EventHandler(this.toolStripButton17_MouseHover);
             // 
             // output
             // 
@@ -706,7 +721,7 @@ namespace Moradi_Notepad
             this.output.BackColor = System.Drawing.Color.Transparent;
             this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output.ForeColor = System.Drawing.Color.Navy;
-            this.output.Location = new System.Drawing.Point(125, 707);
+            this.output.Location = new System.Drawing.Point(135, 707);
             this.output.Name = "output";
             this.output.Size = new System.Drawing.Size(41, 15);
             this.output.TabIndex = 12;
@@ -833,6 +848,8 @@ namespace Moradi_Notepad
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.ToolTipText = "New File";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            this.toolStripButton1.MouseLeave += new System.EventHandler(this.toolStripButton1_MouseLeave);
+            this.toolStripButton1.MouseHover += new System.EventHandler(this.toolStripButton1_MouseHover);
             // 
             // toolStripButton10
             // 
@@ -844,6 +861,8 @@ namespace Moradi_Notepad
             this.toolStripButton10.Text = "toolStripButton10";
             this.toolStripButton10.ToolTipText = "Open File";
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
+            this.toolStripButton10.MouseLeave += new System.EventHandler(this.toolStripButton10_MouseLeave);
+            this.toolStripButton10.MouseHover += new System.EventHandler(this.toolStripButton10_MouseHover);
             // 
             // toolStrip1
             // 
@@ -884,6 +903,8 @@ namespace Moradi_Notepad
             this.B.Text = "B";
             this.B.ToolTipText = "Bold";
             this.B.Click += new System.EventHandler(this.B_Click);
+            this.B.MouseLeave += new System.EventHandler(this.B_MouseLeave);
+            this.B.MouseHover += new System.EventHandler(this.B_MouseHover);
             // 
             // toolStripButton2
             // 
@@ -897,6 +918,8 @@ namespace Moradi_Notepad
             this.toolStripButton2.Text = "I";
             this.toolStripButton2.ToolTipText = "Italic";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripButton2.MouseLeave += new System.EventHandler(this.toolStripButton2_MouseLeave);
+            this.toolStripButton2.MouseHover += new System.EventHandler(this.toolStripButton2_MouseHover);
             // 
             // toolStripButton3
             // 
@@ -910,6 +933,8 @@ namespace Moradi_Notepad
             this.toolStripButton3.Text = "U";
             this.toolStripButton3.ToolTipText = "Underline";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.toolStripButton3.MouseLeave += new System.EventHandler(this.toolStripButton3_MouseLeave);
+            this.toolStripButton3.MouseHover += new System.EventHandler(this.toolStripButton3_MouseHover);
             // 
             // toolStripButton4
             // 
@@ -923,6 +948,8 @@ namespace Moradi_Notepad
             this.toolStripButton4.Text = "S";
             this.toolStripButton4.ToolTipText = "Strikethrough";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.toolStripButton4.MouseLeave += new System.EventHandler(this.toolStripButton4_MouseLeave);
+            this.toolStripButton4.MouseHover += new System.EventHandler(this.toolStripButton4_MouseHover);
             // 
             // toolStripSeparator6
             // 
@@ -939,6 +966,8 @@ namespace Moradi_Notepad
             this.toolStripButton5.Text = "A";
             this.toolStripButton5.ToolTipText = "Case CAP";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.toolStripButton5.MouseLeave += new System.EventHandler(this.toolStripButton5_MouseLeave);
+            this.toolStripButton5.MouseHover += new System.EventHandler(this.toolStripButton5_MouseHover);
             // 
             // toolStripButton6
             // 
@@ -950,6 +979,8 @@ namespace Moradi_Notepad
             this.toolStripButton6.Text = "a";
             this.toolStripButton6.ToolTipText = "Case Lowercase";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.toolStripButton6.MouseLeave += new System.EventHandler(this.toolStripButton6_MouseLeave);
+            this.toolStripButton6.MouseHover += new System.EventHandler(this.toolStripButton6_MouseHover);
             // 
             // toolStripSeparator7
             // 
@@ -966,6 +997,8 @@ namespace Moradi_Notepad
             this.toolStripButton7.Text = "A+";
             this.toolStripButton7.ToolTipText = "Increase Text Size";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            this.toolStripButton7.MouseLeave += new System.EventHandler(this.toolStripButton7_MouseLeave);
+            this.toolStripButton7.MouseHover += new System.EventHandler(this.toolStripButton7_MouseHover);
             // 
             // toolStripButton8
             // 
@@ -977,6 +1010,8 @@ namespace Moradi_Notepad
             this.toolStripButton8.Text = "A-";
             this.toolStripButton8.ToolTipText = "Decrease Text Size";
             this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            this.toolStripButton8.MouseLeave += new System.EventHandler(this.toolStripButton8_MouseLeave);
+            this.toolStripButton8.MouseHover += new System.EventHandler(this.toolStripButton8_MouseHover);
             // 
             // toolStripSeparator8
             // 
@@ -998,6 +1033,8 @@ namespace Moradi_Notepad
             this.toolStripButton9.Size = new System.Drawing.Size(29, 22);
             this.toolStripButton9.Text = "Background Color";
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            this.toolStripButton9.MouseLeave += new System.EventHandler(this.toolStripButton9_MouseLeave);
+            this.toolStripButton9.MouseHover += new System.EventHandler(this.toolStripButton9_MouseHover);
             // 
             // redToolStripMenuItem
             // 
@@ -1073,6 +1110,8 @@ namespace Moradi_Notepad
             this.toolStripDropDownButton1.Text = "Text Color";
             this.toolStripDropDownButton1.ToolTipText = "Text Color";
             this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
+            this.toolStripDropDownButton1.MouseLeave += new System.EventHandler(this.toolStripDropDownButton1_MouseLeave);
+            this.toolStripDropDownButton1.MouseHover += new System.EventHandler(this.toolStripDropDownButton1_MouseHover);
             // 
             // redToolStripMenuItem1
             // 
@@ -1081,7 +1120,7 @@ namespace Moradi_Notepad
             this.redToolStripMenuItem1.ForeColor = System.Drawing.Color.Red;
             this.redToolStripMenuItem1.Image = global::Moradi_Notepad.Properties.Resources.imageedit_24_8334251899;
             this.redToolStripMenuItem1.Name = "redToolStripMenuItem1";
-            this.redToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.redToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.redToolStripMenuItem1.Text = "Red | Text";
             this.redToolStripMenuItem1.Click += new System.EventHandler(this.redToolStripMenuItem1_Click);
             // 
@@ -1092,7 +1131,7 @@ namespace Moradi_Notepad
             this.blueTextToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
             this.blueTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.blue_dot_md;
             this.blueTextToolStripMenuItem.Name = "blueTextToolStripMenuItem";
-            this.blueTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.blueTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.blueTextToolStripMenuItem.Text = "Blue | Text";
             this.blueTextToolStripMenuItem.Click += new System.EventHandler(this.blueTextToolStripMenuItem_Click);
             // 
@@ -1103,7 +1142,7 @@ namespace Moradi_Notepad
             this.limeTextToolStripMenuItem.ForeColor = System.Drawing.Color.Lime;
             this.limeTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.neon_green_dot_hi;
             this.limeTextToolStripMenuItem.Name = "limeTextToolStripMenuItem";
-            this.limeTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.limeTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.limeTextToolStripMenuItem.Text = "Lime | Text";
             this.limeTextToolStripMenuItem.Click += new System.EventHandler(this.limeTextToolStripMenuItem_Click);
             // 
@@ -1114,7 +1153,7 @@ namespace Moradi_Notepad
             this.yellowTextToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.yellowTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.yellow_dot_md;
             this.yellowTextToolStripMenuItem.Name = "yellowTextToolStripMenuItem";
-            this.yellowTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.yellowTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.yellowTextToolStripMenuItem.Text = "Yellow | Text";
             this.yellowTextToolStripMenuItem.Click += new System.EventHandler(this.yellowTextToolStripMenuItem_Click);
             // 
@@ -1125,7 +1164,7 @@ namespace Moradi_Notepad
             this.purpleTextToolStripMenuItem.ForeColor = System.Drawing.Color.Purple;
             this.purpleTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.Location_dot_purple_svg;
             this.purpleTextToolStripMenuItem.Name = "purpleTextToolStripMenuItem";
-            this.purpleTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.purpleTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.purpleTextToolStripMenuItem.Text = "Purple | Text";
             this.purpleTextToolStripMenuItem.Click += new System.EventHandler(this.purpleTextToolStripMenuItem_Click);
             // 
@@ -1136,7 +1175,7 @@ namespace Moradi_Notepad
             this.otherColorToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.otherColorToolStripMenuItem1.Image = global::Moradi_Notepad.Properties.Resources.Color_wheel;
             this.otherColorToolStripMenuItem1.Name = "otherColorToolStripMenuItem1";
-            this.otherColorToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.otherColorToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.otherColorToolStripMenuItem1.Text = "Other Color";
             this.otherColorToolStripMenuItem1.Click += new System.EventHandler(this.otherColorToolStripMenuItem1_Click);
             // 
@@ -1154,6 +1193,8 @@ namespace Moradi_Notepad
             this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton11.Text = "Show Line Number";
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
+            this.toolStripButton11.MouseLeave += new System.EventHandler(this.toolStripButton11_MouseLeave);
+            this.toolStripButton11.MouseHover += new System.EventHandler(this.toolStripButton11_MouseHover);
             // 
             // toolStripButton12
             // 
@@ -1164,6 +1205,8 @@ namespace Moradi_Notepad
             this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton12.Text = "Hide Line Number";
             this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
+            this.toolStripButton12.MouseLeave += new System.EventHandler(this.toolStripButton12_MouseLeave);
+            this.toolStripButton12.MouseHover += new System.EventHandler(this.toolStripButton12_MouseHover);
             // 
             // ubuntuControlBox1
             // 
@@ -1189,7 +1232,7 @@ namespace Moradi_Notepad
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(1, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(393, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(301, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1317,8 +1360,7 @@ namespace Moradi_Notepad
             this.copyToolStripMenuItem,
             this.pasteToolStripMenuItem,
             this.toolStripSeparator4,
-            this.selectAllToolStripMenuItem,
-            this.gotoToolStripMenuItem});
+            this.selectAllToolStripMenuItem});
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
@@ -1383,6 +1425,8 @@ namespace Moradi_Notepad
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
+            this.pasteToolStripMenuItem.MouseLeave += new System.EventHandler(this.pasteToolStripMenuItem_MouseLeave);
+            this.pasteToolStripMenuItem.MouseHover += new System.EventHandler(this.pasteToolStripMenuItem_MouseHover);
             // 
             // toolStripSeparator4
             // 
@@ -1396,13 +1440,7 @@ namespace Moradi_Notepad
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
-            // 
-            // gotoToolStripMenuItem
-            // 
-            this.gotoToolStripMenuItem.Name = "gotoToolStripMenuItem";
-            this.gotoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.gotoToolStripMenuItem.Text = "Goto";
-            this.gotoToolStripMenuItem.Click += new System.EventHandler(this.gotoToolStripMenuItem_Click);
+            this.selectAllToolStripMenuItem.MouseHover += new System.EventHandler(this.selectAllToolStripMenuItem_MouseHover);
             // 
             // toolsToolStripMenuItem
             // 
@@ -1426,6 +1464,8 @@ namespace Moradi_Notepad
             this.customizeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.customizeToolStripMenuItem.Text = "&Font";
             this.customizeToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
+            this.customizeToolStripMenuItem.MouseLeave += new System.EventHandler(this.customizeToolStripMenuItem_MouseLeave);
+            this.customizeToolStripMenuItem.MouseHover += new System.EventHandler(this.customizeToolStripMenuItem_MouseHover);
             // 
             // addSignaturesToolStripMenuItem
             // 
@@ -1437,6 +1477,8 @@ namespace Moradi_Notepad
             this.addSignaturesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.addSignaturesToolStripMenuItem.Text = "&Add Signatures";
             this.addSignaturesToolStripMenuItem.Click += new System.EventHandler(this.addSignaturesToolStripMenuItem_Click);
+            this.addSignaturesToolStripMenuItem.MouseLeave += new System.EventHandler(this.addSignaturesToolStripMenuItem_MouseLeave);
+            this.addSignaturesToolStripMenuItem.MouseHover += new System.EventHandler(this.addSignaturesToolStripMenuItem_MouseHover);
             // 
             // thankYouToolStripMenuItem
             // 
@@ -1471,6 +1513,8 @@ namespace Moradi_Notepad
             this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
             this.insertToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.insertToolStripMenuItem.Text = "&Insert";
+            this.insertToolStripMenuItem.MouseLeave += new System.EventHandler(this.insertToolStripMenuItem_MouseLeave);
+            this.insertToolStripMenuItem.MouseHover += new System.EventHandler(this.insertToolStripMenuItem_MouseHover);
             // 
             // dateTimeToolStripMenuItem
             // 
@@ -1491,6 +1535,8 @@ namespace Moradi_Notepad
             this.clockToolStripMenuItem.Name = "clockToolStripMenuItem";
             this.clockToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.clockToolStripMenuItem.Text = "&Clock ";
+            this.clockToolStripMenuItem.MouseLeave += new System.EventHandler(this.clockToolStripMenuItem_MouseLeave);
+            this.clockToolStripMenuItem.MouseHover += new System.EventHandler(this.clockToolStripMenuItem_MouseHover);
             // 
             // timeColorToolStripMenuItem
             // 
@@ -1544,16 +1590,20 @@ namespace Moradi_Notepad
             // pronounceThatWordToolStripMenuItem
             // 
             this.pronounceThatWordToolStripMenuItem.Name = "pronounceThatWordToolStripMenuItem";
-            this.pronounceThatWordToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.pronounceThatWordToolStripMenuItem.Text = "Custom Word Pronounce";
+            this.pronounceThatWordToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.pronounceThatWordToolStripMenuItem.Text = "Word &Pronouncer";
             this.pronounceThatWordToolStripMenuItem.Click += new System.EventHandler(this.pronounceThatWordToolStripMenuItem_Click_1);
+            this.pronounceThatWordToolStripMenuItem.MouseLeave += new System.EventHandler(this.pronounceThatWordToolStripMenuItem_MouseLeave);
+            this.pronounceThatWordToolStripMenuItem.MouseHover += new System.EventHandler(this.pronounceThatWordToolStripMenuItem_MouseHover);
             // 
             // readCurrentDocumentToolStripMenuItem
             // 
             this.readCurrentDocumentToolStripMenuItem.Name = "readCurrentDocumentToolStripMenuItem";
-            this.readCurrentDocumentToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.readCurrentDocumentToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.readCurrentDocumentToolStripMenuItem.Text = "Read &Selected Text";
             this.readCurrentDocumentToolStripMenuItem.Click += new System.EventHandler(this.readCurrentDocumentToolStripMenuItem_Click);
+            this.readCurrentDocumentToolStripMenuItem.MouseLeave += new System.EventHandler(this.readCurrentDocumentToolStripMenuItem_MouseLeave);
+            this.readCurrentDocumentToolStripMenuItem.MouseHover += new System.EventHandler(this.readCurrentDocumentToolStripMenuItem_MouseHover);
             // 
             // themesToolStripMenuItem
             // 
@@ -1565,6 +1615,7 @@ namespace Moradi_Notepad
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.themesToolStripMenuItem.Text = "&Themes";
+            this.themesToolStripMenuItem.MouseHover += new System.EventHandler(this.themesToolStripMenuItem_MouseHover);
             // 
             // defaultToolStripMenuItem
             // 
@@ -1574,6 +1625,8 @@ namespace Moradi_Notepad
             this.defaultToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.defaultToolStripMenuItem.Text = "&Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
+            this.defaultToolStripMenuItem.MouseLeave += new System.EventHandler(this.defaultToolStripMenuItem_MouseLeave);
+            this.defaultToolStripMenuItem.MouseHover += new System.EventHandler(this.defaultToolStripMenuItem_MouseHover);
             // 
             // halloweenToolStripMenuItem
             // 
@@ -1583,6 +1636,8 @@ namespace Moradi_Notepad
             this.halloweenToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.halloweenToolStripMenuItem.Text = "&Christmas";
             this.halloweenToolStripMenuItem.Click += new System.EventHandler(this.halloweenToolStripMenuItem_Click);
+            this.halloweenToolStripMenuItem.MouseLeave += new System.EventHandler(this.halloweenToolStripMenuItem_MouseLeave);
+            this.halloweenToolStripMenuItem.MouseHover += new System.EventHandler(this.halloweenToolStripMenuItem_MouseHover);
             // 
             // windowsNotepadThemeToolStripMenuItem
             // 
@@ -1592,6 +1647,8 @@ namespace Moradi_Notepad
             this.windowsNotepadThemeToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.windowsNotepadThemeToolStripMenuItem.Text = "&Windows Notepad Theme ";
             this.windowsNotepadThemeToolStripMenuItem.Click += new System.EventHandler(this.windowsNotepadThemeToolStripMenuItem_Click);
+            this.windowsNotepadThemeToolStripMenuItem.MouseLeave += new System.EventHandler(this.windowsNotepadThemeToolStripMenuItem_MouseLeave);
+            this.windowsNotepadThemeToolStripMenuItem.MouseHover += new System.EventHandler(this.windowsNotepadThemeToolStripMenuItem_MouseHover);
             // 
             // helpToolStripMenuItem
             // 
@@ -1612,6 +1669,8 @@ namespace Moradi_Notepad
             this.contentsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.contentsToolStripMenuItem.Text = "&About";
             this.contentsToolStripMenuItem.Click += new System.EventHandler(this.contentsToolStripMenuItem_Click);
+            this.contentsToolStripMenuItem.MouseLeave += new System.EventHandler(this.contentsToolStripMenuItem_MouseLeave);
+            this.contentsToolStripMenuItem.MouseHover += new System.EventHandler(this.contentsToolStripMenuItem_MouseHover);
             // 
             // toolStripSeparator5
             // 
@@ -1625,6 +1684,8 @@ namespace Moradi_Notepad
             this.creditsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.creditsToolStripMenuItem.Text = "&Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
+            this.creditsToolStripMenuItem.MouseLeave += new System.EventHandler(this.creditsToolStripMenuItem_MouseLeave);
+            this.creditsToolStripMenuItem.MouseHover += new System.EventHandler(this.creditsToolStripMenuItem_MouseHover);
             // 
             // timer1
             // 
@@ -1699,7 +1760,7 @@ namespace Moradi_Notepad
             this.infolabel.AutoSize = true;
             this.infolabel.BackColor = System.Drawing.Color.Transparent;
             this.infolabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infolabel.Location = new System.Drawing.Point(3, 707);
+            this.infolabel.Location = new System.Drawing.Point(3, 709);
             this.infolabel.Name = "infolabel";
             this.infolabel.Size = new System.Drawing.Size(40, 14);
             this.infolabel.TabIndex = 15;
@@ -1938,7 +1999,6 @@ namespace Moradi_Notepad
         private ToolStripMenuItem toolsToolStripMenuItem1;
         private ToolStripMenuItem pronounceThatWordToolStripMenuItem;
         private ToolStripMenuItem readCurrentDocumentToolStripMenuItem;
-        private ToolStripMenuItem gotoToolStripMenuItem;
         private Label infolabel;
     }
 }
