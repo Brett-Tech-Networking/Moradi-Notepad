@@ -803,6 +803,8 @@ namespace Moradi_Notepad
 
         private void label1_Click(object sender, EventArgs e)
         {
+            clock.Start();
+           
             // Current Time of day 
         }
 
@@ -1700,6 +1702,45 @@ namespace Moradi_Notepad
         private void toolStripButton17_MouseLeave(object sender, EventArgs e)
         {
             infolabel.Text = "Ready";
+        }
+
+        private void onToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clock.Start();
+            clock.Enabled = true;
+        }
+
+        private void clock_Tick(object sender, EventArgs e)
+        {
+            if (label1.ForeColor == Color.DarkBlue)
+            {
+                label1.ForeColor = Color.Red;
+            }
+            else
+            if (label1.ForeColor == Color.Red)
+            {
+                label1.ForeColor = Color.Lime;
+            }
+            else
+            if (label1.ForeColor == Color.Lime)
+            {
+                label1.ForeColor = Color.Yellow;
+            }
+            else
+            if (label1.ForeColor == Color.Yellow)
+            {
+                label1.ForeColor = Color.Orange;
+            }
+            else
+                if (label1.ForeColor == Color.Orange)
+            {
+                label1.ForeColor = Color.DarkBlue;
+            }
+        }
+
+        private void offToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clock.Stop();
         }
     }
 }
