@@ -516,12 +516,16 @@ namespace Moradi_Notepad
             // Display Numbered lines left of document 
 
             richTextBox1.Location = new Point(20, 80);
+
+            //enable disable option
+            toolStripButton12.Enabled = true;
         }
 
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
             // Hide numbered lines on left side of document
             richTextBox1.Location = new Point(1, 76);
+            toolStripButton12.Enabled = false;
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
