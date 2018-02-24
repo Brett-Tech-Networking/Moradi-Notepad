@@ -176,6 +176,13 @@ namespace Moradi_Notepad
         {
             // Copy document text
             richTextBox1.Copy();
+
+            // enable if text exist
+            if (richTextBox1.TextLength > 0)
+            {
+                copyToolStripMenuItem.Enabled = true;
+            }
+            else copyToolStripMenuItem.Enabled = false;
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -188,6 +195,14 @@ namespace Moradi_Notepad
         {
             // Select all text
             richTextBox1.SelectAll();
+
+            //enable if text exist
+            if (richTextBox1.TextLength > 0)
+            {
+                selectAllToolStripMenuItem.Enabled = true;
+            }
+            else
+                selectAllToolStripMenuItem.Enabled = false;
         }
 
         private void B_Click(object sender, EventArgs e)
