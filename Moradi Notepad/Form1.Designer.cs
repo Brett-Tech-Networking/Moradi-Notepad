@@ -185,8 +185,10 @@ namespace Moradi_Notepad
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
+            this.toolsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pronounceThatWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readCurrentDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.ubuntuTheme1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.toolStrip3.SuspendLayout();
@@ -1179,11 +1181,12 @@ namespace Moradi_Notepad
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.toolsToolStripMenuItem,
+            this.toolsToolStripMenuItem1,
             this.themesToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(1, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(345, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(301, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1298,8 +1301,7 @@ namespace Moradi_Notepad
             this.copyToolStripMenuItem,
             this.pasteToolStripMenuItem,
             this.toolStripSeparator4,
-            this.selectAllToolStripMenuItem,
-            this.pronounceThatWordToolStripMenuItem});
+            this.selectAllToolStripMenuItem});
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
@@ -1310,7 +1312,7 @@ namespace Moradi_Notepad
             this.undoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.undoToolStripMenuItem.Text = "&Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
@@ -1318,14 +1320,14 @@ namespace Moradi_Notepad
             // 
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.redoToolStripMenuItem.Text = "&Redo";
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(166, 6);
             // 
             // cutToolStripMenuItem
             // 
@@ -1333,7 +1335,7 @@ namespace Moradi_Notepad
             this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.cutToolStripMenuItem.Text = "&Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
@@ -1343,7 +1345,7 @@ namespace Moradi_Notepad
             this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.copyToolStripMenuItem.Text = "&Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -1353,20 +1355,20 @@ namespace Moradi_Notepad
             this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(166, 6);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
@@ -1551,20 +1553,20 @@ namespace Moradi_Notepad
             this.contentsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
             this.contentsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contentsToolStripMenuItem.Text = "&About";
             this.contentsToolStripMenuItem.Click += new System.EventHandler(this.contentsToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(125, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
             // 
             // creditsToolStripMenuItem
             // 
             this.creditsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
-            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.creditsToolStripMenuItem.Text = "&Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
             // 
@@ -1636,6 +1638,30 @@ namespace Moradi_Notepad
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
+            // toolsToolStripMenuItem1
+            // 
+            this.toolsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pronounceThatWordToolStripMenuItem,
+            this.readCurrentDocumentToolStripMenuItem});
+            this.toolsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
+            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem1.Text = "&Tools";
+            // 
+            // pronounceThatWordToolStripMenuItem
+            // 
+            this.pronounceThatWordToolStripMenuItem.Name = "pronounceThatWordToolStripMenuItem";
+            this.pronounceThatWordToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.pronounceThatWordToolStripMenuItem.Text = "Custom Word Pronounce";
+            this.pronounceThatWordToolStripMenuItem.Click += new System.EventHandler(this.pronounceThatWordToolStripMenuItem_Click_1);
+            // 
+            // readCurrentDocumentToolStripMenuItem
+            // 
+            this.readCurrentDocumentToolStripMenuItem.Name = "readCurrentDocumentToolStripMenuItem";
+            this.readCurrentDocumentToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.readCurrentDocumentToolStripMenuItem.Text = "Read Current Document";
+            this.readCurrentDocumentToolStripMenuItem.Click += new System.EventHandler(this.readCurrentDocumentToolStripMenuItem_Click);
+            // 
             // lineNumbers_For_RichTextBox2
             // 
             this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
@@ -1672,13 +1698,6 @@ namespace Moradi_Notepad
             this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
             this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 632);
             this.lineNumbers_For_RichTextBox2.TabIndex = 7;
-            // 
-            // pronounceThatWordToolStripMenuItem
-            // 
-            this.pronounceThatWordToolStripMenuItem.Name = "pronounceThatWordToolStripMenuItem";
-            this.pronounceThatWordToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.pronounceThatWordToolStripMenuItem.Text = "Pronounce That Word";
-            this.pronounceThatWordToolStripMenuItem.Click += new System.EventHandler(this.pronounceThatWordToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -1873,7 +1892,9 @@ namespace Moradi_Notepad
         private ToolStripButton undo;
         private ToolStripButton redo;
         private ToolStripSeparator toolStripSeparator14;
+        private ToolStripMenuItem toolsToolStripMenuItem1;
         private ToolStripMenuItem pronounceThatWordToolStripMenuItem;
+        private ToolStripMenuItem readCurrentDocumentToolStripMenuItem;
     }
 }
 

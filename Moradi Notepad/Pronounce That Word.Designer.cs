@@ -42,9 +42,8 @@
             this.textBox1.ForeColor = System.Drawing.Color.Yellow;
             this.textBox1.Location = new System.Drawing.Point(36, 104);
             this.textBox1.MaxLength = 1000;
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(402, 32);
+            this.textBox1.Size = new System.Drawing.Size(402, 30);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -85,6 +84,7 @@
             // 
             // Pronounce_That_Word
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;

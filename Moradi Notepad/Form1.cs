@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
+using System.Speech.Synthesis;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -1223,8 +1224,19 @@ namespace Moradi_Notepad
 
         private void pronounceThatWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void pronounceThatWordToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
             Pronounce_That_Word ptw = new Pronounce_That_Word();
             ptw.Show();
+        }
+
+        private void readCurrentDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer ss = new SpeechSynthesizer();
+            ss.SpeakAsync(richTextBox1.Text);
         }
     }
 }
