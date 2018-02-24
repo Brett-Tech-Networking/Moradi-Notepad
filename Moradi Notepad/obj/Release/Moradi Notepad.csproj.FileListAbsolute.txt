@@ -14,3 +14,4 @@ C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Releas
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.exe
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.pdb
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\CP.Window.Forms.FindReplaceDialog.resources

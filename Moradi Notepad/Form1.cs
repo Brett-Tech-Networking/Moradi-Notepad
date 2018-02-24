@@ -1801,5 +1801,10 @@ namespace Moradi_Notepad
                 richTextBox1.Paste();
             }
         }
+
+        private void fRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
