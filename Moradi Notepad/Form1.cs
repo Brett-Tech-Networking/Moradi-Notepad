@@ -48,7 +48,7 @@ namespace Moradi_Notepad
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                     richTextBox1.Clear();
                 }
-                 if (result == DialogResult.No)
+                if (result == DialogResult.No)
                 {
                     richTextBox1.Clear();
                 }
@@ -260,7 +260,7 @@ namespace Moradi_Notepad
             //Clears current rich textbox to begain a new document
 
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             //yes
             if (result == DialogResult.Yes)
@@ -274,14 +274,14 @@ namespace Moradi_Notepad
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                 }
-                else
-                    if (result == DialogResult.No)
+               if (result == DialogResult.No)
                 {
-                    richTextBox1.Clear();
-
+                    MessageBox.Show("hello");
                 }
             }
-            }
+        }
+    
+
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {

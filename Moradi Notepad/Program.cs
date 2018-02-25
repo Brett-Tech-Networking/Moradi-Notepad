@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -14,7 +11,6 @@ namespace Moradi_Notepad
         [STAThread]
         static void Main()
         {
-            
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new splashscreen());
         }
