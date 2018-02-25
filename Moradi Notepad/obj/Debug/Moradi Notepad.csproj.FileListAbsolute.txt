@@ -100,3 +100,5 @@ C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_N
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Forms.FindReplaceDialog.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojResolveAssemblyReference.cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Forms.FindReplaceDialog.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources

@@ -6,8 +6,6 @@ using System.Speech.Synthesis;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-
-
 namespace Moradi_Notepad
 {
     public partial class Form1 : Form
@@ -30,11 +28,10 @@ namespace Moradi_Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // no statement coming first cause it to work properly //
-
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
+            //no
             if (result == DialogResult.No)
             {
                 richTextBox1.Clear();
@@ -51,9 +48,7 @@ namespace Moradi_Notepad
                 if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-                    richTextBox1.Clear();
                 }
-               
             }
         }
 
@@ -67,19 +62,46 @@ namespace Moradi_Notepad
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Title = "OPen File";
-            openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
-            openFileDialog1.FileName = "";
-            openFileDialog1.FilterIndex = 0;
-
-            openFileDialog1.InitialDirectory = "My Documents";
-
-            openFileDialog1.CheckFileExists = true;
-            openFileDialog1.CheckPathExists = true;
-
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                richTextBox1.LoadFile(openFileDialog1.FileName);
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                //no
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
+
+                    else { return; }
+                }
+
+                openFileDialog1.Title = "Open File";
+                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                openFileDialog1.FileName = "";
+                openFileDialog1.FilterIndex = 0;
+
+                openFileDialog1.InitialDirectory = "My Documents";
+
+                openFileDialog1.CheckFileExists = true;
+                openFileDialog1.CheckPathExists = true;
+
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    richTextBox1.LoadFile(openFileDialog1.FileName);
+                }
             }
         }
 
@@ -94,8 +116,6 @@ namespace Moradi_Notepad
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-
-
             }
         }
 
@@ -259,18 +279,14 @@ namespace Moradi_Notepad
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            // REASON NO STATEMENT COMES FIRST // 
-            // when the no statement is called first it works how its supposed to // 
-
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
             //no
             if (result == DialogResult.No)
             {
                 richTextBox1.Clear();
             }
-
 
             //yes
             if (result == DialogResult.Yes)
@@ -284,11 +300,8 @@ namespace Moradi_Notepad
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                 }
-
             }
         }
-    
-
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -306,7 +319,32 @@ namespace Moradi_Notepad
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             {
-                openFileDialog1.Title = "OPen File";
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                //no
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
+
+                    else { return; }
+                }
+
+                openFileDialog1.Title = "Open File";
                 openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
                 openFileDialog1.FileName = "";
                 openFileDialog1.FilterIndex = 0;
@@ -529,8 +567,6 @@ namespace Moradi_Notepad
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
-
-
         }
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
@@ -725,9 +761,8 @@ namespace Moradi_Notepad
 
         private void label1_Click(object sender, EventArgs e)
         {
-            clock.Start();
-           
             // Current Time of day 
+            clock.Start();
         }
 
         private void otherColorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1085,7 +1120,6 @@ namespace Moradi_Notepad
                 saveFileDialog1.Title = "Save File";
                 saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
 
-
                 if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
@@ -1148,7 +1182,6 @@ namespace Moradi_Notepad
 
         private void pronounceThatWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pronounceThatWordToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -1165,7 +1198,6 @@ namespace Moradi_Notepad
 
         private void gotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void newToolStripMenuItem_MouseHover(object sender, EventArgs e)
@@ -1191,7 +1223,6 @@ namespace Moradi_Notepad
         private void saveToolStripMenuItem_MouseHover(object sender, EventArgs e)
         {
             infolabel.Text = ("Save Document As");
-          
         }
 
         private void saveToolStripMenuItem_MouseLeave(object sender, EventArgs e)
@@ -1666,7 +1697,6 @@ namespace Moradi_Notepad
 
         private void toolStripButton18_Click(object sender, EventArgs e)
         {
-    
         }
 
         private void toolStripButton19_Click(object sender, EventArgs e)
@@ -1701,7 +1731,6 @@ namespace Moradi_Notepad
 
         private void fRToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1719,8 +1748,6 @@ namespace Moradi_Notepad
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-
-               
             }
         }
 
@@ -1739,14 +1766,11 @@ namespace Moradi_Notepad
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 richTextBox1.LoadFile(openFileDialog1.FileName);
-
-                
             }
         }
 
         private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           
         }
 
         private void lockDocumentToolStripMenuItem_Click(object sender, EventArgs e)
