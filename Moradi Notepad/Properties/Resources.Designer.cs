@@ -363,6 +363,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap speaknew {
+            get {
+                object obj = ResourceManager.GetObject("speaknew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap text_27924_960_720 {
             get {
                 object obj = ResourceManager.GetObject("text-27924_960_720", resourceCulture);
