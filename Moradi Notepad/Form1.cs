@@ -30,10 +30,15 @@ namespace Moradi_Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Clears current rich textbox to begain a new document
+            // no statement coming first cause it to work properly //
 
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No)
+            {
+                richTextBox1.Clear();
+            }
 
             //yes
             if (result == DialogResult.Yes)
@@ -48,10 +53,7 @@ namespace Moradi_Notepad
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                     richTextBox1.Clear();
                 }
-                if (result == DialogResult.No)
-                {
-                    richTextBox1.Clear();
-                }
+               
             }
         }
 
@@ -257,10 +259,18 @@ namespace Moradi_Notepad
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            //Clears current rich textbox to begain a new document
+            // REASON NO STATEMENT COMES FIRST // 
+            // when the no statement is called first it works how its supposed to // 
 
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            //no
+            if (result == DialogResult.No)
+            {
+                richTextBox1.Clear();
+            }
+
 
             //yes
             if (result == DialogResult.Yes)
@@ -274,10 +284,7 @@ namespace Moradi_Notepad
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                 }
-               if (result == DialogResult.No)
-                {
-                    MessageBox.Show("hello");
-                }
+
             }
         }
     
