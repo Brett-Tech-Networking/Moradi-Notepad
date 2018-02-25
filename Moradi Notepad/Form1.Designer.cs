@@ -203,6 +203,10 @@ namespace Moradi_Notepad
             this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.findReplaceDialog1 = new CP.Window.Forms.FindReplaceDialog();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.lockDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unlockDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readSelectedTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ubuntuTheme1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.toolStrip3.SuspendLayout();
@@ -285,7 +289,7 @@ namespace Moradi_Notepad
             this.toolStripButton17});
             this.toolStrip3.Location = new System.Drawing.Point(1, 51);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(343, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(312, 25);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "Lock Document";
             // 
@@ -805,7 +809,7 @@ namespace Moradi_Notepad
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.richTextBox1.ContextMenuStrip = this.CopyPaste;
+            this.richTextBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.richTextBox1.EnableAutoDragDrop = true;
             this.richTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Lime;
@@ -1781,9 +1785,13 @@ namespace Moradi_Notepad
             this.toolStripMenuItem2,
             this.undoToolStripMenuItem1,
             this.redoToolStripMenuItem1,
-            this.selectAllToolStripMenuItem1});
+            this.selectAllToolStripMenuItem1,
+            this.toolStripMenuItem5,
+            this.lockDocumentToolStripMenuItem,
+            this.unlockDocumentToolStripMenuItem,
+            this.readSelectedTextToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(173, 208);
             // 
             // toolStripMenuItem1
             // 
@@ -1910,6 +1918,33 @@ namespace Moradi_Notepad
             this.saveToolStripMenuItem1.Size = new System.Drawing.Size(237, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(167, 6);
+            // 
+            // lockDocumentToolStripMenuItem
+            // 
+            this.lockDocumentToolStripMenuItem.Name = "lockDocumentToolStripMenuItem";
+            this.lockDocumentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.lockDocumentToolStripMenuItem.Text = "Lock Document";
+            this.lockDocumentToolStripMenuItem.Click += new System.EventHandler(this.lockDocumentToolStripMenuItem_Click);
+            // 
+            // unlockDocumentToolStripMenuItem
+            // 
+            this.unlockDocumentToolStripMenuItem.Enabled = false;
+            this.unlockDocumentToolStripMenuItem.Name = "unlockDocumentToolStripMenuItem";
+            this.unlockDocumentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.unlockDocumentToolStripMenuItem.Text = "Unlock Document";
+            this.unlockDocumentToolStripMenuItem.Click += new System.EventHandler(this.unlockDocumentToolStripMenuItem_Click);
+            // 
+            // readSelectedTextToolStripMenuItem
+            // 
+            this.readSelectedTextToolStripMenuItem.Name = "readSelectedTextToolStripMenuItem";
+            this.readSelectedTextToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.readSelectedTextToolStripMenuItem.Text = "Read Selected Text";
+            this.readSelectedTextToolStripMenuItem.Click += new System.EventHandler(this.readSelectedTextToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -2120,6 +2155,10 @@ namespace Moradi_Notepad
         private ToolStripMenuItem websiteToolStripMenuItem;
         private SaveFileDialog saveFileDialog1;
         private ToolStripMenuItem saveToolStripMenuItem1;
+        private ToolStripSeparator toolStripMenuItem5;
+        private ToolStripMenuItem lockDocumentToolStripMenuItem;
+        private ToolStripMenuItem unlockDocumentToolStripMenuItem;
+        private ToolStripMenuItem readSelectedTextToolStripMenuItem;
     }
 }
 

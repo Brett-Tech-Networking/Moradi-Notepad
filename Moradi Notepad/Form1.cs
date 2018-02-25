@@ -1741,5 +1741,27 @@ namespace Moradi_Notepad
         {
            
         }
+
+        private void lockDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = true;
+            unlockDocumentToolStripMenuItem.Enabled = true;
+            lockDocumentToolStripMenuItem.Enabled = false;
+            MessageBox.Show("Document Locked", "LOCKED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void unlockDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = false;
+            lockDocumentToolStripMenuItem.Enabled = true;
+            unlockDocumentToolStripMenuItem.Enabled = false;
+            MessageBox.Show("Document Unlocked", "UNLOCKED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void readSelectedTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer ss = new SpeechSynthesizer();
+            ss.SpeakAsync(richTextBox1.SelectedText);
+        }
     }
 }
