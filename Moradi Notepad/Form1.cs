@@ -1,10 +1,11 @@
-﻿using Moradi_Notepad.Properties;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Speech.Synthesis;
 using System.Windows.Forms;
+using System.Diagnostics;
+
 
 
 namespace Moradi_Notepad
@@ -1805,6 +1806,11 @@ namespace Moradi_Notepad
         private void fRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome", @"http://www.brett-techrepair.com");
         }
     }
 }
