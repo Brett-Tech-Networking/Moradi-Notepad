@@ -250,10 +250,10 @@ namespace Moradi_Notepad
             // 
             this.infolabel.AutoSize = true;
             this.infolabel.BackColor = System.Drawing.Color.Transparent;
-            this.infolabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infolabel.Location = new System.Drawing.Point(3, 709);
             this.infolabel.Name = "infolabel";
-            this.infolabel.Size = new System.Drawing.Size(40, 14);
+            this.infolabel.Size = new System.Drawing.Size(43, 13);
             this.infolabel.TabIndex = 15;
             this.infolabel.Text = "Ready";
             // 
@@ -946,7 +946,7 @@ namespace Moradi_Notepad
             this.toolStripButton19});
             this.toolStrip2.Location = new System.Drawing.Point(301, 27);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(81, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(112, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -983,7 +983,7 @@ namespace Moradi_Notepad
             this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton19.Name = "toolStripButton19";
             this.toolStripButton19.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton19.Text = "toolStripButton19";
+            this.toolStripButton19.Text = "Import Image";
             this.toolStripButton19.Click += new System.EventHandler(this.toolStripButton19_Click);
             // 
             // toolStrip1
@@ -1462,6 +1462,7 @@ namespace Moradi_Notepad
             // 
             // restartSoftwareToolStripMenuItem
             // 
+            this.restartSoftwareToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.Recycle001_svg;
             this.restartSoftwareToolStripMenuItem.Name = "restartSoftwareToolStripMenuItem";
             this.restartSoftwareToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.R)));
@@ -1473,6 +1474,7 @@ namespace Moradi_Notepad
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.mexit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.Z)));
@@ -1500,6 +1502,7 @@ namespace Moradi_Notepad
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.undoToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.undo;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
@@ -1510,6 +1513,7 @@ namespace Moradi_Notepad
             // 
             // redoToolStripMenuItem
             // 
+            this.redoToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.redo;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.redoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
@@ -1568,6 +1572,7 @@ namespace Moradi_Notepad
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Enabled = false;
+            this.selectAllToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.select_all;
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
@@ -1762,6 +1767,7 @@ namespace Moradi_Notepad
             // 
             // pronounceThatWordToolStripMenuItem
             // 
+            this.pronounceThatWordToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.auto_speaker_1042642_960_720;
             this.pronounceThatWordToolStripMenuItem.Name = "pronounceThatWordToolStripMenuItem";
             this.pronounceThatWordToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.pronounceThatWordToolStripMenuItem.Text = "Word &Pronouncer";
@@ -1771,6 +1777,7 @@ namespace Moradi_Notepad
             // 
             // readCurrentDocumentToolStripMenuItem
             // 
+            this.readCurrentDocumentToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.speak;
             this.readCurrentDocumentToolStripMenuItem.Name = "readCurrentDocumentToolStripMenuItem";
             this.readCurrentDocumentToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.readCurrentDocumentToolStripMenuItem.Text = "Read &Selected Text";
@@ -1838,6 +1845,7 @@ namespace Moradi_Notepad
             // contentsToolStripMenuItem
             // 
             this.contentsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.contentsToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.info;
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
             this.contentsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.contentsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);

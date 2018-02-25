@@ -306,6 +306,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FindReplace.csproj" />
+    <None Include="Resources\speak.png" />
+    <None Include="Resources\auto-speaker-1042642_960_720.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\select-all.png" />
+    <None Include="Resources\mexit.jpg" />
+    <None Include="Resources\Recycle001_svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
