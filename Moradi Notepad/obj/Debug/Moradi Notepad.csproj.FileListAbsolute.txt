@@ -58,7 +58,6 @@ C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.pdb
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.pdb
-C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.About.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Form1.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Credits.resources
@@ -98,5 +97,5 @@ C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources
-C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources
+C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Forms.FindReplaceDialog.resources

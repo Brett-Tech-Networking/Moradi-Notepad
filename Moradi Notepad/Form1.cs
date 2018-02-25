@@ -33,40 +33,25 @@ namespace Moradi_Notepad
             //Clears current rich textbox to begain a new document
 
             DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             //yes
             if (result == DialogResult.Yes)
             {
-                SaveFileDialog svf = new SaveFileDialog();
-                svf.Filter = "Save File (.txt)|*.txt";
-                svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK)
+                saveFileDialog1.DefaultExt = ".rtf";
+                saveFileDialog1.OverwritePrompt = true;
+                saveFileDialog1.Title = "Save File";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    try
-                    {
-                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                        sw.Write(richTextBox1.Text);
-                        sw.Close();
-                        richTextBox1.Clear();
-                    }
-                    catch
-                    {
-                        //This is just meant to catch the exception. It doesn't actaully return anything.
-                    }
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    richTextBox1.Clear();
                 }
-            }
-
-            // no
-            else if (result == DialogResult.No)
-            {
-                richTextBox1.Clear();
-            }
-
-            //cancel
-            else if (result == DialogResult.Cancel)
-            {
-                //Do nothing if the user changes their indecisive mind.
+                 if (result == DialogResult.No)
+                {
+                    richTextBox1.Clear();
+                }
             }
         }
 
@@ -80,78 +65,35 @@ namespace Moradi_Notepad
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Open an existing document/file 
+            openFileDialog1.Title = "OPen File";
+            openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+            openFileDialog1.FileName = "";
+            openFileDialog1.FilterIndex = 0;
+
+            openFileDialog1.InitialDirectory = "My Documents";
+
+            openFileDialog1.CheckFileExists = true;
+            openFileDialog1.CheckPathExists = true;
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
-                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-
-                //userInput == yes
-                if (result == DialogResult.Yes)
-                {
-                    SaveFileDialog svf = new SaveFileDialog();
-                    svf.Filter = "Save File (.txt)|*.txt";
-                    svf.Title = "Save File";
-                    if (svf.ShowDialog() == DialogResult.OK) ;
-                    {
-                        try
-                        {
-                            System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                            sw.Write(richTextBox1.Text);
-                            sw.Close();
-                        }
-                        catch
-                        {
-                            //This is just meant to catch the exception.
-                        }
-                    }
-                    return;
-                }
-
-                //userInput == no
-                else if (result == DialogResult.No)
-                {
-                    richTextBox1.Clear();
-                }
-
-                else if (result == DialogResult.Cancel)
-                {
-                    return;
-                }
-            }
-
-            //Open Existing Document
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Text Files (.txt)|*.txt";
-            ofd.Title = "Open File";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);
-                richTextBox1.Text = sr.ReadToEnd();
-                sr.Close();
+                richTextBox1.LoadFile(openFileDialog1.FileName);
             }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Save Changes in notepad to local drive
+            saveFileDialog1.DefaultExt = ".rtf";
+            saveFileDialog1.OverwritePrompt = true;
+            saveFileDialog1.Title = "Save File";
+            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
 
-            SaveFileDialog svf = new SaveFileDialog();
 
-            svf.Filter = "Save File (.rtf)|*.rtf|Save File (.txt)|*.txt";
-            svf.Title = "Save File";
-            if (svf.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                try
-                {
-                    System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                    sw.Write(richTextBox1.Text);
-                    sw.Close();
-                }
-                catch
-                {
-                    //This is just meant to catch the exception. It doesn't actaully return anything.
-                }
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+
+
             }
         }
 
@@ -315,45 +257,31 @@ namespace Moradi_Notepad
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            // Start New Document
+            //Clears current rich textbox to begain a new document
+
+            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            //yes
+            if (result == DialogResult.Yes)
             {
-                DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
-                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                saveFileDialog1.DefaultExt = ".rtf";
+                saveFileDialog1.OverwritePrompt = true;
+                saveFileDialog1.Title = "Save File";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
 
-                //yes
-                if (result == DialogResult.Yes)
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    SaveFileDialog svf = new SaveFileDialog();
-                    svf.Filter = "Save File (.txt)|*.txt";
-                    svf.Title = "Save File";
-                    if (svf.ShowDialog() == DialogResult.OK) ;
-                    {
-                        try
-                        {
-                            System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                            sw.Write(richTextBox1.Text);
-                            sw.Close();
-                        }
-                        catch
-                        {
-                            //This is just to catch the exception.
-                        }
-                    }
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                 }
-
-                // no
-                else if (result == DialogResult.No)
+                else
+                    if (result == DialogResult.No)
                 {
                     richTextBox1.Clear();
-                }
 
-                //cancel
-                else if (result == DialogResult.Cancel)
-                {
-                    //Do nothing if the user changes their indecisive mind.
                 }
             }
-        }
+            }
 
         private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -371,53 +299,20 @@ namespace Moradi_Notepad
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             {
-                DialogResult result = MessageBox.Show("Do you want to save this file?", "Whoa There!",
-                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                openFileDialog1.Title = "OPen File";
+                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                openFileDialog1.FileName = "";
+                openFileDialog1.FilterIndex = 0;
 
-                //userInput == yes
-                if (result == DialogResult.Yes)
+                openFileDialog1.InitialDirectory = "My Documents";
+
+                openFileDialog1.CheckFileExists = true;
+                openFileDialog1.CheckPathExists = true;
+
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    SaveFileDialog svf = new SaveFileDialog();
-                    svf.Filter = "Save File (.txt)|*.txt";
-                    svf.Title = "Save File";
-                    if (svf.ShowDialog() == DialogResult.OK) ;
-                    {
-                        try
-                        {
-                            System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                            sw.Write(richTextBox1.Text);
-                            sw.Close();
-                        }
-                        catch
-                        {
-                            //This is just meant to catch the exception.
-                        }
-                        return;
-                    }
-                }
-
-                //userInput == no
-                else if (result == DialogResult.No)
-                {
-                    richTextBox1.Clear();
-                }
-
-                else if (result == DialogResult.Cancel)
-                {
-                    return;
-                }
-            }
-
-            //Open Existing Document
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Text Files (.txt)|*.txt";
-            ofd.Title = "Open File";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.StreamReader sr = new System.IO.StreamReader(ofd.FileName);
-                richTextBox1.Text = sr.ReadToEnd();
-                sr.Close();
+                    richTextBox1.LoadFile(openFileDialog1.FileName);
+                }                
             }
         }
 
@@ -1178,21 +1073,15 @@ namespace Moradi_Notepad
             //yes
             if (result == DialogResult.Yes)
             {
-                SaveFileDialog svf = new SaveFileDialog();
-                svf.Filter = "Save File (.txt)|*.txt";
-                svf.Title = "Save File";
-                if (svf.ShowDialog() == DialogResult.OK)
+                saveFileDialog1.DefaultExt = ".rtf";
+                saveFileDialog1.OverwritePrompt = true;
+                saveFileDialog1.Title = "Save File";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+
+
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    try
-                    {
-                        System.IO.StreamWriter sw = new System.IO.StreamWriter(svf.FileName);
-                        sw.Write(richTextBox1.Text);
-                        sw.Close();
-                    }
-                    catch
-                    {
-                        //This is just meant to catch the exception. It doesn't actaully return anything.
-                    }
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                 }
             }
 
@@ -1202,7 +1091,7 @@ namespace Moradi_Notepad
                 ss.Close();
             }
 
-            //cancer
+            //cancel
             else if (result == DialogResult.Cancel)
             {
                 e.Cancel = true;
@@ -1811,6 +1700,46 @@ namespace Moradi_Notepad
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("chrome", @"http://www.brett-techrepair.com");
+        }
+
+        private void toolStripButton18_Click_1(object sender, EventArgs e)
+        {
+            saveFileDialog1.DefaultExt = ".rtf";
+            saveFileDialog1.OverwritePrompt = true;
+            saveFileDialog1.Title = "Save File";
+          
+
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+
+               
+            }
+        }
+
+        private void toolStripButton20_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "OPen File";
+            openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf";
+            openFileDialog1.FileName = "";
+            openFileDialog1.FilterIndex = 0;
+
+            openFileDialog1.InitialDirectory = "My Documents";
+
+            openFileDialog1.CheckFileExists = true;
+            openFileDialog1.CheckPathExists = true;
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                richTextBox1.LoadFile(openFileDialog1.FileName);
+
+                
+            }
+        }
+
+        private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
