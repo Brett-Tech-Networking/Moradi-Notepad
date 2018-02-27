@@ -1,4 +1,4 @@
-# Moradi-Notepad
+# <img src="https://github.com/Brett-Tech-Networking/Moradi-Notepad/blob/master/notepad.ico" alt="logo" width="40" height ="40"/>Moradi Notepad
 This software is being developed for Moradi OS.
 Feel absolutely inclined to give feedback and suggestions.
 
