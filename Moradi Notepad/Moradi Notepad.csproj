@@ -306,6 +306,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FindReplace.csproj" />
+    <None Include="Resources\Treetog-I-Floppy-Small.ico" />
+    <None Include="Resources\4665-200.png" />
+    <None Include="Resources\read.png" />
+    <None Include="Resources\msn-web-2.png" />
+    <None Include="Resources\web.png" />
     <None Include="Resources\Octocat.PNG" />
     <None Include="Resources\speaknew.png" />
     <None Include="Resources\speak.png" />
