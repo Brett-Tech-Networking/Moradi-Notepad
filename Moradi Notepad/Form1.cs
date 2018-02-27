@@ -1735,7 +1735,14 @@ namespace Moradi_Notepad
 
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("chrome", @"http://www.brett-techrepair.com");
+            try
+            {
+                Process.Start("chrome", @"http://www.brett-techrepair.com");
+            }
+            catch
+            {
+                MessageBox.Show("You must have a valid installation of Chrome to continue. Sorry about that.", "Whoa There!");
+            }
         }
 
         private void toolStripButton18_Click_1(object sender, EventArgs e)
@@ -1793,6 +1800,18 @@ namespace Moradi_Notepad
         {
             SpeechSynthesizer ss = new SpeechSynthesizer();
             ss.SpeakAsync(richTextBox1.SelectedText);
+        }
+
+        private void gitHubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("chrome", @"https://github.com/Brett-Tech-Networking/Moradi-Notepad");
+            }
+            catch
+            {
+                MessageBox.Show("You must have a valid installation of Chrome to continue. Sorry about that.", "Whoa There!");
+            }
         }
     }
 }

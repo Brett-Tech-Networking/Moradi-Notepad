@@ -306,6 +306,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FindReplace.csproj" />
+    <None Include="Resources\Octocat.PNG" />
     <None Include="Resources\speaknew.png" />
     <None Include="Resources\speak.png" />
     <None Include="Resources\auto-speaker-1042642_960_720.png" />

@@ -313,6 +313,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Octocat {
+            get {
+                object obj = ResourceManager.GetObject("Octocat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paint_bucket_blue {
             get {
                 object obj = ResourceManager.GetObject("paint_bucket_blue", resourceCulture);
