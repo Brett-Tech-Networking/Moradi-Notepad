@@ -303,6 +303,26 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap microphone {
+            get {
+                object obj = ResourceManager.GetObject("microphone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap microphone1 {
+            get {
+                object obj = ResourceManager.GetObject("microphone1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Moradi_notepad {
             get {
                 object obj = ResourceManager.GetObject("Moradi notepad", resourceCulture);
@@ -326,6 +346,16 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap neon_green_dot_hi {
             get {
                 object obj = ResourceManager.GetObject("neon-green-dot-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_microphone {
+            get {
+                object obj = ResourceManager.GetObject("no-microphone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

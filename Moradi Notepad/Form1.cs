@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Speech.Synthesis;
+using System.Speech.Recognition;
+using System.Threading;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -12,8 +14,10 @@ namespace Moradi_Notepad
     {
         int charCount = 0;
         int size = 10;
-        public Credits c = new Credits();
-        public About a = new About();
+        public SpeechRecognitionEngine recognizer;
+        public Grammar grammar;
+        public Thread RecThread;
+        public Boolean RecognizerState = true;
 
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
@@ -357,7 +361,7 @@ namespace Moradi_Notepad
                 if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     richTextBox1.LoadFile(openFileDialog1.FileName);
-                }                
+                }
             }
         }
 
@@ -1139,7 +1143,18 @@ namespace Moradi_Notepad
                 return;
             }
             Application.ExitThread();
+
+            // voice rec.
+
+            RecThread.Abort();
+            RecThread = null;
+
+            recognizer.UnloadAllGrammars();
+            recognizer.Dispose();
+
+            grammar = null;
         }
+
 
         private void toolStripButton16_Click(object sender, EventArgs e)
         {
@@ -1201,8 +1216,8 @@ namespace Moradi_Notepad
         }
 
         private void newToolStripMenuItem_MouseHover(object sender, EventArgs e)
-        {            
-                infolabel.Text = ("New Document");            
+        {
+            infolabel.Text = ("New Document");
         }
 
         private void newToolStripMenuItem_MouseLeave(object sender, EventArgs e)
@@ -1383,7 +1398,7 @@ namespace Moradi_Notepad
 
         private void themesToolStripMenuItem_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
 
         private void defaultToolStripMenuItem_MouseHover(object sender, EventArgs e)
@@ -1750,7 +1765,7 @@ namespace Moradi_Notepad
             saveFileDialog1.DefaultExt = ".rtf";
             saveFileDialog1.OverwritePrompt = true;
             saveFileDialog1.Title = "Save File";
-          
+
 
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -1812,6 +1827,74 @@ namespace Moradi_Notepad
             {
                 MessageBox.Show("You must have a valid installation of Chrome to continue. Sorry about that.", "Whoa There!");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // grammer rules
+
+            GrammarBuilder build = new GrammarBuilder();
+            build.AppendDictation();
+            grammar = new Grammar(build);
+
+            // recognizer & setup
+
+            recognizer = new SpeechRecognitionEngine();
+            recognizer.LoadGrammar(grammar);
+            recognizer.SetInputToDefaultAudioDevice();
+
+            recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+
+
+            RecognizerState = true;
+            RecThread = new Thread(new ThreadStart(RecThreadFunction));
+            RecThread.Start();
+
+        }
+        public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+
+            if (!RecognizerState)
+                return;
+
+            this.Invoke((MethodInvoker)delegate
+            {
+                richTextBox1.Text += (" " + e.Result.Text.ToLower());
+            });
+        }
+        public void RecThreadFunction()
+        {
+            while (true)
+            {
+                try
+                {
+                    recognizer.Recognize();
+                }
+                catch
+                {
+                    // handles error
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripButton18_Click_2(object sender, EventArgs e)
+        {
+            //mic on//
+            RecognizerState = true;
+        }
+
+        private void toolStripButton20_Click_1(object sender, EventArgs e)
+        {
+            //mic off//
+            RecognizerState = false;
         }
     }
 }
