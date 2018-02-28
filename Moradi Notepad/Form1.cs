@@ -1889,12 +1889,16 @@ namespace Moradi_Notepad
         {
             //mic on//
             RecognizerState = true;
+            toolStripButton18.Enabled = false;
+            toolStripButton20.Enabled = true;
         }
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
-            //mic off//
+            //mic off//                
             RecognizerState = false;
+            toolStripButton20.Enabled = false;
+            toolStripButton18.Enabled = true;
         }
     }
 }
