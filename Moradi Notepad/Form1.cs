@@ -47,7 +47,7 @@ namespace Moradi_Notepad
                 saveFileDialog1.DefaultExt = ".rtf";
                 saveFileDialog1.OverwritePrompt = true;
                 saveFileDialog1.Title = "Save File";
-                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
                 if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -82,7 +82,7 @@ namespace Moradi_Notepad
                     saveFileDialog1.DefaultExt = ".rtf";
                     saveFileDialog1.OverwritePrompt = true;
                     saveFileDialog1.Title = "Save File";
-                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
                     if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
@@ -93,7 +93,7 @@ namespace Moradi_Notepad
                 }
 
                 openFileDialog1.Title = "Open File";
-                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
                 openFileDialog1.FileName = "";
                 openFileDialog1.FilterIndex = 0;
 
@@ -114,7 +114,7 @@ namespace Moradi_Notepad
             saveFileDialog1.DefaultExt = ".rtf";
             saveFileDialog1.OverwritePrompt = true;
             saveFileDialog1.Title = "Save File";
-            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
 
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -298,7 +298,7 @@ namespace Moradi_Notepad
                 saveFileDialog1.DefaultExt = ".rtf";
                 saveFileDialog1.OverwritePrompt = true;
                 saveFileDialog1.Title = "Save File";
-                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
                 if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -338,7 +338,7 @@ namespace Moradi_Notepad
                     saveFileDialog1.DefaultExt = ".rtf";
                     saveFileDialog1.OverwritePrompt = true;
                     saveFileDialog1.Title = "Save File";
-                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
                     if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
@@ -349,7 +349,7 @@ namespace Moradi_Notepad
                 }
 
                 openFileDialog1.Title = "Open File";
-                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
                 openFileDialog1.FileName = "";
                 openFileDialog1.FilterIndex = 0;
 
@@ -1122,7 +1122,7 @@ namespace Moradi_Notepad
                 saveFileDialog1.DefaultExt = ".rtf";
                 saveFileDialog1.OverwritePrompt = true;
                 saveFileDialog1.Title = "Save File";
-                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf | Rich Text Files (*.txt) | *.txt";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
                 if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
