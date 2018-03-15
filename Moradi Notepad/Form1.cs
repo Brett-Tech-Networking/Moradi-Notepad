@@ -18,7 +18,6 @@ namespace Moradi_Notepad
         public Grammar grammar;
         public Thread RecThread;
         public Boolean RecognizerState = true;
-
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
         public Form1()
@@ -115,7 +114,6 @@ namespace Moradi_Notepad
             saveFileDialog1.OverwritePrompt = true;
             saveFileDialog1.Title = "Save File";
             saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
 
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -848,7 +846,6 @@ namespace Moradi_Notepad
         {
         }
 
-
         private void arielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionFont = new Font("ariel", 10, FontStyle.Regular);
@@ -1398,7 +1395,6 @@ namespace Moradi_Notepad
 
         private void themesToolStripMenuItem_MouseHover(object sender, EventArgs e)
         {
-
         }
 
         private void defaultToolStripMenuItem_MouseHover(object sender, EventArgs e)
@@ -1766,7 +1762,6 @@ namespace Moradi_Notepad
             saveFileDialog1.OverwritePrompt = true;
             saveFileDialog1.Title = "Save File";
 
-
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
@@ -1838,19 +1833,25 @@ namespace Moradi_Notepad
             grammar = new Grammar(build);
 
             // recognizer & setup
+            try
+            {
+                recognizer = new SpeechRecognitionEngine();
+                recognizer.LoadGrammar(grammar);
+                recognizer.SetInputToDefaultAudioDevice();
 
-            recognizer = new SpeechRecognitionEngine();
-            recognizer.LoadGrammar(grammar);
-            recognizer.SetInputToDefaultAudioDevice();
-
-            recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+                recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
 
 
-            RecognizerState = true;
-            RecThread = new Thread(new ThreadStart(RecThreadFunction));
-            RecThread.Start();
-
+                RecognizerState = true;
+                RecThread = new Thread(new ThreadStart(RecThreadFunction));
+                RecThread.Start();
+            }
+            catch
+            {
+                MessageBox.Show("No valid mic was detected on your system.", "Whoa There!");
+            }
         }
+
         public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
 
