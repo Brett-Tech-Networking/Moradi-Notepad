@@ -16,3 +16,21 @@ C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Releas
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.pdb
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\CP.Window.Forms.FindReplaceDialog.resources
 C:\Users\Administrator\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csprojResolveAssemblyReference.cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.exe.config
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.ResolveComReference.cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.exe
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.pdb
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.exe
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.pdb
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Fader Theme.dll
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Ubuntu Theme.dll
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csprojResolveAssemblyReference.cache
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.About.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\CP.Window.Forms.FindReplaceDialog.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Form1.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Credits.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\LineNumbers.LineNumbers_For_RichTextBox.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Pronounce_That_Word.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Properties.Resources.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.splashscreen.resources
+C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.GenerateResource.Cache

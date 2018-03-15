@@ -1142,10 +1142,8 @@ namespace Moradi_Notepad
                 e.Cancel = true;
                 return;
             }
-            Application.ExitThread();
 
             // voice rec.
-
             RecThread.Abort();
             RecThread = null;
 
@@ -1153,6 +1151,8 @@ namespace Moradi_Notepad
             recognizer.Dispose();
 
             grammar = null;
+
+            Environment.Exit(0);
         }
 
 
