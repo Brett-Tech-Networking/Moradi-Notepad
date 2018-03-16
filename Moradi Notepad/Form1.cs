@@ -1131,6 +1131,7 @@ namespace Moradi_Notepad
             else if (result == DialogResult.No)
             {
                 ss.Close();
+                Application.Exit();
             }
 
             //cancel
@@ -1140,16 +1141,21 @@ namespace Moradi_Notepad
                 return;
             }
 
-            // voice rec.
-            RecThread.Abort();
-            RecThread = null;
+            try
+            {
+                // voice rec.
+                RecThread.Abort();
+                RecThread = null;
+                recognizer.UnloadAllGrammars();
+                recognizer.Dispose();
+                grammar = null;
 
-            recognizer.UnloadAllGrammars();
-            recognizer.Dispose();
-
-            grammar = null;
-
-            Environment.Exit(0);
+                Environment.Exit(0);
+            }
+            catch
+            {
+               // nothing to do
+            }
         }
 
 
@@ -1843,6 +1849,7 @@ namespace Moradi_Notepad
 
                 // this tells the recorder not to record by default until button is clicked
                 RecognizerState = false;
+
                 RecThread = new Thread(new ThreadStart(RecThreadFunction));
                 RecThread.Start();
             }
@@ -1888,19 +1895,30 @@ namespace Moradi_Notepad
 
         private void toolStripButton18_Click_2(object sender, EventArgs e)
         {
-            
-            //mic on
-            RecognizerState = true;
-            toolStripButton18.Enabled = false;
-            toolStripButton20.Enabled = true;
+            pictureBox1.Enabled = true;
+           
+            try
+            {
+                //mic on
+                RecognizerState = true;
+                toolStripButton18.Enabled = false;
+                toolStripButton20.Enabled = true;
 
-            //status update
-            infolabel.Text = ("Recognizer Stated  . . . ");
-                        
+                //status update
+                infolabel.Text = ("Recognizer Stated  . . . ");
+            }
+            catch
+            {
+                MessageBox.Show("No valid mic was detected on your system.", "Whoa There!");
+            }
+
         }
+    
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
+            pictureBox1.Enabled = false;
+           
             //mic off//                
             RecognizerState = false;
             toolStripButton20.Enabled = false;

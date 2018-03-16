@@ -393,6 +393,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap recorder {
+            get {
+                object obj = ResourceManager.GetObject("recorder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Recycle001_svg {
             get {
                 object obj = ResourceManager.GetObject("Recycle001_svg", resourceCulture);
@@ -416,6 +426,26 @@ namespace Moradi_Notepad.Properties {
         internal static System.Drawing.Bitmap select_all {
             get {
                 object obj = ResourceManager.GetObject("select-all", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound {
+            get {
+                object obj = ResourceManager.GetObject("sound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound1 {
+            get {
+                object obj = ResourceManager.GetObject("sound1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
