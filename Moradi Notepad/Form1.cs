@@ -1841,7 +1841,7 @@ namespace Moradi_Notepad
 
                 recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
 
-
+                // this tells the recorder not to record by default until button is clicked
                 RecognizerState = false;
                 RecThread = new Thread(new ThreadStart(RecThreadFunction));
                 RecThread.Start();
@@ -1888,10 +1888,15 @@ namespace Moradi_Notepad
 
         private void toolStripButton18_Click_2(object sender, EventArgs e)
         {
-            //mic on//
+            
+            //mic on
             RecognizerState = true;
             toolStripButton18.Enabled = false;
             toolStripButton20.Enabled = true;
+
+            //status update
+            infolabel.Text = ("Recognizer Stated  . . . ");
+                        
         }
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
@@ -1900,6 +1905,33 @@ namespace Moradi_Notepad
             RecognizerState = false;
             toolStripButton20.Enabled = false;
             toolStripButton18.Enabled = true;
+
+            //status update
+            infolabel.Text = ("Recognizer Stopped ! ");
+        }
+
+        private void toolStripButton18_MouseHover(object sender, EventArgs e)
+        {
+            // status update
+            infolabel.Text = ("Start Recognizer");
+        }
+
+        private void toolStripButton18_MouseLeave(object sender, EventArgs e)
+        {
+            // status update
+            infolabel.Text = ("Ready");
+        }
+
+        private void toolStripButton20_MouseHover(object sender, EventArgs e)
+        {
+            // status update
+            infolabel.Text = ("Stop Recognizer");
+        }
+
+        private void toolStripButton20_MouseLeave(object sender, EventArgs e)
+        {
+            // status update
+            infolabel.Text = ("Ready");
         }
     }
 }
