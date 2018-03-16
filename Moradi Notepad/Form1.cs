@@ -1842,7 +1842,7 @@ namespace Moradi_Notepad
                 recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
 
 
-                RecognizerState = true;
+                RecognizerState = false;
                 RecThread = new Thread(new ThreadStart(RecThreadFunction));
                 RecThread.Start();
             }

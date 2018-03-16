@@ -34,3 +34,7 @@ C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notep
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Properties.Resources.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.splashscreen.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Release\Moradi Notepad.exe.config
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csproj.ResolveComReference.cache
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.exe
+C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.pdb
