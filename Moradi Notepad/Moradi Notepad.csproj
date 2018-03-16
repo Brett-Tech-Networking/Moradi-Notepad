@@ -306,6 +306,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FindReplace.csproj" />
+    <None Include="Resources\credits1.png" />
     <None Include="Resources\sound1.gif" />
     <None Include="Resources\sound.gif" />
     <None Include="Resources\recorder.gif" />

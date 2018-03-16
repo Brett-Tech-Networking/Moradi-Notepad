@@ -730,13 +730,14 @@ namespace Moradi_Notepad
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(125, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
             // 
             // creditsToolStripMenuItem
             // 
             this.creditsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.creditsToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.credits1;
             this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
-            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.creditsToolStripMenuItem.Text = "&Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
             this.creditsToolStripMenuItem.MouseLeave += new System.EventHandler(this.creditsToolStripMenuItem_MouseLeave);
@@ -1938,7 +1939,7 @@ namespace Moradi_Notepad
             this.contentsToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.info;
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
             this.contentsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contentsToolStripMenuItem.Text = "&About";
             this.contentsToolStripMenuItem.Click += new System.EventHandler(this.contentsToolStripMenuItem_Click);
             this.contentsToolStripMenuItem.MouseLeave += new System.EventHandler(this.contentsToolStripMenuItem_MouseLeave);
@@ -1948,7 +1949,7 @@ namespace Moradi_Notepad
             // 
             this.gitHubToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.Octocat;
             this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
-            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gitHubToolStripMenuItem.Text = "GitHub";
             this.gitHubToolStripMenuItem.Click += new System.EventHandler(this.gitHubToolStripMenuItem_Click);
             // 
@@ -1956,7 +1957,7 @@ namespace Moradi_Notepad
             // 
             this.websiteToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.msn_web_2;
             this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
-            this.websiteToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.websiteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.websiteToolStripMenuItem.Text = "Website";
             this.websiteToolStripMenuItem.Click += new System.EventHandler(this.websiteToolStripMenuItem_Click);
             // 

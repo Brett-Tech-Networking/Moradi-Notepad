@@ -1855,7 +1855,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("No valid mic was detected on your system.", "Whoa There!");
+                MessageBox.Show("No valid mic was detected on your system. Please connect one to use voice to text features", "Whoa There!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
