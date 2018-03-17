@@ -1959,5 +1959,17 @@ namespace Moradi_Notepad
             // status update
             infolabel.Text = ("Ready");
         }
+
+        private void toolStripButton21_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+            }
+            catch
+            {
+                MessageBox.Show("No new data to save", "looks like we had an error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            }
     }
 }
