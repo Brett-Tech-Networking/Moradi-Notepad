@@ -1794,6 +1794,14 @@ namespace Moradi_Notepad
 
         private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+            }
+            catch
+            {
+                MessageBox.Show("No New Data To Be Updated","Seems Theres An Issue",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void lockDocumentToolStripMenuItem_Click(object sender, EventArgs e)
