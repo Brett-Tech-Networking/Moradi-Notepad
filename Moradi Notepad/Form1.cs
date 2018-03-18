@@ -1970,5 +1970,10 @@ namespace Moradi_Notepad
                 MessageBox.Show("No new data to save", "looks like we had an error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             }
+
+        private void toolStripButton22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
