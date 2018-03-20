@@ -1799,7 +1799,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("No New Data To Be Updated","Seems Theres An Issue",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("No New Data To Save - Try Save-As","Whoa There!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -1887,7 +1887,7 @@ namespace Moradi_Notepad
                 }
                 catch
                 {
-                    // handles error
+                    // handles exception
                 }
             }
         }
@@ -1920,7 +1920,6 @@ namespace Moradi_Notepad
             }
 
         }
-    
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
@@ -1967,13 +1966,12 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("No new data to save", "looks like we had an error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("No New Data To Save - Try Save-As", "Woah There!", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            }
+        }
 
         private void toolStripButton22_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
