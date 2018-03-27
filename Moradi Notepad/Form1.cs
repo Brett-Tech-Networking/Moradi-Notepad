@@ -1903,7 +1903,14 @@ namespace Moradi_Notepad
 
         private void toolStripButton18_Click_2(object sender, EventArgs e)
         {
+            // Options 
+            if (richTextBox1.Text == ("Start Typing Here . . .")) // Text On Main Notepad To Be Deleted Once Screen Is Clicked
+            {
+                richTextBox1.Clear();  // Deletes Written Text
+            }
+            
             pictureBox1.Enabled = true;
+            richTextBox1.Enabled = false;
            
             try
             {
@@ -1924,9 +1931,11 @@ namespace Moradi_Notepad
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
+            // options
             pictureBox1.Enabled = false;
+            richTextBox1.Enabled = true;
            
-            //mic off//                
+            //mic off    
             RecognizerState = false;
             toolStripButton20.Enabled = false;
             toolStripButton18.Enabled = true;
