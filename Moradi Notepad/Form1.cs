@@ -1775,7 +1775,7 @@ namespace Moradi_Notepad
 
         private void toolStripButton20_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Title = "OPen File";
+            openFileDialog1.Title = "Open File";
             openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf";
             openFileDialog1.FileName = "";
             openFileDialog1.FilterIndex = 0;
@@ -1877,6 +1877,7 @@ namespace Moradi_Notepad
                 richTextBox1.Text += (" " + e.Result.Text.ToLower());
             });
         }
+
         public void RecThreadFunction()
         {
             while (true)
