@@ -1131,6 +1131,7 @@ namespace Moradi_Notepad
             else if (result == DialogResult.No)
             {
                 ss.Close();
+                Application.Exit();
             }
 
             //cancel
