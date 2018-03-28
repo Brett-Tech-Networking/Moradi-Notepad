@@ -1154,7 +1154,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-               // nothing to do
+                // nothing to do
             }
         }
 
@@ -1800,7 +1800,15 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("No New Data To Save - Try Save-As","Whoa There!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                saveFileDialog1.DefaultExt = ".rtf";
+                saveFileDialog1.OverwritePrompt = true;
+                saveFileDialog1.Title = "Save File";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                }
             }
         }
 
@@ -1863,7 +1871,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("No valid mic was detected on your system. Please connect one to use voice to text features", "Whoa There!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("No valid mic was detected on your system. Please connect one to use voice to text features", "Whoa There!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1909,10 +1917,10 @@ namespace Moradi_Notepad
             {
                 richTextBox1.Clear();  // Deletes Written Text
             }
-            
+
             pictureBox1.Enabled = true;
             richTextBox1.Enabled = false;
-           
+
             try
             {
                 //mic on
@@ -1935,7 +1943,7 @@ namespace Moradi_Notepad
             // options
             pictureBox1.Enabled = false;
             richTextBox1.Enabled = true;
-           
+
             //mic off    
             RecognizerState = false;
             toolStripButton20.Enabled = false;
@@ -1977,9 +1985,20 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("No New Data To Save - Try Save-As", "Woah There!", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                saveFileDialog1.DefaultExt = ".rtf";
+                saveFileDialog1.OverwritePrompt = true;
+                saveFileDialog1.Title = "Save File";
+                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                }
             }
         }
+
+
+   
 
         private void toolStripButton22_Click(object sender, EventArgs e)
         {
