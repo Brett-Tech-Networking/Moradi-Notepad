@@ -1983,6 +1983,34 @@ namespace Moradi_Notepad
 
         private void toolStripButton22_Click(object sender, EventArgs e)
         {
+            // Print current document text to local printer
+
+            PrintDialog printDialog = new PrintDialog();
+            PrintDocument documentToPrint = new PrintDocument();
+            printDialog.Document = documentToPrint;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                StringReader reader = new StringReader(richTextBox1.Text);
+                documentToPrint.Print();
+                documentToPrint.PrintPage += new PrintPageEventHandler(DocumentToPrint_PrintPage);
+            }
+        }
+
+        private void toolStripButton22_Click_1(object sender, EventArgs e)
+        {
+            // Print current document text to local printer
+
+            PrintDialog printDialog = new PrintDialog();
+            PrintDocument documentToPrint = new PrintDocument();
+            printDialog.Document = documentToPrint;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                StringReader reader = new StringReader(richTextBox1.Text);
+                documentToPrint.Print();
+                documentToPrint.PrintPage += new PrintPageEventHandler(DocumentToPrint_PrintPage);
+            }
         }
     }
 }
