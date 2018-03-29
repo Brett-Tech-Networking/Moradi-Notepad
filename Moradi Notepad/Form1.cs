@@ -478,14 +478,14 @@ namespace Moradi_Notepad
             richTextBox1.Location = new Point(20, 80);
 
             //enable disable option
-            toolStripButton12.Enabled = true;
+            HideNumbline.Enabled = true;
         }
 
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
             // Hide numbered lines on left side of document
             richTextBox1.Location = new Point(1, 76);
-            toolStripButton12.Enabled = false;
+            HideNumbline.Enabled = false;
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
@@ -1166,8 +1166,8 @@ namespace Moradi_Notepad
             richTextBox1.ReadOnly = true;
             MessageBox.Show("Your Document is now LOCKED, You Can Not Edit This Document Until You Unlock It", "LOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            toolStripButton16.Enabled = false;
-            toolStripButton17.Enabled = true;
+            LockDoc.Enabled = false;
+            UnlockDoc.Enabled = true;
             MicOn.Enabled = false;
         }
 
@@ -1175,8 +1175,8 @@ namespace Moradi_Notepad
         {
             richTextBox1.ReadOnly = false;
             MessageBox.Show("Your Document Is Now UNLOCKED, You May Now Continue Editing Your Document", "UNLOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            toolStripButton17.Enabled = false;
-            toolStripButton16.Enabled = true;
+            UnlockDoc.Enabled = false;
+            LockDoc.Enabled = true;
             MicOn.Enabled = true;
         }
 

@@ -88,13 +88,13 @@ namespace Moradi_Notepad
             this.undo = new System.Windows.Forms.ToolStripButton();
             this.redo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
+            this.LockDoc = new System.Windows.Forms.ToolStripButton();
+            this.UnlockDoc = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.MicOn = new System.Windows.Forms.ToolStripButton();
             this.MicOff = new System.Windows.Forms.ToolStripButton();
             this.output = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FindText = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -110,30 +110,30 @@ namespace Moradi_Notepad
             this.unlockDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readSelectedTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
+            this.NewDoc = new System.Windows.Forms.ToolStripButton();
+            this.OpenDoc = new System.Windows.Forms.ToolStripButton();
+            this.SaveDoc = new System.Windows.Forms.ToolStripButton();
+            this.PrintDoc = new System.Windows.Forms.ToolStripButton();
+            this.InsertImage = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.B = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.Bold1 = new System.Windows.Forms.ToolStripButton();
+            this.Italic1 = new System.Windows.Forms.ToolStripButton();
+            this.Underline1 = new System.Windows.Forms.ToolStripButton();
+            this.StrikeThrough1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.CaseCap = new System.Windows.Forms.ToolStripButton();
+            this.CaseLowercase = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.Fontincrease = new System.Windows.Forms.ToolStripButton();
+            this.Fontdecrease = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.BackColor = new System.Windows.Forms.ToolStripDropDownButton();
             this.redToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blackThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.navyBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limeBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otherColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.Forcolor = new System.Windows.Forms.ToolStripDropDownButton();
             this.redToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.blueTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limeTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -141,8 +141,8 @@ namespace Moradi_Notepad
             this.purpleTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otherColorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.NumbLine = new System.Windows.Forms.ToolStripButton();
+            this.HideNumbline = new System.Windows.Forms.ToolStripButton();
             this.ubuntuControlBox1 = new Ubuntu_Theme.UbuntuControlBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -232,7 +232,7 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.trackBar1);
             this.ubuntuTheme1.Controls.Add(this.toolStrip3);
             this.ubuntuTheme1.Controls.Add(this.output);
-            this.ubuntuTheme1.Controls.Add(this.button1);
+            this.ubuntuTheme1.Controls.Add(this.FindText);
             this.ubuntuTheme1.Controls.Add(this.label2);
             this.ubuntuTheme1.Controls.Add(this.textBox1);
             this.ubuntuTheme1.Controls.Add(this.label1);
@@ -305,8 +305,8 @@ namespace Moradi_Notepad
             this.undo,
             this.redo,
             this.toolStripSeparator14,
-            this.toolStripButton16,
-            this.toolStripButton17,
+            this.LockDoc,
+            this.UnlockDoc,
             this.toolStripSeparator15,
             this.MicOn,
             this.MicOff});
@@ -741,31 +741,31 @@ namespace Moradi_Notepad
             this.toolStripSeparator14.Name = "toolStripSeparator14";
             this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton16
+            // LockDoc
             // 
-            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton16.Image = global::Moradi_Notepad.Properties.Resources.locked;
-            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton16.Text = "toolStripButton16";
-            this.toolStripButton16.ToolTipText = "Lock Document";
-            this.toolStripButton16.Click += new System.EventHandler(this.toolStripButton16_Click);
-            this.toolStripButton16.MouseLeave += new System.EventHandler(this.toolStripButton16_MouseLeave);
-            this.toolStripButton16.MouseHover += new System.EventHandler(this.toolStripButton16_MouseHover);
+            this.LockDoc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.LockDoc.Image = global::Moradi_Notepad.Properties.Resources.locked;
+            this.LockDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LockDoc.Name = "LockDoc";
+            this.LockDoc.Size = new System.Drawing.Size(23, 22);
+            this.LockDoc.Text = "Lock";
+            this.LockDoc.ToolTipText = "Lock Document";
+            this.LockDoc.Click += new System.EventHandler(this.toolStripButton16_Click);
+            this.LockDoc.MouseLeave += new System.EventHandler(this.toolStripButton16_MouseLeave);
+            this.LockDoc.MouseHover += new System.EventHandler(this.toolStripButton16_MouseHover);
             // 
-            // toolStripButton17
+            // UnlockDoc
             // 
-            this.toolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton17.Enabled = false;
-            this.toolStripButton17.Image = global::Moradi_Notepad.Properties.Resources.unlocked;
-            this.toolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton17.Name = "toolStripButton17";
-            this.toolStripButton17.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton17.Text = "Unlock Document";
-            this.toolStripButton17.Click += new System.EventHandler(this.toolStripButton17_Click);
-            this.toolStripButton17.MouseLeave += new System.EventHandler(this.toolStripButton17_MouseLeave);
-            this.toolStripButton17.MouseHover += new System.EventHandler(this.toolStripButton17_MouseHover);
+            this.UnlockDoc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UnlockDoc.Enabled = false;
+            this.UnlockDoc.Image = global::Moradi_Notepad.Properties.Resources.unlocked;
+            this.UnlockDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UnlockDoc.Name = "UnlockDoc";
+            this.UnlockDoc.Size = new System.Drawing.Size(23, 22);
+            this.UnlockDoc.Text = "Unlock Document";
+            this.UnlockDoc.Click += new System.EventHandler(this.toolStripButton17_Click);
+            this.UnlockDoc.MouseLeave += new System.EventHandler(this.toolStripButton17_MouseLeave);
+            this.UnlockDoc.MouseHover += new System.EventHandler(this.toolStripButton17_MouseHover);
             // 
             // toolStripSeparator15
             // 
@@ -813,19 +813,19 @@ namespace Moradi_Notepad
             this.output.Text = "Char:";
             this.output.Click += new System.EventHandler(this.output_Click);
             // 
-            // button1
+            // FindText
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(1001, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 24);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.FindText.BackColor = System.Drawing.Color.Black;
+            this.FindText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FindText.Font = new System.Drawing.Font("Arial Narrow", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindText.ForeColor = System.Drawing.Color.Red;
+            this.FindText.Location = new System.Drawing.Point(1001, 48);
+            this.FindText.Name = "FindText";
+            this.FindText.Size = new System.Drawing.Size(42, 24);
+            this.FindText.TabIndex = 11;
+            this.FindText.Text = "Find";
+            this.FindText.UseVisualStyleBackColor = false;
+            this.FindText.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -960,244 +960,244 @@ namespace Moradi_Notepad
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton10,
-            this.toolStripButton21,
-            this.toolStripButton22,
-            this.toolStripButton19});
+            this.NewDoc,
+            this.OpenDoc,
+            this.SaveDoc,
+            this.PrintDoc,
+            this.InsertImage});
             this.toolStrip2.Location = new System.Drawing.Point(303, 27);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(127, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton1
+            // NewDoc
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.ToolTipText = "New File";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
-            this.toolStripButton1.MouseLeave += new System.EventHandler(this.toolStripButton1_MouseLeave);
-            this.toolStripButton1.MouseHover += new System.EventHandler(this.toolStripButton1_MouseHover);
+            this.NewDoc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.NewDoc.Image = ((System.Drawing.Image)(resources.GetObject("NewDoc.Image")));
+            this.NewDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NewDoc.Name = "NewDoc";
+            this.NewDoc.Size = new System.Drawing.Size(23, 22);
+            this.NewDoc.Text = "toolStripButton1";
+            this.NewDoc.ToolTipText = "New File";
+            this.NewDoc.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            this.NewDoc.MouseLeave += new System.EventHandler(this.toolStripButton1_MouseLeave);
+            this.NewDoc.MouseHover += new System.EventHandler(this.toolStripButton1_MouseHover);
             // 
-            // toolStripButton10
+            // OpenDoc
             // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton10.Text = "toolStripButton10";
-            this.toolStripButton10.ToolTipText = "Open File";
-            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
-            this.toolStripButton10.MouseLeave += new System.EventHandler(this.toolStripButton10_MouseLeave);
-            this.toolStripButton10.MouseHover += new System.EventHandler(this.toolStripButton10_MouseHover);
+            this.OpenDoc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.OpenDoc.Image = ((System.Drawing.Image)(resources.GetObject("OpenDoc.Image")));
+            this.OpenDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OpenDoc.Name = "OpenDoc";
+            this.OpenDoc.Size = new System.Drawing.Size(23, 22);
+            this.OpenDoc.Text = "toolStripButton10";
+            this.OpenDoc.ToolTipText = "Open File";
+            this.OpenDoc.Click += new System.EventHandler(this.toolStripButton10_Click);
+            this.OpenDoc.MouseLeave += new System.EventHandler(this.toolStripButton10_MouseLeave);
+            this.OpenDoc.MouseHover += new System.EventHandler(this.toolStripButton10_MouseHover);
             // 
-            // toolStripButton21
+            // SaveDoc
             // 
-            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton21.Image = global::Moradi_Notepad.Properties.Resources.save;
-            this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton21.Name = "toolStripButton21";
-            this.toolStripButton21.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton21.Text = "Save";
-            this.toolStripButton21.Click += new System.EventHandler(this.toolStripButton21_Click);
+            this.SaveDoc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SaveDoc.Image = global::Moradi_Notepad.Properties.Resources.save;
+            this.SaveDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SaveDoc.Name = "SaveDoc";
+            this.SaveDoc.Size = new System.Drawing.Size(23, 22);
+            this.SaveDoc.Text = "Save";
+            this.SaveDoc.Click += new System.EventHandler(this.toolStripButton21_Click);
             // 
-            // toolStripButton22
+            // PrintDoc
             // 
-            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton22.Image = global::Moradi_Notepad.Properties.Resources.printer;
-            this.toolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton22.Name = "toolStripButton22";
-            this.toolStripButton22.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton22.Text = "Print";
-            this.toolStripButton22.Click += new System.EventHandler(this.toolStripButton22_Click_1);
+            this.PrintDoc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PrintDoc.Image = global::Moradi_Notepad.Properties.Resources.printer;
+            this.PrintDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PrintDoc.Name = "PrintDoc";
+            this.PrintDoc.Size = new System.Drawing.Size(23, 22);
+            this.PrintDoc.Text = "Print";
+            this.PrintDoc.Click += new System.EventHandler(this.toolStripButton22_Click_1);
             // 
-            // toolStripButton19
+            // InsertImage
             // 
-            this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton19.Image = global::Moradi_Notepad.Properties.Resources.images;
-            this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton19.Name = "toolStripButton19";
-            this.toolStripButton19.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton19.Text = "Import Image";
-            this.toolStripButton19.Click += new System.EventHandler(this.toolStripButton19_Click);
+            this.InsertImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.InsertImage.Image = global::Moradi_Notepad.Properties.Resources.images;
+            this.InsertImage.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.InsertImage.Name = "InsertImage";
+            this.InsertImage.Size = new System.Drawing.Size(23, 22);
+            this.InsertImage.Text = "Import Image";
+            this.InsertImage.Click += new System.EventHandler(this.toolStripButton19_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.B,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
+            this.Bold1,
+            this.Italic1,
+            this.Underline1,
+            this.StrikeThrough1,
             this.toolStripSeparator6,
-            this.toolStripButton5,
-            this.toolStripButton6,
+            this.CaseCap,
+            this.CaseLowercase,
             this.toolStripSeparator7,
-            this.toolStripButton7,
-            this.toolStripButton8,
+            this.Fontincrease,
+            this.Fontdecrease,
             this.toolStripSeparator8,
-            this.toolStripButton9,
-            this.toolStripDropDownButton1,
+            this.BackColor,
+            this.Forcolor,
             this.toolStripSeparator9,
-            this.toolStripButton11,
-            this.toolStripButton12});
+            this.NumbLine,
+            this.HideNumbline});
             this.toolStrip1.Location = new System.Drawing.Point(439, 29);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(329, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // B
+            // Bold1
             // 
-            this.B.CheckOnClick = true;
-            this.B.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.B.DoubleClickEnabled = true;
-            this.B.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.B.Image = ((System.Drawing.Image)(resources.GetObject("B.Image")));
-            this.B.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(23, 22);
-            this.B.Text = "B";
-            this.B.ToolTipText = "Bold";
-            this.B.Click += new System.EventHandler(this.B_Click);
-            this.B.MouseLeave += new System.EventHandler(this.B_MouseLeave);
-            this.B.MouseHover += new System.EventHandler(this.B_MouseHover);
+            this.Bold1.CheckOnClick = true;
+            this.Bold1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Bold1.DoubleClickEnabled = true;
+            this.Bold1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.Bold1.Image = ((System.Drawing.Image)(resources.GetObject("Bold1.Image")));
+            this.Bold1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Bold1.Name = "Bold1";
+            this.Bold1.Size = new System.Drawing.Size(23, 22);
+            this.Bold1.Text = "B";
+            this.Bold1.ToolTipText = "Bold";
+            this.Bold1.Click += new System.EventHandler(this.B_Click);
+            this.Bold1.MouseLeave += new System.EventHandler(this.B_MouseLeave);
+            this.Bold1.MouseHover += new System.EventHandler(this.B_MouseHover);
             // 
-            // toolStripButton2
+            // Italic1
             // 
-            this.toolStripButton2.CheckOnClick = true;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "I";
-            this.toolStripButton2.ToolTipText = "Italic";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            this.toolStripButton2.MouseLeave += new System.EventHandler(this.toolStripButton2_MouseLeave);
-            this.toolStripButton2.MouseHover += new System.EventHandler(this.toolStripButton2_MouseHover);
+            this.Italic1.CheckOnClick = true;
+            this.Italic1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Italic1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Italic1.Image = ((System.Drawing.Image)(resources.GetObject("Italic1.Image")));
+            this.Italic1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Italic1.Name = "Italic1";
+            this.Italic1.Size = new System.Drawing.Size(23, 22);
+            this.Italic1.Text = "I";
+            this.Italic1.ToolTipText = "Italic";
+            this.Italic1.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.Italic1.MouseLeave += new System.EventHandler(this.toolStripButton2_MouseLeave);
+            this.Italic1.MouseHover += new System.EventHandler(this.toolStripButton2_MouseHover);
             // 
-            // toolStripButton3
+            // Underline1
             // 
-            this.toolStripButton3.CheckOnClick = true;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "U";
-            this.toolStripButton3.ToolTipText = "Underline";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            this.toolStripButton3.MouseLeave += new System.EventHandler(this.toolStripButton3_MouseLeave);
-            this.toolStripButton3.MouseHover += new System.EventHandler(this.toolStripButton3_MouseHover);
+            this.Underline1.CheckOnClick = true;
+            this.Underline1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Underline1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.Underline1.Image = ((System.Drawing.Image)(resources.GetObject("Underline1.Image")));
+            this.Underline1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Underline1.Name = "Underline1";
+            this.Underline1.Size = new System.Drawing.Size(23, 22);
+            this.Underline1.Text = "U";
+            this.Underline1.ToolTipText = "Underline";
+            this.Underline1.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.Underline1.MouseLeave += new System.EventHandler(this.toolStripButton3_MouseLeave);
+            this.Underline1.MouseHover += new System.EventHandler(this.toolStripButton3_MouseHover);
             // 
-            // toolStripButton4
+            // StrikeThrough1
             // 
-            this.toolStripButton4.CheckOnClick = true;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Strikeout);
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "S";
-            this.toolStripButton4.ToolTipText = "Strikethrough";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            this.toolStripButton4.MouseLeave += new System.EventHandler(this.toolStripButton4_MouseLeave);
-            this.toolStripButton4.MouseHover += new System.EventHandler(this.toolStripButton4_MouseHover);
+            this.StrikeThrough1.CheckOnClick = true;
+            this.StrikeThrough1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.StrikeThrough1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Strikeout);
+            this.StrikeThrough1.Image = ((System.Drawing.Image)(resources.GetObject("StrikeThrough1.Image")));
+            this.StrikeThrough1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StrikeThrough1.Name = "StrikeThrough1";
+            this.StrikeThrough1.Size = new System.Drawing.Size(23, 22);
+            this.StrikeThrough1.Text = "S";
+            this.StrikeThrough1.ToolTipText = "Strikethrough";
+            this.StrikeThrough1.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.StrikeThrough1.MouseLeave += new System.EventHandler(this.toolStripButton4_MouseLeave);
+            this.StrikeThrough1.MouseHover += new System.EventHandler(this.toolStripButton4_MouseHover);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton5
+            // CaseCap
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "A";
-            this.toolStripButton5.ToolTipText = "Case CAP";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            this.toolStripButton5.MouseLeave += new System.EventHandler(this.toolStripButton5_MouseLeave);
-            this.toolStripButton5.MouseHover += new System.EventHandler(this.toolStripButton5_MouseHover);
+            this.CaseCap.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.CaseCap.Image = ((System.Drawing.Image)(resources.GetObject("CaseCap.Image")));
+            this.CaseCap.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CaseCap.Name = "CaseCap";
+            this.CaseCap.Size = new System.Drawing.Size(23, 22);
+            this.CaseCap.Text = "A";
+            this.CaseCap.ToolTipText = "Case CAP";
+            this.CaseCap.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.CaseCap.MouseLeave += new System.EventHandler(this.toolStripButton5_MouseLeave);
+            this.CaseCap.MouseHover += new System.EventHandler(this.toolStripButton5_MouseHover);
             // 
-            // toolStripButton6
+            // CaseLowercase
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "a";
-            this.toolStripButton6.ToolTipText = "Case Lowercase";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
-            this.toolStripButton6.MouseLeave += new System.EventHandler(this.toolStripButton6_MouseLeave);
-            this.toolStripButton6.MouseHover += new System.EventHandler(this.toolStripButton6_MouseHover);
+            this.CaseLowercase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.CaseLowercase.Image = ((System.Drawing.Image)(resources.GetObject("CaseLowercase.Image")));
+            this.CaseLowercase.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CaseLowercase.Name = "CaseLowercase";
+            this.CaseLowercase.Size = new System.Drawing.Size(23, 22);
+            this.CaseLowercase.Text = "a";
+            this.CaseLowercase.ToolTipText = "Case Lowercase";
+            this.CaseLowercase.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.CaseLowercase.MouseLeave += new System.EventHandler(this.toolStripButton6_MouseLeave);
+            this.CaseLowercase.MouseHover += new System.EventHandler(this.toolStripButton6_MouseHover);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton7
+            // Fontincrease
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(27, 22);
-            this.toolStripButton7.Text = "A+";
-            this.toolStripButton7.ToolTipText = "Increase Text Size";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
-            this.toolStripButton7.MouseLeave += new System.EventHandler(this.toolStripButton7_MouseLeave);
-            this.toolStripButton7.MouseHover += new System.EventHandler(this.toolStripButton7_MouseHover);
+            this.Fontincrease.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Fontincrease.Image = ((System.Drawing.Image)(resources.GetObject("Fontincrease.Image")));
+            this.Fontincrease.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Fontincrease.Name = "Fontincrease";
+            this.Fontincrease.Size = new System.Drawing.Size(27, 22);
+            this.Fontincrease.Text = "A+";
+            this.Fontincrease.ToolTipText = "Increase Text Size";
+            this.Fontincrease.Click += new System.EventHandler(this.toolStripButton7_Click);
+            this.Fontincrease.MouseLeave += new System.EventHandler(this.toolStripButton7_MouseLeave);
+            this.Fontincrease.MouseHover += new System.EventHandler(this.toolStripButton7_MouseHover);
             // 
-            // toolStripButton8
+            // Fontdecrease
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(24, 22);
-            this.toolStripButton8.Text = "A-";
-            this.toolStripButton8.ToolTipText = "Decrease Text Size";
-            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
-            this.toolStripButton8.MouseLeave += new System.EventHandler(this.toolStripButton8_MouseLeave);
-            this.toolStripButton8.MouseHover += new System.EventHandler(this.toolStripButton8_MouseHover);
+            this.Fontdecrease.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Fontdecrease.Image = ((System.Drawing.Image)(resources.GetObject("Fontdecrease.Image")));
+            this.Fontdecrease.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Fontdecrease.Name = "Fontdecrease";
+            this.Fontdecrease.Size = new System.Drawing.Size(24, 22);
+            this.Fontdecrease.Text = "A-";
+            this.Fontdecrease.ToolTipText = "Decrease Text Size";
+            this.Fontdecrease.Click += new System.EventHandler(this.toolStripButton8_Click);
+            this.Fontdecrease.MouseLeave += new System.EventHandler(this.toolStripButton8_MouseLeave);
+            this.Fontdecrease.MouseHover += new System.EventHandler(this.toolStripButton8_MouseHover);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton9
+            // BackColor
             // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BackColor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.redToolStripMenuItem,
             this.blackThemeToolStripMenuItem,
             this.navyBackgroundToolStripMenuItem,
             this.limeBackgroundToolStripMenuItem,
             this.otherColorToolStripMenuItem});
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(29, 22);
-            this.toolStripButton9.Text = "Background Color";
-            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
-            this.toolStripButton9.MouseLeave += new System.EventHandler(this.toolStripButton9_MouseLeave);
-            this.toolStripButton9.MouseHover += new System.EventHandler(this.toolStripButton9_MouseHover);
+            this.BackColor.Image = ((System.Drawing.Image)(resources.GetObject("BackColor.Image")));
+            this.BackColor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BackColor.Name = "BackColor";
+            this.BackColor.Size = new System.Drawing.Size(29, 22);
+            this.BackColor.Text = "Background Color";
+            this.BackColor.Click += new System.EventHandler(this.toolStripButton9_Click);
+            this.BackColor.MouseLeave += new System.EventHandler(this.toolStripButton9_MouseLeave);
+            this.BackColor.MouseHover += new System.EventHandler(this.toolStripButton9_MouseHover);
             // 
             // redToolStripMenuItem
             // 
@@ -1254,27 +1254,27 @@ namespace Moradi_Notepad
             this.otherColorToolStripMenuItem.Text = "Other Color";
             this.otherColorToolStripMenuItem.Click += new System.EventHandler(this.otherColorToolStripMenuItem_Click);
             // 
-            // toolStripDropDownButton1
+            // Forcolor
             // 
-            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Forcolor.BackColor = System.Drawing.Color.White;
+            this.Forcolor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Forcolor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.redToolStripMenuItem1,
             this.blueTextToolStripMenuItem,
             this.limeTextToolStripMenuItem,
             this.yellowTextToolStripMenuItem,
             this.purpleTextToolStripMenuItem,
             this.otherColorToolStripMenuItem1});
-            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton1.Image = global::Moradi_Notepad.Properties.Resources.Hopstarter_Scrap_Pen;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "Text Color";
-            this.toolStripDropDownButton1.ToolTipText = "Text Color";
-            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
-            this.toolStripDropDownButton1.MouseLeave += new System.EventHandler(this.toolStripDropDownButton1_MouseLeave);
-            this.toolStripDropDownButton1.MouseHover += new System.EventHandler(this.toolStripDropDownButton1_MouseHover);
+            this.Forcolor.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Forcolor.Image = global::Moradi_Notepad.Properties.Resources.Hopstarter_Scrap_Pen;
+            this.Forcolor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Forcolor.Name = "Forcolor";
+            this.Forcolor.Size = new System.Drawing.Size(29, 22);
+            this.Forcolor.Text = "Text Color";
+            this.Forcolor.ToolTipText = "Text Color";
+            this.Forcolor.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
+            this.Forcolor.MouseLeave += new System.EventHandler(this.toolStripDropDownButton1_MouseLeave);
+            this.Forcolor.MouseHover += new System.EventHandler(this.toolStripDropDownButton1_MouseHover);
             // 
             // redToolStripMenuItem1
             // 
@@ -1283,7 +1283,7 @@ namespace Moradi_Notepad
             this.redToolStripMenuItem1.ForeColor = System.Drawing.Color.Red;
             this.redToolStripMenuItem1.Image = global::Moradi_Notepad.Properties.Resources.imageedit_24_8334251899;
             this.redToolStripMenuItem1.Name = "redToolStripMenuItem1";
-            this.redToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.redToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.redToolStripMenuItem1.Text = "Red | Text";
             this.redToolStripMenuItem1.Click += new System.EventHandler(this.redToolStripMenuItem1_Click);
             // 
@@ -1294,7 +1294,7 @@ namespace Moradi_Notepad
             this.blueTextToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
             this.blueTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.blue_dot_md;
             this.blueTextToolStripMenuItem.Name = "blueTextToolStripMenuItem";
-            this.blueTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.blueTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.blueTextToolStripMenuItem.Text = "Blue | Text";
             this.blueTextToolStripMenuItem.Click += new System.EventHandler(this.blueTextToolStripMenuItem_Click);
             // 
@@ -1305,7 +1305,7 @@ namespace Moradi_Notepad
             this.limeTextToolStripMenuItem.ForeColor = System.Drawing.Color.Lime;
             this.limeTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.neon_green_dot_hi;
             this.limeTextToolStripMenuItem.Name = "limeTextToolStripMenuItem";
-            this.limeTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.limeTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.limeTextToolStripMenuItem.Text = "Lime | Text";
             this.limeTextToolStripMenuItem.Click += new System.EventHandler(this.limeTextToolStripMenuItem_Click);
             // 
@@ -1316,7 +1316,7 @@ namespace Moradi_Notepad
             this.yellowTextToolStripMenuItem.ForeColor = System.Drawing.Color.Yellow;
             this.yellowTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.yellow_dot_md;
             this.yellowTextToolStripMenuItem.Name = "yellowTextToolStripMenuItem";
-            this.yellowTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.yellowTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.yellowTextToolStripMenuItem.Text = "Yellow | Text";
             this.yellowTextToolStripMenuItem.Click += new System.EventHandler(this.yellowTextToolStripMenuItem_Click);
             // 
@@ -1327,7 +1327,7 @@ namespace Moradi_Notepad
             this.purpleTextToolStripMenuItem.ForeColor = System.Drawing.Color.Purple;
             this.purpleTextToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.Location_dot_purple_svg;
             this.purpleTextToolStripMenuItem.Name = "purpleTextToolStripMenuItem";
-            this.purpleTextToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.purpleTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.purpleTextToolStripMenuItem.Text = "Purple | Text";
             this.purpleTextToolStripMenuItem.Click += new System.EventHandler(this.purpleTextToolStripMenuItem_Click);
             // 
@@ -1338,7 +1338,7 @@ namespace Moradi_Notepad
             this.otherColorToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.otherColorToolStripMenuItem1.Image = global::Moradi_Notepad.Properties.Resources.Color_wheel;
             this.otherColorToolStripMenuItem1.Name = "otherColorToolStripMenuItem1";
-            this.otherColorToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.otherColorToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.otherColorToolStripMenuItem1.Text = "Other Color";
             this.otherColorToolStripMenuItem1.Click += new System.EventHandler(this.otherColorToolStripMenuItem1_Click);
             // 
@@ -1347,30 +1347,30 @@ namespace Moradi_Notepad
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton11
+            // NumbLine
             // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton11.Text = "Show Line Number";
-            this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
-            this.toolStripButton11.MouseLeave += new System.EventHandler(this.toolStripButton11_MouseLeave);
-            this.toolStripButton11.MouseHover += new System.EventHandler(this.toolStripButton11_MouseHover);
+            this.NumbLine.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.NumbLine.Image = ((System.Drawing.Image)(resources.GetObject("NumbLine.Image")));
+            this.NumbLine.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NumbLine.Name = "NumbLine";
+            this.NumbLine.Size = new System.Drawing.Size(23, 22);
+            this.NumbLine.Text = "Show Line Number";
+            this.NumbLine.Click += new System.EventHandler(this.toolStripButton11_Click);
+            this.NumbLine.MouseLeave += new System.EventHandler(this.toolStripButton11_MouseLeave);
+            this.NumbLine.MouseHover += new System.EventHandler(this.toolStripButton11_MouseHover);
             // 
-            // toolStripButton12
+            // HideNumbline
             // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Enabled = false;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton12.Text = "Hide Line Number";
-            this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
-            this.toolStripButton12.MouseLeave += new System.EventHandler(this.toolStripButton12_MouseLeave);
-            this.toolStripButton12.MouseHover += new System.EventHandler(this.toolStripButton12_MouseHover);
+            this.HideNumbline.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HideNumbline.Enabled = false;
+            this.HideNumbline.Image = ((System.Drawing.Image)(resources.GetObject("HideNumbline.Image")));
+            this.HideNumbline.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.HideNumbline.Name = "HideNumbline";
+            this.HideNumbline.Size = new System.Drawing.Size(23, 22);
+            this.HideNumbline.Text = "Hide Line Number";
+            this.HideNumbline.Click += new System.EventHandler(this.toolStripButton12_Click);
+            this.HideNumbline.MouseLeave += new System.EventHandler(this.toolStripButton12_MouseLeave);
+            this.HideNumbline.MouseHover += new System.EventHandler(this.toolStripButton12_MouseHover);
             // 
             // ubuntuControlBox1
             // 
@@ -2043,7 +2043,6 @@ namespace Moradi_Notepad
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1178, 726);
             this.Controls.Add(this.ubuntuTheme1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2107,27 +2106,27 @@ namespace Moradi_Notepad
         private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton Italic1;
+        private System.Windows.Forms.ToolStripButton Underline1;
+        private System.Windows.Forms.ToolStripButton StrikeThrough1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton CaseCap;
+        private System.Windows.Forms.ToolStripButton CaseLowercase;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton Fontincrease;
+        private System.Windows.Forms.ToolStripButton Fontdecrease;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton NewDoc;
+        private System.Windows.Forms.ToolStripButton OpenDoc;
         public System.Windows.Forms.RichTextBox richTextBox1;
         private LineNumbers.LineNumbers_For_RichTextBox lineNumbers_For_RichTextBox2;
-        private System.Windows.Forms.ToolStripButton B;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripButton9;
+        private System.Windows.Forms.ToolStripButton Bold1;
+        private System.Windows.Forms.ToolStripDropDownButton BackColor;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton Forcolor;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem blueTextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limeTextToolStripMenuItem;
@@ -2136,8 +2135,8 @@ namespace Moradi_Notepad
         private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem halloweenToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton NumbLine;
+        private System.Windows.Forms.ToolStripButton HideNumbline;
         private System.Windows.Forms.ToolStripMenuItem yellowTextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem navyBackgroundToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purpleTextToolStripMenuItem;
@@ -2159,7 +2158,7 @@ namespace Moradi_Notepad
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button FindText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label output;
@@ -2190,7 +2189,7 @@ namespace Moradi_Notepad
         private ToolStripMenuItem offToolStripMenuItem;
         private Timer clock;
         private OpenFileDialog openFileDialog1;
-        private ToolStripButton toolStripButton19;
+        private ToolStripButton InsertImage;
         private ToolStripMenuItem imageToolStripMenuItem;
         private CP.Window.Forms.FindReplaceDialog findReplaceDialog1;
         private ToolStripMenuItem websiteToolStripMenuItem;
@@ -2251,14 +2250,14 @@ namespace Moradi_Notepad
         private ToolStripButton undo;
         private ToolStripButton redo;
         private ToolStripSeparator toolStripSeparator14;
-        private ToolStripButton toolStripButton16;
-        private ToolStripButton toolStripButton17;
+        private ToolStripButton LockDoc;
+        private ToolStripButton UnlockDoc;
         private ToolStripSeparator toolStripSeparator15;
         private ToolStripButton MicOn;
         private ToolStripButton MicOff;
         private PictureBox pictureBox1;
-        private ToolStripButton toolStripButton21;
-        private ToolStripButton toolStripButton22;
+        private ToolStripButton SaveDoc;
+        private ToolStripButton PrintDoc;
     }
 }
 
