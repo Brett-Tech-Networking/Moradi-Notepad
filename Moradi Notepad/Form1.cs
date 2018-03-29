@@ -320,50 +320,50 @@ namespace Moradi_Notepad
 
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
-            {                
-                    DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                
-                    //no
-                    if (result == DialogResult.Cancel)
+            {
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                //no
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        return;
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                     }
 
-                    //yes
-                    if (result == DialogResult.Yes)
-                    {
-                        saveFileDialog1.DefaultExt = ".rtf";
-                        saveFileDialog1.OverwritePrompt = true;
-                        saveFileDialog1.Title = "Save File";
-                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                    else { return; }
+                }
 
-                        if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                        {
-                            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-                        }
+                openFileDialog1.Title = "Open File";
+                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                openFileDialog1.FileName = "";
+                openFileDialog1.FilterIndex = 0;
 
-                        else { return; }
-                    }
+                openFileDialog1.InitialDirectory = "My Documents";
 
-                    openFileDialog1.Title = "Open File";
-                    openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-                    openFileDialog1.FileName = "";
-                    openFileDialog1.FilterIndex = 0;
+                openFileDialog1.CheckFileExists = true;
+                openFileDialog1.CheckPathExists = true;
 
-                    openFileDialog1.InitialDirectory = "My Documents";
-
-                    openFileDialog1.CheckFileExists = true;
-                    openFileDialog1.CheckPathExists = true;
-
-                    if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                    {
-                        richTextBox1.LoadFile(openFileDialog1.FileName);
-                    }
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    richTextBox1.LoadFile(openFileDialog1.FileName);
                 }
             }
-        
-    
+        }
+
+
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
@@ -1858,8 +1858,8 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
-            
-           
+
+
         }
 
         public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -1899,65 +1899,69 @@ namespace Moradi_Notepad
 
         private void toolStripButton18_Click_2(object sender, EventArgs e)
         {
-
-                                                // Mic Settings //
-
-            //////////////////////////////////////////////////////////////////////////////////////////////////
             try
             {
-                recognizer = new SpeechRecognitionEngine();
-                recognizer.LoadGrammar(grammar);
-                recognizer.SetInputToDefaultAudioDevice();
+                // Mic Settings //
 
-                recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+                //////////////////////////////////////////////////////////////////////////////////////////////////
+                try
+                {
+                    recognizer = new SpeechRecognitionEngine();
+                    recognizer.LoadGrammar(grammar);
+                    recognizer.SetInputToDefaultAudioDevice();
 
-                // this tells the recorder not to record by default until button is clicked
-                RecognizerState = false;
+                    recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
 
-                RecThread = new Thread(new ThreadStart(RecThreadFunction));
-                RecThread.Start();
+                    // this tells the recorder not to record by default until button is clicked
+                    RecognizerState = false;
+
+                    RecThread = new Thread(new ThreadStart(RecThreadFunction));
+                    RecThread.Start();
+                }
+                catch
+                {
+                    MessageBox.Show("No valid mic was detected on your system. Please connect one to use voice to text features", "Whoa There!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    // Button Properties //
+                    ////////////////////////////
+                    RecognizerState = false;
+                    MicOn.Enabled = true;
+                    MicOff.Enabled = false;
+                    pictureBox1.Enabled = false;
+                    ////////////////////////////
+                }
+                //////////////////////////////////////////////////////////////////////////////////////////////////
             }
             catch
             {
-                MessageBox.Show("No valid mic was detected on your system. Please connect one to use voice to text features", "Whoa There!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                   // Button Properties //
-                ////////////////////////////
-                RecognizerState = false;
-                MicOn.Enabled = true;
-                MicOff.Enabled = false;
-                pictureBox1.Enabled = false;
-                ////////////////////////////
+                // Button Settings
+
+                if (richTextBox1.Text == ("Start Typing Here . . .")) // Text On Main Notepad To Be Deleted Once Screen Is Clicked
+                {
+                    richTextBox1.Clear();  // Deletes Written Text
+                }
+
+                pictureBox1.Enabled = true;
+                richTextBox1.ReadOnly = true;
+
+                try
+                {
+                    //mic on
+                    RecognizerState = true;
+                    MicOn.Enabled = false;
+                    MicOff.Enabled = true;
+
+                    //status update
+                    infolabel.Text = ("Recognizer Stated  . . . ");
+                }
+                catch
+                {
+                    MessageBox.Show("No valid mic was detected on your system.", "Whoa There!");
+                }
             }
-            //////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-            // Button Settings
-             
-            if (richTextBox1.Text == ("Start Typing Here . . .")) // Text On Main Notepad To Be Deleted Once Screen Is Clicked
-            {
-                richTextBox1.Clear();  // Deletes Written Text
-            }
-
-            pictureBox1.Enabled = true;
-            richTextBox1.ReadOnly = true;
-
-            try
-            {
-                //mic on
-                RecognizerState = true;
-                MicOn.Enabled = false;
-                MicOff.Enabled = true;
-
-                //status update
-                infolabel.Text = ("Recognizer Stated  . . . ");
-            }
-            catch
-            {
-                MessageBox.Show("No valid mic was detected on your system.", "Whoa There!");
-            }
-
         }
+               
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
