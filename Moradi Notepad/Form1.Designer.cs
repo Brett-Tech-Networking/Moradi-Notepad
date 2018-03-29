@@ -91,8 +91,8 @@ namespace Moradi_Notepad
             this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.MicOn = new System.Windows.Forms.ToolStripButton();
+            this.MicOff = new System.Windows.Forms.ToolStripButton();
             this.output = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -308,11 +308,11 @@ namespace Moradi_Notepad
             this.toolStripButton16,
             this.toolStripButton17,
             this.toolStripSeparator15,
-            this.toolStripButton18,
-            this.toolStripButton20});
+            this.MicOn,
+            this.MicOff});
             this.toolStrip3.Location = new System.Drawing.Point(1, 51);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(364, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(395, 25);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "Lock Document";
             // 
@@ -772,33 +772,33 @@ namespace Moradi_Notepad
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             this.toolStripSeparator15.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton18
+            // MicOn
             // 
-            this.toolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton18.ForeColor = System.Drawing.Color.Black;
-            this.toolStripButton18.Image = global::Moradi_Notepad.Properties.Resources.microphone1;
-            this.toolStripButton18.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton18.Name = "toolStripButton18";
-            this.toolStripButton18.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton18.Text = "toolStripButton18";
-            this.toolStripButton18.ToolTipText = "Voice Enabled";
-            this.toolStripButton18.Click += new System.EventHandler(this.toolStripButton18_Click_2);
-            this.toolStripButton18.MouseLeave += new System.EventHandler(this.toolStripButton18_MouseLeave);
-            this.toolStripButton18.MouseHover += new System.EventHandler(this.toolStripButton18_MouseHover);
+            this.MicOn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MicOn.ForeColor = System.Drawing.Color.Black;
+            this.MicOn.Image = global::Moradi_Notepad.Properties.Resources.microphone1;
+            this.MicOn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MicOn.Name = "MicOn";
+            this.MicOn.Size = new System.Drawing.Size(23, 22);
+            this.MicOn.Text = "Mic On";
+            this.MicOn.ToolTipText = "Voice Enabled";
+            this.MicOn.Click += new System.EventHandler(this.toolStripButton18_Click_2);
+            this.MicOn.MouseLeave += new System.EventHandler(this.toolStripButton18_MouseLeave);
+            this.MicOn.MouseHover += new System.EventHandler(this.toolStripButton18_MouseHover);
             // 
-            // toolStripButton20
+            // MicOff
             // 
-            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton20.Enabled = false;
-            this.toolStripButton20.Image = global::Moradi_Notepad.Properties.Resources.no_microphone;
-            this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton20.Text = "toolStripButton20";
-            this.toolStripButton20.ToolTipText = "Voice Disabled";
-            this.toolStripButton20.Click += new System.EventHandler(this.toolStripButton20_Click_1);
-            this.toolStripButton20.MouseLeave += new System.EventHandler(this.toolStripButton20_MouseLeave);
-            this.toolStripButton20.MouseHover += new System.EventHandler(this.toolStripButton20_MouseHover);
+            this.MicOff.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MicOff.Enabled = false;
+            this.MicOff.Image = global::Moradi_Notepad.Properties.Resources.no_microphone;
+            this.MicOff.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MicOff.Name = "MicOff";
+            this.MicOff.Size = new System.Drawing.Size(23, 22);
+            this.MicOff.Text = "Mic Off";
+            this.MicOff.ToolTipText = "Voice Disabled";
+            this.MicOff.Click += new System.EventHandler(this.toolStripButton20_Click_1);
+            this.MicOff.MouseLeave += new System.EventHandler(this.toolStripButton20_MouseLeave);
+            this.MicOff.MouseHover += new System.EventHandler(this.toolStripButton20_MouseHover);
             // 
             // output
             // 
@@ -1004,7 +1004,7 @@ namespace Moradi_Notepad
             this.toolStripButton19});
             this.toolStrip2.Location = new System.Drawing.Point(303, 27);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(158, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(127, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -2254,8 +2254,8 @@ namespace Moradi_Notepad
         private ToolStripButton toolStripButton16;
         private ToolStripButton toolStripButton17;
         private ToolStripSeparator toolStripSeparator15;
-        private ToolStripButton toolStripButton18;
-        private ToolStripButton toolStripButton20;
+        private ToolStripButton MicOn;
+        private ToolStripButton MicOff;
         private PictureBox pictureBox1;
         private ToolStripButton toolStripButton21;
         private ToolStripButton toolStripButton22;

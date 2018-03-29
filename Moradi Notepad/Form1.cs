@@ -1166,6 +1166,7 @@ namespace Moradi_Notepad
 
             toolStripButton16.Enabled = false;
             toolStripButton17.Enabled = true;
+            MicOn.Enabled = false;
         }
 
         private void toolStripButton17_Click(object sender, EventArgs e)
@@ -1174,6 +1175,7 @@ namespace Moradi_Notepad
             MessageBox.Show("Your Document Is Now UNLOCKED, You May Now Continue Editing Your Document", "UNLOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             toolStripButton17.Enabled = false;
             toolStripButton16.Enabled = true;
+            MicOn.Enabled = true;
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -1919,14 +1921,14 @@ namespace Moradi_Notepad
             }
 
             pictureBox1.Enabled = true;
-            richTextBox1.Enabled = false;
+            richTextBox1.ReadOnly = true;
 
             try
             {
                 //mic on
                 RecognizerState = true;
-                toolStripButton18.Enabled = false;
-                toolStripButton20.Enabled = true;
+                MicOn.Enabled = false;
+                MicOff.Enabled = true;
 
                 //status update
                 infolabel.Text = ("Recognizer Stated  . . . ");
@@ -1942,12 +1944,14 @@ namespace Moradi_Notepad
         {
             // options
             pictureBox1.Enabled = false;
-            richTextBox1.Enabled = true;
+            richTextBox1.ReadOnly = false;
+
 
             //mic off    
             RecognizerState = false;
-            toolStripButton20.Enabled = false;
-            toolStripButton18.Enabled = true;
+            MicOff.Enabled = false;
+            MicOn.Enabled = true;
+            
 
             //status update
             infolabel.Text = ("Recognizer Stopped ! ");
