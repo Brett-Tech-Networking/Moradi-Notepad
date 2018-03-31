@@ -8,6 +8,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Diagnostics;
 
+
 namespace Moradi_Notepad
 {
     public partial class Form1 : Form
@@ -1913,7 +1914,17 @@ namespace Moradi_Notepad
                     recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
 
                     // this tells the recorder not to record by default until button is clicked
-                    RecognizerState = false;
+
+                    // Delete text containing Start tpying here , prior to starting mic
+                    if (richTextBox1.Text == ("Start Typing Here . . .")) 
+                    {
+                        richTextBox1.Clear();  // Deletes Written Text
+                    }
+
+                    RecognizerState = true;
+                    MicOn.Enabled = false;
+                    MicOff.Enabled = true;
+                    pictureBox1.Enabled = true;
 
                     RecThread = new Thread(new ThreadStart(RecThreadFunction));
                     RecThread.Start();
@@ -1967,6 +1978,7 @@ namespace Moradi_Notepad
         {
             // options
             pictureBox1.Enabled = false;
+            pictureBox1.Refresh();
             richTextBox1.ReadOnly = false;
 
 
