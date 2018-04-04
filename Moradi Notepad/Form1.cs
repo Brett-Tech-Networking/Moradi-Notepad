@@ -323,48 +323,55 @@ namespace Moradi_Notepad
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             {
-                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-
-                //no
-                if (result == DialogResult.Cancel)
+               
+                if (richTextBox1.Text == String.Empty)
                 {
-                    return;
-                }
+                    openFileDialog1.Title = "Open File";
+                    openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                    openFileDialog1.FileName = "";
+                    openFileDialog1.FilterIndex = 0;
 
-                //yes
-                if (result == DialogResult.Yes)
-                {
-                    saveFileDialog1.DefaultExt = ".rtf";
-                    saveFileDialog1.OverwritePrompt = true;
-                    saveFileDialog1.Title = "Save File";
-                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                    openFileDialog1.InitialDirectory = "My Documents";
 
-                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    openFileDialog1.CheckFileExists = true;
+                    openFileDialog1.CheckPathExists = true;
+
+                    if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                        richTextBox1.LoadFile(openFileDialog1.FileName);
+                    }
+                }
+                else if (richTextBox1.Text != String.Empty)
+                {
+                    DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                    //no
+                    if (result == DialogResult.Cancel)
+                    {
+                        return;
                     }
 
-                    else { return; }
+                    //yes
+                    if (result == DialogResult.Yes)
+                    {
+                        saveFileDialog1.DefaultExt = ".rtf";
+                        saveFileDialog1.OverwritePrompt = true;
+                        saveFileDialog1.Title = "Save File";
+                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                        if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                        {
+                            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                        }
+
+                        else { return; }
+                    }
+
                 }
-
-                openFileDialog1.Title = "Open File";
-                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-                openFileDialog1.FileName = "";
-                openFileDialog1.FilterIndex = 0;
-
-                openFileDialog1.InitialDirectory = "My Documents";
-
-                openFileDialog1.CheckFileExists = true;
-                openFileDialog1.CheckPathExists = true;
-
-                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    richTextBox1.LoadFile(openFileDialog1.FileName);
                 }
             }
-        }
-
+        
 
 
         private void toolStripButton7_Click(object sender, EventArgs e)
