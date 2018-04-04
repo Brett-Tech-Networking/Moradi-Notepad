@@ -5,6 +5,7 @@ using System.IO;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Threading;
+using System.Windows;
 using System.Windows.Forms;
 using System.Diagnostics;
 
