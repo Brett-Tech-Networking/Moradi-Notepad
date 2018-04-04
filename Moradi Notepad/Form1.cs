@@ -2075,5 +2075,35 @@ namespace Moradi_Notepad
         {
            
         }
+
+        private void Highlighter_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void transeparentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                richTextBox1.SelectionBackColor = Color.Black;
+        }
+
+        private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBackColor = Color.Yellow;
+        }
+
+        private void limeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBackColor = Color.Lime;
+        }
+
+        private void lightBlueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBackColor = Color.DodgerBlue;
+        }
+
+        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBackColor = Color.White;
+        }
     }
 }

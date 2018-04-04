@@ -513,6 +513,16 @@ namespace Moradi_Notepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Text_x_generic_highlight_yellow_pen {
+            get {
+                object obj = ResourceManager.GetObject("Text-x-generic-highlight-yellow-pen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Treetog_I_Floppy_Small {
             get {
                 object obj = ResourceManager.GetObject("Treetog-I-Floppy-Small", resourceCulture);
