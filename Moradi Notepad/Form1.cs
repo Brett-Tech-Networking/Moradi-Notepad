@@ -2113,5 +2113,36 @@ namespace Moradi_Notepad
         {
             richTextBox1.SelectionBackColor = Color.White;
         }
+
+        private void otherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //text color wheel picker
+            ColorDialog MyDialog = new ColorDialog();
+
+            // Allows user to pick custom color.
+            MyDialog.AllowFullOpen = true;
+
+            // Allows the user to get help. (The default is false.)
+            MyDialog.ShowHelp = true;
+
+            // Sets the initial color select to the current text color.
+            MyDialog.Color = richTextBox1.SelectionBackColor;
+
+            // Update the text box color if the user clicks OK 
+            if (MyDialog.ShowDialog() == DialogResult.OK)
+                richTextBox1.SelectionBackColor = MyDialog.Color;
+        }
+
+        private void nONEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                richTextBox1.SelectionBackColor = richTextBox1.BackColor;
+            }
+            catch
+            {
+                MessageBox.Show("Sorry About That We Could Not Clear Your Highlights At This Time Please Try Again, If The Issue Continues Please Contact Us At Support@Brett-TechRepair.Com Thank You.","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
     }
 }
