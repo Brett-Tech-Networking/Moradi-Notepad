@@ -580,6 +580,10 @@ namespace Moradi_Notepad
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
+
+            //lines
+            int lineNumber = richTextBox1.GetLineFromCharIndex(richTextBox1.TextLength) + 1;
+            lines.Text = "Lines: " + (lineNumber.ToString());
         }
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
