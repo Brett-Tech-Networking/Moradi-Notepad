@@ -133,6 +133,12 @@
     <Compile Include="splashscreen.Designer.cs">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Templates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Templates.Designer.cs">
+      <DependentUpon>Templates.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splashscreen.resx">
       <DependentUpon>splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates.resx">
+      <DependentUpon>Templates.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -306,6 +315,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FindReplace.csproj" />
+    <None Include="Resources\conver letter.png" />
     <None Include="Resources\white dot1.png" />
     <None Include="Resources\color wheel.gif" />
     <None Include="Resources\white dot.png" />

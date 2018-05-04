@@ -773,7 +773,10 @@ namespace Moradi_Notepad
 
         private void output_Click(object sender, EventArgs e)
         {
-            // Charector Counter (Of typed charectors in doc.)
+            /*
+              Charector Counter (Of typed charectors in doc.)
+              Located In richTextBox1_TextChanged
+            */
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -2147,6 +2150,17 @@ namespace Moradi_Notepad
             {
                 MessageBox.Show("Sorry About That We Could Not Clear Your Highlights At This Time Please Try Again, If The Issue Continues Please Contact Us At Support@Brett-TechRepair.Com Thank You.","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void lines_Click(object sender, EventArgs e)
+        {
+            // located in richTextBox1_TextChanged
+        }
+
+        private void templatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Templates t = new Templates();
+            t.Show();
         }
     }
 }
