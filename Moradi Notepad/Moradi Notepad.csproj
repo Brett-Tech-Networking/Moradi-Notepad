@@ -315,6 +315,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FindReplace.csproj" />
+    <None Include="Resources\max.png" />
     <None Include="Resources\conver letter.png" />
     <None Include="Resources\white dot1.png" />
     <None Include="Resources\color wheel.gif" />

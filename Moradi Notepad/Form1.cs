@@ -471,6 +471,7 @@ namespace Moradi_Notepad
 
         private void ubuntuTheme1_Resize(object sender, EventArgs e)
         {
+            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
         private void redToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1928,8 +1929,7 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
-            
-
+           
         }
 
         public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -2224,6 +2224,8 @@ namespace Moradi_Notepad
 
         private void Form1_Resize(object sender, EventArgs e)
         {
+            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+
         }
 
         private void minimizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2346,6 +2348,19 @@ namespace Moradi_Notepad
             {
                 // nothing to do
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+        }
+
+        private void faderControlBox1_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }
