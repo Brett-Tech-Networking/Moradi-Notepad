@@ -60,55 +60,75 @@ namespace Moradi_Notepad
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Will Close Moradi Notepad Software
+        
             Application.Exit();
             splashscreen ss = new splashscreen();
             ss.Close();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
-                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-
-                //no
-                if (result == DialogResult.Cancel)
+        {  
+                // open if not modified
                 {
-                    return;
-                }
-
-                //yes
-                if (result == DialogResult.Yes)
-                {
-                    saveFileDialog1.DefaultExt = ".rtf";
-                    saveFileDialog1.OverwritePrompt = true;
-                    saveFileDialog1.Title = "Save File";
-                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    if (richTextBox1.Modified == false)
                     {
-                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                        // filters
+                        openFileDialog1.Title = "Open File";
+                        openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                        openFileDialog1.FileName = "";
+                        openFileDialog1.FilterIndex = 0;
+                        openFileDialog1.InitialDirectory = "My Documents";
+
+                        openFileDialog1.CheckFileExists = true;
+                        openFileDialog1.CheckPathExists = true;
+
+                        if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                        {
+                            richTextBox1.LoadFile(openFileDialog1.FileName);
+                        }
                     }
 
-                    else { return; }
-                }
+                    //open if modified
+                    else if (richTextBox1.Modified == true)
+                    {
+                        DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
-                openFileDialog1.Title = "Open File";
-                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-                openFileDialog1.FileName = "";
-                openFileDialog1.FilterIndex = 0;
+                        //no
+                        richTextBox1.Clear();
+                        {
+                            openFileDialog1.Title = "Open File";
+                            openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                            openFileDialog1.FileName = "";
+                            openFileDialog1.FilterIndex = 0;
 
-                openFileDialog1.InitialDirectory = "My Documents";
+                            openFileDialog1.InitialDirectory = "My Documents";
 
-                openFileDialog1.CheckFileExists = true;
-                openFileDialog1.CheckPathExists = true;
+                            openFileDialog1.CheckFileExists = true;
+                            openFileDialog1.CheckPathExists = true;
 
-                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    richTextBox1.LoadFile(openFileDialog1.FileName);
+                            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                            {
+                                richTextBox1.LoadFile(openFileDialog1.FileName);
+                            }
+                        }
+
+                        //yes
+                        if (result == DialogResult.Yes)
+                        {
+                            saveFileDialog1.DefaultExt = ".rtf";
+                            saveFileDialog1.OverwritePrompt = true;
+                            saveFileDialog1.Title = "Save File";
+                            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                            {
+                                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                            }
+                        }
+                    }
                 }
             }
-        }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -321,10 +341,35 @@ namespace Moradi_Notepad
         }
 
         private void toolStripButton10_Click(object sender, EventArgs e)
+
+        // open if not modified
         {
+            if (richTextBox1.Modified == false)
             {
-               
-                if (richTextBox1.Text == String.Empty)
+                // filters
+                openFileDialog1.Title = "Open File";
+                openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                openFileDialog1.FileName = "";
+                openFileDialog1.FilterIndex = 0;
+                openFileDialog1.InitialDirectory = "My Documents";
+
+                openFileDialog1.CheckFileExists = true;
+                openFileDialog1.CheckPathExists = true;
+
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    richTextBox1.LoadFile(openFileDialog1.FileName);
+                }
+            }
+
+            //open if modified
+            if (richTextBox1.Modified == true)
+            {
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                //no
+                richTextBox1.Clear();
                 {
                     openFileDialog1.Title = "Open File";
                     openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
@@ -341,37 +386,23 @@ namespace Moradi_Notepad
                         richTextBox1.LoadFile(openFileDialog1.FileName);
                     }
                 }
-                else if (richTextBox1.Text != String.Empty)
+
+                //yes
+                if (result == DialogResult.Yes)
                 {
-                    DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
-                    //no
-                    if (result == DialogResult.Cancel)
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        return;
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                     }
-
-                    //yes
-                    if (result == DialogResult.Yes)
-                    {
-                        saveFileDialog1.DefaultExt = ".rtf";
-                        saveFileDialog1.OverwritePrompt = true;
-                        saveFileDialog1.Title = "Save File";
-                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                        if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                        {
-                            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-                        }
-
-                        else { return; }
-                    }
-
-                }
                 }
             }
-        
+        }
+
 
 
         private void toolStripButton7_Click(object sender, EventArgs e)
@@ -584,6 +615,19 @@ namespace Moradi_Notepad
             //lines
             int lineNumber = richTextBox1.GetLineFromCharIndex(richTextBox1.TextLength) + 1;
             lines.Text = "Lines: " + (lineNumber.ToString());
+
+            //auto save
+            {
+                if (saveFileDialog1.CheckFileExists == true)
+                {
+                    // Save the contents of the RichTextBox into the file.
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                }
+                else if (saveFileDialog1.CheckFileExists == false)
+                {
+                 //do nothing
+                }
+            }
         }
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1128,37 +1172,48 @@ namespace Moradi_Notepad
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-
-            //yes
-            if (result == DialogResult.Yes)
+            // not modified
+            if (richTextBox1.Modified == false)
             {
-                saveFileDialog1.DefaultExt = ".rtf";
-                saveFileDialog1.OverwritePrompt = true;
-                saveFileDialog1.Title = "Save File";
-                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                Application.Exit();
+            }
 
-                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //is modified
+            else if (richTextBox1.Modified == true)
+            {
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                //yes
+                if (result == DialogResult.Yes)
                 {
-                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
                 }
-            }
 
-            // no
-            else if (result == DialogResult.No)
-            {
-                ss.Close();
-                Environment.Exit(0);
-            }
+                // no
+                else if (result == DialogResult.No)
+                {
+                    ss.Close();
+                    Environment.Exit(0);
+                }
 
-            //cancel
-            else if (result == DialogResult.Cancel)
-            {
-                e.Cancel = true;
-                return;
+                //cancel
+                else if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            
+                   
             }
-
             try
             {
                 // voice rec.
@@ -2161,6 +2216,11 @@ namespace Moradi_Notepad
         {
             Templates t = new Templates();
             t.Show();
+        }
+
+        private void TextSaveTimer_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }
