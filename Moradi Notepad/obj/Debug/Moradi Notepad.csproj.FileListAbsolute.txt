@@ -102,7 +102,8 @@ C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Form
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Forms.FindReplaceDialog.resources
 C:\Users\Admin\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Templates.resources
-C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojAssemblyReference.cache
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe.config
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.ResolveComReference.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.About.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Forms.FindReplaceDialog.resources
@@ -115,9 +116,8 @@ C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Mor
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Templates.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.CoreCompileInputs.cache
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.CopyComplete
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.exe
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.pdb
-C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe.config
-C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.pdb
-C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.CopyComplete
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojAssemblyReference.cache

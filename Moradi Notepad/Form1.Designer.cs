@@ -99,6 +99,7 @@ namespace Moradi_Notepad
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -222,7 +223,6 @@ namespace Moradi_Notepad
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.TextSaveTimer = new System.Windows.Forms.Timer(this.components);
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.findReplaceDialog1 = new CP.Window.Forms.FindReplaceDialog();
             this.ubuntuTheme1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -256,10 +256,9 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.menuStrip1);
             this.ubuntuTheme1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ubuntuTheme1.Location = new System.Drawing.Point(0, 0);
-            this.ubuntuTheme1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ubuntuTheme1.MinimumSize = new System.Drawing.Size(1571, 894);
+            this.ubuntuTheme1.Margin = new System.Windows.Forms.Padding(4);
             this.ubuntuTheme1.Name = "ubuntuTheme1";
-            this.ubuntuTheme1.Size = new System.Drawing.Size(1571, 894);
+            this.ubuntuTheme1.Size = new System.Drawing.Size(1600, 900);
             this.ubuntuTheme1.TabIndex = 0;
             this.ubuntuTheme1.Text = "Moradi Notepad | Moradi OS Development";
             this.ubuntuTheme1.Click += new System.EventHandler(this.ubuntuTheme1_Click);
@@ -273,7 +272,7 @@ namespace Moradi_Notepad
             this.lines.BackColor = System.Drawing.Color.Transparent;
             this.lines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lines.ForeColor = System.Drawing.Color.Navy;
-            this.lines.Location = new System.Drawing.Point(315, 875);
+            this.lines.Location = new System.Drawing.Point(330, 881);
             this.lines.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lines.Name = "lines";
             this.lines.Size = new System.Drawing.Size(52, 17);
@@ -283,12 +282,12 @@ namespace Moradi_Notepad
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Moradi_Notepad.Properties.Resources.sound;
-            this.pictureBox1.Location = new System.Drawing.Point(1075, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(1106, 37);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -302,7 +301,7 @@ namespace Moradi_Notepad
             this.infolabel.BackColor = System.Drawing.Color.White;
             this.infolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infolabel.ForeColor = System.Drawing.Color.Navy;
-            this.infolabel.Location = new System.Drawing.Point(4, 873);
+            this.infolabel.Location = new System.Drawing.Point(4, 879);
             this.infolabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.infolabel.Name = "infolabel";
             this.infolabel.Size = new System.Drawing.Size(54, 17);
@@ -313,8 +312,8 @@ namespace Moradi_Notepad
             // 
             this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar1.AutoSize = false;
-            this.trackBar1.Location = new System.Drawing.Point(1408, 869);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar1.Location = new System.Drawing.Point(1437, 875);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 5;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(159, 23);
@@ -323,6 +322,7 @@ namespace Moradi_Notepad
             // 
             // toolStrip3
             // 
+            this.toolStrip3.AutoSize = false;
             this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -842,7 +842,7 @@ namespace Moradi_Notepad
             this.output.BackColor = System.Drawing.Color.White;
             this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output.ForeColor = System.Drawing.Color.Navy;
-            this.output.Location = new System.Drawing.Point(180, 873);
+            this.output.Location = new System.Drawing.Point(180, 879);
             this.output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.output.Name = "output";
             this.output.Size = new System.Drawing.Size(49, 18);
@@ -857,8 +857,8 @@ namespace Moradi_Notepad
             this.FindText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.FindText.Font = new System.Drawing.Font("Arial Narrow", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindText.ForeColor = System.Drawing.Color.Red;
-            this.FindText.Location = new System.Drawing.Point(1351, 59);
-            this.FindText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FindText.Location = new System.Drawing.Point(1380, 59);
+            this.FindText.Margin = new System.Windows.Forms.Padding(4);
             this.FindText.Name = "FindText";
             this.FindText.Size = new System.Drawing.Size(56, 30);
             this.FindText.TabIndex = 11;
@@ -872,7 +872,7 @@ namespace Moradi_Notepad
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1211, 41);
+            this.label2.Location = new System.Drawing.Point(1240, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
@@ -885,8 +885,8 @@ namespace Moradi_Notepad
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1140, 60);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(1169, 60);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 26);
             this.textBox1.TabIndex = 9;
@@ -899,13 +899,50 @@ namespace Moradi_Notepad
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bodoni MT", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(1403, 36);
+            this.label1.Location = new System.Drawing.Point(1432, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 30);
             this.label1.TabIndex = 8;
             this.label1.Text = "00:00:00:00";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lineNumbers_For_RichTextBox2
+            // 
+            this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
+            this.lineNumbers_For_RichTextBox2.AutoSizing = true;
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbers_For_RichTextBox2.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.lineNumbers_For_RichTextBox2.BorderLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.DockSide = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Left;
+            this.lineNumbers_For_RichTextBox2.GridLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.GridLines_Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbers_For_RichTextBox2.GridLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.LineNrs_Alignment = System.Drawing.ContentAlignment.TopRight;
+            this.lineNumbers_For_RichTextBox2.LineNrs_AntiAlias = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_AsHexadecimal = false;
+            this.lineNumbers_For_RichTextBox2.LineNrs_ClippedByItemRectangle = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_LeadingZeroes = true;
+            this.lineNumbers_For_RichTextBox2.LineNrs_Offset = new System.Drawing.Size(0, 0);
+            this.lineNumbers_For_RichTextBox2.Location = new System.Drawing.Point(-24, 97);
+            this.lineNumbers_For_RichTextBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbers_For_RichTextBox2.MarginLines_Color = System.Drawing.Color.SlateGray;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbers_For_RichTextBox2.MarginLines_Thickness = 1F;
+            this.lineNumbers_For_RichTextBox2.Name = "lineNumbers_For_RichTextBox2";
+            this.lineNumbers_For_RichTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.lineNumbers_For_RichTextBox2.ParentRichTextBox = this.richTextBox1;
+            this.lineNumbers_For_RichTextBox2.Show_BackgroundGradient = true;
+            this.lineNumbers_For_RichTextBox2.Show_BorderLines = true;
+            this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
+            this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
+            this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
+            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(24, 780);
+            this.lineNumbers_For_RichTextBox2.TabIndex = 7;
             // 
             // richTextBox1
             // 
@@ -918,9 +955,9 @@ namespace Moradi_Notepad
             this.richTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Lime;
             this.richTextBox1.Location = new System.Drawing.Point(1, 97);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1567, 774);
+            this.richTextBox1.Size = new System.Drawing.Size(1596, 780);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Start Typing Here . . .";
             this.richTextBox1.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.richTextBox1_ContentsResized);
@@ -1008,6 +1045,7 @@ namespace Moradi_Notepad
             // 
             // toolStrip2
             // 
+            this.toolStrip2.AutoSize = false;
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1018,7 +1056,7 @@ namespace Moradi_Notepad
             this.InsertImage});
             this.toolStrip2.Location = new System.Drawing.Point(404, 33);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(132, 27);
+            this.toolStrip2.Size = new System.Drawing.Size(173, 33);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -1080,6 +1118,8 @@ namespace Moradi_Notepad
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1100,9 +1140,9 @@ namespace Moradi_Notepad
             this.toolStripSeparator9,
             this.NumbLine,
             this.HideNumbline});
-            this.toolStrip1.Location = new System.Drawing.Point(585, 36);
+            this.toolStrip1.Location = new System.Drawing.Point(601, 36);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(387, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(487, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -1525,8 +1565,8 @@ namespace Moradi_Notepad
             this.ubuntuControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ubuntuControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.ubuntuControlBox1.Font = new System.Drawing.Font("Marlett", 7F);
-            this.ubuntuControlBox1.Location = new System.Drawing.Point(1483, 4);
-            this.ubuntuControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ubuntuControlBox1.Location = new System.Drawing.Point(1512, 4);
+            this.ubuntuControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.ubuntuControlBox1.Name = "ubuntuControlBox1";
             this.ubuntuControlBox1.Size = new System.Drawing.Size(100, 28);
             this.ubuntuControlBox1.TabIndex = 0;
@@ -2151,43 +2191,6 @@ namespace Moradi_Notepad
             this.TextSaveTimer.Interval = 1000;
             this.TextSaveTimer.Tick += new System.EventHandler(this.TextSaveTimer_Tick);
             // 
-            // lineNumbers_For_RichTextBox2
-            // 
-            this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
-            this.lineNumbers_For_RichTextBox2.AutoSizing = true;
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_AlphaColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_BetaColor = System.Drawing.Color.LightSteelBlue;
-            this.lineNumbers_For_RichTextBox2.BackgroundGradient_Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Style = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lineNumbers_For_RichTextBox2.BorderLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.DockSide = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Left;
-            this.lineNumbers_For_RichTextBox2.GridLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.GridLines_Style = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.lineNumbers_For_RichTextBox2.GridLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.LineNrs_Alignment = System.Drawing.ContentAlignment.TopRight;
-            this.lineNumbers_For_RichTextBox2.LineNrs_AntiAlias = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_AsHexadecimal = false;
-            this.lineNumbers_For_RichTextBox2.LineNrs_ClippedByItemRectangle = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_LeadingZeroes = true;
-            this.lineNumbers_For_RichTextBox2.LineNrs_Offset = new System.Drawing.Size(0, 0);
-            this.lineNumbers_For_RichTextBox2.Location = new System.Drawing.Point(-24, 97);
-            this.lineNumbers_For_RichTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.lineNumbers_For_RichTextBox2.MarginLines_Color = System.Drawing.Color.SlateGray;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Side = LineNumbers.LineNumbers_For_RichTextBox.LineNumberDockSide.Right;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Style = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.lineNumbers_For_RichTextBox2.MarginLines_Thickness = 1F;
-            this.lineNumbers_For_RichTextBox2.Name = "lineNumbers_For_RichTextBox2";
-            this.lineNumbers_For_RichTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.lineNumbers_For_RichTextBox2.ParentRichTextBox = this.richTextBox1;
-            this.lineNumbers_For_RichTextBox2.Show_BackgroundGradient = true;
-            this.lineNumbers_For_RichTextBox2.Show_BorderLines = true;
-            this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
-            this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
-            this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
-            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(24, 774);
-            this.lineNumbers_For_RichTextBox2.TabIndex = 7;
-            // 
             // findReplaceDialog1
             // 
             this.findReplaceDialog1.Direction = CP.Window.Forms.FindDirection.Up;
@@ -2209,13 +2212,12 @@ namespace Moradi_Notepad
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1571, 894);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.ubuntuTheme1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1571, 894);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Moradi Notepad";
@@ -2289,7 +2291,7 @@ namespace Moradi_Notepad
         public System.Windows.Forms.RichTextBox richTextBox1;
         private LineNumbers.LineNumbers_For_RichTextBox lineNumbers_For_RichTextBox2;
         private System.Windows.Forms.ToolStripButton Bold1;
-        private System.Windows.Forms.ToolStripDropDownButton BackColor;
+        private new System.Windows.Forms.ToolStripDropDownButton BackColor;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton Forcolor;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem1;
