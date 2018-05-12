@@ -96,7 +96,6 @@ namespace Moradi_Notepad
             this.MicOff = new System.Windows.Forms.ToolStripButton();
             this.output = new System.Windows.Forms.Label();
             this.FindText = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
@@ -245,7 +244,6 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.toolStrip3);
             this.ubuntuTheme1.Controls.Add(this.output);
             this.ubuntuTheme1.Controls.Add(this.FindText);
-            this.ubuntuTheme1.Controls.Add(this.label2);
             this.ubuntuTheme1.Controls.Add(this.textBox1);
             this.ubuntuTheme1.Controls.Add(this.label1);
             this.ubuntuTheme1.Controls.Add(this.lineNumbers_For_RichTextBox2);
@@ -286,7 +284,7 @@ namespace Moradi_Notepad
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Moradi_Notepad.Properties.Resources.sound;
-            this.pictureBox1.Location = new System.Drawing.Point(1106, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(1246, 39);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 49);
@@ -322,7 +320,6 @@ namespace Moradi_Notepad
             // 
             // toolStrip3
             // 
-            this.toolStrip3.AutoSize = false;
             this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -857,7 +854,7 @@ namespace Moradi_Notepad
             this.FindText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.FindText.Font = new System.Drawing.Font("Arial Narrow", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindText.ForeColor = System.Drawing.Color.Red;
-            this.FindText.Location = new System.Drawing.Point(1380, 59);
+            this.FindText.Location = new System.Drawing.Point(1540, 63);
             this.FindText.Margin = new System.Windows.Forms.Padding(4);
             this.FindText.Name = "FindText";
             this.FindText.Size = new System.Drawing.Size(56, 30);
@@ -866,26 +863,12 @@ namespace Moradi_Notepad
             this.FindText.UseVisualStyleBackColor = false;
             this.FindText.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1240, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Search";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1169, 60);
+            this.textBox1.Location = new System.Drawing.Point(1331, 66);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 26);
@@ -899,7 +882,7 @@ namespace Moradi_Notepad
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bodoni MT", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(1432, 36);
+            this.label1.Location = new System.Drawing.Point(1366, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 30);
@@ -1045,7 +1028,6 @@ namespace Moradi_Notepad
             // 
             // toolStrip2
             // 
-            this.toolStrip2.AutoSize = false;
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1056,7 +1038,7 @@ namespace Moradi_Notepad
             this.InsertImage});
             this.toolStrip2.Location = new System.Drawing.Point(404, 33);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(173, 33);
+            this.toolStrip2.Size = new System.Drawing.Size(132, 27);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -1119,7 +1101,6 @@ namespace Moradi_Notepad
             // toolStrip1
             // 
             this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1140,9 +1121,9 @@ namespace Moradi_Notepad
             this.toolStripSeparator9,
             this.NumbLine,
             this.HideNumbline});
-            this.toolStrip1.Location = new System.Drawing.Point(601, 36);
+            this.toolStrip1.Location = new System.Drawing.Point(630, 36);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(487, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(387, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -2326,7 +2307,6 @@ namespace Moradi_Notepad
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Windows.Forms.Button FindText;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label output;
         private System.Windows.Forms.ToolStripMenuItem otherColorToolStripMenuItem;
