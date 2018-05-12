@@ -1928,7 +1928,7 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
-
+            
 
         }
 
