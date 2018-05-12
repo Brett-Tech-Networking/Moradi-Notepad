@@ -2156,6 +2156,7 @@ namespace Moradi_Notepad
             // undo
             // 
             this.undo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.undo.Enabled = false;
             this.undo.Image = global::Moradi_Notepad.Properties.Resources.undo;
             this.undo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.undo.Name = "undo";
@@ -2168,6 +2169,7 @@ namespace Moradi_Notepad
             // redo
             // 
             this.redo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.redo.Enabled = false;
             this.redo.Image = global::Moradi_Notepad.Properties.Resources.redo;
             this.redo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.redo.Name = "redo";

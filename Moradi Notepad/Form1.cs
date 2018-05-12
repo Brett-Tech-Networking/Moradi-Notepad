@@ -628,6 +628,26 @@ namespace Moradi_Notepad
                 {
                  //do nothing
                 }
+
+                if (richTextBox1.Modified == true)
+                {
+                    // Enable undo button
+                    undo.Enabled = true;
+                }
+                else
+                {
+                    //
+                }
+
+                // redo
+                if (richTextBox1.Modified == true)
+                {
+                    redo.Enabled = true;
+                }
+                else
+                {
+                    redo.Enabled = false;
+                }
             }
         }
 
@@ -1265,12 +1285,32 @@ namespace Moradi_Notepad
 
         private void undo_Click(object sender, EventArgs e)
         {
-            richTextBox1.Undo();
+            // was modified
+            if (richTextBox1.Modified == true)
+            {
+                undo.Enabled = true;
+                richTextBox1.Undo();
+            }
+            //was not modified
+             if (richTextBox1.Modified == false)
+            {
+                undo.Enabled = false;
+            }
         }
 
         private void redo_Click(object sender, EventArgs e)
         {
-            richTextBox1.Redo();
+            //not modified
+            if (richTextBox1.Modified == false)
+            {
+                redo.Enabled = false;
+                richTextBox1.Redo();
+            }
+            // is modified
+            else
+            {
+                redo.Enabled = false;
+            }
         }
 
         private void pronounceThatWordToolStripMenuItem_Click(object sender, EventArgs e)
