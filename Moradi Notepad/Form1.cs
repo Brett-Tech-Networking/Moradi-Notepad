@@ -1235,8 +1235,7 @@ namespace Moradi_Notepad
         private void toolStripButton16_Click(object sender, EventArgs e)
         {
             richTextBox1.ReadOnly = true;
-            MessageBox.Show("Your Document is now LOCKED, You Can Not Edit This Document Until You Unlock It", "LOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "Document Now Locked", ToolTipIcon.Warning);
             LockDoc.Enabled = false;
             UnlockDoc.Enabled = true;
             MicOn.Enabled = false;
@@ -1245,7 +1244,7 @@ namespace Moradi_Notepad
         private void toolStripButton17_Click(object sender, EventArgs e)
         {
             richTextBox1.ReadOnly = false;
-            MessageBox.Show("Your Document Is Now UNLOCKED, You May Now Continue Editing Your Document", "UNLOCKED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "Document Now Unlocked", ToolTipIcon.Warning);
             UnlockDoc.Enabled = false;
             LockDoc.Enabled = true;
             MicOn.Enabled = true;
@@ -2002,7 +2001,7 @@ namespace Moradi_Notepad
                 catch
                 {
                     MessageBox.Show("No valid mic was detected on your system. Please connect one to use voice to text features", "Whoa There!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "No Valid Mic Detected", ToolTipIcon.Error);
                     // Button Properties //
                     ////////////////////////////
                     RecognizerState = false;
@@ -2221,6 +2220,132 @@ namespace Moradi_Notepad
         private void TextSaveTimer_Tick(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+        }
+
+        private void minimizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void normalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void onToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = true;
+            notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "Document Now Locked", ToolTipIcon.Warning);
+            LockDoc.Enabled = false;
+            UnlockDoc.Enabled = true;
+            MicOn.Enabled = false;
+        }
+
+        private void offToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = false;
+            notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "Document Now Unlocked", ToolTipIcon.Warning);
+            UnlockDoc.Enabled = false;
+            LockDoc.Enabled = true;
+            MicOn.Enabled = true;
+        }
+
+        private void githubToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("chrome", @"https://github.com/Brett-Tech-Networking/Moradi-Notepad");
+            }
+            catch
+            {
+                MessageBox.Show("You must have a valid installation of Chrome to continue. Sorry about that.", "Whoa There!");
+            }
+        }
+
+        private void NotifyMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            // Shows Credit given Window
+            Credits credit = new Credits();
+            credit.Show();
+        }
+
+        private void closeNotepadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // not modified
+            if (richTextBox1.Modified == false)
+            {
+                Application.Exit();
+            }
+
+            //is modified
+            else if (richTextBox1.Modified == true)
+            {
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
+                }
+
+                // no
+                else if (result == DialogResult.No)
+                {
+                    ss.Close();
+                    Environment.Exit(0);
+                }
+
+                //cancel
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+
+            }
+            try
+            {
+                // voice rec.
+                RecThread.Abort();
+                RecThread = null;
+                recognizer.UnloadAllGrammars();
+                recognizer.Dispose();
+                grammar = null;
+
+                Environment.Exit(0);
+            }
+            catch
+            {
+                // nothing to do
+            }
         }
     }
 }
