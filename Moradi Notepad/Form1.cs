@@ -101,6 +101,12 @@ namespace Moradi_Notepad
                     DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
                     MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
+                    //cancel
+                    if(result == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+
                     //no
                     richTextBox1.Clear();
                     {
@@ -375,6 +381,12 @@ namespace Moradi_Notepad
                 DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
                 MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
+                //cancel
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
                 //no
                 richTextBox1.Clear();
                 {
@@ -409,8 +421,6 @@ namespace Moradi_Notepad
                 }
             }
         }
-
-
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
