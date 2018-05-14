@@ -1,5 +1,20 @@
 # ---Change_Log---
 
+### Updates: 5/14/18 ###
+ - Added Insert Image Options 
+ - Added Voice-Text Option
+ - Added Print opton to main taskbar
+ - Added Feature to disable mic when document is locked, to pervent unwanted editing
+ - Added read selected text option
+ - Added System Notifications/System Tray icon with right click option menu
+ - Added Moradi Hints
+ - Fixed bug that caused cancel options to act as if user clicked no.
+ - Fixed bug that caused mic to enable on application start
+ - Fixed bug that kept causing notifications due to no mic detected (now shows error if no mic is detected when enabling)
+ - Fixed bug causing application to keep runnung in background even if application is closed
+ - Fixed bug that kept asking user to save document prior to closing application even if no changes have been made
+ - Fixed bug causing save and open options not to work 
+
 ### Updates: 2/22/18 ###
  - Added Locking/Unlocking Ability, to prevent unauthorized modification to your document.
  - Added A Custom Loading Screen Prior To Accessing The Notepad.
