@@ -96,9 +96,6 @@
     <Compile Include="CustomControl1.Designer.cs">
       <DependentUpon>CustomControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindReplace.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,17 +130,8 @@
     <Compile Include="splashscreen.Designer.cs">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Templates.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Templates.Designer.cs">
-      <DependentUpon>Templates.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FindReplace.resx">
-      <DependentUpon>FindReplace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -164,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splashscreen.resx">
       <DependentUpon>splashscreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Templates.resx">
-      <DependentUpon>Templates.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -314,11 +299,9 @@
     <None Include="Resources\images.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FindReplace.csproj" />
     <None Include="Resources\max.png" />
     <None Include="Resources\conver letter.png" />
     <None Include="Resources\white dot1.png" />
-    <None Include="Resources\color wheel.gif" />
     <None Include="Resources\white dot.png" />
     <None Include="Resources\Text-x-generic-highlight-yellow-pen.png" />
     <None Include="Resources\printer.png" />

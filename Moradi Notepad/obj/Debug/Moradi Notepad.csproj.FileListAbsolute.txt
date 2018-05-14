@@ -106,14 +106,12 @@ C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Mor
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.exe.config
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.ResolveComReference.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.About.resources
-C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\CP.Window.Forms.FindReplaceDialog.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Form1.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Credits.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\LineNumbers.LineNumbers_For_RichTextBox.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Pronounce_That_Word.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Properties.Resources.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.splashscreen.resources
-C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Templates.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.GenerateResource.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.CoreCompileInputs.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csproj.CopyComplete

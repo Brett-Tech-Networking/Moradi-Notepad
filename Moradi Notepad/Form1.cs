@@ -25,6 +25,12 @@ namespace Moradi_Notepad
         public Form1()
         {
             InitializeComponent();
+
+            // Add the font sizes.
+            for (var i = 1; i < 72; i++)
+            {
+                FontSize.Items.Add((double)i);
+            }
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
@@ -60,23 +66,48 @@ namespace Moradi_Notepad
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Will Close Moradi Notepad Software
-        
+
             Application.Exit();
             splashscreen ss = new splashscreen();
             ss.Close();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {  
-                // open if not modified
+        {
+            // open if not modified
+            {
+                if (richTextBox1.Modified == false)
                 {
-                    if (richTextBox1.Modified == false)
+                    // filters
+                    openFileDialog1.Title = "Open File";
+                    openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                    openFileDialog1.FileName = "";
+                    openFileDialog1.FilterIndex = 0;
+                    openFileDialog1.InitialDirectory = "My Documents";
+
+                    openFileDialog1.CheckFileExists = true;
+                    openFileDialog1.CheckPathExists = true;
+
+                    if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        // filters
+                        richTextBox1.LoadFile(openFileDialog1.FileName);
+                    }
+                }
+
+                //open if modified
+                else if (richTextBox1.Modified == true)
+                {
+                    DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                    //no
+                    richTextBox1.Clear();
+                    {
                         openFileDialog1.Title = "Open File";
                         openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
                         openFileDialog1.FileName = "";
                         openFileDialog1.FilterIndex = 0;
+
                         openFileDialog1.InitialDirectory = "My Documents";
 
                         openFileDialog1.CheckFileExists = true;
@@ -88,47 +119,22 @@ namespace Moradi_Notepad
                         }
                     }
 
-                    //open if modified
-                    else if (richTextBox1.Modified == true)
+                    //yes
+                    if (result == DialogResult.Yes)
                     {
-                        DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
-                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                        saveFileDialog1.DefaultExt = ".rtf";
+                        saveFileDialog1.OverwritePrompt = true;
+                        saveFileDialog1.Title = "Save File";
+                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
-                        //no
-                        richTextBox1.Clear();
+                        if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                         {
-                            openFileDialog1.Title = "Open File";
-                            openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-                            openFileDialog1.FileName = "";
-                            openFileDialog1.FilterIndex = 0;
-
-                            openFileDialog1.InitialDirectory = "My Documents";
-
-                            openFileDialog1.CheckFileExists = true;
-                            openFileDialog1.CheckPathExists = true;
-
-                            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                            {
-                                richTextBox1.LoadFile(openFileDialog1.FileName);
-                            }
-                        }
-
-                        //yes
-                        if (result == DialogResult.Yes)
-                        {
-                            saveFileDialog1.DefaultExt = ".rtf";
-                            saveFileDialog1.OverwritePrompt = true;
-                            saveFileDialog1.Title = "Save File";
-                            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                            {
-                                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-                            }
+                            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                         }
                     }
                 }
             }
+        }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -626,7 +632,7 @@ namespace Moradi_Notepad
                 }
                 else if (saveFileDialog1.CheckFileExists == false)
                 {
-                 //do nothing
+                    //do nothing
                 }
 
                 if (richTextBox1.Modified == true)
@@ -1046,131 +1052,7 @@ namespace Moradi_Notepad
         {
         }
 
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 10);
-            Font_Size.Text = "10";
-        }
-
-        private void toolStripMenuItem7_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 11);
-            Font_Size.Text = "11";
-        }
-
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 12);
-            Font_Size.Text = "12";
-        }
-
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 13);
-            Font_Size.Text = "13";
-        }
-
-        private void toolStripMenuItem10_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 14);
-            Font_Size.Text = "14";
-        }
-
-        private void toolStripMenuItem11_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 15);
-            Font_Size.Text = "15";
-        }
-
-        private void toolStripMenuItem12_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 16);
-            Font_Size.Text = "16";
-        }
-
-        private void toolStripMenuItem13_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 17);
-            Font_Size.Text = "17";
-        }
-
-        private void toolStripMenuItem14_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 18);
-            Font_Size.Text = "18";
-        }
-
-        private void toolStripMenuItem15_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 19);
-            Font_Size.Text = "19";
-        }
-
-        private void toolStripMenuItem16_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 20);
-            Font_Size.Text = "20";
-        }
-
-        private void toolStripMenuItem17_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 21);
-            Font_Size.Text = "21";
-        }
-
-        private void toolStripMenuItem18_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 22);
-            Font_Size.Text = "22";
-        }
-
-        private void toolStripMenuItem19_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 23);
-            Font_Size.Text = "23";
-        }
-
-        private void toolStripMenuItem20_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 24);
-            Font_Size.Text = "24";
-        }
-
-        private void toolStripMenuItem21_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 25);
-            Font_Size.Text = "25";
-        }
-
-        private void toolStripMenuItem22_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 26);
-            Font_Size.Text = "26";
-        }
-
-        private void toolStripMenuItem23_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 27);
-            Font_Size.Text = "27";
-        }
-
-        private void toolStripMenuItem24_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 28);
-            Font_Size.Text = "28";
-        }
-
-        private void toolStripMenuItem25_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 29);
-            Font_Size.Text = "29";
-        }
-
-        private void toolStripMenuItem26_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Arial Rounded MT", 30);
-            Font_Size.Text = "30";
-        }
+       
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
@@ -1232,8 +1114,8 @@ namespace Moradi_Notepad
                     e.Cancel = true;
                     return;
                 }
-            
-                   
+
+
             }
             try
             {
@@ -1292,7 +1174,7 @@ namespace Moradi_Notepad
                 richTextBox1.Undo();
             }
             //was not modified
-             if (richTextBox1.Modified == false)
+            if (richTextBox1.Modified == false)
             {
                 undo.Enabled = false;
             }
@@ -1969,7 +1851,7 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
-           
+
         }
 
         public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -2025,7 +1907,7 @@ namespace Moradi_Notepad
                     // this tells the recorder not to record by default until button is clicked
 
                     // Delete text containing Start tpying here , prior to starting mic
-                    if (richTextBox1.Text == ("Start Typing Here . . .")) 
+                    if (richTextBox1.Text == ("Start Typing Here . . ."))
                     {
                         richTextBox1.Clear();  // Deletes Written Text
                     }
@@ -2081,7 +1963,7 @@ namespace Moradi_Notepad
                 }
             }
         }
-               
+
 
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
@@ -2095,7 +1977,7 @@ namespace Moradi_Notepad
             RecognizerState = false;
             MicOff.Enabled = false;
             MicOn.Enabled = true;
-            
+
 
             //status update
             infolabel.Text = ("Recognizer Stopped ! ");
@@ -2146,7 +2028,7 @@ namespace Moradi_Notepad
         }
 
 
-   
+
 
         private void toolStripButton22_Click(object sender, EventArgs e)
         {
@@ -2182,17 +2064,17 @@ namespace Moradi_Notepad
 
         private void MicEnable_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Highlighter_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void transeparentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                richTextBox1.SelectionBackColor = Color.Black;
+            richTextBox1.SelectionBackColor = Color.Black;
         }
 
         private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2242,7 +2124,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-                MessageBox.Show("Sorry About That We Could Not Clear Your Highlights At This Time Please Try Again, If The Issue Continues Please Contact Us At Support@Brett-TechRepair.Com Thank You.","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Sorry About That We Could Not Clear Your Highlights At This Time Please Try Again, If The Issue Continues Please Contact Us At Support@Brett-TechRepair.Com Thank You.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -2251,15 +2133,11 @@ namespace Moradi_Notepad
             // located in richTextBox1_TextChanged
         }
 
-        private void templatesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Templates t = new Templates();
-            t.Show();
-        }
+        
 
         private void TextSaveTimer_Tick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -2400,7 +2278,19 @@ namespace Moradi_Notepad
 
         private void faderControlBox1_Click(object sender, EventArgs e)
         {
-         
+
+        }
+
+        private void richTextBox1_SelectionChanged(object sender, EventArgs e)
+        {
+        }
+    
+
+        private void FontSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+
