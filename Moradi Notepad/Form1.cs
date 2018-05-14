@@ -12,6 +12,7 @@ using System.Diagnostics;
 
 namespace Moradi_Notepad
 {
+    
     public partial class Form1 : Form
     {
         int charCount = 0;
@@ -421,11 +422,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-                /*
-                I actually don't know why this is happening. Just a catch.
-                For some reason when I fixed the shrink exception, it caused a growth exception.
-                This shall fix the exception.
-                */
+                 //
             }
         }
 
@@ -1075,6 +1072,9 @@ namespace Moradi_Notepad
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
+            // notify icon dump
+            notifyIcon1.Dispose();
+
             // not modified
             if (richTextBox1.Modified == false)
             {
@@ -1139,6 +1139,7 @@ namespace Moradi_Notepad
         {
             richTextBox1.ReadOnly = true;
             notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "Document Now Locked", ToolTipIcon.Warning);
+           
             LockDoc.Enabled = false;
             UnlockDoc.Enabled = true;
             MicOn.Enabled = false;
@@ -1851,6 +1852,8 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
+            // font size
+            FontSize.Text = richTextBox1.Font.Size.ToString();
 
         }
 
@@ -2288,6 +2291,44 @@ namespace Moradi_Notepad
 
         private void FontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void FontSize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FontTimer_Tick(object sender, EventArgs e) => FontSize.Text = richTextBox1.Font.Size.ToString();
+
+        private void FontSize_SelectedIndexChanged_1(object sender, EventArgs e)
+        { 
+          
+        }
+
+        private void Form1_FontChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void onToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dancingpencil.Visible = true;
+            MoradiHint.Visible = true;
+            notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "You Have Enabled Moradi Hints", ToolTipIcon.Warning);
+        }
+
+        private void offToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dancingpencil.Visible = false;
+            MoradiHint.Visible = false;
+            notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "You Have Disabled Moradi Hints", ToolTipIcon.Warning);
 
         }
     }
