@@ -107,6 +107,20 @@ namespace Moradi_Notepad
                         return;
                     }
 
+                    //yes
+                    if (result == DialogResult.Yes)
+                    {
+                        saveFileDialog1.DefaultExt = ".rtf";
+                        saveFileDialog1.OverwritePrompt = true;
+                        saveFileDialog1.Title = "Save File";
+                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                        if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                        {
+                            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                        }
+                    }
+
                     //no
                     richTextBox1.Clear();
                     {
@@ -123,20 +137,6 @@ namespace Moradi_Notepad
                         if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                         {
                             richTextBox1.LoadFile(openFileDialog1.FileName);
-                        }
-                    }
-
-                    //yes
-                    if (result == DialogResult.Yes)
-                    {
-                        saveFileDialog1.DefaultExt = ".rtf";
-                        saveFileDialog1.OverwritePrompt = true;
-                        saveFileDialog1.Title = "Save File";
-                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                        if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                        {
-                            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                         }
                     }
                 }
@@ -387,6 +387,20 @@ namespace Moradi_Notepad
                     return;
                 }
 
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
+                }
+
                 //no
                 richTextBox1.Clear();
                 {
@@ -403,20 +417,6 @@ namespace Moradi_Notepad
                     if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
                         richTextBox1.LoadFile(openFileDialog1.FileName);
-                    }
-                }
-
-                //yes
-                if (result == DialogResult.Yes)
-                {
-                    saveFileDialog1.DefaultExt = ".rtf";
-                    saveFileDialog1.OverwritePrompt = true;
-                    saveFileDialog1.Title = "Save File";
-                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                    {
-                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
                     }
                 }
             }
@@ -1124,8 +1124,6 @@ namespace Moradi_Notepad
                     e.Cancel = true;
                     return;
                 }
-
-
             }
             try
             {
@@ -1143,7 +1141,6 @@ namespace Moradi_Notepad
                 // nothing to do
             }
         }
-
 
         private void toolStripButton16_Click(object sender, EventArgs e)
         {
