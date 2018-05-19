@@ -83,7 +83,7 @@ namespace Moradi_Notepad
                     openFileDialog1.Title = "Open File";
                     openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt |All files (*.*)|*.*";
                     openFileDialog1.FileName = "";
-                    openFileDialog1.FilterIndex = 0;
+                    openFileDialog1.FilterIndex = 3;
                     openFileDialog1.InitialDirectory = "My Documents";
                     
 
@@ -361,10 +361,12 @@ namespace Moradi_Notepad
             if (richTextBox1.Modified == false)
             {
                 // filters
+                openFileDialog1.DefaultExt = "*.*";
+
                 openFileDialog1.Title = "Open File";
                 openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt |All files (*.*)|*.*";
                 openFileDialog1.FileName = "";
-                openFileDialog1.FilterIndex = 0;
+                openFileDialog1.FilterIndex = 3;
                 openFileDialog1.InitialDirectory = "My Documents";
 
                 openFileDialog1.CheckFileExists = true;
