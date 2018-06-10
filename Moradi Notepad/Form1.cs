@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace Moradi_Notepad
 {
-    
+
     public partial class Form1 : Form
     {
         int charCount = 0;
@@ -85,7 +85,7 @@ namespace Moradi_Notepad
                     openFileDialog1.FileName = "";
                     openFileDialog1.FilterIndex = 3;
                     openFileDialog1.InitialDirectory = "My Documents";
-                    
+
 
                     openFileDialog1.CheckFileExists = true;
                     openFileDialog1.CheckPathExists = true;
@@ -103,7 +103,7 @@ namespace Moradi_Notepad
                     MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
                     //cancel
-                    if(result == DialogResult.Cancel)
+                    if (result == DialogResult.Cancel)
                     {
                         return;
                     }
@@ -361,13 +361,12 @@ namespace Moradi_Notepad
             if (richTextBox1.Modified == false)
             {
                 // filters
-                openFileDialog1.DefaultExt = "*.*";
-
                 openFileDialog1.Title = "Open File";
                 openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt |All files (*.*)|*.*";
                 openFileDialog1.FileName = "";
                 openFileDialog1.FilterIndex = 3;
                 openFileDialog1.InitialDirectory = "My Documents";
+
 
                 openFileDialog1.CheckFileExists = true;
                 openFileDialog1.CheckPathExists = true;
@@ -379,7 +378,7 @@ namespace Moradi_Notepad
             }
 
             //open if modified
-            if (richTextBox1.Modified == true)
+            else if (richTextBox1.Modified == true)
             {
                 DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
                 MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
@@ -425,6 +424,7 @@ namespace Moradi_Notepad
             }
         }
 
+
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             // Increase font size of text
@@ -435,7 +435,7 @@ namespace Moradi_Notepad
             }
             catch
             {
-                 //
+                //
             }
         }
 
@@ -625,6 +625,7 @@ namespace Moradi_Notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
@@ -1062,7 +1063,7 @@ namespace Moradi_Notepad
         {
         }
 
-       
+
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
@@ -1149,7 +1150,7 @@ namespace Moradi_Notepad
         {
             richTextBox1.ReadOnly = true;
             notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "Document Now Locked", ToolTipIcon.Warning);
-           
+
             LockDoc.Enabled = false;
             UnlockDoc.Enabled = true;
             MicOn.Enabled = false;
@@ -2146,7 +2147,7 @@ namespace Moradi_Notepad
             // located in richTextBox1_TextChanged
         }
 
-        
+
 
         private void TextSaveTimer_Tick(object sender, EventArgs e)
         {
@@ -2297,7 +2298,7 @@ namespace Moradi_Notepad
         private void richTextBox1_SelectionChanged(object sender, EventArgs e)
         {
         }
-    
+
 
         private void FontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2312,19 +2313,19 @@ namespace Moradi_Notepad
         private void FontTimer_Tick(object sender, EventArgs e) => FontSize.Text = richTextBox1.Font.Size.ToString();
 
         private void FontSize_SelectedIndexChanged_1(object sender, EventArgs e)
-        { 
-          
+        {
+
         }
 
         private void Form1_FontChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
         private void onToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -2341,7 +2342,14 @@ namespace Moradi_Notepad
             notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "You Have Disabled Moradi Hints", ToolTipIcon.Warning);
 
         }
+
+        private void MessageBoxPerMin_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+    
 
 
