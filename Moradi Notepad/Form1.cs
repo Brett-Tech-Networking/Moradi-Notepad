@@ -2347,6 +2347,23 @@ namespace Moradi_Notepad
         {
 
         }
+
+        private void Opacity_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Windows.Forms.Form.ActiveForm.Opacity = ((double)(metroTrackBar1.Value) / 100.0);
+            }
+            catch
+            {
+                //
+            }
+        }
+
+        private void OpacityControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

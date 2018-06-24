@@ -60,6 +60,9 @@
     <Reference Include="Login Theme">
       <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Login Theme.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Brett-Tech-Control-Panel-V3\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="onlykl theme">
       <HintPath>..\..\desktop\Theme . dlls\onlykl theme.dll</HintPath>

@@ -49,7 +49,7 @@ namespace Moradi_Notepad
             this.pasteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Clocklabel = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
@@ -222,6 +222,9 @@ namespace Moradi_Notepad
             this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.FontTimer = new System.Windows.Forms.Timer(this.components);
             this.MessageBoxPerMin = new System.Windows.Forms.Timer(this.components);
+            this.Opacity = new System.Windows.Forms.Timer(this.components);
+            this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
+            this.OpacityControl = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -342,11 +345,11 @@ namespace Moradi_Notepad
             this.cutToolStripMenuItem1.Text = "Cut";
             this.cutToolStripMenuItem1.Click += new System.EventHandler(this.cutToolStripMenuItem1_Click);
             // 
-            // timer1
+            // Clocklabel
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Clocklabel.Enabled = true;
+            this.Clocklabel.Interval = 1;
+            this.Clocklabel.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
@@ -2064,7 +2067,12 @@ namespace Moradi_Notepad
             // 
             // ubuntuTheme1
             // 
+            this.ubuntuTheme1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ubuntuTheme1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ubuntuTheme1.Controls.Add(this.OpacityControl);
+            this.ubuntuTheme1.Controls.Add(this.metroTrackBar1);
             this.ubuntuTheme1.Controls.Add(this.MoradiHint);
             this.ubuntuTheme1.Controls.Add(this.dancingpencil);
             this.ubuntuTheme1.Controls.Add(this.lines);
@@ -2082,7 +2090,6 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.richTextBox1);
             this.ubuntuTheme1.Controls.Add(this.ubuntuControlBox1);
             this.ubuntuTheme1.Controls.Add(this.menuStrip1);
-            this.ubuntuTheme1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ubuntuTheme1.Location = new System.Drawing.Point(0, 0);
             this.ubuntuTheme1.Margin = new System.Windows.Forms.Padding(4);
             this.ubuntuTheme1.Name = "ubuntuTheme1";
@@ -2182,6 +2189,39 @@ namespace Moradi_Notepad
             this.MessageBoxPerMin.Interval = 1000;
             this.MessageBoxPerMin.Tick += new System.EventHandler(this.MessageBoxPerMin_Tick);
             // 
+            // Opacity
+            // 
+            this.Opacity.Enabled = true;
+            this.Opacity.Interval = 500;
+            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
+            // 
+            // metroTrackBar1
+            // 
+            this.metroTrackBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.metroTrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.metroTrackBar1.Location = new System.Drawing.Point(926, 875);
+            this.metroTrackBar1.Minimum = 40;
+            this.metroTrackBar1.Name = "metroTrackBar1";
+            this.metroTrackBar1.Size = new System.Drawing.Size(212, 23);
+            this.metroTrackBar1.TabIndex = 21;
+            this.metroTrackBar1.Text = "metroTrackBar1";
+            this.metroTrackBar1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTrackBar1.Value = 100;
+            // 
+            // OpacityControl
+            // 
+            this.OpacityControl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.OpacityControl.AutoSize = true;
+            this.OpacityControl.BackColor = System.Drawing.Color.Transparent;
+            this.OpacityControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpacityControl.ForeColor = System.Drawing.Color.Navy;
+            this.OpacityControl.Location = new System.Drawing.Point(846, 879);
+            this.OpacityControl.Name = "OpacityControl";
+            this.OpacityControl.Size = new System.Drawing.Size(63, 17);
+            this.OpacityControl.TabIndex = 22;
+            this.OpacityControl.Text = "Opacity";
+            this.OpacityControl.Click += new System.EventHandler(this.OpacityControl_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2226,7 +2266,7 @@ namespace Moradi_Notepad
 
         #endregion
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Clocklabel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -2413,6 +2453,9 @@ namespace Moradi_Notepad
         private ToolStripMenuItem onToolStripMenuItem2;
         private ToolStripMenuItem offToolStripMenuItem2;
         private Timer MessageBoxPerMin;
+        private MetroFramework.Controls.MetroTrackBar metroTrackBar1;
+        private Timer Opacity;
+        private Label OpacityControl;
     }
 }
 
