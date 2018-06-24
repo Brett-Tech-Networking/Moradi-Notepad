@@ -26,7 +26,6 @@ C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Fader Theme.
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\bin\Release\Ubuntu Theme.dll
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi Notepad.csprojResolveAssemblyReference.cache
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.About.resources
-C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\CP.Window.Forms.FindReplaceDialog.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Form1.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\Moradi_Notepad.Credits.resources
 C:\Users\Mat\Source\Repos\Moradi-Notepad\Moradi Notepad\obj\Release\LineNumbers.LineNumbers_For_RichTextBox.resources
