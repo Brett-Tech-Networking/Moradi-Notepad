@@ -1866,6 +1866,9 @@ namespace Moradi_Notepad
             // font size
             FontSize.Text = richTextBox1.Font.Size.ToString();
 
+            // Welcome Back Label
+            WelcomeBack.Text = "Welcome Back:  " + (System.Environment.UserName);
+
         }
 
         public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)

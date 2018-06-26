@@ -333,6 +333,21 @@
   <ItemGroup>
     <None Include="Resources\danicingpencil.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\christmas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location_dot_lime.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon---colorful-stickers-set-insert-green-plus-15.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

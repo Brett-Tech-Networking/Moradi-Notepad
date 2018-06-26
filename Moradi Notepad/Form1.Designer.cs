@@ -216,6 +216,8 @@ namespace Moradi_Notepad
             this.infolabel = new System.Windows.Forms.Label();
             this.lines = new System.Windows.Forms.Label();
             this.ubuntuTheme1 = new Ubuntu_Theme.UbuntuTheme();
+            this.OpacityControl = new System.Windows.Forms.Label();
+            this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             this.MoradiHint = new System.Windows.Forms.Label();
             this.dancingpencil = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -223,8 +225,7 @@ namespace Moradi_Notepad
             this.FontTimer = new System.Windows.Forms.Timer(this.components);
             this.MessageBoxPerMin = new System.Windows.Forms.Timer(this.components);
             this.Opacity = new System.Windows.Forms.Timer(this.components);
-            this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
-            this.OpacityControl = new System.Windows.Forms.Label();
+            this.WelcomeBack = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -777,6 +778,7 @@ namespace Moradi_Notepad
             this.thankYouToolStripMenuItem,
             this.sincerelyToolStripMenuItem,
             this.moradiDevelopmentToolStripMenuItem});
+            this.addSignaturesToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources._15_512;
             this.addSignaturesToolStripMenuItem.Name = "addSignaturesToolStripMenuItem";
             this.addSignaturesToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.addSignaturesToolStripMenuItem.Text = "&Add Signatures";
@@ -815,6 +817,7 @@ namespace Moradi_Notepad
             this.insertToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateTimeToolStripMenuItem,
             this.imageToolStripMenuItem});
+            this.insertToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.add_icon___colorful_stickers_set_insert_green_plus_15;
             this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
             this.insertToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.insertToolStripMenuItem.Text = "&Insert";
@@ -983,6 +986,7 @@ namespace Moradi_Notepad
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.defaultToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.ABOUT;
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
             this.defaultToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
             this.defaultToolStripMenuItem.Size = new System.Drawing.Size(324, 26);
@@ -994,6 +998,7 @@ namespace Moradi_Notepad
             // halloweenToolStripMenuItem
             // 
             this.halloweenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.halloweenToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.christmas;
             this.halloweenToolStripMenuItem.Name = "halloweenToolStripMenuItem";
             this.halloweenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
             this.halloweenToolStripMenuItem.Size = new System.Drawing.Size(324, 26);
@@ -1005,6 +1010,7 @@ namespace Moradi_Notepad
             // windowsNotepadThemeToolStripMenuItem
             // 
             this.windowsNotepadThemeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.windowsNotepadThemeToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.notepad_logo;
             this.windowsNotepadThemeToolStripMenuItem.Name = "windowsNotepadThemeToolStripMenuItem";
             this.windowsNotepadThemeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
             this.windowsNotepadThemeToolStripMenuItem.Size = new System.Drawing.Size(324, 26);
@@ -2067,10 +2073,8 @@ namespace Moradi_Notepad
             // 
             // ubuntuTheme1
             // 
-            this.ubuntuTheme1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ubuntuTheme1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ubuntuTheme1.Controls.Add(this.WelcomeBack);
             this.ubuntuTheme1.Controls.Add(this.OpacityControl);
             this.ubuntuTheme1.Controls.Add(this.metroTrackBar1);
             this.ubuntuTheme1.Controls.Add(this.MoradiHint);
@@ -2090,6 +2094,7 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.richTextBox1);
             this.ubuntuTheme1.Controls.Add(this.ubuntuControlBox1);
             this.ubuntuTheme1.Controls.Add(this.menuStrip1);
+            this.ubuntuTheme1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ubuntuTheme1.Location = new System.Drawing.Point(0, 0);
             this.ubuntuTheme1.Margin = new System.Windows.Forms.Padding(4);
             this.ubuntuTheme1.Name = "ubuntuTheme1";
@@ -2099,6 +2104,33 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Click += new System.EventHandler(this.ubuntuTheme1_Click);
             this.ubuntuTheme1.Enter += new System.EventHandler(this.ubuntuTheme1_Enter);
             this.ubuntuTheme1.Resize += new System.EventHandler(this.ubuntuTheme1_Resize);
+            // 
+            // OpacityControl
+            // 
+            this.OpacityControl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.OpacityControl.AutoSize = true;
+            this.OpacityControl.BackColor = System.Drawing.Color.Transparent;
+            this.OpacityControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpacityControl.ForeColor = System.Drawing.Color.Navy;
+            this.OpacityControl.Location = new System.Drawing.Point(1087, 879);
+            this.OpacityControl.Name = "OpacityControl";
+            this.OpacityControl.Size = new System.Drawing.Size(63, 17);
+            this.OpacityControl.TabIndex = 22;
+            this.OpacityControl.Text = "Opacity";
+            this.OpacityControl.Click += new System.EventHandler(this.OpacityControl_Click);
+            // 
+            // metroTrackBar1
+            // 
+            this.metroTrackBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.metroTrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.metroTrackBar1.Location = new System.Drawing.Point(1167, 875);
+            this.metroTrackBar1.Minimum = 40;
+            this.metroTrackBar1.Name = "metroTrackBar1";
+            this.metroTrackBar1.Size = new System.Drawing.Size(212, 23);
+            this.metroTrackBar1.TabIndex = 21;
+            this.metroTrackBar1.Text = "metroTrackBar1";
+            this.metroTrackBar1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTrackBar1.Value = 100;
             // 
             // MoradiHint
             // 
@@ -2195,32 +2227,18 @@ namespace Moradi_Notepad
             this.Opacity.Interval = 500;
             this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
             // 
-            // metroTrackBar1
+            // WelcomeBack
             // 
-            this.metroTrackBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroTrackBar1.BackColor = System.Drawing.Color.Transparent;
-            this.metroTrackBar1.Location = new System.Drawing.Point(926, 875);
-            this.metroTrackBar1.Minimum = 40;
-            this.metroTrackBar1.Name = "metroTrackBar1";
-            this.metroTrackBar1.Size = new System.Drawing.Size(212, 23);
-            this.metroTrackBar1.TabIndex = 21;
-            this.metroTrackBar1.Text = "metroTrackBar1";
-            this.metroTrackBar1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTrackBar1.Value = 100;
-            // 
-            // OpacityControl
-            // 
-            this.OpacityControl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.OpacityControl.AutoSize = true;
-            this.OpacityControl.BackColor = System.Drawing.Color.Transparent;
-            this.OpacityControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpacityControl.ForeColor = System.Drawing.Color.Navy;
-            this.OpacityControl.Location = new System.Drawing.Point(846, 879);
-            this.OpacityControl.Name = "OpacityControl";
-            this.OpacityControl.Size = new System.Drawing.Size(63, 17);
-            this.OpacityControl.TabIndex = 22;
-            this.OpacityControl.Text = "Opacity";
-            this.OpacityControl.Click += new System.EventHandler(this.OpacityControl_Click);
+            this.WelcomeBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.WelcomeBack.AutoSize = true;
+            this.WelcomeBack.BackColor = System.Drawing.Color.Transparent;
+            this.WelcomeBack.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeBack.ForeColor = System.Drawing.Color.Red;
+            this.WelcomeBack.Location = new System.Drawing.Point(593, 879);
+            this.WelcomeBack.Name = "WelcomeBack";
+            this.WelcomeBack.Size = new System.Drawing.Size(125, 19);
+            this.WelcomeBack.TabIndex = 23;
+            this.WelcomeBack.Text = "Welcome Back:";
             // 
             // Form1
             // 
@@ -2456,6 +2474,7 @@ namespace Moradi_Notepad
         private MetroFramework.Controls.MetroTrackBar metroTrackBar1;
         private Timer Opacity;
         private Label OpacityControl;
+        private Label WelcomeBack;
     }
 }
 
