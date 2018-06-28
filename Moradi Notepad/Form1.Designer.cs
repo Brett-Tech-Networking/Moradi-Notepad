@@ -216,6 +216,7 @@ namespace Moradi_Notepad
             this.infolabel = new System.Windows.Forms.Label();
             this.lines = new System.Windows.Forms.Label();
             this.ubuntuTheme1 = new Ubuntu_Theme.UbuntuTheme();
+            this.WelcomeBack = new System.Windows.Forms.Label();
             this.OpacityControl = new System.Windows.Forms.Label();
             this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             this.MoradiHint = new System.Windows.Forms.Label();
@@ -225,7 +226,6 @@ namespace Moradi_Notepad
             this.FontTimer = new System.Windows.Forms.Timer(this.components);
             this.MessageBoxPerMin = new System.Windows.Forms.Timer(this.components);
             this.Opacity = new System.Windows.Forms.Timer(this.components);
-            this.WelcomeBack = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -671,7 +671,7 @@ namespace Moradi_Notepad
             this.undoToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.undo;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.undoToolStripMenuItem.Text = "&Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             this.undoToolStripMenuItem.MouseLeave += new System.EventHandler(this.undoToolStripMenuItem_MouseLeave);
@@ -682,7 +682,7 @@ namespace Moradi_Notepad
             this.redoToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.redo;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.redoToolStripMenuItem.Text = "&Redo";
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             this.redoToolStripMenuItem.MouseLeave += new System.EventHandler(this.redoToolStripMenuItem_MouseLeave);
@@ -691,7 +691,7 @@ namespace Moradi_Notepad
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(201, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(213, 6);
             // 
             // cutToolStripMenuItem
             // 
@@ -699,7 +699,7 @@ namespace Moradi_Notepad
             this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.cutToolStripMenuItem.Text = "&Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             this.cutToolStripMenuItem.MouseLeave += new System.EventHandler(this.cutToolStripMenuItem_MouseLeave);
@@ -712,7 +712,7 @@ namespace Moradi_Notepad
             this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.copyToolStripMenuItem.Text = "&Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             this.copyToolStripMenuItem.MouseLeave += new System.EventHandler(this.copyToolStripMenuItem_MouseLeave);
@@ -724,7 +724,7 @@ namespace Moradi_Notepad
             this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.pasteToolStripMenuItem.Text = "&Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             this.pasteToolStripMenuItem.MouseLeave += new System.EventHandler(this.pasteToolStripMenuItem_MouseLeave);
@@ -733,7 +733,7 @@ namespace Moradi_Notepad
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(201, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(213, 6);
             // 
             // selectAllToolStripMenuItem
             // 
@@ -741,7 +741,7 @@ namespace Moradi_Notepad
             this.selectAllToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.select_all;
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             this.selectAllToolStripMenuItem.MouseHover += new System.EventHandler(this.selectAllToolStripMenuItem_MouseHover);
@@ -1097,7 +1097,7 @@ namespace Moradi_Notepad
             this.richTextBox1.BackColor = System.Drawing.Color.Black;
             this.richTextBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.richTextBox1.EnableAutoDragDrop = true;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Lime;
             this.richTextBox1.Location = new System.Drawing.Point(1, 97);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -2105,6 +2105,19 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Enter += new System.EventHandler(this.ubuntuTheme1_Enter);
             this.ubuntuTheme1.Resize += new System.EventHandler(this.ubuntuTheme1_Resize);
             // 
+            // WelcomeBack
+            // 
+            this.WelcomeBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.WelcomeBack.AutoSize = true;
+            this.WelcomeBack.BackColor = System.Drawing.Color.Transparent;
+            this.WelcomeBack.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeBack.ForeColor = System.Drawing.Color.Red;
+            this.WelcomeBack.Location = new System.Drawing.Point(593, 879);
+            this.WelcomeBack.Name = "WelcomeBack";
+            this.WelcomeBack.Size = new System.Drawing.Size(125, 19);
+            this.WelcomeBack.TabIndex = 23;
+            this.WelcomeBack.Text = "Welcome Back:";
+            // 
             // OpacityControl
             // 
             this.OpacityControl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -2226,19 +2239,6 @@ namespace Moradi_Notepad
             this.Opacity.Enabled = true;
             this.Opacity.Interval = 500;
             this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
-            // 
-            // WelcomeBack
-            // 
-            this.WelcomeBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.WelcomeBack.AutoSize = true;
-            this.WelcomeBack.BackColor = System.Drawing.Color.Transparent;
-            this.WelcomeBack.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeBack.ForeColor = System.Drawing.Color.Red;
-            this.WelcomeBack.Location = new System.Drawing.Point(593, 879);
-            this.WelcomeBack.Name = "WelcomeBack";
-            this.WelcomeBack.Size = new System.Drawing.Size(125, 19);
-            this.WelcomeBack.TabIndex = 23;
-            this.WelcomeBack.Text = "Welcome Back:";
             // 
             // Form1
             // 
