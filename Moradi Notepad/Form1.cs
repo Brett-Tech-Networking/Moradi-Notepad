@@ -2367,8 +2367,26 @@ namespace Moradi_Notepad
         {
 
         }
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TabPage tp = new TabPage();
+            int tc = (tabControl1.TabCount + 1);
+            tp.Text = "New " + tc.ToString();
+            tabControl1.TabPages.Add(tp);
+            RichTextBox rtb = new RichTextBox();
+            rtb.Dock = DockStyle.Fill;
+            tp.Controls.Add(rtb);
+            rtb.BackColor = Color.Black;
+            rtb.ForeColor = Color.Lime;
+            rtb.Text = "Start Typing Here . . .";
+            rtb.Font.Size.ToString("10");
+            
+
+            return;
+        }
+        }
     }
-}
 
     
 
