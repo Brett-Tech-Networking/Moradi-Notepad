@@ -229,6 +229,7 @@ namespace Moradi_Notepad
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -242,6 +243,7 @@ namespace Moradi_Notepad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -1140,7 +1142,7 @@ namespace Moradi_Notepad
             this.HideNumbline});
             this.toolStrip1.Location = new System.Drawing.Point(472, 29);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(403, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(372, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -2263,12 +2265,29 @@ namespace Moradi_Notepad
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Controls.Add(this.richTextBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1186, 599);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.BackColor = System.Drawing.Color.Black;
+            this.richTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.richTextBox2.EnableAutoDragDrop = true;
+            this.richTextBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.ForeColor = System.Drawing.Color.Lime;
+            this.richTextBox2.Location = new System.Drawing.Point(2, 0);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(1183, 598);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "Start Typing Here . . .";
             // 
             // Form1
             // 
@@ -2308,6 +2327,7 @@ namespace Moradi_Notepad
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2510,6 +2530,7 @@ namespace Moradi_Notepad
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
+        public RichTextBox richTextBox2;
     }
 }
 
