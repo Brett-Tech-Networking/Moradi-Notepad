@@ -119,3 +119,8 @@ C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Mor
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Moradi Notepad.pdb
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi Notepad.csprojAssemblyReference.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\MetroFramework.dll
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Eto.dll
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Eto.Mac.dll
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\MonoMac.dll
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\bin\Debug\Eto.xml
+C:\Users\Brett Tech\Documents\GitHub\Moradi-Notepad\Moradi Notepad\obj\Debug\Moradi_Notepad.Updater.resources

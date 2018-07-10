@@ -317,26 +317,29 @@ namespace Moradi_Notepad
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
+            if (richTextBox1.Modified == true)
+            {
+                DialogResult result = MessageBox.Show("Do you want to save the current file?", "Whoa There!",
             MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
-            //no
-            if (result == DialogResult.No)
-            {
-                richTextBox1.Clear();
-            }
-
-            //yes
-            if (result == DialogResult.Yes)
-            {
-                saveFileDialog1.DefaultExt = ".rtf";
-                saveFileDialog1.OverwritePrompt = true;
-                saveFileDialog1.Title = "Save File";
-                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                //no
+                if (result == DialogResult.No)
                 {
-                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    richTextBox1.Clear();
+                }
+
+                //yes
+                if (result == DialogResult.Yes)
+                {
+                    saveFileDialog1.DefaultExt = ".rtf";
+                    saveFileDialog1.OverwritePrompt = true;
+                    saveFileDialog1.Title = "Save File";
+                    saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+
+                    if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
                 }
             }
         }
@@ -2377,6 +2380,7 @@ namespace Moradi_Notepad
             RichTextBox rtb = new RichTextBox();
             rtb.Dock = DockStyle.Fill;
             tp.Controls.Add(rtb);
+
             rtb.BackColor = Color.Black;
             rtb.ForeColor = Color.Lime;
             rtb.Text = "Start Typing Here . . .";
@@ -2385,7 +2389,18 @@ namespace Moradi_Notepad
 
             return;
         }
+
+        private void iMABUTTONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Updater up = new Updater();
+            up.Show();
+        }
+    }
     }
 
     
