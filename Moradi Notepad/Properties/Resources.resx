@@ -269,7 +269,7 @@
     <value>..\Resources\black-dot-md.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fader_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Fader Theme.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Fader Theme.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -290,7 +290,7 @@
     <value>..\Resources\neon-green-dot-hi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ubuntu_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Ubuntu Theme.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Ubuntu Theme.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="sound1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -306,5 +306,8 @@
   </data>
   <data name="download icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MetroFramework" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MetroFramework.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
