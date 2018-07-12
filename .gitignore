@@ -1,2 +1,10 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
 
-.vs/Moradi Notepad/v15/Server/sqlite3/db.lock
+# Visual Studio 2015 cache/options directory
+.vs/*
+
+# The packages folder can be ignored because of Package Restore
+**/packages/*
