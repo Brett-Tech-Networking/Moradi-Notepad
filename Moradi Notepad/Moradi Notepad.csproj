@@ -52,10 +52,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.2, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="Effectual Theme">
-      <HintPath>..\..\desktop\Theme . dlls\Effectual Theme.dll</HintPath>
-    </Reference>
     <Reference Include="Eto, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Eto.Forms.2.4.1\lib\netstandard1.0\Eto.dll</HintPath>
     </Reference>
@@ -65,18 +61,12 @@
     <Reference Include="Fader Theme">
       <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Fader Theme.dll</HintPath>
     </Reference>
-    <Reference Include="Login Theme">
-      <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Login Theme.dll</HintPath>
-    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\..\Brett-Tech-Control-Panel-V3\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MonoMac, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Eto.Platform.Mac.2.4.1\lib\net45\MonoMac.dll</HintPath>
-    </Reference>
-    <Reference Include="onlykl theme">
-      <HintPath>..\..\desktop\Theme . dlls\onlykl theme.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -91,9 +81,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="theme">
-      <HintPath>..\..\desktop\Theme . dlls\theme.dll</HintPath>
-    </Reference>
     <Reference Include="Ubuntu Theme">
       <HintPath>..\..\..\..\..\Desktop\desktop\Theme . dlls\Ubuntu Theme.dll</HintPath>
     </Reference>
