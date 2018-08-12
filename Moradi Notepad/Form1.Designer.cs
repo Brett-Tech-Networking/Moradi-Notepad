@@ -188,6 +188,8 @@ namespace Moradi_Notepad
             this.helpToolStripButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.kToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.TextSize = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.undo = new System.Windows.Forms.ToolStripButton();
             this.redo = new System.Windows.Forms.ToolStripButton();
@@ -197,7 +199,6 @@ namespace Moradi_Notepad
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.MicOn = new System.Windows.Forms.ToolStripButton();
             this.MicOff = new System.Windows.Forms.ToolStripButton();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.infolabel = new System.Windows.Forms.Label();
             this.lines = new System.Windows.Forms.Label();
@@ -211,13 +212,11 @@ namespace Moradi_Notepad
             this.OpacityControl = new System.Windows.Forms.Label();
             this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.FontTimer = new System.Windows.Forms.Timer(this.components);
             this.MessageBoxPerMin = new System.Windows.Forms.Timer(this.components);
             this.Opacity = new System.Windows.Forms.Timer(this.components);
             this.FontNames = new System.Windows.Forms.Timer(this.components);
-            this.TESTTIMER = new System.Windows.Forms.Timer(this.components);
-            this.TextSize = new System.Windows.Forms.ToolStripComboBox();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -1693,7 +1692,7 @@ namespace Moradi_Notepad
             this.MicOff});
             this.toolStrip3.Location = new System.Drawing.Point(1, 51);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(583, 27);
+            this.toolStrip3.Size = new System.Drawing.Size(552, 27);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "Lock Document";
             // 
@@ -1769,6 +1768,86 @@ namespace Moradi_Notepad
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.DropDownWidth = 130;
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(130, 27);
+            this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
+            // 
+            // TextSize
+            // 
+            this.TextSize.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72"});
+            this.TextSize.Name = "TextSize";
+            this.TextSize.Size = new System.Drawing.Size(121, 27);
+            this.TextSize.SelectedIndexChanged += new System.EventHandler(this.TextSize_SelectedIndexChanged);
+            this.TextSize.Click += new System.EventHandler(this.TextSize_Click);
             // 
             // toolStripSeparator13
             // 
@@ -1865,13 +1944,6 @@ namespace Moradi_Notepad
             this.MicOff.Click += new System.EventHandler(this.toolStripButton20_Click_1);
             this.MicOff.MouseLeave += new System.EventHandler(this.toolStripButton20_MouseLeave);
             this.MicOff.MouseHover += new System.EventHandler(this.toolStripButton20_MouseHover);
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.DropDownWidth = 130;
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(130, 27);
-            this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
             // 
             // trackBar1
             // 
@@ -2074,108 +2146,6 @@ namespace Moradi_Notepad
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // FontTimer
-            // 
-            this.FontTimer.Enabled = true;
-            this.FontTimer.Interval = 1000;
-            // 
-            // MessageBoxPerMin
-            // 
-            this.MessageBoxPerMin.Enabled = true;
-            this.MessageBoxPerMin.Interval = 1000;
-            this.MessageBoxPerMin.Tick += new System.EventHandler(this.MessageBoxPerMin_Tick);
-            // 
-            // Opacity
-            // 
-            this.Opacity.Enabled = true;
-            this.Opacity.Interval = 500;
-            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
-            // 
-            // FontNames
-            // 
-            this.FontNames.Enabled = true;
-            this.FontNames.Interval = 1000;
-            this.FontNames.Tick += new System.EventHandler(this.FontNames_Tick);
-            // 
-            // TESTTIMER
-            // 
-            this.TESTTIMER.Enabled = true;
-            this.TESTTIMER.Interval = 1000;
-            this.TESTTIMER.Tick += new System.EventHandler(this.TESTTIMER_Tick);
-            // 
-            // TextSize
-            // 
-            this.TextSize.Items.AddRange(new object[] {
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59",
-            "60",
-            "61",
-            "62",
-            "63",
-            "64",
-            "65",
-            "66",
-            "67",
-            "68",
-            "69",
-            "70",
-            "71",
-            "72"});
-            this.TextSize.Name = "TextSize";
-            this.TextSize.Size = new System.Drawing.Size(121, 27);
-            this.TextSize.SelectedIndexChanged += new System.EventHandler(this.TextSize_SelectedIndexChanged);
-            this.TextSize.Click += new System.EventHandler(this.TextSize_Click);
-            // 
             // lineNumbers_For_RichTextBox2
             // 
             this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
@@ -2212,6 +2182,29 @@ namespace Moradi_Notepad
             this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
             this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 598);
             this.lineNumbers_For_RichTextBox2.TabIndex = 7;
+            // 
+            // FontTimer
+            // 
+            this.FontTimer.Enabled = true;
+            this.FontTimer.Interval = 1000;
+            // 
+            // MessageBoxPerMin
+            // 
+            this.MessageBoxPerMin.Enabled = true;
+            this.MessageBoxPerMin.Interval = 1000;
+            this.MessageBoxPerMin.Tick += new System.EventHandler(this.MessageBoxPerMin_Tick);
+            // 
+            // Opacity
+            // 
+            this.Opacity.Enabled = true;
+            this.Opacity.Interval = 500;
+            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
+            // 
+            // FontNames
+            // 
+            this.FontNames.Enabled = true;
+            this.FontNames.Interval = 1000;
+            this.FontNames.Tick += new System.EventHandler(this.FontNames_Tick);
             // 
             // Form1
             // 
@@ -2440,7 +2433,6 @@ namespace Moradi_Notepad
         private ToolStripMenuItem toolStripMenuItem7;
         private ToolStripComboBox toolStripComboBox1;
         private Timer FontNames;
-        private Timer TESTTIMER;
         private ToolStripComboBox TextSize;
     }
 }

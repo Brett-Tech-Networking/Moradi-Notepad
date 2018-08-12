@@ -26,8 +26,6 @@ namespace Moradi_Notepad
         public Form1()
         {
             InitializeComponent();
-
-          
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
@@ -620,6 +618,7 @@ namespace Moradi_Notepad
             {
                 richTextBox1.Clear();  // Deletes Written Text
             }
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -1785,6 +1784,7 @@ namespace Moradi_Notepad
             try
             {
                 toolStripComboBox1.Text = richTextBox1.Font.Name.ToString();
+                TextSize.Text = richTextBox1.Font.Size.ToString();
             }
             catch
             {
@@ -2369,6 +2369,7 @@ namespace Moradi_Notepad
                 //
             }
         }
+
     }
     }
 
