@@ -1122,7 +1122,7 @@ namespace Moradi_Notepad
                 else if (result == DialogResult.No)
                 {
                     ss.Close();
-                    Environment.Exit(0);
+                    Environment.Exit(1);
                 }
 
                 //cancel

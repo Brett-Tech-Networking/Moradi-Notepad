@@ -1644,7 +1644,7 @@ namespace Moradi_Notepad
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(998, 54);
+            this.textBox1.Location = new System.Drawing.Point(979, 54);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 23);
             this.textBox1.TabIndex = 9;
@@ -1657,9 +1657,9 @@ namespace Moradi_Notepad
             this.FindText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.FindText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindText.ForeColor = System.Drawing.Color.Red;
-            this.FindText.Location = new System.Drawing.Point(1155, 51);
+            this.FindText.Location = new System.Drawing.Point(1132, 53);
             this.FindText.Name = "FindText";
-            this.FindText.Size = new System.Drawing.Size(42, 24);
+            this.FindText.Size = new System.Drawing.Size(59, 24);
             this.FindText.TabIndex = 11;
             this.FindText.Text = "Find";
             this.FindText.UseVisualStyleBackColor = false;
