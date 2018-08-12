@@ -188,22 +188,6 @@ namespace Moradi_Notepad
             this.helpToolStripButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.kToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.Font_style = new System.Windows.Forms.ToolStripDropDownButton();
-            this.arielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.algerianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aRCHRISTYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aRDELANEYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aRDESTINEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.castellarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.digitalReadoutUprightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.georgiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jokermanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lucidaHandwritingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.microsoftSansSerifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modernNo20ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.smallFontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timesNewRomanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FontSize = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.undo = new System.Windows.Forms.ToolStripButton();
             this.redo = new System.Windows.Forms.ToolStripButton();
@@ -213,6 +197,7 @@ namespace Moradi_Notepad
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.MicOn = new System.Windows.Forms.ToolStripButton();
             this.MicOff = new System.Windows.Forms.ToolStripButton();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.infolabel = new System.Windows.Forms.Label();
             this.lines = new System.Windows.Forms.Label();
@@ -226,10 +211,13 @@ namespace Moradi_Notepad
             this.OpacityControl = new System.Windows.Forms.Label();
             this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.FontTimer = new System.Windows.Forms.Timer(this.components);
             this.MessageBoxPerMin = new System.Windows.Forms.Timer(this.components);
             this.Opacity = new System.Windows.Forms.Timer(this.components);
+            this.FontNames = new System.Windows.Forms.Timer(this.components);
+            this.TESTTIMER = new System.Windows.Forms.Timer(this.components);
+            this.TextSize = new System.Windows.Forms.ToolStripComboBox();
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -1692,8 +1680,8 @@ namespace Moradi_Notepad
             this.toolStripSeparator11,
             this.helpToolStripButton,
             this.toolStripSeparator12,
-            this.Font_style,
-            this.FontSize,
+            this.toolStripComboBox1,
+            this.TextSize,
             this.toolStripSeparator13,
             this.undo,
             this.redo,
@@ -1705,7 +1693,7 @@ namespace Moradi_Notepad
             this.MicOff});
             this.toolStrip3.Location = new System.Drawing.Point(1, 51);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(437, 27);
+            this.toolStrip3.Size = new System.Drawing.Size(583, 27);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "Lock Document";
             // 
@@ -1781,151 +1769,6 @@ namespace Moradi_Notepad
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
-            // 
-            // Font_style
-            // 
-            this.Font_style.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.Font_style.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arielToolStripMenuItem,
-            this.algerianToolStripMenuItem,
-            this.aRCHRISTYToolStripMenuItem,
-            this.aRDELANEYToolStripMenuItem,
-            this.aRDESTINEToolStripMenuItem,
-            this.castellarToolStripMenuItem,
-            this.digitalReadoutUprightToolStripMenuItem,
-            this.georgiaToolStripMenuItem,
-            this.jokermanToolStripMenuItem,
-            this.lucidaHandwritingToolStripMenuItem,
-            this.microsoftSansSerifToolStripMenuItem,
-            this.modernNo20ToolStripMenuItem,
-            this.smallFontsToolStripMenuItem,
-            this.timesNewRomanToolStripMenuItem});
-            this.Font_style.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.Font_style.Image = ((System.Drawing.Image)(resources.GetObject("Font_style.Image")));
-            this.Font_style.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Font_style.Name = "Font_style";
-            this.Font_style.Size = new System.Drawing.Size(46, 24);
-            this.Font_style.Text = "Ariel";
-            this.Font_style.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
-            // 
-            // arielToolStripMenuItem
-            // 
-            this.arielToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.arielToolStripMenuItem.Name = "arielToolStripMenuItem";
-            this.arielToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.arielToolStripMenuItem.Text = "Ariel";
-            this.arielToolStripMenuItem.Click += new System.EventHandler(this.arielToolStripMenuItem_Click);
-            // 
-            // algerianToolStripMenuItem
-            // 
-            this.algerianToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.algerianToolStripMenuItem.Name = "algerianToolStripMenuItem";
-            this.algerianToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.algerianToolStripMenuItem.Text = "Algerian";
-            this.algerianToolStripMenuItem.Click += new System.EventHandler(this.algerianToolStripMenuItem_Click);
-            // 
-            // aRCHRISTYToolStripMenuItem
-            // 
-            this.aRCHRISTYToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.aRCHRISTYToolStripMenuItem.Name = "aRCHRISTYToolStripMenuItem";
-            this.aRCHRISTYToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.aRCHRISTYToolStripMenuItem.Text = "AR CHRISTY";
-            this.aRCHRISTYToolStripMenuItem.Click += new System.EventHandler(this.aRCHRISTYToolStripMenuItem_Click);
-            // 
-            // aRDELANEYToolStripMenuItem
-            // 
-            this.aRDELANEYToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.aRDELANEYToolStripMenuItem.Name = "aRDELANEYToolStripMenuItem";
-            this.aRDELANEYToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.aRDELANEYToolStripMenuItem.Text = "AR DELANEY";
-            this.aRDELANEYToolStripMenuItem.Click += new System.EventHandler(this.aRDELANEYToolStripMenuItem_Click);
-            // 
-            // aRDESTINEToolStripMenuItem
-            // 
-            this.aRDESTINEToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.aRDESTINEToolStripMenuItem.Name = "aRDESTINEToolStripMenuItem";
-            this.aRDESTINEToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.aRDESTINEToolStripMenuItem.Text = "AR DESTINE";
-            this.aRDESTINEToolStripMenuItem.Click += new System.EventHandler(this.aRDESTINEToolStripMenuItem_Click);
-            // 
-            // castellarToolStripMenuItem
-            // 
-            this.castellarToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.castellarToolStripMenuItem.Name = "castellarToolStripMenuItem";
-            this.castellarToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.castellarToolStripMenuItem.Text = "Castellar";
-            this.castellarToolStripMenuItem.Click += new System.EventHandler(this.castellarToolStripMenuItem_Click);
-            // 
-            // digitalReadoutUprightToolStripMenuItem
-            // 
-            this.digitalReadoutUprightToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.digitalReadoutUprightToolStripMenuItem.Name = "digitalReadoutUprightToolStripMenuItem";
-            this.digitalReadoutUprightToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.digitalReadoutUprightToolStripMenuItem.Text = "Digital Readout Upright";
-            this.digitalReadoutUprightToolStripMenuItem.Click += new System.EventHandler(this.digitalReadoutUprightToolStripMenuItem_Click);
-            // 
-            // georgiaToolStripMenuItem
-            // 
-            this.georgiaToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold);
-            this.georgiaToolStripMenuItem.Name = "georgiaToolStripMenuItem";
-            this.georgiaToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.georgiaToolStripMenuItem.Text = "Georgia";
-            this.georgiaToolStripMenuItem.Click += new System.EventHandler(this.georgiaToolStripMenuItem_Click);
-            // 
-            // jokermanToolStripMenuItem
-            // 
-            this.jokermanToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.jokermanToolStripMenuItem.Name = "jokermanToolStripMenuItem";
-            this.jokermanToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.jokermanToolStripMenuItem.Text = "Jokerman";
-            this.jokermanToolStripMenuItem.Click += new System.EventHandler(this.jokermanToolStripMenuItem_Click);
-            // 
-            // lucidaHandwritingToolStripMenuItem
-            // 
-            this.lucidaHandwritingToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.lucidaHandwritingToolStripMenuItem.Name = "lucidaHandwritingToolStripMenuItem";
-            this.lucidaHandwritingToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.lucidaHandwritingToolStripMenuItem.Text = "Lucida Handwriting";
-            this.lucidaHandwritingToolStripMenuItem.Click += new System.EventHandler(this.lucidaHandwritingToolStripMenuItem_Click);
-            // 
-            // microsoftSansSerifToolStripMenuItem
-            // 
-            this.microsoftSansSerifToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.microsoftSansSerifToolStripMenuItem.Name = "microsoftSansSerifToolStripMenuItem";
-            this.microsoftSansSerifToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.microsoftSansSerifToolStripMenuItem.Text = "Microsoft Sans Serif";
-            this.microsoftSansSerifToolStripMenuItem.Click += new System.EventHandler(this.microsoftSansSerifToolStripMenuItem_Click);
-            // 
-            // modernNo20ToolStripMenuItem
-            // 
-            this.modernNo20ToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.modernNo20ToolStripMenuItem.Name = "modernNo20ToolStripMenuItem";
-            this.modernNo20ToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.modernNo20ToolStripMenuItem.Text = "Modern No. 20";
-            this.modernNo20ToolStripMenuItem.Click += new System.EventHandler(this.modernNo20ToolStripMenuItem_Click);
-            // 
-            // smallFontsToolStripMenuItem
-            // 
-            this.smallFontsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.smallFontsToolStripMenuItem.Name = "smallFontsToolStripMenuItem";
-            this.smallFontsToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.smallFontsToolStripMenuItem.Text = "Stencil";
-            this.smallFontsToolStripMenuItem.Click += new System.EventHandler(this.smallFontsToolStripMenuItem_Click);
-            // 
-            // timesNewRomanToolStripMenuItem
-            // 
-            this.timesNewRomanToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.timesNewRomanToolStripMenuItem.Name = "timesNewRomanToolStripMenuItem";
-            this.timesNewRomanToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.timesNewRomanToolStripMenuItem.Text = "Times New Roman";
-            this.timesNewRomanToolStripMenuItem.Click += new System.EventHandler(this.timesNewRomanToolStripMenuItem_Click);
-            // 
-            // FontSize
-            // 
-            this.FontSize.Name = "FontSize";
-            this.FontSize.Size = new System.Drawing.Size(92, 27);
-            this.FontSize.SelectedIndexChanged += new System.EventHandler(this.FontSize_SelectedIndexChanged_1);
-            this.FontSize.Click += new System.EventHandler(this.FontSize_Click);
             // 
             // toolStripSeparator13
             // 
@@ -2023,6 +1866,13 @@ namespace Moradi_Notepad
             this.MicOff.MouseLeave += new System.EventHandler(this.toolStripButton20_MouseLeave);
             this.MicOff.MouseHover += new System.EventHandler(this.toolStripButton20_MouseHover);
             // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.DropDownWidth = 130;
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(130, 27);
+            this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
+            // 
             // trackBar1
             // 
             this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -2115,7 +1965,7 @@ namespace Moradi_Notepad
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1186, 599);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Tab 1";
             // 
             // MoradiHint
             // 
@@ -2224,6 +2074,108 @@ namespace Moradi_Notepad
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // FontTimer
+            // 
+            this.FontTimer.Enabled = true;
+            this.FontTimer.Interval = 1000;
+            // 
+            // MessageBoxPerMin
+            // 
+            this.MessageBoxPerMin.Enabled = true;
+            this.MessageBoxPerMin.Interval = 1000;
+            this.MessageBoxPerMin.Tick += new System.EventHandler(this.MessageBoxPerMin_Tick);
+            // 
+            // Opacity
+            // 
+            this.Opacity.Enabled = true;
+            this.Opacity.Interval = 500;
+            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
+            // 
+            // FontNames
+            // 
+            this.FontNames.Enabled = true;
+            this.FontNames.Interval = 1000;
+            this.FontNames.Tick += new System.EventHandler(this.FontNames_Tick);
+            // 
+            // TESTTIMER
+            // 
+            this.TESTTIMER.Enabled = true;
+            this.TESTTIMER.Interval = 1000;
+            this.TESTTIMER.Tick += new System.EventHandler(this.TESTTIMER_Tick);
+            // 
+            // TextSize
+            // 
+            this.TextSize.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72"});
+            this.TextSize.Name = "TextSize";
+            this.TextSize.Size = new System.Drawing.Size(121, 27);
+            this.TextSize.SelectedIndexChanged += new System.EventHandler(this.TextSize_SelectedIndexChanged);
+            this.TextSize.Click += new System.EventHandler(this.TextSize_Click);
+            // 
             // lineNumbers_For_RichTextBox2
             // 
             this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
@@ -2260,24 +2212,6 @@ namespace Moradi_Notepad
             this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
             this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 598);
             this.lineNumbers_For_RichTextBox2.TabIndex = 7;
-            // 
-            // FontTimer
-            // 
-            this.FontTimer.Enabled = true;
-            this.FontTimer.Interval = 1000;
-            this.FontTimer.Tick += new System.EventHandler(this.FontTimer_Tick);
-            // 
-            // MessageBoxPerMin
-            // 
-            this.MessageBoxPerMin.Enabled = true;
-            this.MessageBoxPerMin.Interval = 1000;
-            this.MessageBoxPerMin.Tick += new System.EventHandler(this.MessageBoxPerMin_Tick);
-            // 
-            // Opacity
-            // 
-            this.Opacity.Enabled = true;
-            this.Opacity.Interval = 500;
-            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
             // 
             // Form1
             // 
@@ -2474,21 +2408,6 @@ namespace Moradi_Notepad
         private ToolStripDropDownButton helpToolStripButton;
         private ToolStripMenuItem kToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator12;
-        private ToolStripDropDownButton Font_style;
-        private ToolStripMenuItem arielToolStripMenuItem;
-        private ToolStripMenuItem algerianToolStripMenuItem;
-        private ToolStripMenuItem aRCHRISTYToolStripMenuItem;
-        private ToolStripMenuItem aRDELANEYToolStripMenuItem;
-        private ToolStripMenuItem aRDESTINEToolStripMenuItem;
-        private ToolStripMenuItem castellarToolStripMenuItem;
-        private ToolStripMenuItem digitalReadoutUprightToolStripMenuItem;
-        private ToolStripMenuItem georgiaToolStripMenuItem;
-        private ToolStripMenuItem jokermanToolStripMenuItem;
-        private ToolStripMenuItem lucidaHandwritingToolStripMenuItem;
-        private ToolStripMenuItem microsoftSansSerifToolStripMenuItem;
-        private ToolStripMenuItem modernNo20ToolStripMenuItem;
-        private ToolStripMenuItem smallFontsToolStripMenuItem;
-        private ToolStripMenuItem timesNewRomanToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator13;
         private ToolStripButton undo;
         private ToolStripButton redo;
@@ -2504,7 +2423,6 @@ namespace Moradi_Notepad
         private Label lines;
         public Ubuntu_Theme.UbuntuTheme ubuntuTheme1;
         private Timer FontTimer;
-        public ToolStripComboBox FontSize;
         private ToolStripMenuItem moradiHintsToolStripMenuItem;
         private ToolStripMenuItem onToolStripMenuItem2;
         private ToolStripMenuItem offToolStripMenuItem2;
@@ -2520,6 +2438,10 @@ namespace Moradi_Notepad
         private PictureBox dancingpencil;
         public RichTextBox richTextBox1;
         private ToolStripMenuItem toolStripMenuItem7;
+        private ToolStripComboBox toolStripComboBox1;
+        private Timer FontNames;
+        private Timer TESTTIMER;
+        private ToolStripComboBox TextSize;
     }
 }
 

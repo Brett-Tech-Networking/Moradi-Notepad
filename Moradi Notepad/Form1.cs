@@ -27,11 +27,7 @@ namespace Moradi_Notepad
         {
             InitializeComponent();
 
-            // Add the font sizes.
-            for (var i = 1; i < 72; i++)
-            {
-                FontSize.Items.Add((double)i);
-            }
+          
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
@@ -628,7 +624,6 @@ namespace Moradi_Notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
@@ -949,89 +944,7 @@ namespace Moradi_Notepad
         {
         }
 
-        private void arielToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("ariel", 10, FontStyle.Regular);
-            Font_style.Text = "Ariel";
-        }
-
-        private void algerianToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("algerian", 10, FontStyle.Regular);
-            Font_style.Text = "Algerian";
-        }
-
-        private void aRCHRISTYToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("AR CHRISTY", 10, FontStyle.Regular);
-            Font_style.Text = "AR CHRISTY";
-        }
-
-        private void aRDELANEYToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("AR DELANEY", 10, FontStyle.Regular);
-            Font_style.Text = "AR DELANEY";
-        }
-
-        private void aRDESTINEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("AR DESTINE", 10, FontStyle.Regular);
-            Font_style.Text = "AR DESTINE";
-        }
-
-        private void castellarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("castellar", 10, FontStyle.Regular);
-            Font_style.Text = "Castellar";
-        }
-
-        private void digitalReadoutUprightToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Digital Readout Upright", 10, FontStyle.Regular);
-            Font_style.Text = "Digital Readout Upright";
-        }
-
-        private void georgiaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Georgia", 10, FontStyle.Regular);
-            Font_style.Text = "Georgia";
-        }
-
-        private void jokermanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Jokerman", 10, FontStyle.Regular);
-            Font_style.Text = "Jokerman";
-        }
-
-        private void lucidaHandwritingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("lucida Handwriting", 10, FontStyle.Regular);
-            Font_style.Text = "Lucisa Handwriting";
-        }
-
-        private void microsoftSansSerifToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            Font_style.Text = "Microsoft Sans Serif";
-        }
-
-        private void modernNo20ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Modern No. 20", 10, FontStyle.Regular);
-            Font_style.Text = "Modern No. 20";
-        }
-
-        private void smallFontsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Stencil", 10, FontStyle.Regular);
-            Font_style.Text = "Stencil";
-        }
-
-        private void timesNewRomanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.SelectionFont = new Font("Times New Roman", 10, FontStyle.Regular);
-            Font_style.Text = "Times New Roman";
-        }
+       
 
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -1122,7 +1035,14 @@ namespace Moradi_Notepad
                 else if (result == DialogResult.No)
                 {
                     ss.Close();
-                    Environment.Exit(1);
+                    try
+                    {
+                        Environment.Exit(1);
+                    }
+                    catch
+                    {
+                        Application.Exit();
+                    }
                 }
 
                 //cancel
@@ -1860,14 +1780,24 @@ namespace Moradi_Notepad
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            // Font Size Check
+            try
+            {
+                toolStripComboBox1.Text = richTextBox1.Font.Name.ToString();
+            }
+            catch
+            {
+                toolStripComboBox1.Text = ("N/A");
+            }
+
             // grammer rules
 
             GrammarBuilder build = new GrammarBuilder();
             build.AppendDictation();
             grammar = new Grammar(build);
 
-            // font size
-            FontSize.Text = richTextBox1.Font.Size.ToString();
+          
 
             // Welcome Back Label
             WelcomeBack.Text = "Welcome Back:  " + (System.Environment.UserName);
@@ -2316,7 +2246,6 @@ namespace Moradi_Notepad
 
         }
 
-        private void FontTimer_Tick(object sender, EventArgs e) => FontSize.Text = richTextBox1.Font.Size.ToString();
 
         private void FontSize_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -2375,7 +2304,7 @@ namespace Moradi_Notepad
         {
             TabPage tp = new TabPage();
             int tc = (tabControl1.TabCount + 1);
-            tp.Text = "New " + tc.ToString();
+            tp.Text = "Tab " + tc.ToString();
             tabControl1.TabPages.Add(tp);
             RichTextBox rtb = new RichTextBox();
             rtb.Dock = DockStyle.Fill;
@@ -2399,6 +2328,46 @@ namespace Moradi_Notepad
         {
             Updater up = new Updater();
             up.Show();
+        }
+
+        private void FontNames_Tick(object sender, EventArgs e)
+        {
+            foreach (FontFamily font in FontFamily.Families)
+            {
+                toolStripComboBox1.Items.Add(font.Name.ToString());
+            }
+        }
+
+        private void toolStripComboBox1_TextChanged(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionFont = new Font(toolStripComboBox1.Text, richTextBox1.Font.Size);
+        }
+
+        private void FontSize_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TESTTIMER_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void TextSize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, float.Parse(TextSize.SelectedItem.ToString()));
+            }
+            catch
+            {
+                //
+            }
         }
     }
     }
