@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Speech.Synthesis;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -18,22 +19,31 @@ namespace Moradi_Notepad
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             progress += 1;
             if(progress >=100)
             {
+
                 timer1.Enabled = false;
                 timer1.Stop();
-                this.Hide();
+                this.Hide();  
 
                 //Instantiates Main Form
                 Form1 f1 = new Form1();
                 f1.Show();
+
             }
             progressBar1.Value = progress;
         }
 
         private void splashscreen_Load(object sender, EventArgs e)
         {
+            // welcome
+            SpeechSynthesizer ss = new SpeechSynthesizer();
+            ss.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Teen);
+            ss.Volume = (100);
+            ss.SpeakAsync("Welcome To More ah dee Notepad");
+
             timer1.Enabled = true;
             timer1.Interval = 15;
         }

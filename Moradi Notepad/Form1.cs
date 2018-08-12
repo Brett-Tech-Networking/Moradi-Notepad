@@ -8,7 +8,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Forms;
 using System.Diagnostics;
-
+using System.Runtime.InteropServices;
 
 namespace Moradi_Notepad
 {
@@ -23,9 +23,13 @@ namespace Moradi_Notepad
         public Boolean RecognizerState = true;
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
+       
+
+
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
@@ -1779,6 +1783,7 @@ namespace Moradi_Notepad
 
         private void Form1_Load(object sender, EventArgs e)
         {
+         
 
             // Font Size Check
             try
