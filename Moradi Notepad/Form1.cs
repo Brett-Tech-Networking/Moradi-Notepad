@@ -2337,6 +2337,7 @@ namespace Moradi_Notepad
 
         private void FontNames_Tick(object sender, EventArgs e)
         {
+            this.toolStripComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (FontFamily font in FontFamily.Families)
             {
                 toolStripComboBox1.Items.Add(font.Name.ToString());
@@ -2367,6 +2368,7 @@ namespace Moradi_Notepad
         {
             try
             {
+                this.TextSize.DropDownStyle = ComboBoxStyle.DropDownList;
                 richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, float.Parse(TextSize.SelectedItem.ToString()));
             }
             catch
@@ -2376,8 +2378,4 @@ namespace Moradi_Notepad
         }
 
     }
-    }
-
-    
-
-
+}
