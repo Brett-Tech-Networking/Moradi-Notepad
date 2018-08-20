@@ -39,11 +39,7 @@ namespace Moradi_Notepad
         private void splashscreen_Load(object sender, EventArgs e)
         {
             // welcome
-            SpeechSynthesizer ss = new SpeechSynthesizer();
-            ss.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Teen);
-            ss.Volume = (100);
-            ss.SpeakAsync("Welcome To More ah dee Notepad");
-
+           
             timer1.Enabled = true;
             timer1.Interval = 15;
         }

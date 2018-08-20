@@ -29,7 +29,6 @@ namespace Moradi_Notepad
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void ubuntuTheme1_Click(object sender, EventArgs e)
@@ -671,7 +670,14 @@ namespace Moradi_Notepad
 
         private void restartSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            try
+            {
+                Application.Restart();
+            }
+                catch
+            {
+                //
+            }
         }
 
         private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1039,8 +1045,9 @@ namespace Moradi_Notepad
                 {
                     ss.Close();
                     try
+                        
                     {
-                        Environment.Exit(1);
+                        Application.ExitThread();
                     }
                     catch
                     {
