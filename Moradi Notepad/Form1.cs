@@ -626,6 +626,9 @@ namespace Moradi_Notepad
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+            // Update Label "Last Modified"
+            LastModified.Text = "Last Modified: " + DateTime.Now;
+
             //rich textbox for typing area
             charCount = richTextBox1.Text.Length;
             output.Text = "Char: " + charCount.ToString();
