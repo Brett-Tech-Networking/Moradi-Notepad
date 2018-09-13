@@ -23,7 +23,7 @@ namespace Moradi_Notepad
         public Boolean RecognizerState = true;
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
-       
+
 
 
         public Form1()
@@ -677,7 +677,7 @@ namespace Moradi_Notepad
             {
                 Application.Restart();
             }
-                catch
+            catch
             {
                 //
             }
@@ -956,7 +956,7 @@ namespace Moradi_Notepad
         {
         }
 
-       
+
 
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -1048,7 +1048,7 @@ namespace Moradi_Notepad
                 {
                     ss.Close();
                     try
-                        
+
                     {
                         Application.ExitThread();
                     }
@@ -1793,7 +1793,7 @@ namespace Moradi_Notepad
 
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+
 
             // Font Size Check
             try
@@ -1812,7 +1812,7 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
-          
+
 
             // Welcome Back Label
             WelcomeBack.Text = "Welcome Back:  " + (System.Environment.UserName);
@@ -2329,7 +2329,7 @@ namespace Moradi_Notepad
             rtb.ForeColor = Color.Lime;
             rtb.Text = "Start Typing Here . . .";
             rtb.Font.Size.ToString("10");
-            
+
 
             return;
         }
@@ -2366,7 +2366,7 @@ namespace Moradi_Notepad
 
         private void TESTTIMER_Tick(object sender, EventArgs e)
         {
-           
+
         }
 
         private void TextSize_Click(object sender, EventArgs e)
@@ -2387,5 +2387,41 @@ namespace Moradi_Notepad
             }
         }
 
+        private void HTML_Tick(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text.Contains  ("<html>"))
+            {
+                richTextBox1.AppendText ("</html>");
+            }
+            
+            else if (richTextBox1.Text.Contains ("<br>"))
+                richTextBox1.AppendText ("</br>");
+            
+        
+    }
+
+        private void enableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HTML.Enabled = true;
+        }
+
+        private void disableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HTML.Enabled = false;
+        }
+
+        private void Validate_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void hTMLToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            HTML.Start();
+        }
+
+        private void exitCodePlatformToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HTML.Stop();
+        }
     }
 }
