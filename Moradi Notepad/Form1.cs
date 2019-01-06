@@ -23,16 +23,9 @@ namespace Moradi_Notepad
         public Boolean RecognizerState = true;
         public PrintPageEventHandler pd_PrintPage { get; private set; }
 
-
-
-
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void ubuntuTheme1_Click(object sender, EventArgs e)
-        {
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -423,7 +416,6 @@ namespace Moradi_Notepad
                 }
             }
         }
-
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
