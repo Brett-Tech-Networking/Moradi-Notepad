@@ -12,7 +12,6 @@ using System.Runtime.InteropServices;
 
 namespace Moradi_Notepad
 {
-
     public partial class Form1 : Form
     {
         int charCount = 0;
@@ -348,7 +347,6 @@ namespace Moradi_Notepad
         }
 
         private void toolStripButton10_Click(object sender, EventArgs e)
-
         // open if not modified
         {
             if (richTextBox1.Modified == false)
@@ -427,7 +425,6 @@ namespace Moradi_Notepad
             }
             catch
             {
-                //
             }
         }
 
@@ -671,7 +668,6 @@ namespace Moradi_Notepad
             }
             catch
             {
-                //
             }
         }
 
@@ -948,8 +944,6 @@ namespace Moradi_Notepad
         {
         }
 
-
-
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             label1.ForeColor = Color.Red;
@@ -982,8 +976,6 @@ namespace Moradi_Notepad
         private void timer2_Tick(object sender, EventArgs e)
         {
         }
-
-
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
@@ -1303,7 +1295,6 @@ namespace Moradi_Notepad
         private void insertToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
             infolabel.Text = "Ready";
-
         }
 
         private void clockToolStripMenuItem_MouseHover(object sender, EventArgs e)
@@ -1785,8 +1776,6 @@ namespace Moradi_Notepad
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
             // Font Size Check
             try
             {
@@ -1804,16 +1793,12 @@ namespace Moradi_Notepad
             build.AppendDictation();
             grammar = new Grammar(build);
 
-
-
             // Welcome Back Label
             WelcomeBack.Text = "Welcome Back:  " + (System.Environment.UserName);
-
         }
 
         public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-
             if (!RecognizerState)
                 return;
 
@@ -1851,7 +1836,6 @@ namespace Moradi_Notepad
             try
             {
                 // Mic Settings //
-
                 //////////////////////////////////////////////////////////////////////////////////////////////////
                 try
                 {
@@ -1893,7 +1877,6 @@ namespace Moradi_Notepad
             }
             catch
             {
-
                 // Button Settings
 
                 if (richTextBox1.Text == ("Start Typing Here . . .")) // Text On Main Notepad To Be Deleted Once Screen Is Clicked
@@ -1921,7 +1904,6 @@ namespace Moradi_Notepad
             }
         }
 
-
         private void toolStripButton20_Click_1(object sender, EventArgs e)
         {
             // options
@@ -1929,12 +1911,10 @@ namespace Moradi_Notepad
             pictureBox1.Refresh();
             richTextBox1.ReadOnly = false;
 
-
             //mic off    
             RecognizerState = false;
             MicOff.Enabled = false;
             MicOn.Enabled = true;
-
 
             //status update
             infolabel.Text = ("Recognizer Stopped ! ");
@@ -1984,9 +1964,6 @@ namespace Moradi_Notepad
             }
         }
 
-
-
-
         private void toolStripButton22_Click(object sender, EventArgs e)
         {
             // Print current document text to local printer
@@ -2021,12 +1998,10 @@ namespace Moradi_Notepad
 
         private void MicEnable_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Highlighter_Click(object sender, EventArgs e)
         {
-
         }
 
         private void transeparentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2090,17 +2065,13 @@ namespace Moradi_Notepad
             // located in richTextBox1_TextChanged
         }
 
-
-
         private void TextSaveTimer_Tick(object sender, EventArgs e)
         {
-
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
             this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
-
         }
 
         private void minimizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2150,12 +2121,10 @@ namespace Moradi_Notepad
 
         private void NotifyMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
         }
 
         private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -2205,9 +2174,8 @@ namespace Moradi_Notepad
                 {
                     return;
                 }
-
-
             }
+
             try
             {
                 // voice rec.
@@ -2235,39 +2203,30 @@ namespace Moradi_Notepad
 
         private void faderControlBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void richTextBox1_SelectionChanged(object sender, EventArgs e)
         {
         }
 
-
         private void FontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void FontSize_Click(object sender, EventArgs e)
         {
-
         }
-
 
         private void FontSize_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
         }
 
         private void Form1_FontChanged(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-
-
         }
 
         private void onToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -2282,12 +2241,10 @@ namespace Moradi_Notepad
             dancingpencil.Visible = false;
             MoradiHint.Visible = false;
             notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "You Have Disabled Moradi Hints", ToolTipIcon.Warning);
-
         }
 
         private void MessageBoxPerMin_Tick(object sender, EventArgs e)
         {
-
         }
 
         private void Opacity_Tick(object sender, EventArgs e)
@@ -2304,7 +2261,6 @@ namespace Moradi_Notepad
 
         private void OpacityControl_Click(object sender, EventArgs e)
         {
-
         }
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2322,13 +2278,11 @@ namespace Moradi_Notepad
             rtb.Text = "Start Typing Here . . .";
             rtb.Font.Size.ToString("10");
 
-
             return;
         }
 
         private void iMABUTTONToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
@@ -2353,17 +2307,14 @@ namespace Moradi_Notepad
 
         private void FontSize_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void TESTTIMER_Tick(object sender, EventArgs e)
         {
-
         }
 
         private void TextSize_Click(object sender, EventArgs e)
         {
-
         }
 
         private void TextSize_SelectedIndexChanged(object sender, EventArgs e)
@@ -2387,9 +2338,7 @@ namespace Moradi_Notepad
             }
             
             else if (richTextBox1.Text.Contains ("<br>"))
-                richTextBox1.AppendText ("</br>");
-            
-        
+                richTextBox1.AppendText ("</br>");     
     }
 
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
