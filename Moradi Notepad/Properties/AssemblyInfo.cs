@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Moradi Notepad")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Moradi Notepad")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Brett Tech Networking")]
 [assembly: AssemblyProduct("Moradi Notepad")]
-[assembly: AssemblyCopyright("Copyright © Brett Tech Networking 2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © Brett Tech Networking 2019")]
+[assembly: AssemblyTrademark("Copyright © Brett Tech Networking 2019")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

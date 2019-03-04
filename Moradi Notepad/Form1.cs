@@ -208,11 +208,11 @@ namespace Moradi_Notepad
 
                 if (richTextBox1.SelectionFont.Bold == true)
                 {
-                    newFontStyle = FontStyle.Regular;
+                    newFontStyle = System.Drawing.FontStyle.Regular;
                 }
                 else
                 {
-                    newFontStyle = FontStyle.Bold;
+                    newFontStyle = System.Drawing.FontStyle.Bold;
                 }
 
                 richTextBox1.SelectionFont = new Font(
@@ -234,11 +234,11 @@ namespace Moradi_Notepad
 
                 if (richTextBox1.SelectionFont.Italic == true)
                 {
-                    newFontStyle = FontStyle.Regular;
+                    newFontStyle = System.Drawing.FontStyle.Regular;
                 }
                 else
                 {
-                    newFontStyle = FontStyle.Italic;
+                    newFontStyle = System.Drawing.FontStyle.Italic;
                 }
 
                 richTextBox1.SelectionFont = new Font(
@@ -259,11 +259,11 @@ namespace Moradi_Notepad
 
                 if (richTextBox1.SelectionFont.Underline == true)
                 {
-                    newFontStyle = FontStyle.Regular;
+                    newFontStyle = System.Drawing.FontStyle.Regular;
                 }
                 else
                 {
-                    newFontStyle = FontStyle.Underline;
+                    newFontStyle = System.Drawing.FontStyle.Underline;
                 }
 
                 richTextBox1.SelectionFont = new Font(
@@ -285,11 +285,11 @@ namespace Moradi_Notepad
 
                 if (richTextBox1.SelectionFont.Strikeout == true)
                 {
-                    newFontStyle = FontStyle.Regular;
+                    newFontStyle = System.Drawing.FontStyle.Regular;
                 }
                 else
                 {
-                    newFontStyle = FontStyle.Strikeout;
+                    newFontStyle = System.Drawing.FontStyle.Strikeout;
                 }
 
                 richTextBox1.SelectionFont = new Font(
@@ -782,15 +782,13 @@ namespace Moradi_Notepad
         private void button1_Click(object sender, EventArgs e)
         {
             // Find Text In Document Button 
-            int index = 0; string temp = richTextBox1.Text; richTextBox1.Text = ""; richTextBox1.Text = temp;
+            int index = 0; string temp = richTextBox1.Text; richTextBox1.Text = richTextBox1.Text; richTextBox1.Text = temp;
 
             while (index < richTextBox1.Text.LastIndexOf(textBox1.Text))
             {
                 // Searches the text in a RichTextBox control for a string within a range of text withing the control and with specific options applied to the search.
                 richTextBox1.Find(textBox1.Text, index, richTextBox1.TextLength, RichTextBoxFinds.None);
-                // Selection Color. This is added automatically when a match is found.
-                richTextBox1.SelectionBackColor = Color.Yellow;
-                // After a match is found the index is increased so the search won't stop at the same match again. This makes possible to highlight same words at the same time.
+                // Selection Color. This is added automatically when a match is found.                // After a match is found the index is increased so the search won't stop at the same match again. This makes possible to highlight same words at the same time.
                 index = richTextBox1.Text.IndexOf(textBox1.Text, index) + 1;
             }
         }
@@ -1118,12 +1116,13 @@ namespace Moradi_Notepad
             if (richTextBox1.Modified == false)
             {
                 redo.Enabled = false;
-                richTextBox1.Redo();
             }
             // is modified
             else
             {
                 redo.Enabled = false;
+                richTextBox1.Redo();
+
             }
         }
 
@@ -1779,12 +1778,12 @@ namespace Moradi_Notepad
             // Font Size Check
             try
             {
-                toolStripComboBox1.Text = richTextBox1.Font.Name.ToString();
+                FontStyle.Text = richTextBox1.Font.Name.ToString();
                 TextSize.Text = richTextBox1.Font.Size.ToString();
             }
             catch
             {
-                toolStripComboBox1.Text = ("N/A");
+                FontStyle.Text = ("N/A");
             }
 
             // grammer rules
@@ -2293,16 +2292,16 @@ namespace Moradi_Notepad
 
         private void FontNames_Tick(object sender, EventArgs e)
         {
-            this.toolStripComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.FontStyle.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (FontFamily font in FontFamily.Families)
             {
-                toolStripComboBox1.Items.Add(font.Name.ToString());
+                FontStyle.Items.Add(font.Name.ToString());
             }
         }
 
         private void toolStripComboBox1_TextChanged(object sender, EventArgs e)
         {
-            richTextBox1.SelectionFont = new Font(toolStripComboBox1.Text, richTextBox1.Font.Size);
+            richTextBox1.SelectionFont = new Font(FontStyle.Text, richTextBox1.Font.Size);
         }
 
         private void FontSize_TextChanged(object sender, EventArgs e)
@@ -2313,9 +2312,6 @@ namespace Moradi_Notepad
         {
         }
 
-        private void TextSize_Click(object sender, EventArgs e)
-        {
-        }
 
         private void TextSize_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2364,5 +2360,6 @@ namespace Moradi_Notepad
         {
             HTML.Stop();
         }
+
     }
 }
