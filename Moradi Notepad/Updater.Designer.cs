@@ -62,7 +62,6 @@
             this.ubuntuTheme1.Size = new System.Drawing.Size(493, 388);
             this.ubuntuTheme1.TabIndex = 0;
             this.ubuntuTheme1.Text = "Moradi Notepad Updater";
-            this.ubuntuTheme1.Click += new System.EventHandler(this.ubuntuTheme1_Click);
             // 
             // button1
             // 
