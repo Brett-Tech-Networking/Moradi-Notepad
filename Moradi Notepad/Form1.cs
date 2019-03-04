@@ -445,18 +445,7 @@ namespace Moradi_Notepad
             richTextBox1.SelectedText = richTextBox1.SelectedText.ToUpper();
         }
 
-        private void Form1_SizeChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void richTextBox1_ContentsResized(object sender, ContentsResizedEventArgs e)
-        {
-        }
-
-        private void richTextBox1_SizeChanged(object sender, EventArgs e)
-        {
-        }
-
+     
         private void numberedLinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please Choose Show, Hide");
@@ -497,10 +486,7 @@ namespace Moradi_Notepad
             richTextBox1.BackColor = Color.Black;
         }
 
-        private void ubuntuTheme1_Enter(object sender, EventArgs e)
-        {
-        }
-
+     
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Default theme for Moradi Notepad
@@ -755,10 +741,6 @@ namespace Moradi_Notepad
             }
         }
 
-        private void tESTToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (richTextBox1.Text == ("Start Typing Here . . ."))
@@ -767,17 +749,6 @@ namespace Moradi_Notepad
             }
         }
 
-        private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void findToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -791,10 +762,6 @@ namespace Moradi_Notepad
                 // Selection Color. This is added automatically when a match is found.                // After a match is found the index is increased so the search won't stop at the same match again. This makes possible to highlight same words at the same time.
                 index = richTextBox1.Text.IndexOf(textBox1.Text, index) + 1;
             }
-        }
-
-        private void helpToolStripButton_Click(object sender, EventArgs e)
-        {
         }
 
         private void kToolStripMenuItem_Click(object sender, EventArgs e)
@@ -902,13 +869,6 @@ namespace Moradi_Notepad
                 richTextBox1.SelectionColor = MyDialog.Color;
         }
 
-        private void addSignaturesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void signatures1_Load(object sender, EventArgs e)
-        {
-        }
 
         private void thankYouToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -927,9 +887,6 @@ namespace Moradi_Notepad
             richTextBox1.Text = richTextBox1.Text + "Using, Moradi Notepad";
         }
 
-        private void headerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
 
         private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -938,10 +895,7 @@ namespace Moradi_Notepad
             richTextBox1.Text = richTextBox1.Text + DateTime.Now;
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-        }
-
+       
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             label1.ForeColor = Color.Red;
@@ -967,29 +921,6 @@ namespace Moradi_Notepad
             label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
-        private void hhmmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-        }
-
-        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ubuntuControlBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
 
         //splash screen reference
         splashscreen ss = new splashscreen();
@@ -1126,9 +1057,7 @@ namespace Moradi_Notepad
             }
         }
 
-        private void pronounceThatWordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
+       
 
         private void pronounceThatWordToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -1324,10 +1253,6 @@ namespace Moradi_Notepad
         private void readCurrentDocumentToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
             infolabel.Text = "Ready";
-        }
-
-        private void themesToolStripMenuItem_MouseHover(object sender, EventArgs e)
-        {
         }
 
         private void defaultToolStripMenuItem_MouseHover(object sender, EventArgs e)
@@ -1639,9 +1564,6 @@ namespace Moradi_Notepad
             clock.Stop();
         }
 
-        private void toolStripButton18_Click(object sender, EventArgs e)
-        {
-        }
 
         private void toolStripButton19_Click(object sender, EventArgs e)
         {
@@ -1673,9 +1595,7 @@ namespace Moradi_Notepad
             }
         }
 
-        private void fRToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
+     
 
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1822,13 +1742,6 @@ namespace Moradi_Notepad
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
 
         private void toolStripButton18_Click_2(object sender, EventArgs e)
         {
@@ -1995,14 +1908,6 @@ namespace Moradi_Notepad
             }
         }
 
-        private void MicEnable_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Highlighter_Click(object sender, EventArgs e)
-        {
-        }
-
         private void transeparentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.SelectionBackColor = Color.Black;
@@ -2064,10 +1969,7 @@ namespace Moradi_Notepad
             // located in richTextBox1_TextChanged
         }
 
-        private void TextSaveTimer_Tick(object sender, EventArgs e)
-        {
-        }
-
+    
         private void Form1_Resize(object sender, EventArgs e)
         {
             this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
@@ -2118,13 +2020,6 @@ namespace Moradi_Notepad
             }
         }
 
-        private void NotifyMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-        }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-        }
 
         private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -2200,33 +2095,7 @@ namespace Moradi_Notepad
             Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
 
-        private void faderControlBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void richTextBox1_SelectionChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void FontSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void FontSize_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void FontSize_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-        }
-
-        private void Form1_FontChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-        }
+     
 
         private void onToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -2242,9 +2111,7 @@ namespace Moradi_Notepad
             notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "You Have Disabled Moradi Hints", ToolTipIcon.Warning);
         }
 
-        private void MessageBoxPerMin_Tick(object sender, EventArgs e)
-        {
-        }
+      
 
         private void Opacity_Tick(object sender, EventArgs e)
         {
@@ -2258,10 +2125,7 @@ namespace Moradi_Notepad
             }
         }
 
-        private void OpacityControl_Click(object sender, EventArgs e)
-        {
-        }
-
+     
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabPage tp = new TabPage();
@@ -2280,9 +2144,6 @@ namespace Moradi_Notepad
             return;
         }
 
-        private void iMABUTTONToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
@@ -2303,15 +2164,6 @@ namespace Moradi_Notepad
         {
             richTextBox1.SelectionFont = new Font(FontStyle.Text, richTextBox1.Font.Size);
         }
-
-        private void FontSize_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void TESTTIMER_Tick(object sender, EventArgs e)
-        {
-        }
-
 
         private void TextSize_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2345,10 +2197,6 @@ namespace Moradi_Notepad
         private void disableToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HTML.Enabled = false;
-        }
-
-        private void Validate_Click(object sender, EventArgs e)
-        {
         }
 
         private void hTMLToolStripMenuItem1_Click(object sender, EventArgs e)

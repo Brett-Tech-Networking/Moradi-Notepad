@@ -62,7 +62,6 @@
             this.faderTheme1.Size = new System.Drawing.Size(809, 450);
             this.faderTheme1.TabIndex = 0;
             this.faderTheme1.Text = "Credits (Moradi Notepad)";
-            this.faderTheme1.Enter += new System.EventHandler(this.faderTheme1_Enter_1);
             // 
             // faderControlBox1
             // 
@@ -123,7 +122,6 @@
             this.textBox3.Size = new System.Drawing.Size(638, 305);
             this.textBox3.TabIndex = 0;
             this.textBox3.Text = resources.GetString("textBox3.Text");
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // tabPage2
             // 
@@ -160,7 +158,6 @@
             this.textBox2.Size = new System.Drawing.Size(590, 274);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = resources.GetString("textBox2.Text");
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Credits
             // 

@@ -11,16 +11,13 @@ namespace Moradi_Notepad
             InitializeComponent();
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-        }
 
         int progress = 0;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            progress += 1;
+            progress += 2;
             if(progress >=100)
             {
 
@@ -44,13 +41,5 @@ namespace Moradi_Notepad
             timer1.Interval = 15;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

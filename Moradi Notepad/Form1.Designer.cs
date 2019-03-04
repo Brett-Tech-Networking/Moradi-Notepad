@@ -356,7 +356,6 @@ namespace Moradi_Notepad
             // 
             // timer2
             // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // printDialog1
             // 
@@ -384,7 +383,6 @@ namespace Moradi_Notepad
             // 
             this.TextSaveTimer.Enabled = true;
             this.TextSaveTimer.Interval = 1000;
-            this.TextSaveTimer.Tick += new System.EventHandler(this.TextSaveTimer_Tick);
             // 
             // notifyIcon1
             // 
@@ -392,7 +390,6 @@ namespace Moradi_Notepad
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Moradi Notepad";
             this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // NotifyMenu
             // 
@@ -408,7 +405,6 @@ namespace Moradi_Notepad
             this.closeNotepadToolStripMenuItem});
             this.NotifyMenu.Name = "NotifyMenu";
             this.NotifyMenu.Size = new System.Drawing.Size(189, 178);
-            this.NotifyMenu.Opening += new System.ComponentModel.CancelEventHandler(this.NotifyMenu_Opening);
             // 
             // moradiNotepadToolStripMenuItem
             // 
@@ -793,7 +789,6 @@ namespace Moradi_Notepad
             this.addSignaturesToolStripMenuItem.Name = "addSignaturesToolStripMenuItem";
             this.addSignaturesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.addSignaturesToolStripMenuItem.Text = "&Add Signatures";
-            this.addSignaturesToolStripMenuItem.Click += new System.EventHandler(this.addSignaturesToolStripMenuItem_Click);
             this.addSignaturesToolStripMenuItem.MouseLeave += new System.EventHandler(this.addSignaturesToolStripMenuItem_MouseLeave);
             this.addSignaturesToolStripMenuItem.MouseHover += new System.EventHandler(this.addSignaturesToolStripMenuItem_MouseHover);
             // 
@@ -1058,7 +1053,6 @@ namespace Moradi_Notepad
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.themesToolStripMenuItem.Text = "&Themes";
-            this.themesToolStripMenuItem.MouseHover += new System.EventHandler(this.themesToolStripMenuItem_MouseHover);
             // 
             // defaultToolStripMenuItem
             // 
@@ -1163,7 +1157,6 @@ namespace Moradi_Notepad
             this.ubuntuControlBox1.Size = new System.Drawing.Size(75, 23);
             this.ubuntuControlBox1.TabIndex = 0;
             this.ubuntuControlBox1.Text = "ubuntuControlBox1";
-            this.ubuntuControlBox1.Click += new System.EventHandler(this.ubuntuControlBox1_Click);
             // 
             // toolStrip1
             // 
@@ -1501,7 +1494,6 @@ namespace Moradi_Notepad
             this.Highlighter.Size = new System.Drawing.Size(33, 24);
             this.Highlighter.Text = "HighLighter";
             this.Highlighter.ToolTipText = "Highlight Text";
-            this.Highlighter.Click += new System.EventHandler(this.Highlighter_Click);
             // 
             // transeparentToolStripMenuItem
             // 
@@ -1818,7 +1810,6 @@ namespace Moradi_Notepad
             this.helpToolStripButton.Image = global::Moradi_Notepad.Properties.Resources.bullets;
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(33, 24);
-            this.helpToolStripButton.Click += new System.EventHandler(this.helpToolStripButton_Click);
             this.helpToolStripButton.MouseLeave += new System.EventHandler(this.helpToolStripButton_MouseLeave);
             this.helpToolStripButton.MouseHover += new System.EventHandler(this.helpToolStripButton_MouseHover);
             // 
@@ -2080,7 +2071,6 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Size = new System.Drawing.Size(1200, 731);
             this.ubuntuTheme1.TabIndex = 0;
             this.ubuntuTheme1.Text = "Moradi Notepad | Moradi OS Development";
-            this.ubuntuTheme1.Enter += new System.EventHandler(this.ubuntuTheme1_Enter);
             this.ubuntuTheme1.Resize += new System.EventHandler(this.ubuntuTheme1_Resize);
             // 
             // LastModified
@@ -2165,10 +2155,7 @@ namespace Moradi_Notepad
             this.richTextBox1.Size = new System.Drawing.Size(1180, 594);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Start Typing Here . . .";
-            this.richTextBox1.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.richTextBox1_ContentsResized);
-            this.richTextBox1.SelectionChanged += new System.EventHandler(this.richTextBox1_SelectionChanged);
             this.richTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.richTextBox1_MouseClick);
-            this.richTextBox1.SizeChanged += new System.EventHandler(this.richTextBox1_SizeChanged);
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             this.richTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_KeyPress);
             this.richTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyUp);
@@ -2200,7 +2187,6 @@ namespace Moradi_Notepad
             this.OpacityControl.Size = new System.Drawing.Size(50, 13);
             this.OpacityControl.TabIndex = 22;
             this.OpacityControl.Text = "Opacity";
-            this.OpacityControl.Click += new System.EventHandler(this.OpacityControl_Click);
             // 
             // metroTrackBar1
             // 
@@ -2275,7 +2261,6 @@ namespace Moradi_Notepad
             // 
             this.MessageBoxPerMin.Enabled = true;
             this.MessageBoxPerMin.Interval = 1000;
-            this.MessageBoxPerMin.Tick += new System.EventHandler(this.MessageBoxPerMin_Tick);
             // 
             // Opacity
             // 
@@ -2310,8 +2295,6 @@ namespace Moradi_Notepad
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_1);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.FontChanged += new System.EventHandler(this.Form1_FontChanged);
-            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.contextMenuStrip1.ResumeLayout(false);
             this.CopyPaste.ResumeLayout(false);
