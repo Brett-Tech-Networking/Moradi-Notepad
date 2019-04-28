@@ -698,10 +698,7 @@ namespace Moradi_Notepad
             richTextBox1.SelectAll();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
-        }
+       
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -898,27 +895,27 @@ namespace Moradi_Notepad
        
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Red;
+            TimeLabel.ForeColor = Color.Red;
         }
 
         private void limeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Green;
+            TimeLabel.ForeColor = Color.Green;
         }
 
         private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Blue;
+            TimeLabel.ForeColor = Color.Blue;
         }
 
         private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.HotPink;
+            TimeLabel.ForeColor = Color.HotPink;
         }
 
         private void hhmmssToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
 
@@ -1533,29 +1530,29 @@ namespace Moradi_Notepad
 
         private void clock_Tick(object sender, EventArgs e)
         {
-            if (label1.ForeColor == Color.DarkBlue)
+            if (TimeLabel.ForeColor == Color.DarkBlue)
             {
-                label1.ForeColor = Color.Red;
+                TimeLabel.ForeColor = Color.Red;
             }
             else
-            if (label1.ForeColor == Color.Red)
+            if (TimeLabel.ForeColor == Color.Red)
             {
-                label1.ForeColor = Color.Lime;
+                TimeLabel.ForeColor = Color.Lime;
             }
             else
-            if (label1.ForeColor == Color.Lime)
+            if (TimeLabel.ForeColor == Color.Lime)
             {
-                label1.ForeColor = Color.Yellow;
+                TimeLabel.ForeColor = Color.Yellow;
             }
             else
-            if (label1.ForeColor == Color.Yellow)
+            if (TimeLabel.ForeColor == Color.Yellow)
             {
-                label1.ForeColor = Color.Orange;
+                TimeLabel.ForeColor = Color.Orange;
             }
             else
-                if (label1.ForeColor == Color.Orange)
+                if (TimeLabel.ForeColor == Color.Orange)
             {
-                label1.ForeColor = Color.DarkBlue;
+                TimeLabel.ForeColor = Color.DarkBlue;
             }
         }
 
@@ -2209,5 +2206,20 @@ namespace Moradi_Notepad
             HTML.Stop();
         }
 
+        private void hourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimeTick.Enabled = false;
+            TimeLabel.Text = DateTime.Now.ToString("HH:mm:ss tt");
+        }
+
+        private void hourToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TimeTick.Enabled = true;
+        }
+
+        private void TimeTick_Tick(object sender, EventArgs e)
+        {
+           TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
     }
 }

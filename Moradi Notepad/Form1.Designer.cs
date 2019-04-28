@@ -115,6 +115,9 @@ namespace Moradi_Notepad
             this.flashingColorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.offToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timeFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.militarytime = new System.Windows.Forms.ToolStripMenuItem();
+            this.normaltime = new System.Windows.Forms.ToolStripMenuItem();
             this.codingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.htmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -182,7 +185,7 @@ namespace Moradi_Notepad
             this.SaveDoc = new System.Windows.Forms.ToolStripButton();
             this.PrintDoc = new System.Windows.Forms.ToolStripButton();
             this.InsertImage = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TimeLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.FindText = new System.Windows.Forms.Button();
             this.output = new System.Windows.Forms.Label();
@@ -220,12 +223,13 @@ namespace Moradi_Notepad
             this.OpacityControl = new System.Windows.Forms.Label();
             this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.FontTimer = new System.Windows.Forms.Timer(this.components);
             this.MessageBoxPerMin = new System.Windows.Forms.Timer(this.components);
             this.Opacity = new System.Windows.Forms.Timer(this.components);
             this.FontNames = new System.Windows.Forms.Timer(this.components);
             this.HTML = new System.Windows.Forms.Timer(this.components);
+            this.TimeTick = new System.Windows.Forms.Timer(this.components);
+            this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -352,10 +356,6 @@ namespace Moradi_Notepad
             // 
             this.Clocklabel.Enabled = true;
             this.Clocklabel.Interval = 1;
-            this.Clocklabel.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
             // 
             // printDialog1
             // 
@@ -518,7 +518,7 @@ namespace Moradi_Notepad
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(1, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(357, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(477, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -773,7 +773,7 @@ namespace Moradi_Notepad
             this.customizeToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.read;
             this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
             this.customizeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.customizeToolStripMenuItem.Text = "&Font";
             this.customizeToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
             this.customizeToolStripMenuItem.MouseLeave += new System.EventHandler(this.customizeToolStripMenuItem_MouseLeave);
@@ -787,7 +787,7 @@ namespace Moradi_Notepad
             this.moradiDevelopmentToolStripMenuItem});
             this.addSignaturesToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources._15_512;
             this.addSignaturesToolStripMenuItem.Name = "addSignaturesToolStripMenuItem";
-            this.addSignaturesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.addSignaturesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.addSignaturesToolStripMenuItem.Text = "&Add Signatures";
             this.addSignaturesToolStripMenuItem.MouseLeave += new System.EventHandler(this.addSignaturesToolStripMenuItem_MouseLeave);
             this.addSignaturesToolStripMenuItem.MouseHover += new System.EventHandler(this.addSignaturesToolStripMenuItem_MouseHover);
@@ -816,7 +816,7 @@ namespace Moradi_Notepad
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(155, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(181, 6);
             // 
             // insertToolStripMenuItem
             // 
@@ -825,7 +825,7 @@ namespace Moradi_Notepad
             this.imageToolStripMenuItem});
             this.insertToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources.add_icon___colorful_stickers_set_insert_green_plus_15;
             this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
-            this.insertToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.insertToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.insertToolStripMenuItem.Text = "&Insert";
             this.insertToolStripMenuItem.MouseLeave += new System.EventHandler(this.insertToolStripMenuItem_MouseLeave);
             this.insertToolStripMenuItem.MouseHover += new System.EventHandler(this.insertToolStripMenuItem_MouseHover);
@@ -847,16 +847,17 @@ namespace Moradi_Notepad
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(155, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(181, 6);
             // 
             // clockToolStripMenuItem
             // 
             this.clockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.timeColorToolStripMenuItem,
-            this.flashingColorsToolStripMenuItem});
+            this.flashingColorsToolStripMenuItem,
+            this.timeFormatToolStripMenuItem});
             this.clockToolStripMenuItem.Image = global::Moradi_Notepad.Properties.Resources._4665_200;
             this.clockToolStripMenuItem.Name = "clockToolStripMenuItem";
-            this.clockToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.clockToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.clockToolStripMenuItem.Text = "&Clock ";
             this.clockToolStripMenuItem.MouseLeave += new System.EventHandler(this.clockToolStripMenuItem_MouseLeave);
             this.clockToolStripMenuItem.MouseHover += new System.EventHandler(this.clockToolStripMenuItem_MouseHover);
@@ -869,7 +870,7 @@ namespace Moradi_Notepad
             this.blueToolStripMenuItem,
             this.pinkToolStripMenuItem});
             this.timeColorToolStripMenuItem.Name = "timeColorToolStripMenuItem";
-            this.timeColorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.timeColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.timeColorToolStripMenuItem.Text = "Time Color";
             // 
             // redToolStripMenuItem2
@@ -906,7 +907,7 @@ namespace Moradi_Notepad
             this.onToolStripMenuItem,
             this.offToolStripMenuItem});
             this.flashingColorsToolStripMenuItem.Name = "flashingColorsToolStripMenuItem";
-            this.flashingColorsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.flashingColorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.flashingColorsToolStripMenuItem.Text = "Flashing Colors";
             // 
             // onToolStripMenuItem
@@ -923,12 +924,35 @@ namespace Moradi_Notepad
             this.offToolStripMenuItem.Text = "Off";
             this.offToolStripMenuItem.Click += new System.EventHandler(this.offToolStripMenuItem_Click);
             // 
+            // timeFormatToolStripMenuItem
+            // 
+            this.timeFormatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.militarytime,
+            this.normaltime});
+            this.timeFormatToolStripMenuItem.Name = "timeFormatToolStripMenuItem";
+            this.timeFormatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.timeFormatToolStripMenuItem.Text = "Time Format";
+            // 
+            // militarytime
+            // 
+            this.militarytime.Name = "militarytime";
+            this.militarytime.Size = new System.Drawing.Size(180, 22);
+            this.militarytime.Text = "24-hour";
+            this.militarytime.Click += new System.EventHandler(this.hourToolStripMenuItem_Click);
+            // 
+            // normaltime
+            // 
+            this.normaltime.Name = "normaltime";
+            this.normaltime.Size = new System.Drawing.Size(180, 22);
+            this.normaltime.Text = "12-hour";
+            this.normaltime.Click += new System.EventHandler(this.hourToolStripMenuItem1_Click);
+            // 
             // codingToolStripMenuItem
             // 
             this.codingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.htmlToolStripMenuItem});
             this.codingToolStripMenuItem.Name = "codingToolStripMenuItem";
-            this.codingToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.codingToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.codingToolStripMenuItem.Text = "Coding";
             // 
             // htmlToolStripMenuItem
@@ -1673,19 +1697,19 @@ namespace Moradi_Notepad
             this.InsertImage.Text = "Import Image";
             this.InsertImage.Click += new System.EventHandler(this.toolStripButton19_Click);
             // 
-            // label1
+            // TimeLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(1024, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "00:00:00:00";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.TimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TimeLabel.AutoSize = true;
+            this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.TimeLabel.Location = new System.Drawing.Point(1024, 28);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(129, 25);
+            this.TimeLabel.TabIndex = 8;
+            this.TimeLabel.Text = "00:00:00:00";
+            this.TimeLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -1753,7 +1777,7 @@ namespace Moradi_Notepad
             this.MicOff});
             this.toolStrip3.Location = new System.Drawing.Point(1, 55);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(583, 27);
+            this.toolStrip3.Size = new System.Drawing.Size(552, 27);
             this.toolStrip3.TabIndex = 13;
             this.toolStrip3.Text = "Lock Document";
             // 
@@ -2059,7 +2083,7 @@ namespace Moradi_Notepad
             this.ubuntuTheme1.Controls.Add(this.output);
             this.ubuntuTheme1.Controls.Add(this.FindText);
             this.ubuntuTheme1.Controls.Add(this.textBox1);
-            this.ubuntuTheme1.Controls.Add(this.label1);
+            this.ubuntuTheme1.Controls.Add(this.TimeLabel);
             this.ubuntuTheme1.Controls.Add(this.lineNumbers_For_RichTextBox2);
             this.ubuntuTheme1.Controls.Add(this.toolStrip2);
             this.ubuntuTheme1.Controls.Add(this.toolStrip1);
@@ -2215,6 +2239,39 @@ namespace Moradi_Notepad
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // FontTimer
+            // 
+            this.FontTimer.Enabled = true;
+            this.FontTimer.Interval = 1000;
+            // 
+            // MessageBoxPerMin
+            // 
+            this.MessageBoxPerMin.Enabled = true;
+            this.MessageBoxPerMin.Interval = 1000;
+            // 
+            // Opacity
+            // 
+            this.Opacity.Enabled = true;
+            this.Opacity.Interval = 500;
+            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
+            // 
+            // FontNames
+            // 
+            this.FontNames.Enabled = true;
+            this.FontNames.Interval = 1000;
+            this.FontNames.Tick += new System.EventHandler(this.FontNames_Tick);
+            // 
+            // HTML
+            // 
+            this.HTML.Interval = 1000;
+            this.HTML.Tick += new System.EventHandler(this.HTML_Tick);
+            // 
+            // TimeTick
+            // 
+            this.TimeTick.Enabled = true;
+            this.TimeTick.Interval = 1000;
+            this.TimeTick.Tick += new System.EventHandler(this.TimeTick_Tick);
+            // 
             // lineNumbers_For_RichTextBox2
             // 
             this.lineNumbers_For_RichTextBox2._SeeThroughMode_ = false;
@@ -2251,33 +2308,6 @@ namespace Moradi_Notepad
             this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
             this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(18, 594);
             this.lineNumbers_For_RichTextBox2.TabIndex = 7;
-            // 
-            // FontTimer
-            // 
-            this.FontTimer.Enabled = true;
-            this.FontTimer.Interval = 1000;
-            // 
-            // MessageBoxPerMin
-            // 
-            this.MessageBoxPerMin.Enabled = true;
-            this.MessageBoxPerMin.Interval = 1000;
-            // 
-            // Opacity
-            // 
-            this.Opacity.Enabled = true;
-            this.Opacity.Interval = 500;
-            this.Opacity.Tick += new System.EventHandler(this.Opacity_Tick);
-            // 
-            // FontNames
-            // 
-            this.FontNames.Enabled = true;
-            this.FontNames.Interval = 1000;
-            this.FontNames.Tick += new System.EventHandler(this.FontNames_Tick);
-            // 
-            // HTML
-            // 
-            this.HTML.Interval = 1000;
-            this.HTML.Tick += new System.EventHandler(this.HTML_Tick);
             // 
             // Form1
             // 
@@ -2459,7 +2489,7 @@ namespace Moradi_Notepad
         private ToolStripButton PrintDoc;
         private ToolStripButton InsertImage;
         private LineNumbers.LineNumbers_For_RichTextBox lineNumbers_For_RichTextBox2;
-        private Label label1;
+        private Label TimeLabel;
         private TextBox textBox1;
         private Button FindText;
         private Label output;
@@ -2514,6 +2544,10 @@ namespace Moradi_Notepad
         private ToolStripMenuItem codingToolStripMenuItem1;
         private ToolStripMenuItem htmlmenu;
         private ToolStripMenuItem exitCodePlatformToolStripMenuItem;
+        private ToolStripMenuItem timeFormatToolStripMenuItem;
+        private ToolStripMenuItem militarytime;
+        private ToolStripMenuItem normaltime;
+        private Timer TimeTick;
     }
 }
 
