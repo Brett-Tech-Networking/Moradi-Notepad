@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Speech.Synthesis;
 using System.Windows.Forms;
 
 namespace Moradi_Notepad
@@ -17,13 +16,13 @@ namespace Moradi_Notepad
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            progress += 2;
-            if(progress >=100)
+            progress += 4;
+            if (progress >= 100)
             {
 
                 timer1.Enabled = false;
                 timer1.Stop();
-                this.Hide();  
+                this.Hide();
 
                 //Instantiates Main Form
                 Form1 f1 = new Form1();
@@ -36,7 +35,7 @@ namespace Moradi_Notepad
         private void splashscreen_Load(object sender, EventArgs e)
         {
             // welcome
-           
+
             timer1.Enabled = true;
             timer1.Interval = 15;
         }

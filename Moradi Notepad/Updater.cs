@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace Moradi_Notepad
 {
     public partial class Updater : Form
-    { 
+    {
         public Updater()
         {
             InitializeComponent();

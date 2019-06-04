@@ -317,8 +317,12 @@
     <None Include="Resources\download icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\coding.ico" />
+    <None Include="Resources\exit.ico" />
     <Content Include="Resources\Fader Theme.dll" />
+    <None Include="Resources\html.ico" />
     <Content Include="Resources\MetroFramework.dll" />
+    <None Include="Resources\new tab.png" />
     <Content Include="Resources\Ubuntu Theme.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

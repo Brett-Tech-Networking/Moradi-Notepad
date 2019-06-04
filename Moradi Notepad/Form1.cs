@@ -1,14 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.Speech.Synthesis;
 using System.Speech.Recognition;
+using System.Speech.Synthesis;
 using System.Threading;
-using System.Windows;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 namespace Moradi_Notepad
 {
@@ -445,7 +443,7 @@ namespace Moradi_Notepad
             richTextBox1.SelectedText = richTextBox1.SelectedText.ToUpper();
         }
 
-     
+
         private void numberedLinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please Choose Show, Hide");
@@ -486,7 +484,7 @@ namespace Moradi_Notepad
             richTextBox1.BackColor = Color.Black;
         }
 
-     
+
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Default theme for Moradi Notepad
@@ -698,7 +696,7 @@ namespace Moradi_Notepad
             richTextBox1.SelectAll();
         }
 
-       
+
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -892,7 +890,7 @@ namespace Moradi_Notepad
             richTextBox1.Text = richTextBox1.Text + DateTime.Now;
         }
 
-       
+
         private void redToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             TimeLabel.ForeColor = Color.Red;
@@ -1054,7 +1052,7 @@ namespace Moradi_Notepad
             }
         }
 
-       
+
 
         private void pronounceThatWordToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -1592,7 +1590,7 @@ namespace Moradi_Notepad
             }
         }
 
-     
+
 
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1966,7 +1964,7 @@ namespace Moradi_Notepad
             // located in richTextBox1_TextChanged
         }
 
-    
+
         private void Form1_Resize(object sender, EventArgs e)
         {
             this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
@@ -2092,7 +2090,7 @@ namespace Moradi_Notepad
             Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
 
-     
+
 
         private void onToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -2108,7 +2106,7 @@ namespace Moradi_Notepad
             notifyIcon1.ShowBalloonTip(100, "Moradi Notepad", "You Have Disabled Moradi Hints", ToolTipIcon.Warning);
         }
 
-      
+
 
         private void Opacity_Tick(object sender, EventArgs e)
         {
@@ -2122,7 +2120,7 @@ namespace Moradi_Notepad
             }
         }
 
-     
+
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabPage tp = new TabPage();
@@ -2177,14 +2175,14 @@ namespace Moradi_Notepad
 
         private void HTML_Tick(object sender, EventArgs e)
         {
-            if (richTextBox1.Text.Contains  ("<html>"))
+            if (richTextBox1.Text.Contains("<html>"))
             {
-                richTextBox1.AppendText ("</html>");
+                richTextBox1.AppendText("</html>");
             }
-            
-            else if (richTextBox1.Text.Contains ("<br>"))
-                richTextBox1.AppendText ("</br>");     
-    }
+
+            else if (richTextBox1.Text.Contains("<br>"))
+                richTextBox1.AppendText("</br>");
+        }
 
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2219,7 +2217,7 @@ namespace Moradi_Notepad
 
         private void TimeTick_Tick(object sender, EventArgs e)
         {
-           TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }
