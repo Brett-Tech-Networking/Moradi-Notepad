@@ -1,5 +1,11 @@
 # ---Change_Log---
 
+### Updates: 1/24/20 ###
+- Added New Insert Options: FORMAT> Insert (HTML Starter, System Information{user, OS ver, IP})
+- Release V5 is now available, this update includes many feature additions and bug fixes | Last release was June 24,2018 New Release: 1/24/20
+- Some Updates are not included in the changelog due to mini updates over time of not being recorded future updates will be accounted for thoroughly
+
+
 ### Updates: 5/14/18 ###
  - Added Insert Image Options 
  - Added Voice-Text Option
