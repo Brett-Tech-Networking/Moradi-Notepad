@@ -35,15 +35,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.faderGroupBox3 = new Fader_Theme.FaderGroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.faderGroupBox2 = new Fader_Theme.FaderGroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.faderTheme1.SuspendLayout();
             this.faderVerticalTabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.faderGroupBox3.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.faderGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // faderTheme1
@@ -79,7 +74,6 @@
             // 
             this.faderVerticalTabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.faderVerticalTabControl1.Controls.Add(this.tabPage3);
-            this.faderVerticalTabControl1.Controls.Add(this.tabPage2);
             this.faderVerticalTabControl1.ItemSize = new System.Drawing.Size(35, 100);
             this.faderVerticalTabControl1.Location = new System.Drawing.Point(16, 57);
             this.faderVerticalTabControl1.Multiline = true;
@@ -123,42 +117,6 @@
             this.textBox3.TabIndex = 0;
             this.textBox3.Text = resources.GetString("textBox3.Text");
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.tabPage2.Controls.Add(this.faderGroupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(104, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(673, 363);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Changelog";
-            // 
-            // faderGroupBox2
-            // 
-            this.faderGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.faderGroupBox2.Controls.Add(this.textBox2);
-            this.faderGroupBox2.Location = new System.Drawing.Point(27, 17);
-            this.faderGroupBox2.Name = "faderGroupBox2";
-            this.faderGroupBox2.ShowHeader = true;
-            this.faderGroupBox2.Size = new System.Drawing.Size(618, 328);
-            this.faderGroupBox2.TabIndex = 0;
-            this.faderGroupBox2.Text = "Changelog";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Red;
-            this.textBox2.Location = new System.Drawing.Point(12, 39);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(590, 274);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = resources.GetString("textBox2.Text");
-            // 
             // Credits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,9 +138,6 @@
             this.tabPage3.ResumeLayout(false);
             this.faderGroupBox3.ResumeLayout(false);
             this.faderGroupBox3.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.faderGroupBox2.ResumeLayout(false);
-            this.faderGroupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -191,11 +146,8 @@
 
         private Fader_Theme.FaderTheme faderTheme1;
         private Fader_Theme.FaderVerticalTabControl faderVerticalTabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private Fader_Theme.FaderControlBox faderControlBox1;
-        private Fader_Theme.FaderGroupBox faderGroupBox2;
-        private System.Windows.Forms.TextBox textBox2;
         private Fader_Theme.FaderGroupBox faderGroupBox3;
         private System.Windows.Forms.TextBox textBox3;
     }

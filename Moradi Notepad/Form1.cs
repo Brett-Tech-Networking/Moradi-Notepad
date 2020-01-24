@@ -7,6 +7,8 @@ using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Threading;
 using System.Windows.Forms;
+using System.Web;
+using System.Net;
 
 namespace Moradi_Notepad
 {
@@ -2218,6 +2220,35 @@ namespace Moradi_Notepad
         private void TimeTick_Tick(object sender, EventArgs e)
         {
             TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void HTMLStarterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //insert html webpage starter code
+
+            richTextBox1.Text = richTextBox1.Text + "<!DOCTYPE html>" + Environment.NewLine + "<html>" + Environment.NewLine + "<head>" + Environment.NewLine + "<title> PAGE TITLE </title>" + Environment.NewLine + "</head>" + Environment.NewLine + "<body>" + Environment.NewLine + Environment.NewLine + "<h1> My First Heading </h1>" + Environment.NewLine + "<p> My first paragraph </p>" + Environment.NewLine + Environment.NewLine + "</body>" + Environment.NewLine + "</html>";
+
+
+        }
+
+        private void CurrentUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //insert user
+
+            richTextBox1.Text = richTextBox1.Text + Environment.UserName;
+        }
+
+        private void CurrentOSVersionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = richTextBox1.Text + Environment.OSVersion;
+        }
+
+        private void IPAddressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            string externalip = new WebClient().DownloadString("http://icanhazip.com");
+            richTextBox1.Text = richTextBox1.Text + (externalip);
         }
     }
 }
