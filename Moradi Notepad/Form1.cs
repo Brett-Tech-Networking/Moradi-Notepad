@@ -7,7 +7,6 @@ using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Threading;
 using System.Windows.Forms;
-using System.Web;
 using System.Net;
 
 namespace Moradi_Notepad
@@ -195,6 +194,9 @@ namespace Moradi_Notepad
             }
             else
                 selectAllToolStripMenuItem.Enabled = false;
+
+            
+
         }
 
         private void B_Click(object sender, EventArgs e)
@@ -298,10 +300,6 @@ namespace Moradi_Notepad
                    newFontStyle
                 );
             }
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
@@ -846,7 +844,6 @@ namespace Moradi_Notepad
                     richTextBox1.BackColor = MyDialog.Color;
             }
         }
-
         private void otherColorToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //text color wheel picker
@@ -883,7 +880,6 @@ namespace Moradi_Notepad
         {
             richTextBox1.Text = richTextBox1.Text + "Using, Moradi Notepad";
         }
-
 
         private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1053,8 +1049,6 @@ namespace Moradi_Notepad
 
             }
         }
-
-
 
         private void pronounceThatWordToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -1592,8 +1586,6 @@ namespace Moradi_Notepad
             }
         }
 
-
-
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -2114,7 +2106,7 @@ namespace Moradi_Notepad
         {
             try
             {
-                System.Windows.Forms.Form.ActiveForm.Opacity = ((double)(metroTrackBar1.Value) / 100.0);
+                ActiveForm.Opacity = ((double)(metroTrackBar1.Value) / 100.0);
             }
             catch
             {
@@ -2136,7 +2128,7 @@ namespace Moradi_Notepad
             rtb.BackColor = Color.Black;
             rtb.ForeColor = Color.Lime;
             rtb.Text = "Start Typing Here . . .";
-            rtb.Font.Size.ToString("10");
+            rtb.Font.Size.ToString("12");
 
             return;
         }
@@ -2227,8 +2219,6 @@ namespace Moradi_Notepad
             //insert html webpage starter code
 
             richTextBox1.Text = richTextBox1.Text + "<!DOCTYPE html>" + Environment.NewLine + "<html>" + Environment.NewLine + "<head>" + Environment.NewLine + "<title> PAGE TITLE </title>" + Environment.NewLine + "</head>" + Environment.NewLine + "<body>" + Environment.NewLine + Environment.NewLine + "<h1> My First Heading </h1>" + Environment.NewLine + "<p> My first paragraph </p>" + Environment.NewLine + Environment.NewLine + "</body>" + Environment.NewLine + "</html>";
-
-
         }
 
         private void CurrentUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2249,6 +2239,33 @@ namespace Moradi_Notepad
 
             string externalip = new WebClient().DownloadString("http://icanhazip.com");
             richTextBox1.Text = richTextBox1.Text + (externalip);
+        }
+
+        private void hideClockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimeLabel.Visible = false;
+        }
+
+        private void showClockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimeLabel.Visible = true;
+        }
+
+        private void autocomplete_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void learnToCodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("chrome", @"http://www.bretttechcoding.com");
+            }
+            catch
+            {
+                MessageBox.Show("You must have a valid installation of Chrome to continue. Sorry about that.", "Whoa There!");
+            }
         }
     }
 }
