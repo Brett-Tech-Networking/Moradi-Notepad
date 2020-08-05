@@ -1,5 +1,13 @@
 # ---Change_Log---
 
+### Updates:8/5/20 ###
+-Added Show/Hide options for clock
+-Added insert > system info
+-Added help> "Learn To Code" website
+-Added auto complete (most common words only for the moment)
+-Updated some "New tab" abilities
+-Rearanged some items: Voice icon, search bar for a cleaner look
+
 ### Updates: 1/24/20 ###
 - Added New Insert Options: FORMAT> Insert (HTML Starter, System Information{user, OS ver, IP})
 - Release V5 is now available, this update includes many feature additions and bug fixes | Last release was June 24,2018 New Release: 1/24/20
