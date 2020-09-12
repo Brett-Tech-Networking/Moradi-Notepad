@@ -505,7 +505,7 @@ namespace Moradi_Notepad
         {
             // Display Numbered lines left of document 
 
-            richTextBox1.Location = new Point(20, 80);
+            richTextBox1.Location = new Point(20, 0); //20, 80
 
             //enable disable option
             HideNumbline.Enabled = true;
@@ -514,7 +514,7 @@ namespace Moradi_Notepad
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
             // Hide numbered lines on left side of document
-            richTextBox1.Location = new Point(1, 76);
+            richTextBox1.Location = new Point(-1, 0); // 1, 76
             HideNumbline.Enabled = false;
         }
 
@@ -971,21 +971,22 @@ namespace Moradi_Notepad
                     return;
                 }
             }
-            try
-            {
-                // voice rec.
-                RecThread.Abort();
-                RecThread = null;
-                recognizer.UnloadAllGrammars();
-                recognizer.Dispose();
-                grammar = null;
+           //try
+           // {
+           //     // voice rec.
+           //     RecThread.Abort();
+           //     RecThread = null;
+           //     recognizer.UnloadAllGrammars();
+           //     recognizer.Dispose();
+           //     grammar = null;
 
-                Environment.Exit(0);
-            }
-            catch
-            {
-                // nothing to do
-            }
+           //     Environment.Exit(0);
+           // }
+           // catch (ThreadAbortException)
+           // {
+           //     // nothing to do
+           // }
+            
         }
 
         private void toolStripButton16_Click(object sender, EventArgs e)
@@ -2267,5 +2268,7 @@ namespace Moradi_Notepad
                 MessageBox.Show("You must have a valid installation of Chrome to continue. Sorry about that.", "Whoa There!");
             }
         }
+
+    
     }
 }
