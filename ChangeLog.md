@@ -1,16 +1,16 @@
 # ---Change_Log---
 ### Updates: 10/23/20 ###
--Removed default saving methods
--Added new temp. saving method: File > Save As > Select .txt or .rtf saving format
+- Removed default saving methods
+- Added new temp. saving method: File > Save As > Select .txt or .rtf saving format
 Notes: A more direct fix will be added in the future.
 
 ### Updates:8/5/20 ###
--Added Show/Hide options for clock
--Added insert > system info
--Added help> "Learn To Code" website
--Added auto complete (most common words only for the moment)
--Updated some "New tab" abilities
--Rearanged some items: Voice icon, search bar for a cleaner look
+- Added Show/Hide options for clock
+- Added insert > system info
+- Added help> "Learn To Code" website
+- Added auto complete (most common words only for the moment)
+- Updated some "New tab" abilities
+- Rearanged some items: Voice icon, search bar for a cleaner look
 
 ### Updates: 1/24/20 ###
 - Added New Insert Options: FORMAT> Insert (HTML Starter, System Information{user, OS ver, IP})
