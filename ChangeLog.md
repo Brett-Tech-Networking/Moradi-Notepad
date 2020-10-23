@@ -1,4 +1,8 @@
 # ---Change_Log---
+### Updates: 10/23/20 ###
+-Removed default saving methods
+-Added new temp. saving method: File > Save As > Select .txt or .rtf saving format
+Notes: A more direct fix will be added in the future.
 
 ### Updates:8/5/20 ###
 -Added Show/Hide options for clock
