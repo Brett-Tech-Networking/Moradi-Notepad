@@ -40,15 +40,7 @@ namespace Moradi_Notepad
             //yes
             if (result == DialogResult.Yes)
             {
-                saveFileDialog1.DefaultExt = ".rtf";
-                saveFileDialog1.OverwritePrompt = true;
-                saveFileDialog1.Title = "Save File";
-                saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
-
-                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-                }
+                MessageBox.Show("Please save by going to File > Save As > & Select: Text File(normal text) or Rich Text File(colors,images etc.)", "Please Save Your File", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -70,7 +62,7 @@ namespace Moradi_Notepad
                     // filters
                     openFileDialog1.Title = "Open File";
                     openFileDialog1.Filter = "Rich Text Box Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt |All files (*.*)|*.*";
-                    openFileDialog1.FileName = "";
+                    openFileDialog1.FileName = @"path.txt";
                     openFileDialog1.FilterIndex = 3;
                     openFileDialog1.InitialDirectory = "My Documents";
 
@@ -99,10 +91,10 @@ namespace Moradi_Notepad
                     //yes
                     if (result == DialogResult.Yes)
                     {
-                        saveFileDialog1.DefaultExt = ".rtf";
+                        saveFileDialog1.DefaultExt = "*.*";
                         saveFileDialog1.OverwritePrompt = true;
                         saveFileDialog1.Title = "Save File";
-                        saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+                        saveFileDialog1.Filter = "All Files (*.*)| *.* | Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
 
                         if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                         {
@@ -137,7 +129,7 @@ namespace Moradi_Notepad
             saveFileDialog1.DefaultExt = ".rtf";
             saveFileDialog1.OverwritePrompt = true;
             saveFileDialog1.Title = "Save File";
-            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt";
+            saveFileDialog1.Filter = "Rich Text Files (*.rtf) | *.rtf |Peasant Text Files (*.txt) | *.txt |All Files|*.*";
 
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -2129,7 +2121,8 @@ namespace Moradi_Notepad
             rtb.BackColor = Color.Black;
             rtb.ForeColor = Color.Lime;
             rtb.Text = "Start Typing Here . . .";
-            rtb.Font.Size.ToString("12");
+            //rtb.Font.Size.ToString("12");
+            rtb.Font = new Font("Georgia", 10);
 
             return;
         }
@@ -2269,6 +2262,26 @@ namespace Moradi_Notepad
             }
         }
 
-    
+        private void txtSave_Click(object sender, EventArgs e)
+        {
+            // FILTERS
+            SaveFileDialog SaveFileDialog = new SaveFileDialog();
+            SaveFileDialog.DefaultExt = "*.txt";
+            SaveFileDialog.Filter = "Text File|*.txt";
+
+            if (SaveFileDialog.ShowDialog() == DialogResult.OK)
+                richTextBox1.SaveFile(SaveFileDialog.FileName, RichTextBoxStreamType.PlainText);
+        }
+
+        private void rtfSave_Click(object sender, EventArgs e)
+        {
+            // FILTERS
+            SaveFileDialog SaveFileDialog = new SaveFileDialog();
+            SaveFileDialog.DefaultExt = "*.rtf";
+            SaveFileDialog.Filter = "Rich Text File|*.rtf";
+
+            if (SaveFileDialog.ShowDialog() == DialogResult.OK)
+                richTextBox1.SaveFile(SaveFileDialog.FileName, RichTextBoxStreamType.RichText);
+        }
     }
 }
