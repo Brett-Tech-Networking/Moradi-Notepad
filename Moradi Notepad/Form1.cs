@@ -8,6 +8,7 @@ using System.Speech.Synthesis;
 using System.Threading;
 using System.Windows.Forms;
 using System.Net;
+using FastColoredTextBoxNS;
 
 namespace Moradi_Notepad
 {
@@ -193,105 +194,23 @@ namespace Moradi_Notepad
 
         private void B_Click(object sender, EventArgs e)
         {
-            // Bold format for text
-
-            if (richTextBox1.SelectionFont != null)
-            {
-                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
-                System.Drawing.FontStyle newFontStyle;
-
-                if (richTextBox1.SelectionFont.Bold == true)
-                {
-                    newFontStyle = System.Drawing.FontStyle.Regular;
-                }
-                else
-                {
-                    newFontStyle = System.Drawing.FontStyle.Bold;
-                }
-
-                richTextBox1.SelectionFont = new Font(
-                   currentFont.FontFamily,
-                   currentFont.Size,
-                   newFontStyle
-                );
-            }
+          
+         
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void Italic1_Click(object sender, EventArgs e)
         {
-            // Italic Format For Text
-
-            if (richTextBox1.SelectionFont != null)
-            {
-                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
-                System.Drawing.FontStyle newFontStyle;
-
-                if (richTextBox1.SelectionFont.Italic == true)
-                {
-                    newFontStyle = System.Drawing.FontStyle.Regular;
-                }
-                else
-                {
-                    newFontStyle = System.Drawing.FontStyle.Italic;
-                }
-
-                richTextBox1.SelectionFont = new Font(
-                   currentFont.FontFamily,
-                   currentFont.Size,
-                   newFontStyle
-                );
-            }
+          
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void Underline1_Click(object sender, EventArgs e)
         {
-            // Underlined format for text
-            if (richTextBox1.SelectionFont != null)
-            {
-                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
-                System.Drawing.FontStyle newFontStyle;
+           
+         }
 
-                if (richTextBox1.SelectionFont.Underline == true)
-                {
-                    newFontStyle = System.Drawing.FontStyle.Regular;
-                }
-                else
-                {
-                    newFontStyle = System.Drawing.FontStyle.Underline;
-                }
-
-                richTextBox1.SelectionFont = new Font(
-                   currentFont.FontFamily,
-                   currentFont.Size,
-                   newFontStyle
-                );
-            }
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void StrikeThrough1_Click(object sender, EventArgs e)
         {
-            // StrikeThrough format for text
-
-            if (richTextBox1.SelectionFont != null)
-            {
-                System.Drawing.Font currentFont = richTextBox1.SelectionFont;
-                System.Drawing.FontStyle newFontStyle;
-
-                if (richTextBox1.SelectionFont.Strikeout == true)
-                {
-                    newFontStyle = System.Drawing.FontStyle.Regular;
-                }
-                else
-                {
-                    newFontStyle = System.Drawing.FontStyle.Strikeout;
-                }
-
-                richTextBox1.SelectionFont = new Font(
-                   currentFont.FontFamily,
-                   currentFont.Size,
-                   newFontStyle
-                );
-            }
+            
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
@@ -490,7 +409,7 @@ namespace Moradi_Notepad
             // Christmas theme for Moradi Notepad
             richTextBox1.BackColor = Color.DarkRed;
             richTextBox1.ForeColor = Color.Lime;
-            richTextBox1.Text = richTextBox1.Text;
+            richTextBox1.Text = "Merry Christmas";
         }
 
         private void toolStripButton11_Click(object sender, EventArgs e)
@@ -1583,7 +1502,7 @@ namespace Moradi_Notepad
         {
             try
             {
-                Process.Start("chrome", @"http://www.brett-techrepair.com");
+                Process.Start("chrome", @"https://www.bretttechcoding.com/Projects/moradi-notepad");
             }
             catch
             {
@@ -2122,7 +2041,7 @@ namespace Moradi_Notepad
             rtb.ForeColor = Color.Lime;
             rtb.Text = "Start Typing Here . . .";
             //rtb.Font.Size.ToString("12");
-            rtb.Font = new Font("Georgia", 10);
+            rtb.Font = new Font("Georgia", size);
 
             return;
         }
@@ -2150,9 +2069,11 @@ namespace Moradi_Notepad
 
         private void TextSize_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            //fontsize / textsize
             try
             {
-                this.TextSize.DropDownStyle = ComboBoxStyle.DropDownList;
+               // TextSize.DropDownStyle = ComboBoxStyle.DropDownList;
                 richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, float.Parse(TextSize.SelectedItem.ToString()));
             }
             catch
@@ -2282,6 +2203,91 @@ namespace Moradi_Notepad
 
             if (SaveFileDialog.ShowDialog() == DialogResult.OK)
                 richTextBox1.SaveFile(SaveFileDialog.FileName, RichTextBoxStreamType.RichText);
+        }
+
+        private void ubuntuTheme1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //insert time/date into document
+
+            richTextBox1.Text = richTextBox1.Text + DateTime.Now;
+        }
+
+        private void TextDelete_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
+
+            // enable if text exist
+            if (richTextBox1.TextLength > 0)
+            {
+                TextDelete.Enabled = true;
+            }
+            else TextDelete.Enabled = false;
+        }
+
+        private void halloweenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            // Halloween theme for Moradi Notepad
+            richTextBox1.BackColor = Color.Black;
+            richTextBox1.ForeColor = Color.Orange;
+            richTextBox1.Text = "Happy Halloween!";
+        }
+
+        private void TestBIU_Tick(object sender, EventArgs e)
+        {
+        }
+
+        private void BIU_Tick(object sender, EventArgs e)
+        {
+            //BOLD ITALIC UNDERLINE
+            try
+            {
+                if (Bold1.Checked == true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Bold);
+                }
+                if (Italic1.Checked ==  true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Italic);
+                }
+                if (Underline1.Checked == true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Underline);
+                }
+                if (StrikeThrough1.Checked == true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Strikeout);
+                }
+                 
+
+            if (Bold1.Checked == true & Italic1.Checked == true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
+                }
+
+                if (Bold1.Checked == true & Italic1.Checked == true & Underline1.Checked == true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline);
+                }
+
+                if (Bold1.Checked == true & Italic1.Checked == true & Underline1.Checked == true & StrikeThrough1.Checked == true)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline | System.Drawing.FontStyle.Strikeout);
+                }
+
+                if (Bold1.Checked == false)
+                {
+                    richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Regular);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR, ERROR");
+            }
         }
     }
 }
