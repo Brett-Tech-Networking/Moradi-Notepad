@@ -655,21 +655,6 @@ namespace Moradi_Notepad
             }
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Find Text In Document Button 
-            int index = 0; string temp = richTextBox1.Text; richTextBox1.Text = richTextBox1.Text; richTextBox1.Text = temp;
-
-            while (index < richTextBox1.Text.LastIndexOf(textBox1.Text))
-            {
-                // Searches the text in a RichTextBox control for a string within a range of text withing the control and with specific options applied to the search.
-                richTextBox1.Find(textBox1.Text, index, richTextBox1.TextLength, RichTextBoxFinds.None);
-                // Selection Color. This is added automatically when a match is found.                // After a match is found the index is increased so the search won't stop at the same match again. This makes possible to highlight same words at the same time.
-                index = richTextBox1.Text.IndexOf(textBox1.Text, index) + 1;
-            }
-        }
-
         private void kToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Text bullets (listing items)
@@ -2126,7 +2111,15 @@ namespace Moradi_Notepad
 
         private void TimeTick_Tick(object sender, EventArgs e)
         {
-            TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt"); //clock 
+
+            // deselect backcolor on context menu (right click menu) added here to prevent a million timers 
+            if (richTextBox1.SelectionBackColor == Color.Yellow)
+            {
+                deselectTextToolStripMenuItem.Enabled = true; //enable option
+                
+            }
+           
         }
 
         private void HTMLStarterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2246,6 +2239,7 @@ namespace Moradi_Notepad
             //BOLD ITALIC UNDERLINE
             try
             {
+                
                 if (Bold1.Checked == true)
                 {
                     richTextBox1.Font = new Font(richTextBox1.Font, System.Drawing.FontStyle.Bold);
@@ -2287,6 +2281,55 @@ namespace Moradi_Notepad
             catch
             {
                 MessageBox.Show("ERROR, ERROR");
+            }
+        }
+
+        private void FindText_Click(object sender, EventArgs e)
+        {
+            // SEARCH BOX
+
+            {
+                int count = 0;
+                string keyword = textBox1.Text.Trim();//getting given searching string
+                int startPosition = 0; //initializing starting position to search
+                int endPosition = 0;
+                int endArticle = richTextBox1.Text.Length;//finding total number of characters
+                for (int i = 0; i < endArticle; i = startPosition)//creating a loop until ending 
+                {
+                    if (i == -1) //if the loop goes to end then stop
+                    {
+                        break;
+                    }
+                    startPosition = richTextBox1.Find(keyword, startPosition, endArticle, RichTextBoxFinds.WholeWord);//using find method get the begining position when find the searching string
+                    if (startPosition >= 0)     //if match the string                                                         //if don't match the string then it  return -1
+                    {
+                        count++; //conunting the number of occuerence or match the search string
+                     //  richTextBox1.SelectionColor = Color.Orange; //coloring the matching string 
+                        richTextBox1.SelectionBackColor = Color.Yellow; // background color select for string 
+
+                        endPosition = textBox1.Text.Length;
+                        startPosition = startPosition + endPosition;//place the starting position at the next word of previously matching string to continue searching.
+                    }
+                }
+
+                if (count == 0)//if the givn search string don't match at any time
+                {
+                    MessageBox.Show("No Match Found!!!");
+                }
+                SearchResults.Text = "Found Matches: " + count.ToString();//show the number of occurence into the text box
+                textBox1.Clear();
+            }
+        }
+
+        private void deselectTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                richTextBox1.SelectionBackColor = richTextBox1.BackColor;
+            }
+            catch
+            {
+
             }
         }
     }

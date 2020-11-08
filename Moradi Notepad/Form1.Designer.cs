@@ -44,6 +44,7 @@ namespace Moradi_Notepad
             this.lockDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unlockDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readSelectedTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deselectTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyPaste = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -243,6 +244,7 @@ namespace Moradi_Notepad
             this.TimeTick = new System.Windows.Forms.Timer(this.components);
             this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.BIU = new System.Windows.Forms.Timer(this.components);
+            this.SearchResults = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.CopyPaste.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
@@ -270,9 +272,10 @@ namespace Moradi_Notepad
             this.toolStripMenuItem5,
             this.lockDocumentToolStripMenuItem,
             this.unlockDocumentToolStripMenuItem,
-            this.readSelectedTextToolStripMenuItem});
+            this.readSelectedTextToolStripMenuItem,
+            this.deselectTextToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 186);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 208);
             // 
             // toolStripMenuItem1
             // 
@@ -333,6 +336,14 @@ namespace Moradi_Notepad
             this.readSelectedTextToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.readSelectedTextToolStripMenuItem.Text = "Read Selected Text";
             this.readSelectedTextToolStripMenuItem.Click += new System.EventHandler(this.readSelectedTextToolStripMenuItem_Click);
+            // 
+            // deselectTextToolStripMenuItem
+            // 
+            this.deselectTextToolStripMenuItem.Enabled = false;
+            this.deselectTextToolStripMenuItem.Name = "deselectTextToolStripMenuItem";
+            this.deselectTextToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.deselectTextToolStripMenuItem.Text = "Deselect Text";
+            this.deselectTextToolStripMenuItem.Click += new System.EventHandler(this.deselectTextToolStripMenuItem_Click);
             // 
             // CopyPaste
             // 
@@ -1852,7 +1863,7 @@ namespace Moradi_Notepad
             this.FindText.TabIndex = 11;
             this.FindText.Text = "Find";
             this.FindText.UseVisualStyleBackColor = false;
-            this.FindText.Click += new System.EventHandler(this.button1_Click);
+            this.FindText.Click += new System.EventHandler(this.FindText_Click);
             // 
             // output
             // 
@@ -1910,6 +1921,7 @@ namespace Moradi_Notepad
             // ubuntuTheme1
             // 
             this.ubuntuTheme1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ubuntuTheme1.Controls.Add(this.SearchResults);
             this.ubuntuTheme1.Controls.Add(this.LastModified);
             this.ubuntuTheme1.Controls.Add(this.tabControl1);
             this.ubuntuTheme1.Controls.Add(this.WelcomeBack);
@@ -3441,6 +3453,17 @@ namespace Moradi_Notepad
             this.BIU.Enabled = true;
             this.BIU.Tick += new System.EventHandler(this.BIU_Tick);
             // 
+            // SearchResults
+            // 
+            this.SearchResults.AutoSize = true;
+            this.SearchResults.BackColor = System.Drawing.Color.Transparent;
+            this.SearchResults.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchResults.Location = new System.Drawing.Point(829, 68);
+            this.SearchResults.Name = "SearchResults";
+            this.SearchResults.Size = new System.Drawing.Size(96, 16);
+            this.SearchResults.TabIndex = 26;
+            this.SearchResults.Text = "Found Matches: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3693,6 +3716,8 @@ namespace Moradi_Notepad
         private ToolStripMenuItem TextDelete;
         private ToolStripMenuItem halloweenToolStripMenuItem1;
         private Timer BIU;
+        private ToolStripMenuItem deselectTextToolStripMenuItem;
+        private Label SearchResults;
     }
 }
 
